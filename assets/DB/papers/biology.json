@@ -1,0 +1,104 @@
+{
+    "id": "ppr004",
+    "title": "Biológia",
+    "image_url": "",
+    "Description": "Általános biológia kvíz.",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr004q001",
+            "question": "Melyik szervünk áll legnagyobb százalékban vízből?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Bőr"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Vese"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Máj"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q002",
+            "question": "Melyik testrészünkben található az emberi test legkisebb méretű izma?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Fül"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Térd"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Ujj"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q003",
+            "question": "Melyik az emberi test legerősebb izma?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Nyelvizom"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Rekeszizom"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Záróizom"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q004",
+            "question": "Melyik szerv felelős a kalcitonin hormon termeléséért?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Mellékvese"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Hasnyálmirigy"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Pajzsmirigy"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr004q005",
+            "question": "Hány ízlelőbimbó található a nyelvben?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "87"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "9000"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "1200"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

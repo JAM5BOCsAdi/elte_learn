@@ -1,0 +1,104 @@
+{
+    "id": "ppr003",
+    "title": "Matematika",
+    "image_url": "",
+    "Description": "Általános matematika kvíz.",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr003q001",
+            "question": "Egy háromszög belső szögeinek aránya 2:3:7.\nHány fokos a háromszög legkisebb szöge?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "30"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "15"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "45"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr003q002",
+            "question": "Hány olyan egész szám van, amelynek az abszolút értéke kisebb 6-nál?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Végtelen"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "11"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr003q003",
+            "question": "Hányadik hatványra kell emelni a 2-t, hogy 512-t kapjunk?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "5"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "9"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "10"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr003q004",
+            "question": "Egy 80 grammos csokoládé tömegének 35 százaléka kakaó. Hány gramm kakaó van ebben a csokoládéban?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "28 g"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "24 g"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "32 g"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr003q005",
+            "question": "Egy mértani sorozat második tagja 6, harmadik tagja –18. Mi a sorozat ötödik tagja?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "-36"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "-162"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "-124"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

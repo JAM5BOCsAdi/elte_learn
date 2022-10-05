@@ -1,0 +1,96 @@
+{
+  "id": "ppr002",
+  "title": "Kémia",
+  "image_url": "",
+  "Description": "Általános kémia kvíz.",
+  "time_seconds": 900,
+  "questions": [
+    {
+      "id": "ppr002q001",
+      "question": "Melyik ENDOTERM folyamat az alábbiak közül?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "Kén oxigénnel való egyesülése"
+        },
+        {
+          "identifier": "B",
+          "Answer": "Az ammónia elemekből történő szintézise"
+        },
+        {
+          "identifier": "C",
+          "Answer": "A mészégetés folyamata"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "id": "ppr002q002",
+      "question": "Az ARZÉN vegyjele 'Az'?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "Igaz"
+        },
+        {
+          "identifier": "B",
+          "Answer": "Hamis"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "id": "ppr002q003",
+      "question": "A fémek reakcióira vonatkozó állítások közül melyik IGAZ?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "Az ezüst tömény kénsavoldatban színtelen, szagtalan gáz fejlődése közben oldódik."
+        },
+        {
+          "identifier": "B",
+          "Answer": "A magnézium forró vízben oldódik."
+        },
+        {
+          "identifier": "C",
+          "Answer": "A vasat híg és tömény salétromsavoldat is oldja."
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "id": "ppr002q004",
+      "question": "Melyik az egyetlen, szobahőmérsékleten is folyékony halmazállapotú fém?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "Higany"
+        },
+        {
+          "identifier": "B",
+          "Answer": "Gallium"
+        },
+        {
+          "identifier": "C",
+          "Answer": "Cézium"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr002q005",
+      "question": "Az emberi testben a vérben található a legtöbb vas?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "Igaz"
+        },
+        {
+          "identifier": "B",
+          "Answer": "Hamis"
+        }
+      ],
+      "correct_answer": "A"
+    }
+  ]
+}

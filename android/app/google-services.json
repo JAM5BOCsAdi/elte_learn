@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "277402526591",
+    "project_id": "eltelearn",
+    "storage_bucket": "eltelearn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277402526591:android:d81ff72fb6652557de704a",
+        "android_client_info": {
+          "package_name": "com.adam.elte_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277402526591-p7ihnl1ktp34r5n68omaaq2tj24d13ia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPqsKqFhAM6HKlfnTGERSpmvM3zeZM8tU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277402526591-p7ihnl1ktp34r5n68omaaq2tj24d13ia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "277402526591-jfgnv128rlqv2bg02mtpb6qretnmm57r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.adam.elteLearn"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

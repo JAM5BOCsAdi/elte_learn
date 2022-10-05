@@ -1,0 +1,117 @@
+{
+    "id": "ppr001",
+    "title": "Fizika",
+    "image_url": "",
+    "Description": "Általános fizika kvíz.",
+    "time_seconds": 900,
+    
+    "questions": [
+        {
+            "id": "ppr001q001",
+            "question": "Hány erő hat a vízszintes asztalon nyugalomban lévő könyvre?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "0"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "4"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "2"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "ppr001q002",
+            "question": "Az alábbiak közük melyik érvényesül, mikor a kanyarodó autóban akaratlanul oldalra dőlünk?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Tehetetlenség"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Szabadesés"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Felhajtóerő"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Közegellenállás"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr001q003",
+            "question": "A gázoknak nincs tömegük.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Igaz"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Hamis"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr001q004",
+            "question": "Melyik törvény írja le a felhajtóerő nagyságát?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "Pascal törvénye"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "Newton I. törvénye"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "Newton II. törvénye"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "Arkhimédész törvénye"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "ppr001q005",
+            "question": "A szabadon eső test gyorsulása ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "9,81 m/s2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "3,14 m/s2"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "14 cm/s"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "kiszámíthatatlan"
+                }
+            ],
+            "correct_answer": "A"
+        }
+    ]
+}
