@@ -1,8 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:elte_learn/firebase_ref/references.dart';
-import 'package:elte_learn/models/question_paper_model.dart';
-import 'package:elte_learn/services/firebase_storage_service.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../firebase_ref/references.dart';
+import '../../models/question_paper_model.dart';
+import '../../services/firebase_storage_service.dart';
 
 class QuestionPaperController extends GetxController {
   final allPaperImages = <String>[].obs;

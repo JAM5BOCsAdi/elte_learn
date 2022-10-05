@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../themes/app_light_theme.dart';
 import '../themes/sub_theme_data_mixin.dart';

@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 /// Class that navigates to the "/introduction" page, delayed by 2 sec.
 class AuthController extends GetxController {

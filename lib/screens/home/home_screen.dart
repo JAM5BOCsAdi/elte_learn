@@ -1,9 +1,8 @@
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
-import 'package:elte_learn/controllers/question_paper/question_paper_controller.dart';
-import 'package:elte_learn/screens/home/question_card.dart';
-import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/question_paper/question_paper_controller.dart';
+import '../home/question_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

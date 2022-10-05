@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../controllers/auth_controller.dart';
 import '../controllers/theme_controller.dart';

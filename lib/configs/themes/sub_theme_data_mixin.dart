@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import 'app_colors.dart';
+import '../themes/app_colors.dart';
 
 /// Mixin: In DART a class can inherit only 1 class, NOT multiple
 mixin SubThemeData {

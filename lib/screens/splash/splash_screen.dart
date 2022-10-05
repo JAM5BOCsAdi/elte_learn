@@ -1,5 +1,6 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:flutter/material.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../configs/themes/app_colors.dart';
 
 /// The logo pops up for a few seconds
 class SplashScreen extends StatelessWidget {

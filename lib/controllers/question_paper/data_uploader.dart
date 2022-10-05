@@ -1,12 +1,10 @@
 import 'dart:convert';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:elte_learn/firebase_ref/loading_status.dart';
-import 'package:elte_learn/firebase_ref/references.dart';
-import 'package:elte_learn/models/question_paper_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../firebase_ref/loading_status.dart';
+import '../../firebase_ref/references.dart';
+import '../../models/question_paper_model.dart';
 
 /// Load DATA from [.json] files
 class DataUploader extends GetxController {

@@ -1,5 +1,6 @@
-import 'package:elte_learn/firebase_ref/references.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../firebase_ref/references.dart';
 
 /// Load images from Firebase Storage
 class FirebaseStorageService extends GetxService {

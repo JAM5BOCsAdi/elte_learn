@@ -1,9 +1,7 @@
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:elte_learn/widgets/app_circle_button.dart';
-import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../configs/themes/app_colors.dart';
+import '../../widgets/app_circle_button.dart';
 
 /// Introduction in a few sentences
 class IntroductionScreen extends StatelessWidget {

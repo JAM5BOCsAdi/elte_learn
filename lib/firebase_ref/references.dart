@@ -1,5 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 /// FireBase References -> Refers to the collections in FireStore
 final fireStore = FirebaseFirestore.instance;

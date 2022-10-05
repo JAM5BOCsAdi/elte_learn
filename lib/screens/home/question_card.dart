@@ -1,7 +1,7 @@
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
-import 'package:elte_learn/models/question_paper_model.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../configs/themes/ui_parameters.dart';
+import '../../models/question_paper_model.dart';
 
 class QuestionCard extends StatelessWidget {
   final QuestionPaperModel model;

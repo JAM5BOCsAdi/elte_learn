@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 const double _mobileScreenPadding = 25.0;
 const double _cardBorderRadius = 10.0;

@@ -1,4 +1,5 @@
-import 'package:get/get.dart';
+// Package(s):
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../screens/home/home_screen.dart';
