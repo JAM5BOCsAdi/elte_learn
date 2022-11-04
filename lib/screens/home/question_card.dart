@@ -24,14 +24,6 @@ class QuestionCard extends StatelessWidget {
                   child: SizedBox(
                     height: Get.height * 0.15,
                     width: Get.width * 0.15,
-                    // child: CachedNetworkImage(
-                    //   imageUrl: _questionPaperController.allPapers[index].imageUrl!,
-                    //   placeholder: (context, url) => Container(
-                    //     alignment: Alignment.center,
-                    //     child: const CircularProgressIndicator(),
-                    //   ),
-                    //   errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
-                    // ),
                     child: model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                   ),
                 ),
