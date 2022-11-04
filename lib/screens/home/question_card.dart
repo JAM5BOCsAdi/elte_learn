@@ -5,13 +5,13 @@ import '../../models/question_paper_model.dart';
 
 class QuestionCard extends StatelessWidget {
   final QuestionPaperModel model;
+
   const QuestionCard({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const double _padding = 10.0;
     return Padding(
-      padding: const EdgeInsets.all(_padding),
+      padding: EdgeInsets.all(Get.height * 0.01),
       child: Stack(
         children: [
           Row(
@@ -22,20 +22,28 @@ class QuestionCard extends StatelessWidget {
                 child: ColoredBox(
                   color: Theme.of(context).primaryColor.withOpacity(0.2),
                   child: SizedBox(
-                    height: Get.height * 0.15,
+                    height: Get.height * 0.10,
                     width: Get.width * 0.15,
-                    child: model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
+                    child: CachedNetworkImage(
+                      imageUrl: model.imageUrl!,
+                      placeholder: (context, url) => Container(
+                        alignment: Alignment.center,
+                        child: const CircularProgressIndicator(),
+                      ),
+                      errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
+                    ),
+                    // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                   ),
                 ),
               ),
-              const SizedBox(width: 12.0),
+              SizedBox(width: Get.width * 0.025),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AutoSizeText(model.title),
                     Padding(
-                      padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
+                      padding: EdgeInsets.only(top: Get.height * 0.01, bottom: Get.height * 0.01),
                       child: AutoSizeText(model.description),
                     ),
                   ],
