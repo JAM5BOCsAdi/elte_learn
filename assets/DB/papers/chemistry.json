@@ -2,7 +2,7 @@
   "id": "ppr002",
   "title": "Kémia",
   "image_url": "",
-  "Description": "Általános kémia kvíz.",
+  "description": "Általános kémia kvíz.",
   "time_seconds": 900,
   "questions": [
     {

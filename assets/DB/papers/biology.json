@@ -2,7 +2,7 @@
     "id": "ppr004",
     "title": "Biológia",
     "image_url": "",
-    "Description": "Általános biológia kvíz.",
+    "description": "Általános biológia kvíz.",
     "time_seconds": 900,
     "questions": [
         {

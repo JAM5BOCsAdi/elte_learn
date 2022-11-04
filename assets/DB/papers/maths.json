@@ -2,7 +2,7 @@
     "id": "ppr003",
     "title": "Matematika",
     "image_url": "",
-    "Description": "Általános matematika kvíz.",
+    "description": "Általános matematika kvíz.",
     "time_seconds": 900,
     "questions": [
         {

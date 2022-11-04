@@ -2,7 +2,7 @@
     "id": "ppr001",
     "title": "Fizika",
     "image_url": "",
-    "Description": "Általános fizika kvíz.",
+    "description": "Általános fizika kvíz.",
     "time_seconds": 900,
     
     "questions": [

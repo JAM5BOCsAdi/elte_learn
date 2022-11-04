@@ -1,4 +1,5 @@
 import 'package:elte_learn/bindings/initial_bindings.dart';
+import 'package:elte_learn/controllers/question_paper/data_uploader.dart';
 import 'package:elte_learn/controllers/theme_controller.dart';
 import 'package:elte_learn/routes/app_routes.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,6 +11,7 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   InitialBindings().dependencies();
+  Get.put(DataUploader());
   // WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
