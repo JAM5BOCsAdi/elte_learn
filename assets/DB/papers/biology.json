@@ -11,15 +11,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Bőr"
+                    "answer": "Bőr"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Vese"
+                    "answer": "Vese"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Máj"
+                    "answer": "Máj"
                 }
             ],
             "correct_answer": "B"
@@ -30,15 +30,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Fül"
+                    "answer": "Fül"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Térd"
+                    "answer": "Térd"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Ujj"
+                    "answer": "Ujj"
                 }
             ],
             "correct_answer": "A"
@@ -49,15 +49,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Nyelvizom"
+                    "answer": "Nyelvizom"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Rekeszizom"
+                    "answer": "Rekeszizom"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Záróizom"
+                    "answer": "Záróizom"
                 }
             ],
             "correct_answer": "A"
@@ -68,15 +68,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Mellékvese"
+                    "answer": "Mellékvese"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Hasnyálmirigy"
+                    "answer": "Hasnyálmirigy"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Pajzsmirigy"
+                    "answer": "Pajzsmirigy"
                 }
             ],
             "correct_answer": "C"
@@ -87,15 +87,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "87"
+                    "answer": "87"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "9000"
+                    "answer": "9000"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "1200"
+                    "answer": "1200"
                 }
             ],
             "correct_answer": "B"

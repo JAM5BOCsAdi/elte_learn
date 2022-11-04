@@ -11,15 +11,15 @@
       "answers": [
         {
           "identifier": "A",
-          "Answer": "Kén oxigénnel való egyesülése"
+          "answer": "Kén oxigénnel való egyesülése"
         },
         {
           "identifier": "B",
-          "Answer": "Az ammónia elemekből történő szintézise"
+          "answer": "Az ammónia elemekből történő szintézise"
         },
         {
           "identifier": "C",
-          "Answer": "A mészégetés folyamata"
+          "answer": "A mészégetés folyamata"
         }
       ],
       "correct_answer": "C"
@@ -30,11 +30,11 @@
       "answers": [
         {
           "identifier": "A",
-          "Answer": "Igaz"
+          "answer": "Igaz"
         },
         {
           "identifier": "B",
-          "Answer": "Hamis"
+          "answer": "Hamis"
         }
       ],
       "correct_answer": "B"
@@ -45,15 +45,15 @@
       "answers": [
         {
           "identifier": "A",
-          "Answer": "Az ezüst tömény kénsavoldatban színtelen, szagtalan gáz fejlődése közben oldódik."
+          "answer": "Az ezüst tömény kénsavoldatban színtelen, szagtalan gáz fejlődése közben oldódik."
         },
         {
           "identifier": "B",
-          "Answer": "A magnézium forró vízben oldódik."
+          "answer": "A magnézium forró vízben oldódik."
         },
         {
           "identifier": "C",
-          "Answer": "A vasat híg és tömény salétromsavoldat is oldja."
+          "answer": "A vasat híg és tömény salétromsavoldat is oldja."
         }
       ],
       "correct_answer": "B"
@@ -64,15 +64,15 @@
       "answers": [
         {
           "identifier": "A",
-          "Answer": "Higany"
+          "answer": "Higany"
         },
         {
           "identifier": "B",
-          "Answer": "Gallium"
+          "answer": "Gallium"
         },
         {
           "identifier": "C",
-          "Answer": "Cézium"
+          "answer": "Cézium"
         }
       ],
       "correct_answer": "A"
@@ -83,11 +83,11 @@
       "answers": [
         {
           "identifier": "A",
-          "Answer": "Igaz"
+          "answer": "Igaz"
         },
         {
           "identifier": "B",
-          "Answer": "Hamis"
+          "answer": "Hamis"
         }
       ],
       "correct_answer": "A"

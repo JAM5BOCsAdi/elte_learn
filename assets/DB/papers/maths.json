@@ -11,15 +11,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "30"
+                    "answer": "30"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "15"
+                    "answer": "15"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "45"
+                    "answer": "45"
                 }
             ],
             "correct_answer": "A"
@@ -30,15 +30,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Végtelen"
+                    "answer": "Végtelen"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "6"
+                    "answer": "6"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "11"
+                    "answer": "11"
                 }
             ],
             "correct_answer": "C"
@@ -49,15 +49,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "5"
+                    "answer": "5"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "9"
+                    "answer": "9"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "10"
+                    "answer": "10"
                 }
             ],
             "correct_answer": "B"
@@ -68,15 +68,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "28 g"
+                    "answer": "28 g"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "24 g"
+                    "answer": "24 g"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "32 g"
+                    "answer": "32 g"
                 }
             ],
             "correct_answer": "A"
@@ -87,15 +87,15 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "-36"
+                    "answer": "-36"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "-162"
+                    "answer": "-162"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "-124"
+                    "answer": "-124"
                 }
             ],
             "correct_answer": "B"

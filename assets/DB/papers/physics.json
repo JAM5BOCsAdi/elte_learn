@@ -12,19 +12,19 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "0"
+                    "answer": "0"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "4"
+                    "answer": "4"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "3"
+                    "answer": "3"
                 },
                 {
                     "identifier": "D",
-                    "Answer": "2"
+                    "answer": "2"
                 }
             ],
             "correct_answer": "D"
@@ -35,19 +35,19 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Tehetetlenség"
+                    "answer": "Tehetetlenség"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Szabadesés"
+                    "answer": "Szabadesés"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Felhajtóerő"
+                    "answer": "Felhajtóerő"
                 },
                 {
                     "identifier": "D",
-                    "Answer": "Közegellenállás"
+                    "answer": "Közegellenállás"
                 }
             ],
             "correct_answer": "A"
@@ -58,11 +58,11 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Igaz"
+                    "answer": "Igaz"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Hamis"
+                    "answer": "Hamis"
                 }
             ],
             "correct_answer": "B"
@@ -73,19 +73,19 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "Pascal törvénye"
+                    "answer": "Pascal törvénye"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "Newton I. törvénye"
+                    "answer": "Newton I. törvénye"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "Newton II. törvénye"
+                    "answer": "Newton II. törvénye"
                 },
                 {
                     "identifier": "D",
-                    "Answer": "Arkhimédész törvénye"
+                    "answer": "Arkhimédész törvénye"
                 }
             ],
             "correct_answer": "D"
@@ -96,19 +96,19 @@
             "answers": [
                 {
                     "identifier": "A",
-                    "Answer": "9,81 m/s2"
+                    "answer": "9,81 m/s2"
                 },
                 {
                     "identifier": "B",
-                    "Answer": "3,14 m/s2"
+                    "answer": "3,14 m/s2"
                 },
                 {
                     "identifier": "C",
-                    "Answer": "14 cm/s"
+                    "answer": "14 cm/s"
                 },
                 {
                     "identifier": "D",
-                    "Answer": "kiszámíthatatlan"
+                    "answer": "kiszámíthatatlan"
                 }
             ],
             "correct_answer": "A"

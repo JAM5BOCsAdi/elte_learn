@@ -12,16 +12,18 @@ class HomeScreen extends StatelessWidget {
     QuestionPaperController _questionPaperController = Get.find();
 
     return Scaffold(
-      body: Obx(
-        () => ListView.separated(
-          padding: UIParameters.mobileScreenPadding,
-          itemBuilder: (BuildContext context, int index) {
-            return QuestionCard(model: _questionPaperController.allPapers[index]);
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return const Gap(20);
-          },
-          itemCount: _questionPaperController.allPapers.length,
+      body: SafeArea(
+        child: Obx(
+          () => ListView.separated(
+            padding: UIParameters.mobileScreenPadding,
+            itemBuilder: (BuildContext context, int index) {
+              return QuestionCard(model: _questionPaperController.allPapers[index]);
+            },
+            separatorBuilder: (BuildContext context, int index) {
+              return const Gap(20);
+            },
+            itemCount: _questionPaperController.allPapers.length,
+          ),
         ),
       ),
     );
