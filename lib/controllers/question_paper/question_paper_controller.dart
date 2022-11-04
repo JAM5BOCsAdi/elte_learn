@@ -21,6 +21,7 @@ class QuestionPaperController extends GetxController {
       "maths",
       "physics",
     ];
+
     try {
       QuerySnapshot<Map<String, dynamic>> data = await questionPaperRef.get();
       final paperList = data.docs.map((paper) => QuestionPaperModel.fromSnapshot(paper)).toList();

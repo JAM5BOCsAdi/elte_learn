@@ -1,6 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-/// The model of nested levels in a [.json] file. F.E.: biology
 class QuestionPaperModel {
   String id;
   String title;

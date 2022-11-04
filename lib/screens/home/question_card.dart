@@ -41,10 +41,10 @@ class QuestionCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(model.title),
+                    AutoSizeText(model.title),
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
-                      child: Text(model.description),
+                      child: AutoSizeText(model.description),
                     ),
                   ],
                 ),

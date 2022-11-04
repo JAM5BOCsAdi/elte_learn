@@ -72,7 +72,6 @@ flutter:
     - assets/DB/papers/chemistry.json
     - assets/DB/papers/maths.json
     - assets/DB/papers/physics.json
-    - assets/DB/papers/test.dart
     # assets / icons:
     - assets/icons/code.svg
     - assets/icons/contact.svg
