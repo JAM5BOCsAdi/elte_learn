@@ -10,7 +10,7 @@ class UIParameters {
   static BorderRadius get cardBorderRadius => BorderRadius.circular(_cardBorderRadius);
   static EdgeInsets get mobileScreenPadding => EdgeInsets.all(_mobileScreenPadding);
 
-  static bool isDarkMode(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.dark;
+  static bool isDarkMode() {
+    return Get.isDarkMode ? true : false;
   }
 }

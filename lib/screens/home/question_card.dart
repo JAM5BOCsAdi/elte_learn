@@ -1,4 +1,7 @@
+import 'package:elte_learn/configs/themes/app_colors.dart';
+import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/widgets/icon_text.dart';
 
 import '../../configs/themes/ui_parameters.dart';
 import '../../models/question_paper_model.dart';
@@ -23,14 +26,16 @@ class QuestionCard extends StatelessWidget {
                   color: Theme.of(context).primaryColor.withOpacity(0.2),
                   child: SizedBox(
                     height: Get.height * 0.10,
-                    width: Get.width * 0.15,
-                    child: CachedNetworkImage(
-                      imageUrl: model.imageUrl!,
-                      placeholder: (context, url) => Container(
-                        alignment: Alignment.center,
-                        child: const CircularProgressIndicator(),
+                    width: Get.width * 0.20,
+                    child: Center(
+                      child: CachedNetworkImage(
+                        imageUrl: model.imageUrl!,
+                        placeholder: (context, url) => Container(
+                          alignment: Alignment.center,
+                          child: const CircularProgressIndicator(),
+                        ),
+                        errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                       ),
-                      errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                     ),
                     // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                   ),
@@ -41,10 +46,24 @@ class QuestionCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AutoSizeText(model.title),
+                    AutoSizeText(
+                      model.title,
+                      style: cardTitles(context),
+                    ),
                     Padding(
                       padding: EdgeInsets.only(top: Get.height * 0.01, bottom: Get.height * 0.01),
                       child: AutoSizeText(model.description),
+                    ),
+                    Row(
+                      children: [
+                        IconText(
+                          icon: Icon(
+                            Icons.help_outline_sharp,
+                            color: Get.isDarkMode ? onSurfaceTextColor : Theme.of(context).primaryColor.withOpacity(0.3),
+                          ),
+                          text: Text("${model.questionsCount} kérdés"),
+                        ),
+                      ],
                     ),
                   ],
                 ),
