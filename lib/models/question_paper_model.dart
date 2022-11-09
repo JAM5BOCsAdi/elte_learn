@@ -1,5 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+/// Every class is a collection in FireBase [ Class = Collection ]
 class QuestionPaperModel {
   String id;
   String title;
