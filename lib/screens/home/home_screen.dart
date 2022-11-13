@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/widgets/content_area.dart';
 
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
@@ -13,16 +14,19 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Obx(
-          () => ListView.separated(
-            padding: UIParameters.mobileScreenPadding,
-            itemBuilder: (BuildContext context, int index) {
-              return QuestionCard(model: _questionPaperController.allPapers[index]);
-            },
-            separatorBuilder: (BuildContext context, int index) {
-              return const Gap(20);
-            },
-            itemCount: _questionPaperController.allPapers.length,
+        child: ContentArea(
+          addPadding: false,
+          child: Obx(
+            () => ListView.separated(
+              padding: UIParameters.mobileScreenPadding,
+              itemBuilder: (BuildContext context, int index) {
+                return QuestionCard(model: _questionPaperController.allPapers[index]);
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return const Gap(20);
+              },
+              itemCount: _questionPaperController.allPapers.length,
+            ),
           ),
         ),
       ),

@@ -25,8 +25,8 @@ class QuestionCard extends StatelessWidget {
                 child: ColoredBox(
                   color: Theme.of(context).primaryColor.withOpacity(0.2),
                   child: SizedBox(
-                    height: Get.height * 0.10,
-                    width: Get.width * 0.20,
+                    height: Get.height * 0.1 / 1.25,
+                    width: Get.width * 0.2 / 1.25,
                     child: Center(
                       child: CachedNetworkImage(
                         imageUrl: model.imageUrl!,
@@ -41,7 +41,7 @@ class QuestionCard extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: Get.width * 0.025),
+              Gap(Get.width * 0.025),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,10 +59,28 @@ class QuestionCard extends StatelessWidget {
                         IconText(
                           icon: Icon(
                             Icons.help_outline_sharp,
-                            color: Get.isDarkMode ? onSurfaceTextColor : Theme.of(context).primaryColor.withOpacity(0.3),
+                            color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                           ),
-                          text: Text("${model.questionsCount} kérdés"),
+                          text: Text(
+                            "${model.questionsCount} kérdés",
+                            style: detailText.copyWith(
+                              color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                            ),
+                          ),
                         ),
+                        Gap(Get.width * 0.025),
+                        IconText(
+                          icon: Icon(
+                            Icons.timer,
+                            color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                          ),
+                          text: Text(
+                            "${model.timeInMinutes()} perc",
+                            style: detailText.copyWith(
+                              color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ],

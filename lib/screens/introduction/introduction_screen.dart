@@ -24,7 +24,7 @@ class IntroductionScreen extends StatelessWidget {
                 const Gap(40.0),
                 const AutoSizeText(
                   "This is a study app. You can use it as you want. If you understand how tis works, you would be able to scale it. With this you will master firebase backend and flutter frontend.",
-                  style: TextStyle(fontSize: 18.0, color: onSurfaceTextColor),
+                  style: TextStyle(fontSize: 18.0, color: kOnSurfaceTextColor),
                   textAlign: TextAlign.center,
                 ),
                 const Gap(40.0),

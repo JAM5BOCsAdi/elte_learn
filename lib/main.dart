@@ -1,11 +1,9 @@
-import 'package:elte_learn/bindings/initial_bindings.dart';
-import 'package:elte_learn/controllers/question_paper/data_uploader.dart';
-import 'package:elte_learn/controllers/theme_controller.dart';
-import 'package:elte_learn/routes/app_routes.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../bindings/initial_bindings.dart';
+import '../controllers/question_paper/data_uploader.dart';
+import '../controllers/theme_controller.dart';
+import '../routes/app_routes.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
