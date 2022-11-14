@@ -1,4 +1,5 @@
 import 'package:elte_learn/configs/themes/app_colors.dart';
+import 'package:elte_learn/configs/themes/app_icons.dart';
 import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/widgets/icon_text.dart';
@@ -101,15 +102,15 @@ class QuestionCard extends StatelessWidget {
               child: GestureDetector(
                 child: Container(
                   padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
-                  child: Icon(
-                    Icons.wine_bar,
-                  ),
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(cardBorderRadius),
                       bottomRight: Radius.circular(cardBorderRadius),
                     ),
+                  ),
+                  child: const Icon(
+                    AppIcons.trophyOutLine,
                   ),
                 ),
               ),
