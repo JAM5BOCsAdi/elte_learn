@@ -100,7 +100,7 @@ class QuestionCard extends StatelessWidget {
               right: -_padding,
               child: GestureDetector(
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
                   child: Icon(
                     Icons.wine_bar,
                   ),
