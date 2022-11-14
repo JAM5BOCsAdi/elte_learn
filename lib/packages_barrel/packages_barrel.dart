@@ -5,6 +5,7 @@ export 'package:firebase_core/firebase_core.dart';
 export 'package:firebase_storage/firebase_storage.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
+export 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 export 'package:gap/gap.dart';
 export 'package:get/get.dart';
 export 'package:google_fonts/google_fonts.dart';

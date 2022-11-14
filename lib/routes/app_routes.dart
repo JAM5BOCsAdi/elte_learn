@@ -1,4 +1,5 @@
 // Package(s):
+import 'package:elte_learn/controllers/zoom_drawer_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../controllers/question_paper/question_paper_controller.dart';
@@ -16,6 +17,7 @@ class AppRoutes {
           page: () => const HomeScreen(),
           binding: BindingsBuilder(() {
             Get.put(QuestionPaperController());
+            Get.put(MyZoomDrawerController());
           }),
         ),
       ];
