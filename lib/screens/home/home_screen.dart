@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                 return QuestionCard(model: _questionPaperController.allPapers[index]);
               },
               separatorBuilder: (BuildContext context, int index) {
-                return const Gap(20);
+                return Gap(Get.width * 0.05);
               },
               itemCount: _questionPaperController.allPapers.length,
             ),

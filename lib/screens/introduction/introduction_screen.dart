@@ -21,13 +21,13 @@ class IntroductionScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(Icons.star, size: 65.0),
-                const Gap(40.0),
+                Gap(Get.height * 0.025),
                 const AutoSizeText(
-                  "This is a study app. You can use it as you want. If you understand how tis works, you would be able to scale it. With this you will master firebase backend and flutter frontend.",
+                  "auctor ligula, tempor mollis tellus purus sed sem. Donec at orci ut risus tincidunt sollicitudin ac et nibh. Vivamus aliquam augue non enim posuere, nec molestie magna rhoncus. Sed dolor sapien, tristique in tortor at, rhoncus dignissim ante. Praesent blandit facilisis urna",
                   style: TextStyle(fontSize: 18.0, color: kOnSurfaceTextColor),
                   textAlign: TextAlign.center,
                 ),
-                const Gap(40.0),
+                Gap(Get.height * 0.025),
                 AppCircleButton(
                   onTap: () => Get.offAndToNamed("/home"),
                   child: const Icon(Icons.arrow_forward, size: 35.0),
