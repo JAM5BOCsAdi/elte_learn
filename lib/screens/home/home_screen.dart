@@ -1,5 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/screens/home/question_card.dart';
+import 'package:elte_learn/widgets/app_circle_button.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -8,7 +9,6 @@ import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
-import '../../widgets/app_circle_button.dart';
 import '../../widgets/content_area.dart';
 
 class HomeScreen extends GetView<MyZoomDrawerController> {
@@ -17,6 +17,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
+    // QuestionPaperModel model = Get.find();
     // MyZoomDrawerController _myZoomDrawerController = Get.find<MyZoomDrawerController>();
     return Scaffold(
       body: GetBuilder<MyZoomDrawerController>(
@@ -29,28 +30,29 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
             style: DrawerStyle.defaultStyle,
             menuBackgroundColor: Colors.white.withOpacity(0.5),
             slideWidth: Get.width * 0.6,
-            menuScreen: Text("Hi"),
+            menuScreen: Text("Hi", style: TextStyle(color: Colors.black)),
             mainScreen: Container(
               decoration: BoxDecoration(gradient: mainGradient()),
               child: SafeArea(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: EdgeInsets.all(mobileScreenPadding),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Icon(AppIcons.menuLeft),
-                          Gap(Get.height * 0.025),
+                          AppCircleButton(
+                            onTap: controller.toggleDrawer,
+                            clipBehavior: Clip.none,
+                            // TODO: Drawer Menu Problem to fix
+                            child: Icon(AppIcons.menuLeft, size: Get.height * 0.035),
+                          ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: Get.height * 0.01),
+                            padding: EdgeInsets.symmetric(vertical: Get.height * 0.025),
                             child: Row(
                               children: [
-                                AppCircleButton(
-                                  onTap: controller.toggleDrawer,
-                                  child: const Icon(AppIcons.peace),
-                                ),
+                                const Icon(AppIcons.peace),
                                 AutoSizeText(
                                   "Hello xy",
                                   style: detailText.copyWith(color: kOnSurfaceTextColor),

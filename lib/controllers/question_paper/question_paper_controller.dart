@@ -10,7 +10,6 @@ class QuestionPaperController extends GetxController {
 
   @override
   void onReady() {
-    // TODO: implement onReady
     getAllPapers();
     super.onReady();
   }

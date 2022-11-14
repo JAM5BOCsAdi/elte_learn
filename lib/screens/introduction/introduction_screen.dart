@@ -20,7 +20,7 @@ class IntroductionScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.star, size: 65.0),
+                Icon(Icons.star, size: Get.height * 0.1),
                 Gap(Get.height * 0.025),
                 const AutoSizeText(
                   "auctor ligula, tempor mollis tellus purus sed sem. Donec at orci ut risus tincidunt sollicitudin ac et nibh. Vivamus aliquam augue non enim posuere, nec molestie magna rhoncus. Sed dolor sapien, tristique in tortor at, rhoncus dignissim ante. Praesent blandit facilisis urna",
@@ -30,7 +30,8 @@ class IntroductionScreen extends StatelessWidget {
                 Gap(Get.height * 0.025),
                 AppCircleButton(
                   onTap: () => Get.offAndToNamed("/home"),
-                  child: const Icon(Icons.arrow_forward, size: 35.0),
+                  clipBehavior: Clip.hardEdge,
+                  child: Icon(Icons.arrow_forward, size: Get.height * 0.05),
                 ),
               ],
             ),
