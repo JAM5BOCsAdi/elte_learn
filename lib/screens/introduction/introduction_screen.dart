@@ -12,6 +12,7 @@ class IntroductionScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         top: false,
+        bottom: false,
         child: Container(
           decoration: BoxDecoration(gradient: mainGradient()),
           alignment: Alignment.center,
