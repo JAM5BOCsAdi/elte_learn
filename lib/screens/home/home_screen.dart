@@ -28,6 +28,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
             angle: 0.0,
             style: DrawerStyle.defaultStyle,
             slideWidth: Get.width * 0.65,
+            androidCloseOnBackTap: true,
             controller: _.zoomDrawerController,
             menuScreen: const MenuScreen(),
             mainScreen: Container(
