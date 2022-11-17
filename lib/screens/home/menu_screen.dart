@@ -7,7 +7,7 @@ class MenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      // decoration: BoxDecoration(gradient: mainGradient()),
+      decoration: BoxDecoration(color: Colors.transparent),
     );
   }
 }

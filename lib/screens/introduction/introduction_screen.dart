@@ -31,7 +31,7 @@ class IntroductionScreen extends StatelessWidget {
                 Gap(Get.height * 0.025),
                 AppCircleButton(
                   onTap: () => Get.offAndToNamed("/home"),
-                  clipBehavior: Clip.hardEdge,
+                  // clipBehavior: Clip.hardEdge,
                   child: Icon(Icons.arrow_forward, size: Get.height * 0.05),
                 ),
               ],
