@@ -30,6 +30,8 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
             slideWidth: Get.width * 0.65,
             androidCloseOnBackTap: true,
             controller: _.zoomDrawerController,
+            mainScreenTapClose: true,
+            // menuScreenWidth: Get.width,
             menuScreen: const MenuScreen(),
             mainScreen: Container(
               decoration: BoxDecoration(gradient: mainGradient()),
