@@ -73,6 +73,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                       ),
                     ),
                     Expanded(
+                      // TODO: SingleChildScrollView instead of Expanded
                       child: ContentArea(
                         addPadding: false,
                         child: Obx(

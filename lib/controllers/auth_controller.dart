@@ -1,5 +1,7 @@
+import 'package:elte_learn/firebase_ref/references.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/utils/app_logger.dart';
+import 'package:elte_learn/widgets/dialogs/dialogue.dart';
 
 class AuthController extends GetxController {
   // static AuthController get to => Get.find<AuthController>(tag: "auth");
@@ -25,7 +27,7 @@ class AuthController extends GetxController {
     navigateToIntroduction();
   }
 
-  signInWithGoogle() async {
+  Future<void> signInWithGoogle() async {
     final GoogleSignIn googleSignIn = GoogleSignIn();
     try {
       GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
@@ -36,14 +38,38 @@ class AuthController extends GetxController {
           accessToken: googleAuthAccount.accessToken,
         );
         await _firebaseAuth.signInWithCredential(googleAuthAccountCredential);
-        // await saveUser(account); ///TODO: UNCOMMENT THIS
+        await saveUser(googleSignInAccount);
       }
     } on Exception catch (error) {
       AppLogger.e(error);
     }
   }
 
-  saveUser(GoogleSignInAccount account) {}
+  Future<void> saveUser(GoogleSignInAccount account) async {
+    userRef.doc(account.email).set({
+      "email": account.email,
+      "name": account.displayName,
+      "profilepic": account.photoUrl,
+    });
+  }
 
   void navigateToIntroduction() => Get.offAllNamed("/introduction");
+
+  void showLoginAlertDialogue() {
+    Get.dialog(
+      Dialogs.questionStartDialogue(
+        onTapOK: () {
+          // Navigate To Login Page
+          // Get.offAllNamed("/introduction");
+          navigateToIntroduction();
+        },
+        onTapCancel: () => Get.back(),
+      ),
+      barrierDismissible: false,
+    );
+  }
+
+  bool isLoggedIn() {
+    return _firebaseAuth.currentUser != null;
+  }
 }

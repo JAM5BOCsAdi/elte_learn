@@ -1,13 +1,14 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:elte_learn/configs/themes/app_icons.dart';
-import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/widgets/icon_text.dart';
 
+import '../../configs/themes/app_colors.dart';
+import '../../configs/themes/app_icons.dart';
+import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../models/question_paper_model.dart';
+import '../../widgets/icon_text.dart';
 
-class QuestionCard extends StatelessWidget {
+class QuestionCard extends GetView<QuestionPaperController> {
   final QuestionPaperModel model;
 
   const QuestionCard({Key? key, required this.model}) : super(key: key);
@@ -20,102 +21,108 @@ class QuestionCard extends StatelessWidget {
         borderRadius: UIParameters.cardBorderRadius,
         color: Theme.of(context).cardColor,
       ),
-      child: Padding(
-        padding: EdgeInsets.all(_padding),
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClipRRect(
-                  borderRadius: UIParameters.cardBorderRadius,
-                  child: ColoredBox(
-                    color: Theme.of(context).primaryColor.withOpacity(0.2),
-                    child: SizedBox(
-                      height: Get.height * 0.1 / 1.25,
-                      width: Get.width * 0.2 / 1.25,
-                      child: Center(
-                        child: CachedNetworkImage(
-                          imageUrl: model.imageUrl!,
-                          placeholder: (context, url) => Container(
-                            alignment: Alignment.center,
-                            child: const CircularProgressIndicator(),
+      child: InkWell(
+        onTap: () {
+          // print("${model.title}");
+          controller.navigateToQuestions(paper: model);
+        },
+        child: Padding(
+          padding: EdgeInsets.all(_padding),
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: UIParameters.cardBorderRadius,
+                    child: ColoredBox(
+                      color: Theme.of(context).primaryColor.withOpacity(0.2),
+                      child: SizedBox(
+                        height: Get.height * 0.1 / 1.25,
+                        width: Get.width * 0.2 / 1.25,
+                        child: Center(
+                          child: CachedNetworkImage(
+                            imageUrl: model.imageUrl!,
+                            placeholder: (context, url) => Container(
+                              alignment: Alignment.center,
+                              child: const CircularProgressIndicator(),
+                            ),
+                            errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                           ),
-                          errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                         ),
+                        // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                       ),
-                      // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                     ),
                   ),
-                ),
-                Gap(Get.width * 0.025),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      AutoSizeText(
-                        model.title,
-                        style: cardTitles(context),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: Get.height * 0.01, bottom: Get.height * 0.01),
-                        child: AutoSizeText(model.description),
-                      ),
-                      Row(
-                        children: [
-                          IconText(
-                            icon: Icon(
-                              Icons.help_outline_sharp,
-                              color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
-                            ),
-                            text: Text(
-                              "${model.questionsCount} kérdés",
-                              style: detailText.copyWith(
+                  Gap(Get.width * 0.025),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AutoSizeText(
+                          model.title,
+                          style: cardTitles(context),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: Get.height * 0.01, bottom: Get.height * 0.01),
+                          child: AutoSizeText(model.description),
+                        ),
+                        Row(
+                          children: [
+                            IconText(
+                              icon: Icon(
+                                Icons.help_outline_sharp,
                                 color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                               ),
-                            ),
-                          ),
-                          Gap(Get.width * 0.025),
-                          IconText(
-                            icon: Icon(
-                              Icons.timer,
-                              color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
-                            ),
-                            text: Text(
-                              "${model.timeInMinutes()} perc",
-                              style: detailText.copyWith(
-                                color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                              text: Text(
+                                "${model.questionsCount} kérdés",
+                                style: detailText.copyWith(
+                                  color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                                ),
                               ),
                             ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Positioned(
-              bottom: -_padding,
-              right: -_padding,
-              child: GestureDetector(
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(cardBorderRadius),
-                      bottomRight: Radius.circular(cardBorderRadius),
+                            Gap(Get.width * 0.025),
+                            IconText(
+                              icon: Icon(
+                                Icons.timer,
+                                color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                              ),
+                              text: Text(
+                                "${model.timeInMinutes()} perc",
+                                style: detailText.copyWith(
+                                  color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  child: const Icon(
-                    AppIcons.trophyOutLine,
+                ],
+              ),
+              Positioned(
+                bottom: -_padding,
+                right: -_padding,
+                child: GestureDetector(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(cardBorderRadius),
+                        bottomRight: Radius.circular(cardBorderRadius),
+                      ),
+                    ),
+                    child: const Icon(
+                      AppIcons.trophyOutLine,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
