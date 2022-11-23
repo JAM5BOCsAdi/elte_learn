@@ -54,6 +54,7 @@ class LoginScreen extends StatelessWidget {
                       Center(
                         child: AutoSizeText(
                           "Sign in with Google",
+                          minFontSize: 18,
                           style: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold,
