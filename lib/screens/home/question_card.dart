@@ -15,7 +15,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
 
   @override
   Widget build(BuildContext context) {
-    double _padding = Get.height * 0.01;
+    double _padding = getHeight * 0.01;
     return Container(
       decoration: BoxDecoration(
         borderRadius: UIParameters.cardBorderRadius,
@@ -39,8 +39,8 @@ class QuestionCard extends GetView<QuestionPaperController> {
                     child: ColoredBox(
                       color: Theme.of(context).primaryColor.withOpacity(0.2),
                       child: SizedBox(
-                        height: Get.height * 0.1 / 1.25,
-                        width: Get.width * 0.2 / 1.25,
+                        height: getHeight * 0.1 / 1.25,
+                        width: getWidth * 0.2 / 1.25,
                         child: Center(
                           child: CachedNetworkImage(
                             imageUrl: model.imageUrl!,
@@ -55,7 +55,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                       ),
                     ),
                   ),
-                  Gap(Get.width * 0.025),
+                  Gap(getWidth * 0.025),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +65,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                           style: cardTitles(context),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: Get.height * 0.01, bottom: Get.height * 0.01),
+                          padding: EdgeInsets.only(top: getHeight * 0.01, bottom: getHeight * 0.01),
                           child: AutoSizeText(model.description),
                         ),
                         Row(
@@ -82,7 +82,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                                 ),
                               ),
                             ),
-                            Gap(Get.width * 0.025),
+                            Gap(getWidth * 0.025),
                             IconText(
                               icon: Icon(
                                 Icons.timer,

@@ -1,3 +1,4 @@
+import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../themes/app_colors.dart';
@@ -14,6 +15,6 @@ mixin SubThemeData {
   }
 
   IconThemeData getIconTheme() {
-    return IconThemeData(color: kOnSurfaceTextColor, size: Get.height * 0.015);
+    return IconThemeData(color: kOnSurfaceTextColor, size: getHeight * 0.015);
   }
 }

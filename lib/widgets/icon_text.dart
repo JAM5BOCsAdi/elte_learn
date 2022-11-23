@@ -1,5 +1,7 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../configs/themes/ui_parameters.dart';
+
 class IconText extends StatelessWidget {
   final Icon icon;
   final Text text;
@@ -10,7 +12,7 @@ class IconText extends StatelessWidget {
     return Row(
       children: [
         icon,
-        Gap(Get.width * 0.01),
+        Gap(getWidth * 0.01),
         text,
       ],
     );

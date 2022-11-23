@@ -1,5 +1,4 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/home/menu_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -8,6 +7,7 @@ import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
+import '../../screens/home/menu_screen.dart';
 import '../../screens/home/question_card.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/content_area.dart';
@@ -23,11 +23,11 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
         return Container(
           decoration: BoxDecoration(gradient: mainGradient()),
           child: ZoomDrawer(
-            borderRadius: Get.height * 0.05,
+            borderRadius: getHeight * 0.05,
             showShadow: false,
             angle: 0.0,
             style: DrawerStyle.defaultStyle,
-            slideWidth: Get.width * 0.65,
+            slideWidth: getWidth * 0.65,
             androidCloseOnBackTap: true,
             controller: _.zoomDrawerController,
             mainScreenTapClose: true,
@@ -47,16 +47,14 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                           AppCircleButton(
                             // clipBehavior: Clip.none,
                             onTap: controller.toggleDrawer,
-                            child: Icon(AppIcons.menuLeft, size: Get.height * 0.035),
+                            child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
                           ),
-
-                          // Gap(Get.height * 0.025),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: Get.height * 0.015),
+                            padding: EdgeInsets.symmetric(vertical: getHeight * 0.015),
                             child: Row(
                               children: [
                                 const Icon(AppIcons.peace),
-                                Gap(Get.width * 0.025),
+                                Gap(getWidth * 0.025),
                                 AutoSizeText(
                                   "Hello xy",
                                   style: detailText.copyWith(color: kOnSurfaceTextColor),
@@ -83,7 +81,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                               return QuestionCard(model: _questionPaperController.allPapers[index]);
                             },
                             separatorBuilder: (BuildContext context, int index) {
-                              return Gap(Get.width * 0.05);
+                              return Gap(getWidth * 0.05);
                             },
                             itemCount: _questionPaperController.allPapers.length,
                           ),

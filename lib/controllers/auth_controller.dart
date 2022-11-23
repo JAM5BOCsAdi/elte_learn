@@ -1,7 +1,9 @@
-import 'package:elte_learn/firebase_ref/references.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/utils/app_logger.dart';
-import 'package:elte_learn/widgets/dialogs/dialogue.dart';
+
+import '../../firebase_ref/references.dart';
+import '../../routes/route_names.dart';
+import '../../utils/app_logger.dart';
+import '../../widgets/dialogs/dialogue.dart';
 
 class AuthController extends GetxController {
   // static AuthController get to => Get.find<AuthController>(tag: "auth");
@@ -53,7 +55,8 @@ class AuthController extends GetxController {
     });
   }
 
-  void navigateToIntroduction() => Get.offAllNamed("/introduction");
+  void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);
+  void navigateToLogin() => Get.toNamed(RouteNames.loginScreenRoute);
 
   void showLoginAlertDialogue() {
     Get.dialog(
@@ -61,7 +64,7 @@ class AuthController extends GetxController {
         onTapOK: () {
           // Navigate To Login Page
           // Get.offAllNamed("/introduction");
-          navigateToIntroduction();
+          navigateToLogin();
         },
         onTapCancel: () => Get.back(),
       ),

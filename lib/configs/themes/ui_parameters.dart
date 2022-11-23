@@ -1,8 +1,12 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-double _mobileScreenPadding = Get.width * 0.075;
-double _cardBorderRadius = Get.width * 0.03;
+double _getHeight = Get.height;
+double _getWidth = Get.width;
+double _mobileScreenPadding = _getHeight * 0.035;
+double _cardBorderRadius = _getWidth * 0.035;
 
+double get getHeight => _getHeight;
+double get getWidth => _getWidth;
 double get mobileScreenPadding => _mobileScreenPadding;
 double get cardBorderRadius => _cardBorderRadius;
 
