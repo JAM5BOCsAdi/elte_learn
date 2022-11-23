@@ -16,14 +16,17 @@ class LoginScreen extends StatelessWidget {
           gradient: mainGradient(),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              Image.asset(
-                "assets/images/app_splash_logo.png",
-                height: getHeight * 0.5,
-                width: getWidth * 0.5,
-              ),
-            ],
+          child: Padding(
+            padding: EdgeInsets.all(mobileScreenPadding),
+            child: Column(
+              children: [
+                Image.asset(
+                  "assets/images/app_splash_logo.png",
+                  height: getHeight * 0.25,
+                  width: getWidth * 0.5,
+                ),
+              ],
+            ),
           ),
         ),
       ),
