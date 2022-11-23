@@ -7,7 +7,7 @@ class Dialogs {
 
   factory Dialogs() => _singleton;
 
-  static Widget questionStartDialogue({required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
+  static AlertDialog questionStartDialogue({required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
     return AlertDialog(
       title: const Text('Kvíz megkezdése sikertelen!'),
       content: SingleChildScrollView(
@@ -30,20 +30,3 @@ class Dialogs {
     );
   }
 }
-// ORIGINAL:
-// AlertDialog(
-// content: Column(
-//   mainAxisSize: MainAxisSize.min,
-//   crossAxisAlignment: CrossAxisAlignment.start,
-//   children: const [
-//     Text(
-//       "Hi",
-//       style: TextStyle(fontWeight: FontWeight.bold),
-//     ),
-//     Text("Kvíz kitöltéséhez előbb kérem lépjen be"),
-//   ],
-// ),
-// actions: [
-//   TextButton(onPressed: onTap, child: const AutoSizeText("OK")),
-// ],
-// );

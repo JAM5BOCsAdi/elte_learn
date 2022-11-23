@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/routes/route_names.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
@@ -33,7 +34,7 @@ class IntroductionScreen extends StatelessWidget {
                   ),
                   Gap(getHeight * 0.025),
                   AppCircleButton(
-                    onTap: () => Get.offAndToNamed("/home"),
+                    onTap: () => Get.offAndToNamed(RouteNames.homeScreenRoute),
                     // clipBehavior: Clip.hardEdge,
                     child: Icon(Icons.arrow_forward, size: getHeight * 0.05),
                   ),

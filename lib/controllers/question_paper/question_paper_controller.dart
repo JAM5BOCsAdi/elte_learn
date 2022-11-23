@@ -17,12 +17,12 @@ class QuestionPaperController extends GetxController {
   }
 
   Future<void> getAllPapers() async {
-    List<String> imgName = [
-      "biology",
-      "chemistry",
-      "maths",
-      "physics",
-    ];
+    // List<String> imgName = [
+    //   "biology",
+    //   "chemistry",
+    //   "maths",
+    //   "physics",
+    // ];
 
     try {
       QuerySnapshot<Map<String, dynamic>> data = await questionPaperRef.get();
@@ -50,7 +50,7 @@ class QuestionPaperController extends GetxController {
         // Get.toNamed();
       }
     } else {
-      print("The title is ${paper.title}");
+      print("Cim: ${paper.title}");
       _authController.showLoginAlertDialogue();
     }
   }

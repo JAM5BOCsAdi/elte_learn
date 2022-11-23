@@ -3,7 +3,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../../firebase_ref/references.dart';
 import '../../routes/route_names.dart';
 import '../../utils/app_logger.dart';
-import '../../widgets/dialogs/dialogue.dart';
+import '../widgets/dialogue.dart';
 
 class AuthController extends GetxController {
   // static AuthController get to => Get.find<AuthController>(tag: "auth");

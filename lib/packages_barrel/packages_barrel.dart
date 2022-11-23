@@ -13,3 +13,4 @@ export 'package:google_fonts/google_fonts.dart';
 export 'package:google_sign_in/google_sign_in.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
+export 'package:flutter_svg/flutter_svg.dart';
