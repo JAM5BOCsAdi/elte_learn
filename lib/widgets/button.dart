@@ -29,7 +29,7 @@ class Button extends StatelessWidget {
           color: color ?? Theme.of(context).cardColor,
         ),
         child: Padding(
-          padding: EdgeInsets.all(getWidth * 0.025),
+          padding: EdgeInsets.all(getWidth * 0.03),
           child: child ??
               Center(
                 child: AutoSizeText(

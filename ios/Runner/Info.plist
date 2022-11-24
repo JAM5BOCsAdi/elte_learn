@@ -45,5 +45,17 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+	    <dict>
+	        <key>CFBundleTypeROle</key>
+	        <string>Editor</string>
+	        <key>CFBundleURLSchemes</key>
+	        <array>
+	            <!-- Copied from GoogleService-Info.plist key REVERSED_CLIENT_ID -->
+	            <string>com.googleusercontent.apps.277402526591-jfgnv128rlqv2bg02mtpb6qretnmm57r</string>
+	        </array>
+	    </dict>
+	</array>
 </dict>
 </plist>

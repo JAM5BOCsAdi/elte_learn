@@ -1,10 +1,11 @@
 import 'package:elte_learn/configs/themes/ui_parameters.dart';
+import 'package:elte_learn/controllers/auth_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/widgets/button.dart';
 
 import '../../configs/themes/app_colors.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends GetView<AuthController> {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -41,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Button(
                   onTap: () {
-                    print("Tap");
+                    controller.signInWithGoogle();
                   },
                   child: Stack(
                     children: [
