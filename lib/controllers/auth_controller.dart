@@ -7,17 +7,16 @@ import '../widgets/dialogue.dart';
 
 class AuthController extends GetxController {
   // static AuthController get to => Get.find<AuthController>(tag: "auth");
+  late FirebaseAuth _firebaseAuth;
+  late Stream<User?> _authStateChanges;
+
+  final _user = Rxn<User>();
 
   @override
   void onReady() {
     initAuth();
     super.onReady();
   }
-
-  late FirebaseAuth _firebaseAuth;
-
-  final _user = Rxn<User>();
-  late Stream<User?> _authStateChanges;
 
   Future<void> initAuth() async {
     await Future.delayed(const Duration(seconds: 2));
@@ -53,6 +52,11 @@ class AuthController extends GetxController {
       "name": account.displayName,
       "profilepic": account.photoUrl,
     });
+  }
+
+  User? getUser() {
+    _user.value = _firebaseAuth.currentUser;
+    return _user.value;
   }
 
   void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);

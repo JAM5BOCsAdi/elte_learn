@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             decoration: BoxDecoration(gradient: mainGradient()),
             child: Image.asset(
               "assets/images/app_splash_logo.png",
-              width: 200.0,
+              width: 200.0, // TODO: Change to getWidth
               height: 200.0,
             ),
           ),

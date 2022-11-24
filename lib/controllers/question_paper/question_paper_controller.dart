@@ -48,6 +48,7 @@ class QuestionPaperController extends GetxController {
         // Get.offNamed();
       } else {
         // Get.toNamed();
+        print("Logged in");
       }
     } else {
       print("Cim: ${paper.title}");

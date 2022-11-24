@@ -1,11 +1,14 @@
+import 'package:elte_learn/controllers/auth_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
+  Rxn<User?> user = Rxn();
 
   @override
   void onReady() {
+    user.value = Get.find<AuthController>().getUser();
     super.onReady();
   }
 

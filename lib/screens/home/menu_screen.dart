@@ -1,8 +1,10 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-class MenuScreen extends StatelessWidget {
+import '../../configs/themes/app_colors.dart';
+import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/zoom_drawer_controller.dart';
+
+class MenuScreen extends GetView<MyZoomDrawerController> {
   const MenuScreen({Key? key}) : super(key: key);
 
   @override
@@ -20,16 +22,22 @@ class MenuScreen extends StatelessWidget {
         child: SafeArea(
           child: Stack(
             children: [
-              // Positioned(
-              //   top: 0,
-              //   right: 0,
-              //   child: BackButton(
-              //     color: kOnSurfaceTextColor,
-              //     onPressed: () {
-              //       print("Tapped");
-              //     },
-              //   ),
-              // ),
+              Column(
+                children: [
+                  Obx(
+                    () => controller.user.value == null
+                        ? const SizedBox()
+                        : AutoSizeText(
+                            controller.user.value!.displayName ?? "",
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 18,
+                              color: kOnSurfaceTextColor,
+                            ),
+                          ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
