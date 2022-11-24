@@ -1,3 +1,4 @@
+import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -19,8 +20,8 @@ class SplashScreen extends StatelessWidget {
             decoration: BoxDecoration(gradient: mainGradient()),
             child: Image.asset(
               "assets/images/app_splash_logo.png",
-              width: 200.0, // TODO: Change to getWidth
-              height: 200.0,
+              width: getWidth * 0.5,
+              height: getHeight * 0.25,
             ),
           ),
         ),
