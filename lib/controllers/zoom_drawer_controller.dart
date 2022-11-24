@@ -19,7 +19,7 @@ class MyZoomDrawerController extends GetxController {
 
   void signOut() {}
   void signIn() {}
-  void gitHub() {}
+  void contactUs() {}
   void email() {
     final emailLaunchUri = Uri(
       scheme: "mailto",

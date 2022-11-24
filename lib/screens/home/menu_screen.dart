@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/widgets/drawer_button.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
@@ -27,15 +28,30 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                   Obx(
                     () => controller.user.value == null
                         ? const SizedBox()
-                        : AutoSizeText(
-                            controller.user.value!.displayName ?? "",
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 18,
-                              color: kOnSurfaceTextColor,
+                        : Align(
+                            alignment: Alignment.centerLeft,
+                            child: AutoSizeText(
+                              controller.user.value!.displayName ?? "",
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: 18,
+                                color: kOnSurfaceTextColor,
+                              ),
                             ),
                           ),
                   ),
+                  Gap(getHeight * 0.025),
+                  DrawerButton(
+                    icon: Icons.contact_support_outlined,
+                    label: "Contact Us",
+                    onPressed: () => controller.contactUs(),
+                  ),
+                  const Spacer(flex: 1),
+                  DrawerButton(
+                    icon: Icons.logout,
+                    label: "Kijelentkezés",
+                    onPressed: () => controller.signOut(),
+                  )
                 ],
               ),
             ],
