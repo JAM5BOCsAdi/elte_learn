@@ -7,7 +7,9 @@ class DrawerButton extends StatelessWidget {
   final String label;
   final VoidCallback? onPressed;
 
-  const DrawerButton({Key? key, required this.icon, required this.label, this.onPressed}) : super(key: key);
+  const DrawerButton(
+      {Key? key, required this.icon, required this.label, this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

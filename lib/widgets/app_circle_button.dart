@@ -6,7 +6,8 @@ class AppCircleButton extends StatelessWidget {
   // final double width;
   // final Clip clipBehavior;
   final VoidCallback? onTap;
-  const AppCircleButton({Key? key, required this.child, this.onTap}) : super(key: key);
+  const AppCircleButton({Key? key, required this.child, this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

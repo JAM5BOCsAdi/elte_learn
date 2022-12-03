@@ -26,6 +26,8 @@ const kMainGradientDark = LinearGradient(
   ],
 );
 
-LinearGradient mainGradient() => UIParameters.isDarkMode() ? kMainGradientDark : kMainGradientLight;
+LinearGradient mainGradient() =>
+    UIParameters.isDarkMode() ? kMainGradientDark : kMainGradientLight;
 
-Color customScaffoldColor(BuildContext context) => UIParameters.isDarkMode() ? kCustomScaffoldColor1 : kCustomScaffoldColor2;
+Color customScaffoldColor(BuildContext context) =>
+    UIParameters.isDarkMode() ? kCustomScaffoldColor1 : kCustomScaffoldColor2;

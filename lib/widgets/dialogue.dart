@@ -7,7 +7,8 @@ class Dialogs {
 
   factory Dialogs() => _singleton;
 
-  static AlertDialog questionStartDialogue({required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
+  static AlertDialog questionStartDialogue(
+      {required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
     return AlertDialog(
       title: const Text('Kvíz megkezdése sikertelen!'),
       content: SingleChildScrollView(

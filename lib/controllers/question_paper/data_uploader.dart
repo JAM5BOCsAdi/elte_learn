@@ -19,18 +19,23 @@ class DataUploader extends GetxController {
   Future<void> uploadData() async {
     loadingStatus.value = LoadingStatus.loading; // value: 0
 
-    final manifestContent = await DefaultAssetBundle.of(Get.context!).loadString("AssetManifest.json");
+    final manifestContent = await DefaultAssetBundle.of(Get.context!)
+        .loadString("AssetManifest.json");
 
     final Map<String, dynamic> manifestMap = json.decode(manifestContent);
 
-    final papersInAssets = manifestMap.keys.where((path) => path.startsWith("assets/DB/papers") && path.contains(".json")).toList();
+    final papersInAssets = manifestMap.keys
+        .where((path) =>
+            path.startsWith("assets/DB/papers") && path.contains(".json"))
+        .toList();
     print(papersInAssets);
 
     List<QuestionPaperModel> questionPapers = [];
 
     for (var paper in papersInAssets) {
       String stringPaperContent = await rootBundle.loadString(paper);
-      questionPapers.add(QuestionPaperModel.fromJson(json.decode(stringPaperContent)));
+      questionPapers
+          .add(QuestionPaperModel.fromJson(json.decode(stringPaperContent)));
       // print(stringPaperContent);
     }
     // print("Items number ${questionPapers[0].description}");
@@ -48,7 +53,8 @@ class DataUploader extends GetxController {
       });
 
       for (var questions in paper.questions!) {
-        final questionPath = questionRef(paperId: paper.id, questionId: questions.id);
+        final questionPath =
+            questionRef(paperId: paper.id, questionId: questions.id);
         batch.set(questionPath, {
           "question": questions.question,
           "correct_answer": questions.correctAnswer,

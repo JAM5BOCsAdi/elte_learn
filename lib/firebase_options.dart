@@ -70,7 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '277402526591',
     projectId: 'eltelearn',
     storageBucket: 'eltelearn.appspot.com',
-    iosClientId: '277402526591-jfgnv128rlqv2bg02mtpb6qretnmm57r.apps.googleusercontent.com',
+    iosClientId:
+        '277402526591-jfgnv128rlqv2bg02mtpb6qretnmm57r.apps.googleusercontent.com',
     iosBundleId: 'com.adam.elteLearn',
   );
 }

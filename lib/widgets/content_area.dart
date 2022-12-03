@@ -5,7 +5,8 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 class ContentArea extends StatelessWidget {
   final bool addPadding;
   final Widget child;
-  const ContentArea({Key? key, required this.child, this.addPadding = true}) : super(key: key);
+  const ContentArea({Key? key, required this.child, this.addPadding = true})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,12 @@ class ContentArea extends StatelessWidget {
         decoration: BoxDecoration(
           color: customScaffoldColor(context),
         ),
-        padding: addPadding ? EdgeInsets.only(top: mobileScreenPadding, left: mobileScreenPadding, right: mobileScreenPadding) : EdgeInsets.zero,
+        padding: addPadding
+            ? EdgeInsets.only(
+                top: mobileScreenPadding,
+                left: mobileScreenPadding,
+                right: mobileScreenPadding)
+            : EdgeInsets.zero,
         child: child,
       ),
     );
