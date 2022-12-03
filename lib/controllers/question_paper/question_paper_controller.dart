@@ -27,14 +27,11 @@ class QuestionPaperController extends GetxController {
 
     try {
       QuerySnapshot<Map<String, dynamic>> data = await questionPaperRef.get();
-      final paperList = data.docs
-          .map((paper) => QuestionPaperModel.fromSnapshot(paper))
-          .toList();
+      final paperList = data.docs.map((paper) => QuestionPaperModel.fromSnapshot(paper)).toList();
       allPapers.assignAll(paperList);
 
       for (var paper in paperList) {
-        final imgUrl =
-            await Get.find<FirebaseStorageService>().getImage(paper.title);
+        final imgUrl = await Get.find<FirebaseStorageService>().getImage(paper.title);
         paper.imageUrl = imgUrl;
       }
       allPapers.assignAll(paperList);
@@ -43,8 +40,7 @@ class QuestionPaperController extends GetxController {
     }
   }
 
-  void navigateToQuestions(
-      {required QuestionPaperModel paper, bool tryAgain = false}) {
+  void navigateToQuestions({required QuestionPaperModel paper, bool tryAgain = false}) {
     AuthController _authController = Get.find();
 
     if (_authController.isLoggedIn()) {

@@ -49,20 +49,17 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                           AppCircleButton(
                             // clipBehavior: Clip.none,
                             onTap: controller.toggleDrawer,
-                            child: Icon(AppIcons.menuLeft,
-                                size: getHeight * 0.035),
+                            child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: getHeight * 0.015),
+                            padding: EdgeInsets.symmetric(vertical: getHeight * 0.015),
                             child: Row(
                               children: [
                                 const Icon(AppIcons.peace),
                                 Gap(getWidth * 0.025),
                                 AutoSizeText(
                                   "Hello xy",
-                                  style: detailText.copyWith(
-                                      color: kOnSurfaceTextColor),
+                                  style: detailText.copyWith(color: kOnSurfaceTextColor),
                                   minFontSize: 20.0,
                                 ),
                               ],
@@ -82,16 +79,12 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                           () => ListView.separated(
                             padding: UIParameters.mobileScreenPadding,
                             itemBuilder: (BuildContext context, int index) {
-                              return QuestionCard(
-                                  model: _questionPaperController
-                                      .allPapers[index]);
+                              return QuestionCard(model: _questionPaperController.allPapers[index]);
                             },
-                            separatorBuilder:
-                                (BuildContext context, int index) {
+                            separatorBuilder: (BuildContext context, int index) {
                               return Gap(getWidth * 0.05);
                             },
-                            itemCount:
-                                _questionPaperController.allPapers.length,
+                            itemCount: _questionPaperController.allPapers.length,
                           ),
                         ),
                       ),

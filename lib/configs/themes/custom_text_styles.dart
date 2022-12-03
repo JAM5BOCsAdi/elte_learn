@@ -5,9 +5,10 @@ import '../themes/ui_parameters.dart';
 
 TextStyle detailText = TextStyle(fontSize: getHeight * 0.015);
 TextStyle headerText = TextStyle(
-    fontSize: getHeight * 0.025,
-    fontWeight: FontWeight.w700,
-    color: kOnSurfaceTextColor);
+  fontSize: getHeight * 0.025,
+  fontWeight: FontWeight.w700,
+  color: kOnSurfaceTextColor,
+);
 
 TextStyle cardTitles(context) => TextStyle(
       color: UIParameters.isDarkMode()

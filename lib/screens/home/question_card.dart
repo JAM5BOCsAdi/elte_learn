@@ -48,8 +48,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                               alignment: Alignment.center,
                               child: const CircularProgressIndicator(),
                             ),
-                            errorWidget: (context, url, error) => Image.asset(
-                                "assets/images/app_splash_logo.png"),
+                            errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                           ),
                         ),
                         // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
@@ -66,8 +65,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                           style: cardTitles(context),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(
-                              top: getHeight * 0.01, bottom: getHeight * 0.01),
+                          padding: EdgeInsets.only(top: getHeight * 0.01, bottom: getHeight * 0.01),
                           child: AutoSizeText(model.description),
                         ),
                         Row(
@@ -75,16 +73,12 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             IconText(
                               icon: Icon(
                                 Icons.help_outline_sharp,
-                                color: Get.isDarkMode
-                                    ? kOnSurfaceTextColor
-                                    : Theme.of(context).primaryColor,
+                                color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                               ),
                               text: Text(
                                 "${model.questionsCount} kérdés",
                                 style: detailText.copyWith(
-                                  color: Get.isDarkMode
-                                      ? kOnSurfaceTextColor
-                                      : Theme.of(context).primaryColor,
+                                  color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                                 ),
                               ),
                             ),
@@ -92,16 +86,12 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             IconText(
                               icon: Icon(
                                 Icons.timer,
-                                color: Get.isDarkMode
-                                    ? kOnSurfaceTextColor
-                                    : Theme.of(context).primaryColor,
+                                color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                               ),
                               text: Text(
                                 "${model.timeInMinutes()} perc",
                                 style: detailText.copyWith(
-                                  color: Get.isDarkMode
-                                      ? kOnSurfaceTextColor
-                                      : Theme.of(context).primaryColor,
+                                  color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                                 ),
                               ),
                             )
@@ -117,8 +107,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                 right: -_padding,
                 child: GestureDetector(
                   child: Container(
-                    padding: EdgeInsets.symmetric(
-                        vertical: _padding, horizontal: _padding * 2),
+                    padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
                     decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.only(

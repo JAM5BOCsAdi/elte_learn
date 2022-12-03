@@ -5,8 +5,7 @@ import '../configs/themes/ui_parameters.dart';
 class IconText extends StatelessWidget {
   final Icon icon;
   final Text text;
-  const IconText({Key? key, required this.icon, required this.text})
-      : super(key: key);
+  const IconText({Key? key, required this.icon, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

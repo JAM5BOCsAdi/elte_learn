@@ -26,9 +26,7 @@ class QuestionPaperModel {
         imageUrl = json['image_url'] as String,
         description = json['description'] as String,
         timeSeconds = json['time_seconds'],
-        questions = (json['questions'] as List)
-            .map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>))
-            .toList(),
+        questions = (json['questions'] as List).map((dynamic e) => Questions.fromJson(e as Map<String, dynamic>)).toList(),
         questionsCount = 0;
 
   QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
@@ -60,17 +58,12 @@ class Questions {
   List<Answers> answers;
   String? correctAnswer;
 
-  Questions(
-      {required this.id,
-      required this.question,
-      required this.answers,
-      this.correctAnswer});
+  Questions({required this.id, required this.question, required this.answers, this.correctAnswer});
 
   Questions.fromJson(Map<String, dynamic> json)
       : id = json['id'],
         question = json['question'],
-        answers =
-            (json['answers'] as List).map((e) => Answers.fromJson(e)).toList(),
+        answers = (json['answers'] as List).map((e) => Answers.fromJson(e)).toList(),
         correctAnswer = json['correct_answer'];
 
   Map<String, dynamic> toJson() {

@@ -29,8 +29,7 @@ class IntroductionScreen extends StatelessWidget {
                   Gap(getHeight * 0.025),
                   const AutoSizeText(
                     "auctor ligula, tempor mollis tellus purus sed sem. Donec at orci ut risus tincidunt sollicitudin ac et nibh. Vivamus aliquam augue non enim posuere, nec molestie magna rhoncus. Sed dolor sapien, tristique in tortor at, rhoncus dignissim ante. Praesent blandit facilisis urna",
-                    style:
-                        TextStyle(fontSize: 18.0, color: kOnSurfaceTextColor),
+                    style: TextStyle(fontSize: 18.0, color: kOnSurfaceTextColor),
                     textAlign: TextAlign.center,
                   ),
                   Gap(getHeight * 0.025),

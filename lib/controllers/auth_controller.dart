@@ -59,8 +59,7 @@ class AuthController extends GetxController {
     return _user.value;
   }
 
-  void navigateToIntroduction() =>
-      Get.offAllNamed(RouteNames.introductionScreenRoute);
+  void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);
   void navigateToLogin() => Get.toNamed(RouteNames.loginScreenRoute);
 
   void showLoginAlertDialogue() {

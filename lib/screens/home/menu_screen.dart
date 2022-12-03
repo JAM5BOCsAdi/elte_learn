@@ -51,7 +51,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     icon: Icons.logout,
                     label: "Kijelentkezés",
                     onPressed: () => controller.signOut(),
-                  )
+                  ),
                 ],
               ),
             ],

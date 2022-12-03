@@ -13,8 +13,7 @@ class InitialBindings implements Bindings {
     Get.put(ThemeController()); // Get.put(ThemeController(), tag: "theme");
     //Get.put(PapersDataUploader());
     Get.put(AuthController(),
-        permanent:
-            true); // Get.put(AuthController(), tag: "auth", permanent: true);
+        permanent: true); // Get.put(AuthController(), tag: "auth", permanent: true);
     // Get.put(NotificationService());
     Get.lazyPut(() => FirebaseStorageService());
   }
