@@ -11,12 +11,8 @@ import '../screens/splash/splash_screen.dart';
 /// Different routes for the app screens
 class AppRoutes {
   static List<GetPage> routes() => [
-        GetPage(
-            name: RouteNames.splashScreenRoute,
-            page: () => const SplashScreen()),
-        GetPage(
-            name: RouteNames.introductionScreenRoute,
-            page: () => const IntroductionScreen()),
+        GetPage(name: RouteNames.splashScreenRoute, page: () => const SplashScreen()),
+        GetPage(name: RouteNames.introductionScreenRoute, page: () => const IntroductionScreen()),
         GetPage(
           name: RouteNames.homeScreenRoute,
           page: () => const HomeScreen(),
@@ -26,6 +22,8 @@ class AppRoutes {
           }),
         ),
         GetPage(
-            name: RouteNames.loginScreenRoute, page: () => const LoginScreen()),
+          name: RouteNames.loginScreenRoute,
+          page: () => const LoginScreen(),
+        ),
       ];
 }

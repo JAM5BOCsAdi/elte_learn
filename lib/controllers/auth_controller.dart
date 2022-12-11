@@ -40,6 +40,7 @@ class AuthController extends GetxController {
         );
         await _firebaseAuth.signInWithCredential(googleAuthAccountCredential);
         await saveUser(googleSignInAccount);
+        navigateToHomePage();
       }
     } on Exception catch (error) {
       AppLogger.e(error);
@@ -59,8 +60,19 @@ class AuthController extends GetxController {
     return _user.value;
   }
 
+  Future<void> signOut() async {
+    AppLogger.d("Kijelentkezés");
+    try {
+      await _firebaseAuth.signOut();
+      navigateToHomePage();
+    } on FirebaseAuthException catch (e) {
+      AppLogger.e(e);
+    }
+  }
+
   void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);
   void navigateToLogin() => Get.toNamed(RouteNames.loginScreenRoute);
+  void navigateToHomePage() => Get.offAllNamed(RouteNames.homeScreenRoute);
 
   void showLoginAlertDialogue() {
     Get.dialog(

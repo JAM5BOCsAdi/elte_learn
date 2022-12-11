@@ -46,28 +46,3 @@ class Button extends StatelessWidget {
     );
   }
 }
-// width: getWidth,
-// height: getHeight * 0.05,
-// decoration: BoxDecoration(
-// borderRadius: BorderRadius.circular(getWidth * 0.025),
-// color: color ?? Theme.of(context).cardColor,
-// ),
-// child: InkWell(
-// onTap: enabled == false ? null : onTap,
-// child: Row(
-// children: [
-// SizedBox(
-// width: 30.0,
-// ),
-// Padding(
-// padding: EdgeInsets.all(getWidth * 0.025),
-// child: child ??
-// AutoSizeText(
-// title,
-// textAlign: TextAlign.center,
-// style: const TextStyle(fontWeight: FontWeight.bold, color: kOnSurfaceTextColor),
-// ),
-// ),
-// ],
-// ),
-// ),
