@@ -6,6 +6,7 @@ import '../../screens/login/login_screen.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/introduction/introduction_screen.dart';
+import '../screens/question/questions_screen.dart';
 import '../screens/splash/splash_screen.dart';
 
 /// Different routes for the app screens
@@ -24,6 +25,10 @@ class AppRoutes {
         GetPage(
           name: RouteNames.loginScreenRoute,
           page: () => const LoginScreen(),
+        ),
+        GetPage(
+          name: RouteNames.questionsScreenRoute,
+          page: () => const QuestionsScreen(),
         ),
       ];
 }

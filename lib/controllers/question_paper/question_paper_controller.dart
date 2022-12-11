@@ -5,6 +5,7 @@ import 'package:elte_learn/utils/app_logger.dart';
 
 import '../../firebase_ref/references.dart';
 import '../../models/question_paper_model.dart';
+import '../../routes/route_names.dart';
 import '../../services/firebase_storage_service.dart';
 
 class QuestionPaperController extends GetxController {
@@ -48,7 +49,8 @@ class QuestionPaperController extends GetxController {
         Get.back();
         // Get.offNamed();
       } else {
-        // Get.toNamed();
+        // TODO: You need to comment this line out, if you want to go back to the "Before QuestionsScreen".
+        Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper);
         print("Logged in");
       }
     } else {
