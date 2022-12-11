@@ -19,7 +19,7 @@ class BackgroundDecorations extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
+        Positioned.fill(
           child: Container(
             decoration: BoxDecoration(
               color: showGradient ? null : Theme.of(context).primaryColor,
@@ -45,7 +45,15 @@ class BackgroundPainter extends CustomPainter {
     path.lineTo(0, getHeight * 0.4);
     path.close();
 
+    final path1 = Path();
+    path1.moveTo(getWidth, 0);
+    path1.lineTo(getWidth * 0.8, 0);
+    path1.lineTo(getWidth * 0.2, getHeight);
+    path1.lineTo(getWidth, getHeight);
+    path1.close();
+
     canvas.drawPath(path, paint);
+    canvas.drawPath(path1, paint);
   }
 
   @override

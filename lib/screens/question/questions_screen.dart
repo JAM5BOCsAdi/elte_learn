@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../../widgets/background_decoration.dart';
 
 class QuestionsScreen extends StatelessWidget {
@@ -10,15 +11,9 @@ class QuestionsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: BackgroundDecorations(
-          child: Center(
-            child: AutoSizeText(
-              "Hi",
-              style: TextStyle(color: Theme.of(context).primaryColor),
-            ),
-          ),
-          // showGradient: ,
+      body: BackgroundDecorations(
+        child: SafeArea(
+          child: Container(),
         ),
       ),
     );
