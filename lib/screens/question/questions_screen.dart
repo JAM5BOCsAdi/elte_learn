@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../widgets/background_decoration.dart';
@@ -10,7 +12,12 @@ class QuestionsScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: BackgroundDecorations(
-          child: AutoSizeText("Hi"),
+          child: Center(
+            child: AutoSizeText(
+              "Hi",
+              style: TextStyle(color: Theme.of(context).primaryColor),
+            ),
+          ),
           // showGradient: ,
         ),
       ),
