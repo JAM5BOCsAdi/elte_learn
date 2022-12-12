@@ -38,6 +38,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
             mainScreen: Container(
               decoration: BoxDecoration(gradient: mainGradient()),
               child: SafeArea(
+                bottom: false,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

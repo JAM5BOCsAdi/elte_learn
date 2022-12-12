@@ -1,3 +1,4 @@
+import 'package:elte_learn/configs/system_chrome/set_system_chrome.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../bindings/initial_bindings.dart';
@@ -10,12 +11,7 @@ Future<void> main() async {
   InitialBindings().dependencies();
   // WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      systemNavigationBarColor: Colors.transparent,
-    ),
-  );
+
   runApp(const MyApp());
 }
 

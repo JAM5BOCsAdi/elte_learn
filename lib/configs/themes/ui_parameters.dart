@@ -11,10 +11,8 @@ double get mobileScreenPadding => _mobileScreenPadding;
 double get cardBorderRadius => _cardBorderRadius;
 
 class UIParameters {
-  static BorderRadius get cardBorderRadius =>
-      BorderRadius.circular(_cardBorderRadius);
-  static EdgeInsets get mobileScreenPadding =>
-      EdgeInsets.all(_mobileScreenPadding);
+  static BorderRadius get cardBorderRadius => BorderRadius.circular(_cardBorderRadius);
+  static EdgeInsets get mobileScreenPadding => EdgeInsets.all(_mobileScreenPadding);
 
   static bool isDarkMode() => Get.isDarkMode ? true : false;
 }
