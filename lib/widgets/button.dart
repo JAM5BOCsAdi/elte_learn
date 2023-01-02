@@ -1,3 +1,4 @@
+import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
@@ -36,7 +37,7 @@ class Button extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

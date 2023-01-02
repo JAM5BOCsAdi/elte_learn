@@ -1,7 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../themes/ui_parameters.dart';
-
 class SetSystemChrome extends GetxController {
   @override
   void onInit() {
@@ -25,7 +23,7 @@ class SetSystemChrome extends GetxController {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.white, // Colors.black.withOpacity(0.002)
+        // systemNavigationBarColor: Colors.white, // Colors.black.withOpacity(0.002)
       ),
     );
   }
