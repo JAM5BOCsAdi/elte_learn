@@ -3,11 +3,11 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../configs/themes/app_colors.dart';
 import '../configs/themes/ui_parameters.dart';
 
-class BackgroundDecorations extends StatelessWidget {
+class BackgroundDecoration extends StatelessWidget {
   final Widget child;
   final bool showGradient;
 
-  const BackgroundDecorations({
+  const BackgroundDecoration({
     Key? key,
     required this.child,
     this.showGradient = false,

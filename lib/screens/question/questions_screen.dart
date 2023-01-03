@@ -4,6 +4,7 @@ import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/widgets/answer_card.dart';
 import 'package:elte_learn/widgets/content_area.dart';
+import 'package:elte_learn/widgets/countdown_timer.dart';
 import 'package:elte_learn/widgets/custom_app_bar.dart';
 
 import '../../controllers/questions_controller.dart';
@@ -21,20 +22,23 @@ class QuestionsScreen extends GetView<QuestionsController> {
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(
         leading: Container(
-          padding: EdgeInsets.symmetric(horizontal: getHeight * 0.025, vertical: getWidth * 0.015),
+          padding: EdgeInsets.symmetric(horizontal: getHeight * 0.015, vertical: getWidth * 0.015),
           decoration: ShapeDecoration(
             shape: StadiumBorder(
               side: BorderSide(color: kOnSurfaceTextColor, width: getWidth * 0.005),
             ),
           ),
-          child: AutoSizeText("Timer"),
+          child: Obx(() => CountdownTimer(
+                time: controller.time.value,
+                color: kOnSurfaceTextColor,
+              )),
         ),
         showActionIcon: true,
         titleWidget: Obx(
           () => AutoSizeText("K ${(controller.questionIndex.value + 1).toString().padLeft(2, "0")}", style: appBarText),
         ),
       ),
-      body: BackgroundDecorations(
+      body: BackgroundDecoration(
         child: SafeArea(
           child: Obx(
             () => Column(

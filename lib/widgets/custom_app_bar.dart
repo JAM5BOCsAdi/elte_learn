@@ -2,6 +2,7 @@ import 'package:elte_learn/configs/themes/app_icons.dart';
 import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/widgets/app_circle_button.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -48,8 +49,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Transform.translate(
                     offset: const Offset(-10, 0),
                     child: AppCircleButton(
-                      onTap: onMenuActionTap,
-                      child: Icon(AppIcons.menuLeft, size: getHeight * 0.025),
+                      onTap: onMenuActionTap ?? () => Get.toNamed(RouteNames.quizzesResultScreenRoute),
+                      child: Icon(AppIcons.menu, size: getHeight * 0.025),
                     ),
                   ),
               ],

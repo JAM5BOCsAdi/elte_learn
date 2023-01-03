@@ -13,3 +13,10 @@ TextStyle cardTitles(context) => TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: getHeight * 0.02,
     );
+
+TextStyle countDownTimerText() => TextStyle(
+      letterSpacing: 2,
+      color: UIParameters.isDarkMode()
+          ? Theme.of(Get.context!).textTheme.bodyText1!.color
+          : Theme.of(Get.context!).primaryColor,
+    );
