@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
@@ -67,7 +65,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                             ),
                           ),
                           AutoSizeText(
-                            "Mit szerenél tanulni ma?",
+                            "Mit szeretnél tanulni ma?",
                             style: headerText,
                           ),
                         ],

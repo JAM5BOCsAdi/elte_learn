@@ -1,5 +1,3 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../configs/themes/app_colors.dart';

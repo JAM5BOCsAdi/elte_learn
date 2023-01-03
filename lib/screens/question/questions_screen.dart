@@ -1,11 +1,10 @@
-import 'dart:ui';
-
 import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/widgets/answer_card.dart';
 import 'package:elte_learn/widgets/content_area.dart';
+import 'package:elte_learn/widgets/custom_app_bar.dart';
 
 import '../../controllers/questions_controller.dart';
 import '../../firebase_ref/loading_status.dart';
@@ -19,6 +18,22 @@ class QuestionsScreen extends GetView<QuestionsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: CustomAppBar(
+        leading: Container(
+          padding: EdgeInsets.symmetric(horizontal: getHeight * 0.025, vertical: getWidth * 0.015),
+          decoration: ShapeDecoration(
+            shape: StadiumBorder(
+              side: BorderSide(color: kOnSurfaceTextColor, width: getWidth * 0.005),
+            ),
+          ),
+          child: AutoSizeText("Timer"),
+        ),
+        showActionIcon: true,
+        titleWidget: Obx(
+          () => AutoSizeText("K ${(controller.questionIndex.value + 1).toString().padLeft(2, "0")}", style: appBarText),
+        ),
+      ),
       body: BackgroundDecorations(
         child: SafeArea(
           child: Obx(

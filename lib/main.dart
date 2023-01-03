@@ -1,4 +1,3 @@
-import 'package:elte_learn/configs/system_chrome/set_system_chrome.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../bindings/initial_bindings.dart';
