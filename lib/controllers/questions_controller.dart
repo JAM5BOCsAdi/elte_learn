@@ -76,6 +76,11 @@ class QuestionsController extends GetxController {
     update(["answers_list"]);
   }
 
+  String get completedQuiz {
+    final answered = allQuestions.where((element) => element.selectedAnswer != null).toList().length;
+    return "$answered / ${allQuestions.length} megválaszolt kérdés";
+  }
+
   void nextQuestion() {
     if (questionIndex.value >= allQuestions.length - 1) {
       return;

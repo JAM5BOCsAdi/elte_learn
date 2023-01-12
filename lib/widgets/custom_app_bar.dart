@@ -50,7 +50,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     offset: const Offset(-10, 0),
                     child: AppCircleButton(
                       onTap: onMenuActionTap ?? () => Get.toNamed(RouteNames.quizzesResultScreenRoute),
-                      child: Icon(AppIcons.menu, size: getHeight * 0.025),
+                      child: Icon(AppIcons.menu, size: getHeight * 0.035),
                     ),
                   ),
               ],

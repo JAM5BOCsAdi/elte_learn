@@ -9,6 +9,7 @@ import 'package:elte_learn/widgets/custom_app_bar.dart';
 
 import '../../controllers/questions_controller.dart';
 import '../../firebase_ref/loading_status.dart';
+import '../../routes/route_names.dart';
 import '../../widgets/background_decoration.dart';
 import '../../widgets/button.dart';
 import '../../widgets/question_place_holder.dart';
@@ -104,7 +105,9 @@ class QuestionsScreen extends GetView<QuestionsController> {
                             visible: controller.loadingStatus.value == LoadingStatus.completed,
                             child: Button(
                               onTap: () {
-                                controller.isLastQuestion ? Container() : controller.nextQuestion();
+                                controller.isLastQuestion
+                                    ? Get.toNamed(RouteNames.quizzesResultScreenRoute)
+                                    : controller.nextQuestion();
                               },
                               title: controller.isLastQuestion ? "Befejez" : "Tovább",
                             ),

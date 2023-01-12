@@ -1,6 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/widgets/background_decoration.dart';
 
+import '../../widgets/background_decoration.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../controllers/questions_controller.dart';
 
@@ -11,10 +11,11 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: "Kvíz Áttekintése",
+        title: controller.completedQuiz,
       ),
-      body: SafeArea(
-        child: BackgroundDecoration(
+      extendBodyBehindAppBar: true,
+      body: const BackgroundDecoration(
+        child: SafeArea(
           child: Center(
             child: AutoSizeText("Teszt"),
           ),
