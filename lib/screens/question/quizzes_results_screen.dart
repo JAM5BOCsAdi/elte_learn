@@ -1,4 +1,11 @@
+import 'package:elte_learn/configs/themes/custom_text_styles.dart';
+import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/widgets/answer_card.dart';
+import 'package:elte_learn/widgets/button.dart';
+import 'package:elte_learn/widgets/content_area.dart';
+import 'package:elte_learn/widgets/countdown_timer.dart';
+import 'package:elte_learn/widgets/quizzes_results_card.dart';
 
 import '../../widgets/background_decoration.dart';
 import '../../widgets/custom_app_bar.dart';
@@ -14,10 +21,70 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
         title: controller.completedQuiz,
       ),
       extendBodyBehindAppBar: true,
-      body: const BackgroundDecoration(
+      body: BackgroundDecoration(
         child: SafeArea(
-          child: Center(
-            child: AutoSizeText("Teszt"),
+          child: Column(
+            children: [
+              Expanded(
+                child: ContentArea(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          CountdownTimer(
+                            time: "",
+                            color: UIParameters.isDarkMode()
+                                ? Theme.of(context).textTheme.bodyText1!.color
+                                : Theme.of(context).primaryColor,
+                          ),
+                          Obx(
+                            () => AutoSizeText(
+                              "${controller.time} maradt",
+                              style: countDownTimerText(),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Gap(getHeight * 0.025),
+                      Expanded(
+                        child: GridView.builder(
+                          shrinkWrap: true,
+                          physics: BouncingScrollPhysics(),
+                          itemCount: controller.allQuestions.length,
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: getWidth ~/ 75,
+                            childAspectRatio: 1,
+                            crossAxisSpacing: getWidth * 0.025,
+                            mainAxisSpacing: 8,
+                          ),
+                          itemBuilder: (_, index) {
+                            AnswersStatus? _answersStatus;
+                            if (controller.allQuestions[index].selectedAnswer != null) {
+                              _answersStatus = AnswersStatus.ANSWERED;
+                            }
+                            return QuizzesResultsCard(
+                              index: index + 1,
+                              status: _answersStatus,
+                              onTap: () => controller.jumpToQuestion(index),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ColoredBox(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                child: Padding(
+                  padding: UIParameters.mobileScreenPadding,
+                  child: Button(
+                    onTap: () {},
+                    title: "Befejez",
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

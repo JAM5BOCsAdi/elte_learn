@@ -3,6 +3,13 @@ import 'package:elte_learn/configs/themes/ui_parameters.dart';
 
 import '../packages_barrel/packages_barrel.dart';
 
+enum AnswersStatus {
+  CORRECT,
+  WRONG,
+  ANSWERED,
+  NOT_ANSWERED,
+}
+
 class AnswerCard extends StatelessWidget {
   final String answer;
   final bool isSelected;

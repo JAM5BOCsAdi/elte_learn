@@ -81,6 +81,14 @@ class QuestionsController extends GetxController {
     return "$answered / ${allQuestions.length} megválaszolt kérdés";
   }
 
+  void jumpToQuestion(int index, {bool isGoBack = true}) {
+    questionIndex.value = index;
+    currentQuestion.value = allQuestions[index];
+    if (isGoBack) {
+      Get.back();
+    }
+  }
+
   void nextQuestion() {
     if (questionIndex.value >= allQuestions.length - 1) {
       return;
