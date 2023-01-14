@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import '../firebase_ref/loading_status.dart';
 import '../firebase_ref/references.dart';
 import '../models/question_paper_model.dart';
+import '../routes/route_names.dart';
 
 class QuestionsController extends GetxController {
   final loadingStatus = LoadingStatus.loading.obs;
@@ -107,10 +108,15 @@ class QuestionsController extends GetxController {
     currentQuestion.value = allQuestions[questionIndex.value];
   }
 
+  void complete() {
+    _timer!.cancel();
+    Get.toNamed(RouteNames.resultScreenRoute, arguments: questionPaperModel);
+  }
+
   _startTimer(int seconds) {
     const duration = Duration(seconds: 1);
     remainedSeconds = seconds;
-    Timer.periodic(duration, (Timer timer) {
+    _timer = Timer.periodic(duration, (Timer timer) {
       if (remainedSeconds == 0) {
         timer.cancel();
       } else {

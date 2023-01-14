@@ -79,7 +79,7 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
                 child: Padding(
                   padding: UIParameters.mobileScreenPadding,
                   child: Button(
-                    onTap: () {},
+                    onTap: () => controller.complete(),
                     title: "Befejez",
                   ),
                 ),
