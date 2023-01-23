@@ -56,10 +56,17 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                               children: [
                                 const Icon(AppIcons.peace),
                                 Gap(getWidth * 0.025),
-                                AutoSizeText(
-                                  "Hello xy",
-                                  style: detailText.copyWith(color: kOnSurfaceTextColor),
-                                  minFontSize: 20.0,
+                                Obx(
+                                  () => controller.user.value == null
+                                      ? const SizedBox()
+                                      : Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: AutoSizeText(
+                                            "Hello ${controller.user.value!.displayName ?? ""} ",
+                                            style: detailText.copyWith(color: kOnSurfaceTextColor),
+                                            minFontSize: 20.0,
+                                          ),
+                                        ),
                                 ),
                               ],
                             ),
