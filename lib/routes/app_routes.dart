@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/screens/question/answer_check_quizzes_result_screen.dart';
 
 import '../../screens/question/quizzes_results_screen.dart';
 import '../../controllers/zoom_drawer_controller.dart';
@@ -41,6 +42,11 @@ class AppRoutes {
         GetPage(
           name: RouteNames.resultScreenRoute,
           page: () => const ResultScreen(),
+          binding: BindingsBuilder.put(() => QuestionsController()),
+        ),
+        GetPage(
+          name: RouteNames.answerCheckQuizzesResultScreenRoute,
+          page: () => const AnswerCheckQuizzesResultScreen(),
           binding: BindingsBuilder.put(() => QuestionsController()),
         ),
       ];

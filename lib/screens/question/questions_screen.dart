@@ -54,14 +54,15 @@ class QuestionsScreen extends GetView<QuestionsController> {
                         child: Column(
                           children: [
                             AutoSizeText(controller.currentQuestion.value!.question, style: questionText),
+                            // Gap(getHeight * 0.025),
                             GetBuilder<QuestionsController>(
                               id: "answers_list",
-                              builder: (context) {
+                              builder: (_) {
                                 return ListView.separated(
                                   shrinkWrap: true,
                                   padding: EdgeInsets.only(top: getHeight * 0.025),
                                   physics: const NeverScrollableScrollPhysics(),
-                                  itemBuilder: (BuildContext context, int index) {
+                                  itemBuilder: (_, index) {
                                     final answer = controller.currentQuestion.value!.answers[index];
                                     return AnswerCard(
                                       answer: "${answer.identifier}. ${answer.answer}",
@@ -69,7 +70,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                                       isSelected: answer.identifier == controller.currentQuestion.value!.selectedAnswer,
                                     );
                                   },
-                                  separatorBuilder: (BuildContext context, int index) => Gap(getHeight * 0.015),
+                                  separatorBuilder: (_, index) => Gap(getHeight * 0.015),
                                   itemCount: controller.currentQuestion.value!.answers.length,
                                 );
                               },
@@ -80,7 +81,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                     ),
                   ),
                 ColoredBox(
-                  color: Theme.of(context).scaffoldBackgroundColor,
+                  color: UIParameters.isDarkMode() ? kCustomScaffoldColor1 : kCustomScaffoldColor2,
                   child: Padding(
                     padding: UIParameters.mobileScreenPadding,
                     child: Row(

@@ -117,7 +117,9 @@ class QuestionsController extends GetxController {
     const duration = Duration(seconds: 1);
     remainedSeconds = seconds;
     _timer = Timer.periodic(duration, (Timer timer) {
-      if (remainedSeconds == 0) {
+      if (remainedSeconds <= 0) {
+        // TODO: If time ends, show a pop up dialog, and say "Time has expired" => dialogue.dart
+        // maths.json is on 10 sec to see if it works or not when the time has expired
         timer.cancel();
       } else {
         int minutes = remainedSeconds ~/ 60;

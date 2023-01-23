@@ -3,7 +3,7 @@
     "title": "Matematika",
     "image_url": "",
     "description": "Általános matematika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
-    "time_seconds": 900,
+    "time_seconds": 10,
     "questions": [
         {
             "id": "ppr003q001",

@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/routes/route_names.dart';
 
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
@@ -21,7 +22,7 @@ class ResultScreen extends GetView<QuestionsController> {
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(
         leading: SizedBox(height: getHeight * 0.05),
-        title: controller.correctAnsweredQuestions, // TODO: controller.correctAnsweredQuestions
+        title: controller.correctAnsweredQuestions,
       ),
       body: BackgroundDecoration(
         child: SafeArea(
@@ -73,9 +74,12 @@ class ResultScreen extends GetView<QuestionsController> {
                               _status = AnswersStatus.WRONG;
                             }
                             return QuizzesResultsCard(
-                              index: index,
+                              index: index + 1,
                               status: _status,
-                              onTap: () => controller.jumpToQuestion(index, isGoBack: false),
+                              onTap: () {
+                                controller.jumpToQuestion(index, isGoBack: false);
+                                Get.toNamed(RouteNames.answerCheckQuizzesResultScreenRoute);
+                              },
                             );
                           },
                         ),

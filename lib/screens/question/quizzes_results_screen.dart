@@ -7,6 +7,7 @@ import 'package:elte_learn/widgets/content_area.dart';
 import 'package:elte_learn/widgets/countdown_timer.dart';
 import 'package:elte_learn/widgets/quizzes_results_card.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../../widgets/background_decoration.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../controllers/questions_controller.dart';
@@ -49,7 +50,7 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
                       Expanded(
                         child: GridView.builder(
                           shrinkWrap: true,
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           itemCount: controller.allQuestions.length,
                           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: getWidth ~/ 75,
@@ -75,7 +76,7 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
                 ),
               ),
               ColoredBox(
-                color: Theme.of(context).scaffoldBackgroundColor,
+                color: UIParameters.isDarkMode() ? kCustomScaffoldColor1 : kCustomScaffoldColor2,
                 child: Padding(
                   padding: UIParameters.mobileScreenPadding,
                   child: Button(
