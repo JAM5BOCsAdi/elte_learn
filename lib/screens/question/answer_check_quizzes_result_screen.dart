@@ -51,9 +51,6 @@ class AnswerCheckQuizzesResultScreen extends GetView<QuestionsController> {
                                   final correctAnswer = controller.currentQuestion.value!.correctAnswer;
                                   final String answerText = "${answer.identifier}. ${answer.answer}";
 
-                                  // TODO: Something wrong with the GREEN (correctAnswers) and RED (wrongAnswers) answers
-                                  // There are too much good answers (green)
-                                  // Video: from 4:58:00 to 5:12:00
                                   if (correctAnswer == selectedAnswer && answer.identifier == selectedAnswer) {
                                     // Correct answer selected
                                     return CorrectAnswer(answer: answerText);
@@ -63,7 +60,7 @@ class AnswerCheckQuizzesResultScreen extends GetView<QuestionsController> {
                                   } else if (correctAnswer != selectedAnswer && answer.identifier == selectedAnswer) {
                                     // Wrong answer selected
                                     return WrongAnswer(answer: answerText);
-                                  } else if (correctAnswer != answer.identifier) {
+                                  } else if (correctAnswer == answer.identifier) {
                                     // Correct answer selected
                                     return CorrectAnswer(answer: answerText);
                                   }
