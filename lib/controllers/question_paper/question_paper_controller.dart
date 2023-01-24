@@ -46,8 +46,8 @@ class QuestionPaperController extends GetxController {
 
     if (_authController.isLoggedIn()) {
       if (tryAgain) {
-        Get.back();
-        // Get.offNamed();
+        // Get.back();
+        Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper, preventDuplicates: false);
       } else {
         // TODO: You need to comment this line out, if you want to go back to the "Before QuestionsScreen".
         Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper);

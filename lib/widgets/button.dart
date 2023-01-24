@@ -8,6 +8,7 @@ class Button extends StatelessWidget {
   final bool enabled;
   final Widget? child;
   final Color? color;
+  final Color? textColor;
 
   const Button({
     Key? key,
@@ -16,6 +17,7 @@ class Button extends StatelessWidget {
     this.enabled = true,
     this.color,
     this.child,
+    this.textColor,
   }) : super(key: key);
 
   @override
@@ -37,7 +39,7 @@ class Button extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                    color: textColor ?? (Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor),
                     fontWeight: FontWeight.bold,
                   ),
                 ),

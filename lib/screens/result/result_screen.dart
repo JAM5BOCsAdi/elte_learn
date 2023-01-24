@@ -1,10 +1,12 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/routes/route_names.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/result_controller_extension.dart';
 import '../../widgets/answer_card.dart';
+import '../../widgets/button.dart';
 import '../../widgets/quizzes_results_card.dart';
 import '../../widgets/background_decoration.dart';
 import '../../widgets/content_area.dart';
@@ -82,6 +84,32 @@ class ResultScreen extends GetView<QuestionsController> {
                               },
                             );
                           },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ColoredBox(
+                color: UIParameters.isDarkMode() ? kCustomScaffoldColor1 : kCustomScaffoldColor2,
+                child: Padding(
+                  padding: EdgeInsets.all(mobileScreenPadding),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Button(
+                          onTap: () => controller.tryAgain(),
+                          color: UIParameters.isDarkMode() ? Theme.of(context).primaryColor : kOnSurfaceTextColor,
+                          title: "Újra",
+                        ),
+                      ),
+                      Gap(getWidth * 0.025),
+                      Expanded(
+                        child: Button(
+                          onTap: () => controller.saveTestResults(),
+                          color: Colors.green.withOpacity(0.75),
+                          textColor: Colors.white,
+                          title: "Kezdőlap",
                         ),
                       ),
                     ],

@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:elte_learn/controllers/auth_controller.dart';
+import 'package:elte_learn/controllers/question_paper/question_paper_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/widgets/dialogue.dart';
 import 'package:flutter/foundation.dart';
 
+import '../controllers/auth_controller.dart';
+import '../widgets/dialogue.dart';
 import '../firebase_ref/loading_status.dart';
 import '../firebase_ref/references.dart';
 import '../models/question_paper_model.dart';
@@ -76,7 +77,7 @@ class QuestionsController extends GetxController {
 
   void selectedAnswer(String? answer) {
     currentQuestion.value!.selectedAnswer = answer;
-    update(["answers_list"]);
+    update(["answers_list", "answer_check_review_list"]);
   }
 
   String get completedQuiz {
@@ -115,6 +116,15 @@ class QuestionsController extends GetxController {
     Get.toNamed(RouteNames.resultScreenRoute, arguments: questionPaperModel);
   }
 
+  void tryAgain() {
+    Get.find<QuestionPaperController>().navigateToQuestions(paper: questionPaperModel, tryAgain: true);
+  }
+
+  void navigateToHome() {
+    _timer!.cancel();
+    Get.offNamedUntil(RouteNames.homeScreenRoute, (route) => false);
+  }
+
   _startTimer(int seconds) {
     const duration = Duration(seconds: 1);
     remainedSeconds = seconds;
@@ -125,7 +135,7 @@ class QuestionsController extends GetxController {
       (Timer timer) {
         if (remainedSeconds <= 0) {
           // If the time is over, show the Dialog
-          Get.dialog(Dialogs.showTimeUpDialogue(onTapOK: () => _auth.navigateToHomePage()));
+          Get.dialog(Dialogs.showTimeUpDialogue(onTapOK: () => navigateToHome()));
 
           timer.cancel();
         } else {
