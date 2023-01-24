@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:elte_learn/controllers/auth_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/widgets/dialogue.dart';
 import 'package:flutter/foundation.dart';
 
 import '../firebase_ref/loading_status.dart';
@@ -116,19 +118,25 @@ class QuestionsController extends GetxController {
   _startTimer(int seconds) {
     const duration = Duration(seconds: 1);
     remainedSeconds = seconds;
-    _timer = Timer.periodic(duration, (Timer timer) {
-      if (remainedSeconds <= 0) {
-        // TODO: If time ends, show a pop up dialog, and say "Time has expired" => dialogue.dart
-        // maths.json is on 10 sec to see if it works or not when the time has expired
-        timer.cancel();
-      } else {
-        int minutes = remainedSeconds ~/ 60;
-        int seconds = remainedSeconds % 60;
+    AuthController _auth = Get.find<AuthController>();
 
-        time.value = "${minutes.toString().padLeft(2, "0")}:${seconds.toString().padLeft(2, "0")}";
+    _timer = Timer.periodic(
+      duration,
+      (Timer timer) {
+        if (remainedSeconds <= 0) {
+          // If the time is over, show the Dialog
+          Get.dialog(Dialogs.showTimeUpDialogue(onTapOK: () => _auth.navigateToHomePage()));
 
-        remainedSeconds--;
-      }
-    });
+          timer.cancel();
+        } else {
+          int minutes = remainedSeconds ~/ 60;
+          int seconds = remainedSeconds % 60;
+
+          time.value = "${minutes.toString().padLeft(2, "0")}:${seconds.toString().padLeft(2, "0")}";
+
+          remainedSeconds--;
+        }
+      },
+    );
   }
 }

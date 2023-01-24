@@ -29,4 +29,23 @@ class Dialogs {
       ],
     );
   }
+
+  static AlertDialog showTimeUpDialogue({required VoidCallback onTapOK}) {
+    return AlertDialog(
+      title: const Text('Lejárt az idő!'),
+      content: SingleChildScrollView(
+        child: ListBody(
+          children: const [
+            Text('Legközelebb jobban fog menni :)'),
+          ],
+        ),
+      ),
+      actions: [
+        TextButton(
+          onPressed: onTapOK,
+          child: const Text('OK'),
+        ),
+      ],
+    );
+  }
 }
