@@ -2,100 +2,100 @@
     "id": "ppr004",
     "title": "Biológia",
     "image_url": "",
-    "description": "Általános biológia kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
-    "time_seconds": 10,
+    "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
+    "time_seconds": 300,
     "questions": [
         {
             "id": "ppr004q001",
-            "question": "Melyik szervünk áll legnagyobb százalékban vízből?",
+            "question": "Ki volt a jogelőd intézmény névadója?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Bőr"
+                    "answer": "Szent Domonkos"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Vese"
+                    "answer": "Berzsenyi Dániel"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Máj"
+                    "answer": "Bolyai János"
                 }
             ],
             "correct_answer": "B"
         },
         {
             "id": "ppr004q002",
-            "question": "Melyik testrészünkben található az emberi test legkisebb méretű izma?",
+            "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Fül"
+                    "answer": "Tanítóképző"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Térd"
+                    "answer": "Tanárképző"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Ujj"
+                    "answer": "Pedagógusképző"
                 }
             ],
             "correct_answer": "A"
         },
         {
             "id": "ppr004q003",
-            "question": "Melyik az emberi test legerősebb izma?",
+            "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Nyelvizom"
+                    "answer": "Tanári"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Rekeszizom"
+                    "answer": "Tanító"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Záróizom"
+                    "answer": "Pedagógiai"
                 }
             ],
             "correct_answer": "A"
         },
         {
             "id": "ppr004q004",
-            "question": "Melyik szerv felelős a kalcitonin hormon termeléséért?",
+            "question": "Milyen duális képzés indul el 2015-ben?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Mellékvese"
+                    "answer": "Turizmus-vendéglátás"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Hasnyálmirigy"
+                    "answer": "Gazdálkodási és menedzsment"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Pajzsmirigy"
+                    "answer": "Gépészmérnök"
                 }
             ],
             "correct_answer": "C"
         },
         {
             "id": "ppr004q005",
-            "question": "Hány ízlelőbimbó található a nyelvben?",
+            "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "87"
+                    "answer": "2016"
                 },
                 {
                     "identifier": "B",
-                    "answer": "9000"
+                    "answer": "2017"
                 },
                 {
                     "identifier": "C",
-                    "answer": "1200"
+                    "answer": "2018"
                 }
             ],
             "correct_answer": "B"

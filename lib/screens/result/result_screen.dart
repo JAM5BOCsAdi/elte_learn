@@ -48,7 +48,7 @@ class ResultScreen extends GetView<QuestionsController> {
                       ),
                       Gap(getHeight * 0.025),
                       const AutoSizeText(
-                        "Valami ",
+                        "Koppints a helyes válaszokért",
                         textAlign: TextAlign.center,
                       ), // Tap below question numbers to view correct answers
                       Gap(getHeight * 0.025),
