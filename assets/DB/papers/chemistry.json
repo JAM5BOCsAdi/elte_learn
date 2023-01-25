@@ -2,12 +2,12 @@
   "id": "ppr002",
   "title": "Kémia",
   "image_url": "",
-  "description": "Általános kémia kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
-  "time_seconds": 900,
+  "description": "PTI képzésről szóló kvíz, mely a képzésről olvasottak alapján méri fel a tudásod",
+  "time_seconds": 300,
   "questions": [
     {
       "id": "ppr002q001",
-      "question": "Melyik ENDOTERM folyamat az alábbiak közül?",
+      "question": "Mennyi a az alapszakos (BsC) képzés?",
       "answers": [
         {
           "identifier": "A",
