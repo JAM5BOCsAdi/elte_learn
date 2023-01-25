@@ -85,6 +85,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                           () => ListView.separated(
                             padding: UIParameters.mobileScreenPadding,
                             itemBuilder: (BuildContext context, int index) {
+                              // TODO: Innen indul a probléma
                               return QuestionCard(model: _questionPaperController.allPapers[index]);
                             },
                             separatorBuilder: (BuildContext context, int index) {
