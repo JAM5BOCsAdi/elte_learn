@@ -96,14 +96,14 @@ class ResultScreen extends GetView<QuestionsController> {
                   padding: EdgeInsets.all(mobileScreenPadding),
                   child: Row(
                     children: [
-                      Expanded(
-                        child: Button(
-                          onTap: () => controller.tryAgain(),
-                          color: UIParameters.isDarkMode() ? Theme.of(context).primaryColor : kOnSurfaceTextColor,
-                          title: "Újra",
-                        ),
-                      ),
-                      Gap(getWidth * 0.025),
+                      // Expanded(
+                      //   child: Button(
+                      //     onTap: () => controller.tryAgain(),
+                      //     color: UIParameters.isDarkMode() ? Theme.of(context).primaryColor : kOnSurfaceTextColor,
+                      //     title: "Újra",
+                      //   ),
+                      // ),
+                      // Gap(getWidth * 0.025),
                       Expanded(
                         child: Button(
                           onTap: () => controller.saveTestResults(),

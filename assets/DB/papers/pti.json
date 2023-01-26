@@ -1,93 +1,93 @@
 {
   "id": "ppr002",
-  "title": "Kémia",
+  "title": "PTI",
   "image_url": "",
-  "description": "PTI képzésről szóló kvíz, mely a képzésről olvasottak alapján méri fel a tudásod",
+  "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
   "time_seconds": 300,
   "questions": [
     {
       "id": "ppr002q001",
-      "question": "Mennyi a az alapszakos (BsC) képzés?",
+      "question": "Mennyi az alapszakos képzés képzésiideje?",
       "answers": [
         {
           "identifier": "A",
-          "answer": "Kén oxigénnel való egyesülése"
+          "answer": "8 félév"
         },
         {
           "identifier": "B",
-          "answer": "Az ammónia elemekből történő szintézise"
+          "answer": "7 félév"
         },
         {
           "identifier": "C",
-          "answer": "A mészégetés folyamata"
+          "answer": "6 félév"
         }
       ],
       "correct_answer": "C"
     },
     {
       "id": "ppr002q002",
-      "question": "Az ARZÉN vegyjele 'Az'?",
+      "question": "Szombathelyen szoftvermérnök specializáció van?",
       "answers": [
         {
           "identifier": "A",
-          "answer": "Igaz"
+          "answer": "Nem"
         },
         {
           "identifier": "B",
-          "answer": "Hamis"
+          "answer": "Igen"
         }
       ],
       "correct_answer": "B"
     },
     {
       "id": "ppr002q003",
-      "question": "A fémek reakcióira vonatkozó állítások közül melyik IGAZ?",
+      "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
       "answers": [
         {
           "identifier": "A",
-          "answer": "Az ezüst tömény kénsavoldatban színtelen, szagtalan gáz fejlődése közben oldódik."
+          "answer": "2016 szeptembere óta"
         },
         {
           "identifier": "B",
-          "answer": "A magnézium forró vízben oldódik."
+          "answer": "2017 szeptembere óta"
         },
         {
           "identifier": "C",
-          "answer": "A vasat híg és tömény salétromsavoldat is oldja."
+          "answer": "2015 szeptembere óta"
         }
       ],
       "correct_answer": "B"
     },
     {
       "id": "ppr002q004",
-      "question": "Melyik az egyetlen, szobahőmérsékleten is folyékony halmazállapotú fém?",
+      "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
       "answers": [
         {
           "identifier": "A",
-          "answer": "Higany"
+          "answer": "Nincs"
         },
         {
           "identifier": "B",
-          "answer": "Gallium"
+          "answer": "Nem tudom"
         },
         {
           "identifier": "C",
-          "answer": "Cézium"
+          "answer": "Van"
         }
       ],
       "correct_answer": "A"
     },
     {
       "id": "ppr002q005",
-      "question": "Az emberi testben a vérben található a legtöbb vas?",
+      "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
       "answers": [
         {
           "identifier": "A",
-          "answer": "Igaz"
+          "answer": "Igen"
         },
         {
           "identifier": "B",
-          "answer": "Hamis"
+          "answer": "Nem"
         }
       ],
       "correct_answer": "A"

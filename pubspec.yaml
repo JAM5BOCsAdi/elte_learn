@@ -75,7 +75,7 @@ flutter:
   assets:
     # assets / DB / papers:
     - assets/DB/papers/history.json
-    - assets/DB/papers/chemistry.json
+    - assets/DB/papers/pti.json
     - assets/DB/papers/maths.json
     - assets/DB/papers/physics.json
     # assets / icons:
