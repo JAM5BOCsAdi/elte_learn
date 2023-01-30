@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/widgets/drawer_button.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -47,10 +48,14 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     onPressed: () => controller.contactUs(),
                   ),
                   const Spacer(flex: 1),
-                  DrawerButton(
-                    icon: Icons.logout,
-                    label: "Kijelentkezés",
-                    onPressed: () => controller.signOut(),
+                  Obx(
+                    () => DrawerButton(
+                      icon: controller.user.value == null ? Icons.login : Icons.logout,
+                      label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
+                      onPressed: controller.user.value == null
+                          ? () => Get.toNamed(RouteNames.loginScreenRoute)
+                          : () => controller.signOut(),
+                    ),
                   ),
                 ],
               ),

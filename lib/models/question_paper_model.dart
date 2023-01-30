@@ -40,16 +40,16 @@ class QuestionPaperModel {
 
   String timeInMinutes() => "${(timeSeconds / 60).ceil()}";
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['image_url'] = this.imageUrl;
-    data['description'] = this.description;
-    data['time_seconds'] = this.timeSeconds;
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['id'] = this.id;
+  //   data['title'] = this.title;
+  //   data['image_url'] = this.imageUrl;
+  //   data['description'] = this.description;
+  //   data['time_seconds'] = this.timeSeconds;
 
-    return data;
-  }
+  //   return data;
+  // }
 }
 
 class Questions {
@@ -73,16 +73,16 @@ class Questions {
         answers = (json['answers'] as List).map((e) => Answers.fromJson(e)).toList(),
         correctAnswer = json['correct_answer'];
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['question'] = this.question;
-    if (this.answers != null) {
-      data['answers'] = this.answers.map((v) => v.toJson()).toList();
-    }
-    data['correct_answer'] = this.correctAnswer;
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['id'] = this.id;
+  //   data['question'] = this.question;
+  //   if (this.answers != null) {
+  //     data['answers'] = this.answers.map((v) => v.toJson()).toList();
+  //   }
+  //   data['correct_answer'] = this.correctAnswer;
+  //   return data;
+  // }
 }
 
 class Answers {
@@ -99,10 +99,10 @@ class Answers {
       : identifier = snapshot['identifier'] as String?,
         answer = snapshot['answer'] as String?;
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['identifier'] = this.identifier;
-    data['answer'] = this.answer;
-    return data;
-  }
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = new Map<String, dynamic>();
+  //   data['identifier'] = this.identifier;
+  //   data['answer'] = this.answer;
+  //   return data;
+  // }
 }
