@@ -1,6 +1,8 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/widgets/drawer_button.dart';
+import 'package:elte_learn/widgets/drawer_tile.dart';
+import 'package:elte_learn/widgets/expandable_drawer_tile.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
@@ -42,11 +44,34 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           ),
                   ),
                   Gap(getHeight * 0.025),
-                  DrawerButton(
-                    icon: Icons.contact_support_outlined,
-                    label: "Contact Us",
-                    onPressed: () => controller.contactUs(),
+                  const ExpandableDrawerTile(
+                    title: "Kvízek",
+                    children: [
+                      DrawerTile(
+                        title: "ELTE",
+                        routeName: "/elte_quiz", // TODO: DO the Navigations
+                      ),
+                      DrawerTile(
+                        title: "ELTE SEK",
+                        routeName: "/elte_sek_quiz", // TODO: DO the Navigations
+                      ),
+                    ],
                   ),
+                  const ExpandableDrawerTile(
+                    title: "ELTE",
+                    children: [
+                      DrawerTile(
+                        title: "ELTE",
+                        routeName: "/elte_history", // TODO: DO the Navigations
+                      ),
+                      DrawerTile(
+                        title: "ELTE SEK",
+                        routeName: "/elte_sek_history", // TODO: DO the Navigations
+                      ),
+                    ],
+                  ),
+                  const DrawerTile(title: "Hírek", routeName: "/news"),
+                  const DrawerTile(title: "Kapcsolat", routeName: "/contact"),
                   const Spacer(flex: 1),
                   Obx(
                     () => DrawerButton(
