@@ -5,6 +5,42 @@ import 'package:flutter_zoom_drawer/config.dart';
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
   Rxn<User?> user = Rxn();
+  final List<Map<String, dynamic>> items = [
+    {
+      'title': 'Kvízek',
+      'children': [
+        {
+          'title': 'ELTE',
+          'routeName': '/elte_quiz',
+        },
+        {
+          'title': 'ELTE SEK',
+          'routeName': '/elte_sek_quiz',
+        },
+      ],
+    },
+    {
+      'title': 'ELTE',
+      'children': [
+        {
+          'title': 'ELTE',
+          'routeName': '/elte_history',
+        },
+        {
+          'title': 'ELTE SEK',
+          'routeName': '/elte_sek_history',
+        },
+      ],
+    },
+    {
+      'title': 'Hírek',
+      'routeName': '/news',
+    },
+    {
+      'title': 'Kapcsolat',
+      'routeName': '/contact',
+    },
+  ];
 
   @override
   void onReady() {

@@ -58,7 +58,13 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
                                 Gap(getWidth * 0.025),
                                 Obx(
                                   () => controller.user.value == null
-                                      ? const SizedBox()
+                                      ? SizedBox(
+                                          child: AutoSizeText(
+                                            "Hello újonc kérlek lépj be",
+                                            style: detailText.copyWith(color: kOnSurfaceTextColor),
+                                            minFontSize: 20.0,
+                                          ),
+                                        )
                                       : Align(
                                           alignment: Alignment.centerLeft,
                                           child: AutoSizeText(
