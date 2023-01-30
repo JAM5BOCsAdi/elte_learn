@@ -44,34 +44,41 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           ),
                   ),
                   Gap(getHeight * 0.025),
-                  const ExpandableDrawerTile(
-                    title: "Kvízek",
-                    children: [
-                      DrawerTile(
-                        title: "ELTE",
-                        routeName: "/elte_quiz", // TODO: DO the Navigations
-                      ),
-                      DrawerTile(
-                        title: "ELTE SEK",
-                        routeName: "/elte_sek_quiz", // TODO: DO the Navigations
-                      ),
-                    ],
+                  SingleChildScrollView(
+                    child: Column(
+                      children: const [
+                        ExpandableDrawerTile(
+                          title: "Kvízek",
+                          children: [
+                            DrawerTile(
+                              title: "ELTE",
+                              routeName: "/elte_quiz", // TODO: DO the Navigations
+                            ),
+                            DrawerTile(
+                              title: "ELTE SEK",
+                              routeName: "/elte_sek_quiz", // TODO: DO the Navigations
+                            ),
+                          ],
+                        ),
+                        ExpandableDrawerTile(
+                          title: "ELTE",
+                          children: [
+                            DrawerTile(
+                              title: "ELTE",
+                              routeName: "/elte_history", // TODO: DO the Navigations
+                            ),
+                            DrawerTile(
+                              title: "ELTE SEK",
+                              routeName: "/elte_sek_history", // TODO: DO the Navigations
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                  const ExpandableDrawerTile(
-                    title: "ELTE",
-                    children: [
-                      DrawerTile(
-                        title: "ELTE",
-                        routeName: "/elte_history", // TODO: DO the Navigations
-                      ),
-                      DrawerTile(
-                        title: "ELTE SEK",
-                        routeName: "/elte_sek_history", // TODO: DO the Navigations
-                      ),
-                    ],
-                  ),
-                  const DrawerTile(title: "Hírek", routeName: "/news"),
-                  const DrawerTile(title: "Kapcsolat", routeName: "/contact"),
+
+                  const DrawerTile(title: "Hírek", routeName: "/news"), // TODO: DO the Navigations
+                  const DrawerTile(title: "Kapcsolat", routeName: "/contact"), // TODO: DO the Navigations
                   const Spacer(flex: 1),
                   Obx(
                     () => DrawerButton(
