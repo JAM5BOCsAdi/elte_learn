@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import '../models/news_article.dart';
 
 class NewsService {
-  static const String apiKey = 'YOUR_API_KEY';
+  static const String apiKey = '5050a9d8b3a144c7852d3e0c01bff74c';
   static const String apiUrl = 'https://newsapi.org/v2/everything';
 
   // Method for fetching news articles from the API

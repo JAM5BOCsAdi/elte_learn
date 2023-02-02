@@ -1,3 +1,4 @@
+import 'package:elte_learn/controllers/news_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/screens/question/answer_check_quizzes_result_screen.dart';
 
@@ -53,7 +54,7 @@ class AppRoutes {
         GetPage(
           name: RouteNames.newsScreenRoute,
           page: () => NewsScreen(),
-          // binding: BindingsBuilder.put(() => QuestionsController()),
+          binding: BindingsBuilder.put(() => NewsController()),
         ),
       ];
 }
