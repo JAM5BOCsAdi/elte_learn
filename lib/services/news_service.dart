@@ -11,6 +11,9 @@ class NewsService {
     final response = await http.get(Uri.parse('$apiUrl?q=$query&apiKey=$apiKey'));
     if (response.statusCode == 200) {
       Map<String, dynamic> jsonResponse = jsonDecode(response.body);
+
+      print(jsonResponse);
+
       List<dynamic> body = jsonResponse['articles'];
       List<NewsArticleModel> articles = body.map((article) => NewsArticleModel.fromJson(article)).toList();
 
