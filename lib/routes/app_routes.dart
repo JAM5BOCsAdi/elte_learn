@@ -9,6 +9,7 @@ import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/introduction/introduction_screen.dart';
+import '../screens/news/news_screen.dart';
 import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -48,6 +49,11 @@ class AppRoutes {
           name: RouteNames.answerCheckQuizzesResultScreenRoute,
           page: () => const AnswerCheckQuizzesResultScreen(),
           binding: BindingsBuilder.put(() => QuestionsController()),
+        ),
+        GetPage(
+          name: RouteNames.newsScreenRoute,
+          page: () => NewsScreen(),
+          // binding: BindingsBuilder.put(() => QuestionsController()),
         ),
       ];
 }

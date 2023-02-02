@@ -52,42 +52,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           ),
                   ),
                   Gap(getHeight * 0.025),
-                  // TODO: If something is not OK with the MenuScreen, there is this:
-                  // SingleChildScrollView(
-                  //   child: Column(
-                  //     children: const [
-                  //       ExpandableDrawerTile(
-                  //         title: "Kvízek",
-                  //         children: [
-                  //           DrawerTile(
-                  //             title: "ELTE",
-                  //             routeName: "/elte_quiz",
-                  //           ),
-                  //           DrawerTile(
-                  //             title: "ELTE SEK",
-                  //             routeName: "/elte_sek_quiz",
-                  //           ),
-                  //         ],
-                  //       ),
-                  //       ExpandableDrawerTile(
-                  //         title: "ELTE",
-                  //         children: [
-                  //           DrawerTile(
-                  //             title: "ELTE",
-                  //             routeName: "/elte_history",
-                  //           ),
-                  //           DrawerTile(
-                  //             title: "ELTE SEK",
-                  //             routeName: "/elte_sek_history",
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
-
-                  // const DrawerTile(title: "Hírek", routeName: "/news"),
-                  // const DrawerTile(title: "Kapcsolat", routeName: "/contact"),
                   SingleChildScrollView(
                     child: Column(
                       children: controller.items.map((item) {
