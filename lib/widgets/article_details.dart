@@ -1,8 +1,8 @@
-import '../models/news_article.dart';
+import '../models/news_article_model.dart';
 import '../packages_barrel/packages_barrel.dart';
 
 class ArticleDetails extends StatelessWidget {
-  final NewsArticle article;
+  final NewsArticleModel article;
 
   const ArticleDetails({Key? key, required this.article}) : super(key: key);
 

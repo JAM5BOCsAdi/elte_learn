@@ -1,10 +1,10 @@
 import 'package:elte_learn/widgets/article_details.dart';
 
-import '../models/news_article.dart';
+import '../models/news_article_model.dart';
 import '../packages_barrel/packages_barrel.dart';
 
 class NewsCard extends StatelessWidget {
-  final NewsArticle article;
+  final NewsArticleModel article;
 
   const NewsCard({Key? key, required this.article}) : super(key: key);
 

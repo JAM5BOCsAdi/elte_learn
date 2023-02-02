@@ -1,9 +1,9 @@
-import '../models/news_article.dart';
+import '../models/news_article_model.dart';
 import '../packages_barrel/packages_barrel.dart';
 import '../services/news_service.dart';
 
 class NewsController extends GetxController {
-  final news = RxList<NewsArticle>();
+  final news = RxList<NewsArticleModel>();
   // Method for searching for news articles
   void search(String query) async {
     news.value = await NewsService.fetchNews(query: query);
