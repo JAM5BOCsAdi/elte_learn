@@ -14,6 +14,9 @@ class NewsService {
       List<dynamic> body = jsonResponse['articles'];
       List<NewsArticleModel> articles = body.map((article) => NewsArticleModel.fromJson(article)).toList();
 
+      print("NewsArticleModel Adatok:");
+      print(articles);
+
       return articles;
     } else {
       throw Exception('Nem sikerült betölteni');
