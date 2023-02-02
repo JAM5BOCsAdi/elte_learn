@@ -28,12 +28,12 @@ class NewsScreen extends GetView<NewsController> {
                 future: NewsService.fetchNews(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(),
                     );
                   }
                   if (!snapshot.hasData) {
-                    return Center(
+                    return const Center(
                       child: Text('Nincsenek hírek'),
                     );
                   }
