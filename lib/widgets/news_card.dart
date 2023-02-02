@@ -23,11 +23,11 @@ class NewsCard extends StatelessWidget {
             SizedBox(height: 8),
             Text(article.content),
             SizedBox(height: 8),
-            article.imageUrl != null ? Image.network(article.imageUrl) : SizedBox(),
+            article.imageUrl != null ? Image.network(article.imageUrl) : const SizedBox(),
             SizedBox(height: 8),
-            FlatButton(
-              onPressed: () => Get.to(ArticleDetails(article: article)),
-              child: Text('Read more'),
+            InkWell(
+              onTap: () => Get.to(ArticleDetails(article: article)),
+              child: Text('Olvass tovább'),
             ),
           ],
         ),

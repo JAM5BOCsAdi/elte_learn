@@ -53,7 +53,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.newsScreenRoute,
-          page: () => NewsScreen(),
+          page: () => const NewsScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
         ),
       ];

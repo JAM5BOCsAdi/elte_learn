@@ -1,21 +1,19 @@
 import '../../controllers/news_controller.dart';
 import '../../packages_barrel/packages_barrel.dart';
+import '../../services/news_service.dart';
 import '../../widgets/news_card.dart';
 import '../../widgets/search_bar.dart';
 
 class NewsScreen extends GetView<NewsController> {
   const NewsScreen({Key? key}) : super(key: key);
 
-  // final newsController = Get.put(NewsController());
-
   @override
   Widget build(BuildContext context) {
-    // Call the search method with the default query when the page loads
     controller.search('ELTE SEK');
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('ELTE SEK News'),
+        title: Text('ELTE SEK Hírek'),
         backgroundColor: Colors.blue,
       ),
       body: SafeArea(
@@ -26,20 +24,28 @@ class NewsScreen extends GetView<NewsController> {
               child: SearchBar(onSearch: (query) => controller.search(query)),
             ),
             Expanded(
-              child: GetBuilder<NewsController>(
-                init: NewsController(),
-                builder: (newsController) {
-                  if (newsController.news.isEmpty) {
+              child: FutureBuilder(
+                future: NewsService.fetchNews(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
                     return Center(
-                      child: Text('No news articles found'),
+                      child: CircularProgressIndicator(),
                     );
                   }
-                  return ListView.builder(
-                    itemCount: newsController.news.length,
-                    itemBuilder: (context, index) {
-                      return NewsCard(article: newsController.news[index]);
-                    },
-                  );
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: Text('Nincsenek hírek'),
+                    );
+                  }
+                  print("Adatok (NINCS):");
+                  print(snapshot.data);
+                  return Text("Something");
+                  // return ListView.builder(
+                  //   itemCount: snapshot.data.length,
+                  //   itemBuilder: (context, index) {
+                  //     return NewsCard(article: snapshot.data[index]);
+                  //   },
+                  // );
                 },
               ),
             ),

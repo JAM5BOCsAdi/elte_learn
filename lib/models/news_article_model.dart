@@ -1,9 +1,36 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+class Source {
+  String id;
+  String name;
+
+  Source({
+    required this.id,
+    required this.name,
+  });
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'id': id,
+      'name': name,
+    };
+  }
+
+  factory Source.fromMap(Map<String, dynamic> map) {
+    return Source(
+      id: map['id'] as String,
+      name: map['name'] as String,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Source.fromJson(String source) => Source.fromMap(json.decode(source) as Map<String, dynamic>);
+}
+
 class NewsArticleModel {
-  final String sourceId;
-  final String sourceName;
+  final Source source;
   final String author;
   final String title;
   final String description;
@@ -13,8 +40,7 @@ class NewsArticleModel {
   final String content;
 
   NewsArticleModel({
-    required this.sourceId,
-    required this.sourceName,
+    required this.source,
     required this.author,
     required this.title,
     required this.description,
@@ -26,8 +52,7 @@ class NewsArticleModel {
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
-      'sourceId': sourceId,
-      'sourceName': sourceName,
+      'source': source,
       'author': author,
       'title': title,
       'description': description,
@@ -40,8 +65,7 @@ class NewsArticleModel {
 
   factory NewsArticleModel.fromMap(Map<String, dynamic> map) {
     return NewsArticleModel(
-      sourceId: map['source']['id'] as String,
-      sourceName: map['source']['name'] as String,
+      source: map['source'],
       author: map['author'] as String,
       title: map['title'] as String,
       description: map['description'] as String,
@@ -56,3 +80,22 @@ class NewsArticleModel {
 
   factory NewsArticleModel.fromJson(String source) => NewsArticleModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }
+// {
+// "status": "ok",
+// "totalResults": 30,
+// -"articles": [
+// -{
+// -"source": {
+// "id": null,
+// "name": "Portfolio.hu"
+// },
+// "author": "Portfolio.hu",
+// "title": "A kormány fellazítja az akkumulátorgyárakra vonatkozó szabályozást - Portfolio",
+// "description": "Szerdán tette közzé a Külgazdasági és Külügyminisztérium azt a jogszabálytervezetet, amely kivonja a nemzetgazdasági célból kiemelt beruházásokat a területrendezési terv hatálya alól. A szabályozást a már folyamatban lévő ügyekre is alkalmazni kell, két eleme…",
+// "url": "https://www.portfolio.hu/gazdasag/20230202/a-kormany-fellazitja-az-akkumulatorgyarakra-vonatkozo-szabalyozast-594452",
+// "urlToImage": "https://pcdn.hu/articles/images-xl/r/a/k/raktarak-ipari-park-503156.jpg",
+// "publishedAt": "2023-02-02T10:02:00Z",
+// "content": "A kormány honlapján társadalmi egyeztetésre bocsátotta a Külgazdasági és Külügyminisztérium egyes beruházásokkal összefügg hatósági ügyek kormányrendeletek módosítását, amely az egyes nemzetgazdasági… [+2180 chars]"
+// },
+// ]
+// }

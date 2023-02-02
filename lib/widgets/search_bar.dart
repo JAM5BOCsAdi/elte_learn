@@ -12,7 +12,7 @@ class SearchBar extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           border: OutlineInputBorder(),
-          hintText: 'Search news articles',
+          hintText: 'Keresés',
         ),
         onSubmitted: onSearch,
       ),
