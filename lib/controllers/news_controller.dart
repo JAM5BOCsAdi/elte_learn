@@ -1,11 +1,23 @@
-import '../models/news_article_model.dart';
 import '../packages_barrel/packages_barrel.dart';
-import '../services/news_service.dart';
 
 class NewsController extends GetxController {
-  final news = RxList<NewsArticleModel>();
+  late NewsController controller;
 
-  void search(String query) async {
-    news.value = await NewsService.fetchNews(query: query);
+  Future<void> reload() async {
+    controller.reload();
+  }
+
+  Future<void> loadWebView() async {
+    return Future.delayed(const Duration(seconds: 2));
+  }
+
+  Future<void> urlLaunch(String url) async {
+    // final Uri _url = Uri.parse('https://www.facebook.com/elte.sek');
+
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
