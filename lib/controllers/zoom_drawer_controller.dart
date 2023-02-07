@@ -17,10 +17,14 @@ class MyZoomDrawerController extends GetxController {
           'title': 'ELTE SEK',
           'routeName': '/elte_sek_quiz',
         },
+        {
+          'title': 'ELTE SEK PTI',
+          'routeName': '/elte_sek_quiz',
+        },
       ],
     },
     {
-      'title': 'ELTE',
+      'title': 'Információk',
       'children': [
         {
           'title': 'ELTE',
@@ -29,6 +33,10 @@ class MyZoomDrawerController extends GetxController {
         {
           'title': 'ELTE SEK',
           'routeName': '/elte_sek_history',
+        },
+        {
+          'title': 'ELTE SEK PTI',
+          'routeName': '/elte_sek_pti_history',
         },
       ],
     },

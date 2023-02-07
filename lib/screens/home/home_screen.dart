@@ -27,7 +27,7 @@ class HomeScreen extends GetView<MyZoomDrawerController> {
             showShadow: false,
             angle: 0.0,
             style: DrawerStyle.defaultStyle,
-            slideWidth: getWidth * 0.65,
+            slideWidth: getWidth * 0.7,
             androidCloseOnBackTap: true,
             controller: _.zoomDrawerController,
             mainScreenTapClose: true,
