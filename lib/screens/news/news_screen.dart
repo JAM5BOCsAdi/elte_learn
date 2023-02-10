@@ -1,6 +1,7 @@
+import 'package:webview_flutter/webview_flutter.dart';
+
 import '../../controllers/news_controller.dart';
 import '../../packages_barrel/packages_barrel.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 class NewsScreen extends GetView<NewsController> {
   const NewsScreen({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class NewsScreen extends GetView<NewsController> {
           },
         ),
       )
-      ..loadRequest(Uri.parse("https://m.facebook.com/"));
+      ..loadRequest(Uri.parse("https://m.facebook.com/elte.sek"));
 
     return Scaffold(
       body: SafeArea(
