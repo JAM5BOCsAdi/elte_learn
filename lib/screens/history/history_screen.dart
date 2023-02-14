@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../../controllers/history_controller.dart';
-import '../../utils/const/elte_sek_history.dart';
+import '../../sources/histories/elte_sek_history.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -11,16 +14,58 @@ class HistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // color: Colors.red,
+        decoration: BoxDecoration(gradient: mainGradient()),
         child: SafeArea(
           child: ListView.builder(
             itemCount: elteSekHistory.length,
             itemBuilder: (_, index) {
-              return Container(
-                color: Colors.red,
+              final elteSeKHistory = elteSekHistory[index];
+
+              return TimelineTile(
+                alignment: TimelineAlign.manual,
+                lineXY: 0.1,
+                isFirst: index == 0,
+                isLast: index == elteSekHistory.length,
+                indicatorStyle: IndicatorStyle(
+                  width: 40,
+                  height: 40,
+                  indicator: _Indicator(yearNumber: elteSeKHistory.year),
+                  drawGap: true,
+                ),
+                beforeLineStyle: LineStyle(
+                  color: Colors.white.withOpacity(0.2),
+                ),
+                endChild: GestureDetector(),
               );
             },
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Indicator extends StatelessWidget {
+  final String yearNumber;
+  const _Indicator({Key? key, required this.yearNumber}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.fromBorderSide(
+          BorderSide(
+            color: Colors.white.withOpacity(0.2),
+            width: 4,
+          ),
+        ),
+      ),
+      child: Center(
+        child: AutoSizeText(
+          yearNumber,
+          style: const TextStyle(color: kOnSurfaceTextColor),
+          // style: const TextStyle(fontSize: 30),
         ),
       ),
     );
@@ -31,8 +76,7 @@ class HistoryScreen extends StatelessWidget {
 
 
 
-
-
+//
 //     GetBuilder<HistoryController>(
 //       builder: (_) {
 //         return ListView.builder(
