@@ -37,7 +37,20 @@ class HistoryScreen extends StatelessWidget {
                       beforeLineStyle: LineStyle(
                         color: Colors.white.withOpacity(0.2),
                       ),
-                      startChild: GestureDetector(),
+                      startChild: GestureDetector(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: getWidth * 0.08, right: getWidth * 0.025),
+                          child: const Text(
+                            "VASFASGSasgasggggggggggggasssssssssssssssssssssssssssffffffffffffggggggggggggggggfhhhhhhhhhhhhhfg",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(
+                              color: kOnSurfaceTextColor,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   if (index.isEven)
                     TimelineTile(
@@ -61,7 +74,10 @@ class HistoryScreen extends StatelessWidget {
                             "VASFASGSasgasggggggggggggasssssssssssssssssssssssssssffffffffffffggggggggggggggggfhhhhhhhhhhhhhfg",
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
-                            style: TextStyle(color: kOnSurfaceTextColor),
+                            style: TextStyle(
+                              color: kOnSurfaceTextColor,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
                       ),
