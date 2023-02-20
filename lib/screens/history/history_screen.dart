@@ -1,11 +1,9 @@
-import 'dart:developer';
-
+import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:timeline_tile/timeline_tile.dart';
 
 import '../../configs/themes/app_colors.dart';
-import '../../controllers/history_controller.dart';
 import '../../sources/histories/elte_sek_history.dart';
-import 'package:timeline_tile/timeline_tile.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({Key? key}) : super(key: key);
@@ -15,11 +13,12 @@ class HistoryScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(gradient: mainGradient()),
+        padding: EdgeInsets.all(mobileScreenPadding * 0.25),
         child: SafeArea(
           child: ListView.builder(
             itemCount: elteSekHistory.length,
             itemBuilder: (_, index) {
-              final elteSeKHistory = elteSekHistory[index];
+              final sekHistory = elteSekHistory[index];
 
               return Column(
                 children: [
@@ -32,13 +31,13 @@ class HistoryScreen extends StatelessWidget {
                       indicatorStyle: IndicatorStyle(
                         width: 40,
                         height: 40,
-                        indicator: _Indicator(yearNumber: elteSeKHistory.year),
+                        indicator: _Indicator(yearNumber: sekHistory.year),
                         drawGap: true,
                       ),
                       beforeLineStyle: LineStyle(
                         color: Colors.white.withOpacity(0.2),
                       ),
-                      endChild: GestureDetector(),
+                      startChild: GestureDetector(),
                     ),
                   if (index.isEven)
                     TimelineTile(
@@ -49,13 +48,23 @@ class HistoryScreen extends StatelessWidget {
                       indicatorStyle: IndicatorStyle(
                         width: 40,
                         height: 40,
-                        indicator: _Indicator(yearNumber: elteSeKHistory.year),
+                        indicator: _Indicator(yearNumber: sekHistory.year),
                         drawGap: true,
                       ),
                       beforeLineStyle: LineStyle(
                         color: Colors.white.withOpacity(0.2),
                       ),
-                      endChild: GestureDetector(),
+                      endChild: GestureDetector(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: getWidth * 0.025, right: getWidth * 0.08),
+                          child: const Text(
+                            "VASFASGSasgasggggggggggggasssssssssssssssssssssssssssffffffffffffggggggggggggggggfhhhhhhhhhhhhhfg",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(color: kOnSurfaceTextColor),
+                          ),
+                        ),
+                      ),
                     ),
                   const TimelineDivider(
                     begin: 0.1,
@@ -84,7 +93,7 @@ class _Indicator extends StatelessWidget {
         border: Border.fromBorderSide(
           BorderSide(
             color: Colors.white.withOpacity(0.2),
-            width: 4,
+            width: 2,
           ),
         ),
       ),
@@ -98,10 +107,6 @@ class _Indicator extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 //
 //     GetBuilder<HistoryController>(
