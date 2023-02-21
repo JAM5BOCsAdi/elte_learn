@@ -10,7 +10,25 @@ class HistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> appBarTitles = [
+      {
+        'elte_title': 'ELTE történelme',
+        'elte_sek_title': 'ELTE SEK történelme',
+        'elte_sek_pti_title': 'ELTE SEK PTI történelme',
+      },
+    ];
+
     return Scaffold(
+      appBar: AppBar(
+        title: AutoSizeText("null"),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, size: getHeight * 0.025),
+          onPressed: () => Get.back(),
+        ),
+      ),
+      extendBodyBehindAppBar: true,
       body: Container(
         decoration: BoxDecoration(gradient: mainGradient()),
         padding: EdgeInsets.all(mobileScreenPadding * 0.25),
@@ -36,15 +54,21 @@ class HistoryScreen extends StatelessWidget {
                       ),
                       beforeLineStyle: LineStyle(
                         color: Colors.white.withOpacity(0.2),
+                        thickness: 3,
                       ),
                       startChild: GestureDetector(
                         child: Padding(
-                          padding: EdgeInsets.only(left: getWidth * 0.08, right: getWidth * 0.025),
-                          child: const Text(
-                            "VASFASGSasgasggggggggggggasssssssssssssssssssssssssssffffffffffffggggggggggggggggfhhhhhhhhhhhhhfg",
+                          padding: EdgeInsets.only(
+                            left: getWidth * 0.1,
+                            right: getWidth * 0.025,
+                            top: getHeight * 0.025,
+                            bottom: getHeight * 0.025,
+                          ),
+                          child: Text(
+                            sekHistory.description,
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                            style: TextStyle(
+                            maxLines: 3,
+                            style: const TextStyle(
                               color: kOnSurfaceTextColor,
                               fontSize: 18,
                             ),
@@ -66,15 +90,21 @@ class HistoryScreen extends StatelessWidget {
                       ),
                       beforeLineStyle: LineStyle(
                         color: Colors.white.withOpacity(0.2),
+                        thickness: 3,
                       ),
                       endChild: GestureDetector(
                         child: Padding(
-                          padding: EdgeInsets.only(left: getWidth * 0.025, right: getWidth * 0.08),
-                          child: const Text(
-                            "VASFASGSasgasggggggggggggasssssssssssssssssssssssssssffffffffffffggggggggggggggggfhhhhhhhhhhhhhfg",
+                          padding: EdgeInsets.only(
+                            left: getWidth * 0.025,
+                            right: getWidth * 0.1,
+                            top: getHeight * 0.025,
+                            bottom: getHeight * 0.025,
+                          ),
+                          child: Text(
+                            sekHistory.description,
                             overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                            style: TextStyle(
+                            maxLines: 3,
+                            style: const TextStyle(
                               color: kOnSurfaceTextColor,
                               fontSize: 18,
                             ),
@@ -82,11 +112,13 @@ class HistoryScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  const TimelineDivider(
-                    begin: 0.1,
-                    end: 0.9,
-                    color: Colors.blue,
-                  ),
+                  if (index < elteSekHistory.length - 1)
+                    const TimelineDivider(
+                      begin: 0.1,
+                      end: 0.9,
+                      color: Colors.blue,
+                      thickness: 3,
+                    ),
                 ],
               );
             },
