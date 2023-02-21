@@ -4,6 +4,7 @@ import 'package:timeline_tile/timeline_tile.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../sources/histories/elte_sek_history.dart';
+import '../../widgets/custom_app_bar.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({Key? key}) : super(key: key);
@@ -19,15 +20,7 @@ class HistoryScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: AutoSizeText("null"),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, size: getHeight * 0.025),
-          onPressed: () => Get.back(),
-        ),
-      ),
+      appBar: CustomAppBar(title: "null", appBarHeight: getHeight * 0.01),
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: BoxDecoration(gradient: mainGradient()),

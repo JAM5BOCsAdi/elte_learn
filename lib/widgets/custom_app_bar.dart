@@ -11,6 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? leading;
   final bool showActionIcon;
   final VoidCallback? onMenuActionTap;
+  final double? appBarHeight;
 
   const CustomAppBar({
     Key? key,
@@ -19,13 +20,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.leading,
     this.showActionIcon = false,
     this.onMenuActionTap,
+    this.appBarHeight,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: mobileScreenPadding, vertical: mobileScreenPadding),
+        padding: EdgeInsets.symmetric(horizontal: mobileScreenPadding, vertical: appBarHeight ?? mobileScreenPadding),
         child: Stack(
           children: [
             Positioned.fill(
@@ -44,7 +46,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                leading ?? Transform.translate(offset: const Offset(-14, 0), child: const BackButton()),
+                leading ??
+                    Transform.translate(
+                      offset: const Offset(-14, 0),
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back, size: getHeight * 0.025),
+                        onPressed: () => Get.back(),
+                      ),
+                    ),
                 if (showActionIcon)
                   Transform.translate(
                     offset: const Offset(-10, 0),
