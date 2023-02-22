@@ -12,13 +12,6 @@ class HistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // List<Map<String, String>> appBarTitles = [
-    //   {
-    //     'elte_title': 'ELTE történelme',
-    //     'elte_sek_title': 'ELTE SEK történelme',
-    //     'elte_sek_pti_title': 'ELTE SEK PTI történelme',
-    //   },
-    // ];
     Event sekHistory = elteSekHistory[0];
     return Scaffold(
       appBar: CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.02),
@@ -34,86 +27,8 @@ class HistoryScreen extends StatelessWidget {
 
               return Column(
                 children: [
-                  // if (index == 0) CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.01),
-                  if (index.isOdd)
-                    TimelineTile(
-                      alignment: TimelineAlign.manual,
-                      lineXY: 0.9,
-                      isFirst: index == 0,
-                      isLast: index == elteSekHistory.length - 1,
-                      indicatorStyle: IndicatorStyle(
-                        width: 40,
-                        height: 40,
-                        indicator: _Indicator(yearNumber: sekHistory.year),
-                        drawGap: true,
-                      ),
-                      beforeLineStyle: LineStyle(
-                        color: Colors.white.withOpacity(0.2),
-                        thickness: 3,
-                      ),
-                      startChild: GestureDetector(
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: getWidth * 0.1,
-                            right: getWidth * 0.025,
-                            top: getHeight * 0.025,
-                            bottom: getHeight * 0.025,
-                          ),
-                          child: Text(
-                            sekHistory.description,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
-                            style: const TextStyle(
-                              color: kOnSurfaceTextColor,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  if (index.isEven)
-                    TimelineTile(
-                      alignment: TimelineAlign.manual,
-                      lineXY: 0.1,
-                      isFirst: index == 0,
-                      isLast: index == elteSekHistory.length - 1,
-                      indicatorStyle: IndicatorStyle(
-                        width: 40,
-                        height: 40,
-                        indicator: _Indicator(yearNumber: sekHistory.year),
-                        drawGap: true,
-                      ),
-                      beforeLineStyle: LineStyle(
-                        color: Colors.white.withOpacity(0.2),
-                        thickness: 3,
-                      ),
-                      endChild: GestureDetector(
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                            left: getWidth * 0.025,
-                            right: getWidth * 0.1,
-                            top: getHeight * 0.025,
-                            bottom: getHeight * 0.025,
-                          ),
-                          child: Text(
-                            sekHistory.description,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
-                            style: const TextStyle(
-                              color: kOnSurfaceTextColor,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  if (index < elteSekHistory.length - 1)
-                    const TimelineDivider(
-                      begin: 0.1,
-                      end: 0.9,
-                      color: Colors.blue,
-                      thickness: 3,
-                    ),
+                  _timelineTile(sekHistory: sekHistory, index: index),
+                  _timelineDivider(index: index),
                 ],
               );
             },
@@ -124,94 +39,119 @@ class HistoryScreen extends StatelessWidget {
   }
 }
 
-class _Indicator extends StatelessWidget {
-  final String yearNumber;
-  const _Indicator({Key? key, required this.yearNumber}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.fromBorderSide(
-          BorderSide(
-            color: Colors.white.withOpacity(0.2),
-            width: 2,
-          ),
-        ),
+TimelineTile _timelineTile({
+  required Event sekHistory,
+  required int index,
+}) {
+  if (index.isEven) {
+    return TimelineTile(
+      alignment: TimelineAlign.manual,
+      lineXY: 0.1,
+      isFirst: index == 0,
+      isLast: index == elteSekHistory.length - 1,
+      indicatorStyle: IndicatorStyle(
+        width: 40,
+        height: 40,
+        indicator: _indicator(yearNumber: sekHistory.year),
+        drawGap: true,
       ),
-      child: Center(
-        child: AutoSizeText(
-          yearNumber,
-          style: const TextStyle(color: kOnSurfaceTextColor),
-          // style: const TextStyle(fontSize: 30),
-        ),
+      beforeLineStyle: LineStyle(
+        color: Colors.white.withOpacity(0.2),
+        thickness: 3,
+      ),
+      endChild: _gestureDetector(
+        sekHistory: sekHistory,
+        paddingLeft: 0.025,
+        paddingRight: 0.1,
+      ),
+    );
+  } else {
+    return TimelineTile(
+      alignment: TimelineAlign.manual,
+      lineXY: 0.9,
+      isFirst: index == 0,
+      isLast: index == elteSekHistory.length - 1,
+      indicatorStyle: IndicatorStyle(
+        width: 40,
+        height: 40,
+        indicator: _indicator(yearNumber: sekHistory.year),
+        drawGap: true,
+      ),
+      beforeLineStyle: LineStyle(
+        color: Colors.white.withOpacity(0.2),
+        thickness: 3,
+      ),
+      startChild: _gestureDetector(
+        sekHistory: sekHistory,
+        paddingLeft: 0.1,
+        paddingRight: 0.025,
       ),
     );
   }
 }
 
-//
-//     GetBuilder<HistoryController>(
-//       builder: (_) {
-//         return ListView.builder(
-//           itemCount: elteSekHistory.length,
-//           itemBuilder: (_, index) {
-//             Map<String, String> event = elteSekHistory[index];
-//             bool isFirst = index % 2 == 0;
+Container _indicator({required String yearNumber}) {
+  return Container(
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      border: Border.fromBorderSide(
+        BorderSide(
+          color: Colors.white.withOpacity(0.2),
+          width: 2,
+        ),
+      ),
+    ),
+    child: Center(
+      child: AutoSizeText(
+        yearNumber,
+        style: const TextStyle(color: kOnSurfaceTextColor),
+        // style: const TextStyle(fontSize: 30),
+      ),
+    ),
+  );
+}
 
-//             return TimelineTile(
-//               isFirst: isFirst,
-//               indicatorStyle: IndicatorStyle(
-//                 width: 50,
-//                 height: 50,
-//                 indicator: _buildYear(event['year']!),
-//                 drawGap: true,
-//               ),
-//               beforeLineStyle: const LineStyle(
-//                 color: Colors.grey,
-//                 thickness: 1.5,
-//               ),
-//               afterLineStyle: const LineStyle(
-//                 color: Colors.grey,
-//                 thickness: 1.5,
-//               ),
-//               alignment: isFirst ? TimelineAlign.start : TimelineAlign.end,
-//               endChild: _buildDescription(event['description']!),
-//             );
-//           },
-//         );
-//       },
-//     );
-//   }
+GestureDetector _gestureDetector({
+  required Event sekHistory,
+  required double paddingLeft,
+  required double paddingRight,
+}) {
+  return GestureDetector(
+    onTap: () => print("Tapped: ${sekHistory.year}"),
+    child: Padding(
+      padding: EdgeInsets.only(
+        left: getWidth * paddingLeft,
+        right: getWidth * paddingRight,
+        top: getHeight * 0.025,
+        bottom: getHeight * 0.025,
+      ),
+      child: Text(
+        sekHistory.description,
+        overflow: TextOverflow.ellipsis,
+        maxLines: 3,
+        style: const TextStyle(
+          color: kOnSurfaceTextColor,
+          fontSize: 18,
+        ),
+      ),
+    ),
+  );
+}
 
-//   Container _buildYear(String year) {
-//     return Container(
-//       decoration: BoxDecoration(
-//         color: Colors.blue,
-//         borderRadius: BorderRadius.circular(50),
-//       ),
-//       child: Center(
-//         child: Text(
-//           year,
-//           style: const TextStyle(
-//             color: Colors.white,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-
-//   Padding _buildDescription(String description) {
-//     return Padding(
-//       padding: const EdgeInsets.all(16.0),
-//       child: Text(
-//         description,
-//         style: const TextStyle(
-//           fontSize: 18,
-//         ),
-//       ),
-//     );
-//   }
-// }
+TimelineDivider _timelineDivider({required int index}) {
+  if (index < elteSekHistory.length - 1) {
+    return const TimelineDivider(
+      begin: 0.1,
+      end: 0.9,
+      color: Colors.blue,
+      thickness: 3,
+    );
+  } else {
+    return const TimelineDivider(
+      begin: 0.1,
+      end: 0.9,
+      color: Colors.transparent,
+      thickness: 3,
+    );
+  }
+}
