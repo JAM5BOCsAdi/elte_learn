@@ -20,7 +20,7 @@ class HistoryScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: CustomAppBar(title: "null", appBarHeight: getHeight * 0.01),
+      // appBar: CustomAppBar(title: "null", appBarHeight: getHeight * 0.01),
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: BoxDecoration(gradient: mainGradient()),
@@ -33,6 +33,7 @@ class HistoryScreen extends StatelessWidget {
 
               return Column(
                 children: [
+                  if (index == 0) CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.01),
                   if (index.isOdd)
                     TimelineTile(
                       alignment: TimelineAlign.manual,

@@ -2,6 +2,7 @@ import '../../models/event_model.dart';
 
 final List<Event> elteSekHistory = [
   const Event(
+    title: "ELTE SEK Történelme",
     year: '1911',
     description: '''
           A közoktatási kormányzat kifogásolja a Csurgói Tanítóképző működési körülményeit, s akkor vetődik fel az intézmény Nagykanizsára való telepítésének gondolata. A Vasvármegye cikkírója (1911/83. sz.) felhívja a figyelmet a szándékra, és felteszi a kérdést, hogy miért ne kerülhetne a Csurgói Tanítóképző Szombathelyre?
