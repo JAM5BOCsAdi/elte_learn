@@ -3,6 +3,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 import '../../configs/themes/app_colors.dart';
+import '../../models/event_model.dart';
 import '../../sources/histories/elte_sek_history.dart';
 import '../../widgets/custom_app_bar.dart';
 
@@ -11,16 +12,16 @@ class HistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Map<String, String>> appBarTitles = [
-      {
-        'elte_title': 'ELTE történelme',
-        'elte_sek_title': 'ELTE SEK történelme',
-        'elte_sek_pti_title': 'ELTE SEK PTI történelme',
-      },
-    ];
-
+    // List<Map<String, String>> appBarTitles = [
+    //   {
+    //     'elte_title': 'ELTE történelme',
+    //     'elte_sek_title': 'ELTE SEK történelme',
+    //     'elte_sek_pti_title': 'ELTE SEK PTI történelme',
+    //   },
+    // ];
+    Event sekHistory = elteSekHistory[0];
     return Scaffold(
-      // appBar: CustomAppBar(title: "null", appBarHeight: getHeight * 0.01),
+      appBar: CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.02),
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: BoxDecoration(gradient: mainGradient()),
@@ -29,11 +30,11 @@ class HistoryScreen extends StatelessWidget {
           child: ListView.builder(
             itemCount: elteSekHistory.length,
             itemBuilder: (_, index) {
-              final sekHistory = elteSekHistory[index];
+              sekHistory = elteSekHistory[index];
 
               return Column(
                 children: [
-                  if (index == 0) CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.01),
+                  // if (index == 0) CustomAppBar(title: sekHistory.title ?? "Nincs Címe", appBarHeight: getHeight * 0.01),
                   if (index.isOdd)
                     TimelineTile(
                       alignment: TimelineAlign.manual,
