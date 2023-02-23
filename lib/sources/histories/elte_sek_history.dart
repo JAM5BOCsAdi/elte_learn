@@ -120,8 +120,7 @@ final List<Event> elteSekHistory = [
   const Event(
     year: '2000',
     description:
-        '''Január 1-jétől az Országgyűlés döntése alapján az intézmény regionális szerepű főiskolai centrum, s neve Berzsenyi Dániel Főiskola.
-              Az elnevezés megváltoztatása a főiskola arculatváltozását is jelzi, hiszen a felvehető szakok köre nem-tanári szakokkal bővül, így közgazdasági szakkal is. Megkezdődik a “D” épület rekonstrukciója és bővítése, hogy helyet adjon az Európa Tanulmányok Központnak, s zajlik a Bolyai János Gyakorló Általános Iskola és Gimnázium bővítése is.''',
+        '''Január 1-jétől az Országgyűlés döntése alapján az intézmény regionális szerepű főiskolai centrum, s neve Berzsenyi Dániel Főiskola. Az elnevezés megváltoztatása a főiskola arculatváltozását is jelzi, hiszen a felvehető szakok köre nem-tanári szakokkal bővül, így közgazdasági szakkal is. Megkezdődik a “D” épület rekonstrukciója és bővítése, hogy helyet adjon az Európa Tanulmányok Központnak, s zajlik a Bolyai János Gyakorló Általános Iskola és Gimnázium bővítése is.''',
   ),
   const Event(
     year: '2002',
