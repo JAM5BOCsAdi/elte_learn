@@ -52,6 +52,7 @@ dependencies:
   http: ^0.13.5
   webview_flutter: ^4.0.2
   timeline_tile: ^2.0.0
+  readmore: ^2.2.0
 
 dev_dependencies:
   flutter_test:
