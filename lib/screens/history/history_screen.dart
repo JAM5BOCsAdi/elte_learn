@@ -131,7 +131,8 @@ Padding _readMore({
     child: ReadMoreText(
       sekHistory.description,
       // overflow: TextOverflow.ellipsis,
-      trimLines: 3,
+      // maxLines: 4,
+      trimLines: 4,
       style: const TextStyle(
         color: kOnSurfaceTextColor,
         fontSize: 18,
