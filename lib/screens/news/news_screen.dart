@@ -20,9 +20,9 @@ class NewsScreen extends GetView<NewsController> {
           onProgress: (int progress) {
             // Update loading bar.
           },
-          onPageStarted: (String url) {},
-          onPageFinished: (String url) {},
-          onWebResourceError: (WebResourceError error) {},
+          // onPageStarted: (String url) {},
+          // onPageFinished: (String url) {},
+          // onWebResourceError: (WebResourceError error) {},
           onNavigationRequest: (NavigationRequest request) {
             if (request.url.startsWith('http')) {
               return NavigationDecision.navigate;

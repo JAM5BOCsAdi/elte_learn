@@ -43,7 +43,6 @@ class QuestionCard extends GetView<QuestionPaperController> {
                         width: getWidth * 0.2 / 1.25,
                         child: Center(
                           child: CachedNetworkImage(
-                            // TODO: Itt a probléma
                             imageUrl: model.imageUrl!,
                             placeholder: (context, url) => Container(
                               alignment: Alignment.center,
