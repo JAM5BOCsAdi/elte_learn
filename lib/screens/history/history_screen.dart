@@ -1,12 +1,14 @@
+import 'package:readmore/readmore.dart';
+import 'package:timeline_tile/timeline_tile.dart';
+
 import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:timeline_tile/timeline_tile.dart';
-import 'package:readmore/readmore.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../models/event_model.dart';
 import '../../sources/histories/elte_sek_history.dart';
 import '../../widgets/custom_app_bar.dart';
+import '../../widgets/read_more.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({Key? key}) : super(key: key);
@@ -63,10 +65,12 @@ TimelineTile _timelineTile({
         color: Colors.lightGreenAccent.withOpacity(0.25),
         thickness: 3,
       ),
-      endChild: _readMore(
-        sekHistory: sekHistory,
+      endChild: ReadMore(
         paddingLeft: 0.025,
         paddingRight: 0.1,
+        sekHistory: sekHistory,
+        maxLines: 4,
+        alignment: Alignment.centerLeft,
       ),
     );
   } else {
@@ -85,10 +89,12 @@ TimelineTile _timelineTile({
         color: Colors.lightGreenAccent.withOpacity(0.25),
         thickness: 3,
       ),
-      startChild: _readMore(
-        sekHistory: sekHistory,
+      startChild: ReadMore(
         paddingLeft: 0.1,
         paddingRight: 0.025,
+        sekHistory: sekHistory,
+        maxLines: 4,
+        alignment: Alignment.centerRight,
       ),
     );
   }
@@ -111,31 +117,6 @@ Container _indicator({required String yearNumber}) {
         yearNumber,
         style: const TextStyle(color: kOnSurfaceTextColor),
         // style: const TextStyle(fontSize: 30),
-      ),
-    ),
-  );
-}
-
-Padding _readMore({
-  required Event sekHistory,
-  required double paddingLeft,
-  required double paddingRight,
-}) {
-  return Padding(
-    padding: EdgeInsets.only(
-      left: getWidth * paddingLeft,
-      right: getWidth * paddingRight,
-      top: getHeight * 0.025,
-      bottom: getHeight * 0.025,
-    ),
-    child: ReadMoreText(
-      sekHistory.description,
-      // overflow: TextOverflow.ellipsis,
-      // maxLines: 10,
-      trimLines: 4,
-      style: const TextStyle(
-        color: kOnSurfaceTextColor,
-        fontSize: 18,
       ),
     ),
   );
