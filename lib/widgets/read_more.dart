@@ -50,56 +50,48 @@ class _ReadMoreState extends State<ReadMore> {
     return textPainter.didExceedMaxLines;
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(
-            left: getWidth * widget.paddingLeft,
-            right: getWidth * widget.paddingRight,
-            top: getHeight * 0.025,
-            bottom: getHeight * 0.025,
-          ),
-          child: Text(
-            widget.sekHistory.description,
-            maxLines: _isExpanded ? widget.sekHistory.description.length : widget.maxLines,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: kOnSurfaceTextColor,
-              fontSize: 18,
-            ),
+  Widget detector() {
+    if (_shouldShowMore) {
+      return GestureDetector(
+        onTap: () {
+          setState(() {
+            _isExpanded = !_isExpanded;
+            // print("Tapped");
+          });
+        },
+        child: Text(
+          widget.sekHistory.description,
+          maxLines: _isExpanded ? widget.sekHistory.description.length : widget.maxLines,
+          overflow: TextOverflow.ellipsis,
+          style: const TextStyle(
+            color: kOnSurfaceTextColor,
+            fontSize: 18,
           ),
         ),
-        if (_shouldShowMore)
-          Padding(
-            padding: EdgeInsets.only(
-              left: getWidth * widget.paddingLeft,
-              right: getWidth * widget.paddingRight,
-              // top: getHeight * 0.025,
-              bottom: getHeight * 0.025,
-            ),
-            child: Align(
-              alignment: widget.alignment,
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _isExpanded = !_isExpanded;
-                  });
-                },
-                child: Text(
-                  _isExpanded ? "Olvass kevesebbet" : "Olvass tovább",
-                  style: TextStyle(
-                    color: kOnSurfaceTextColor,
-                    fontSize: getHeight * 0.0175,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ),
-      ],
+      );
+    } else {
+      return Text(
+        widget.sekHistory.description,
+        maxLines: widget.sekHistory.description.length,
+        overflow: TextOverflow.ellipsis,
+        style: const TextStyle(
+          color: kOnSurfaceTextColor,
+          fontSize: 18,
+        ),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: getWidth * widget.paddingLeft,
+        right: getWidth * widget.paddingRight,
+        top: getHeight * 0.025,
+        bottom: getHeight * 0.025,
+      ),
+      child: detector(),
     );
   }
 }
