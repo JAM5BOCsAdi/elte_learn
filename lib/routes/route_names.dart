@@ -9,4 +9,5 @@ class RouteNames {
   static const String answerCheckQuizzesResultScreenRoute = "/answer_check_quizzes_result_screen";
   static const String newsScreenRoute = '/news';
   static const String historyScreenRoute = '/elte_sek_history';
+  static const String contactScreenRoute = '/contact';
 }

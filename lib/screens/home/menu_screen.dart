@@ -1,9 +1,9 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/routes/route_names.dart';
-import 'package:elte_learn/widgets/drawer_button.dart';
-import 'package:elte_learn/widgets/drawer_tile.dart';
-import 'package:elte_learn/widgets/expandable_drawer_tile.dart';
 
+import '../../routes/route_names.dart';
+import '../../widgets/drawer_tile.dart';
+import '../../widgets/expandable_drawer_tile.dart';
+import '../../widgets/drawer_button.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';

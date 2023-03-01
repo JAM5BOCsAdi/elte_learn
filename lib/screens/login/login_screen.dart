@@ -1,8 +1,8 @@
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
-import 'package:elte_learn/controllers/auth_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/widgets/button.dart';
 
+import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/auth_controller.dart';
+import '../../widgets/button.dart';
 import '../../configs/themes/app_colors.dart';
 
 class LoginScreen extends GetView<AuthController> {

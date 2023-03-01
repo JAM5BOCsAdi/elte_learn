@@ -1,14 +1,15 @@
-import 'package:elte_learn/controllers/news_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/history/history_screen.dart';
-import 'package:elte_learn/screens/question/answer_check_quizzes_result_screen.dart';
 
+import '../../controllers/news_controller.dart';
+import '../../screens/history/history_screen.dart';
+import '../../screens/question/answer_check_quizzes_result_screen.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../routes/route_names.dart';
 import '../../screens/login/login_screen.dart';
 import '../../screens/question/quizzes_results_screen.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
+import '../screens/contact/contact_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/introduction/introduction_screen.dart';
 import '../screens/news/news_screen.dart';
@@ -60,6 +61,11 @@ class AppRoutes {
         GetPage(
           name: RouteNames.historyScreenRoute,
           page: () => const HistoryScreen(),
+          // binding: BindingsBuilder.put(() => HistoryController()),
+        ),
+        GetPage(
+          name: RouteNames.contactScreenRoute,
+          page: () => const ContactScreen(),
           // binding: BindingsBuilder.put(() => HistoryController()),
         ),
       ];

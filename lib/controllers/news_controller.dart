@@ -1,23 +1,50 @@
 import '../packages_barrel/packages_barrel.dart';
 
 class NewsController extends GetxController {
-  late NewsController controller;
+  late WebViewController webViewController;
+  String mobileUrl = "https://m.facebook.com/elte.sek";
 
-  Future<void> reload() async {
-    controller.reload();
+  @override
+  void onInit() {
+    super.onInit();
+    initWebViewController();
+  }
+
+  void initWebViewController() {
+    webViewController = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      // ..setBackgroundColor(Color.fromARGB(0, 255, 255, 255))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          // onProgress: (int progress) {
+          //   // Update loading bar.
+          // },
+          onPageStarted: (String url) {
+            print("Oldal töltődik");
+            // Get.snackbar("Oldal töltődik", "Oldal töltődik");
+          },
+          onPageFinished: (String url) {
+            print("Oldal betöltődött");
+            // Get.snackbar("Oldal betöltődött", "Oldal betöltődött");
+          },
+          onWebResourceError: (WebResourceError error) {
+            Get.snackbar("Hiba az oldal betöltésekor", "Az oldal nem tudott betöltődni");
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            if (request.url.startsWith(mobileUrl)) {
+              return NavigationDecision.navigate;
+            }
+            return NavigationDecision.prevent;
+          },
+        ),
+      );
   }
 
   Future<void> loadWebView() async {
-    return Future.delayed(const Duration(seconds: 2));
+    await webViewController.loadRequest(Uri.parse(mobileUrl));
   }
 
-  Future<void> urlLaunch(String url) async {
-    // final Uri _url = Uri.parse('https://www.facebook.com/elte.sek');
-
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(Uri.parse(url));
-    } else {
-      throw 'Could not launch $url';
-    }
+  Future<void> reload() async {
+    await webViewController.reload();
   }
 }
