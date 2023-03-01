@@ -1,6 +1,6 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../themes/ui_parameters.dart';
 
 TextStyle detailText = TextStyle(fontSize: getHeight * 0.015);

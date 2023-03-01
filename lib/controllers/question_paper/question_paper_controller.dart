@@ -1,8 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:elte_learn/controllers/auth_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/utils/app_logger.dart';
 
+import '../../controllers/auth_controller.dart';
+import '../../utils/app_logger.dart';
 import '../../firebase_ref/references.dart';
 import '../../models/question_paper_model.dart';
 import '../../routes/route_names.dart';
