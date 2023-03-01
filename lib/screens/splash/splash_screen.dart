@@ -1,6 +1,6 @@
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/ui_parameters.dart';
 import '../../configs/themes/app_colors.dart';
 
 /// The logo pops up for a few seconds

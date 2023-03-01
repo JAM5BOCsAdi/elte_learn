@@ -1,14 +1,15 @@
-import 'package:elte_learn/configs/themes/app_icons.dart';
-import 'package:elte_learn/configs/themes/custom_text_styles.dart';
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/routes/route_names.dart';
-import 'package:elte_learn/widgets/app_circle_button.dart';
+
+import '../../configs/themes/app_icons.dart';
+import '../../configs/themes/custom_text_styles.dart';
+import '../../widgets/app_circle_button.dart';
+import '../../configs/themes/ui_parameters.dart';
+import '../../routes/route_names.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final Widget? titleWidget;
   final Widget? leading;
+  final Widget? titleWidget;
   final bool showActionIcon;
   final VoidCallback? onMenuActionTap;
   final double? appBarHeight;

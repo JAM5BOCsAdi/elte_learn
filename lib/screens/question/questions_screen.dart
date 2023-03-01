@@ -1,12 +1,12 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:elte_learn/configs/themes/custom_text_styles.dart';
-import 'package:elte_learn/configs/themes/ui_parameters.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/widgets/answer_card.dart';
-import 'package:elte_learn/widgets/content_area.dart';
-import 'package:elte_learn/widgets/countdown_timer.dart';
-import 'package:elte_learn/widgets/custom_app_bar.dart';
 
+import '../../configs/themes/app_colors.dart';
+import '../../configs/themes/custom_text_styles.dart';
+import '../../configs/themes/ui_parameters.dart';
+import '../../widgets/answer_card.dart';
+import '../../widgets/content_area.dart';
+import '../../widgets/countdown_timer.dart';
+import '../../widgets/custom_app_bar.dart';
 import '../../controllers/questions_controller.dart';
 import '../../firebase_ref/loading_status.dart';
 import '../../routes/route_names.dart';

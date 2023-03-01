@@ -1,5 +1,6 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+
+import '../../configs/themes/app_colors.dart';
 
 class DrawerTile extends StatelessWidget {
   final String title;
