@@ -39,19 +39,51 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                               minFontSize: 20.0,
                             ),
                           )
-                        : Align(
-                            alignment: Alignment.centerLeft,
-                            child: AutoSizeText(
-                              controller.user.value!.displayName ?? "",
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 18,
-                                color: kOnSurfaceTextColor,
+                        : Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: getHeight * 0.015),
+                                child: Container(
+                                  // height: getHeight * 0.25,
+                                  width: getWidth * 0.5,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: controller.randomColor(),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.2),
+                                        blurRadius: 8,
+                                        offset: const Offset(0, 4),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Center(
+                                    child: AutoSizeText(
+                                      "${controller.getFirstLetter(controller.user.value)}",
+                                      style: TextStyle(
+                                        // fontWeight: FontWeight.w900,
+                                        fontSize: getHeight * 0.1,
+                                        color: kOnSurfaceTextColor,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
+                              Align(
+                                alignment: Alignment.center,
+                                child: AutoSizeText(
+                                  controller.user.value!.displayName ?? "",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: getHeight * 0.025,
+                                    color: kOnSurfaceTextColor,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                   ),
-                  Gap(getHeight * 0.025),
+                  Gap(getHeight * 0.015),
                   SingleChildScrollView(
                     child: Column(
                       children: controller.items.map((item) {

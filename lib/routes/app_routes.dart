@@ -61,7 +61,7 @@ class AppRoutes {
         GetPage(
           name: RouteNames.historyScreenRoute,
           page: () => const HistoryScreen(),
-          // binding: BindingsBuilder.put(() => HistoryController()),
+          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,

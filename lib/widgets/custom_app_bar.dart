@@ -51,7 +51,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Transform.translate(
                       offset: const Offset(-14, 0),
                       child: IconButton(
-                        icon: Icon(Icons.arrow_back, size: getHeight * 0.025),
+                        icon: Icon(Icons.arrow_back, size: getHeight * 0.035),
                         onPressed: () => Get.back(),
                       ),
                     ),

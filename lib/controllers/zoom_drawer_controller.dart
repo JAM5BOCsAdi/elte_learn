@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
@@ -6,6 +8,7 @@ import '../../controllers/auth_controller.dart';
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
   Rxn<User?> user = Rxn();
+  final random = Random();
   final List<Map<String, dynamic>> items = [
     {
       'title': 'Kvízek',
@@ -55,6 +58,27 @@ class MyZoomDrawerController extends GetxController {
   void onReady() {
     user.value = Get.find<AuthController>().getUser();
     super.onReady();
+  }
+
+  String? getFirstLetter(User? user) {
+    if (user != null) {
+      return user.displayName?.substring(0, 1).toUpperCase();
+    } else {
+      return "";
+    }
+  }
+
+  Color randomColor() {
+    Color randomColor;
+    do {
+      randomColor = Color.fromRGBO(
+        random.nextInt(256),
+        random.nextInt(256),
+        random.nextInt(256),
+        1,
+      );
+    } while (randomColor == Colors.white);
+    return randomColor;
   }
 
   void toggleDrawer() {
