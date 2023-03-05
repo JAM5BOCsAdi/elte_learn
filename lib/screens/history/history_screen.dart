@@ -1,12 +1,12 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../../widgets/app_circle_button.dart';
+import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';
-import '../../configs/themes/app_colors.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../models/event_model.dart';
 import '../../sources/histories/elte_sek_history.dart';
+import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
 

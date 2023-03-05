@@ -28,7 +28,7 @@ class MyZoomDrawerController extends GetxController {
       ],
     },
     {
-      'title': 'Információk',
+      'title': 'Történetek',
       'children': [
         {
           'title': 'ELTE',
@@ -83,6 +83,7 @@ class MyZoomDrawerController extends GetxController {
 
   void toggleDrawer() {
     zoomDrawerController.toggle?.call();
+    print("Toggle Tapped");
     update();
   }
 
