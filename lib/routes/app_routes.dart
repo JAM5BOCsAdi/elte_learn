@@ -71,7 +71,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,
-          page: () => const ContactScreen(),
+          page: () => ContactScreen(),
           // binding: BindingsBuilder.put(() => HistoryController()),
         ),
       ];

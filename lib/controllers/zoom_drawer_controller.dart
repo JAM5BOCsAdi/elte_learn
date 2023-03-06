@@ -105,7 +105,6 @@ class MyZoomDrawerController extends GetxController {
     Get.find<AuthController>().signInWithGoogle();
   }
 
-  void contactUs() {}
   void email() {
     final emailLaunchUri = Uri(
       scheme: "mailto",
