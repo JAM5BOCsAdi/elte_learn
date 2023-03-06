@@ -10,8 +10,28 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.maxFinite,
         decoration: BoxDecoration(gradient: mainGradient()),
-        padding: EdgeInsets.all(mobileScreenPadding),
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(mobileScreenPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  color: Colors.white,
+                  height: 50,
+                  width: 50,
+                ),
+                Container(
+                  color: Colors.white,
+                  height: 50,
+                  width: 50,
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
