@@ -2,7 +2,6 @@ import '../packages_barrel/packages_barrel.dart';
 
 class NewsController extends GetxController {
   late WebViewController webViewController;
-  String mobileUrl = "https://m.facebook.com/elte.sek";
 
   @override
   void onInit() {
@@ -31,7 +30,7 @@ class NewsController extends GetxController {
             Get.snackbar("Hiba az oldal betöltésekor", "Az oldal nem tudott betöltődni");
           },
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith(mobileUrl)) {
+            if (request.url.startsWith("https://")) {
               return NavigationDecision.navigate;
             }
             return NavigationDecision.prevent;
@@ -40,8 +39,8 @@ class NewsController extends GetxController {
       );
   }
 
-  Future<void> loadWebView() async {
-    await webViewController.loadRequest(Uri.parse(mobileUrl));
+  Future<void> loadWebView({required String url}) async {
+    await webViewController.loadRequest(Uri.parse(url));
   }
 
   Future<void> reload() async {

@@ -12,7 +12,8 @@ import '../controllers/questions_controller.dart';
 import '../screens/contact/contact_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/introduction/introduction_screen.dart';
-import '../screens/news/news_screen.dart';
+import '../screens/news/facebook_screen.dart';
+import '../screens/news/website_screen.dart';
 import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -54,8 +55,13 @@ class AppRoutes {
           binding: BindingsBuilder.put(() => QuestionsController()),
         ),
         GetPage(
-          name: RouteNames.newsScreenRoute,
-          page: () => const NewsScreen(),
+          name: RouteNames.facebookScreenRoute,
+          page: () => const FacebookScreen(),
+          binding: BindingsBuilder.put(() => NewsController()),
+        ),
+        GetPage(
+          name: RouteNames.websiteScreenRoute,
+          page: () => const WebsiteScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
         ),
         GetPage(

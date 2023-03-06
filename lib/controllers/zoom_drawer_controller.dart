@@ -7,6 +7,7 @@ import '../../controllers/auth_controller.dart';
 
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
+
   Rxn<User?> user = Rxn();
   final random = Random();
   final List<Map<String, dynamic>> items = [
@@ -46,7 +47,16 @@ class MyZoomDrawerController extends GetxController {
     },
     {
       'title': 'Hírek',
-      'routeName': '/news',
+      'children': [
+        {
+          'title': 'ELTE SEK Facebook',
+          'routeName': '/elte_sek_facebook',
+        },
+        {
+          'title': 'ELTE SEK Weboldal',
+          'routeName': '/elte_sek_website',
+        },
+      ],
     },
     {
       'title': 'Kapcsolat',
