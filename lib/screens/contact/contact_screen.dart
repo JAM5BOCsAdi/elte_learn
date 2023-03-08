@@ -60,12 +60,12 @@ class ContactScreen extends GetView<ContactController> {
                           child: Column(
                             children: [
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () => controller.zoomIn(),
                                 child: const Icon(Icons.add),
                               ),
                               // Gap(getHeight * 0.025),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () => controller.zoomOut(),
                                 child: const Icon(Icons.remove),
                               ),
                             ],
