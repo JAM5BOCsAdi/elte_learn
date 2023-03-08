@@ -79,7 +79,7 @@ class ContactScreen extends GetView<ContactController> {
                           left: 16.0,
                           child: ElevatedButton(
                             onPressed: controller.resetMap,
-                            child: Text('Reset Map'),
+                            child: const AutoSizeText('Visszaállítás'),
                           ),
                         ),
                       ],
