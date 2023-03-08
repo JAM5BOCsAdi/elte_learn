@@ -26,44 +26,63 @@ class ContactScreen extends GetView<ContactController> {
                   SizedBox(
                     height: getHeight * 0.5,
                     width: double.maxFinite,
-                    child: FlutterMap(
-                      mapController: controller.mapController,
-                      options: MapOptions(
-                        center: controller.getInitialPosition,
-                        zoom: 16.0,
-                        maxZoom: 18.0,
-                        interactiveFlags: InteractiveFlag.all,
-                      ),
-                      layers: [
-                        TileLayerOptions(
-                          urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                          subdomains: ['a', 'b', 'c'],
-                        ),
-                        MarkerLayerOptions(
-                          markers: [
-                            Marker(
-                              width: 80.0,
-                              height: 80.0,
-                              point: controller.getInitialPosition,
-                              builder: (_) => const Icon(
-                                Icons.location_pin,
-                                color: Colors.red,
-                                size: 50,
-                              ),
+                    child: Stack(
+                      children: [
+                        FlutterMap(
+                          mapController: controller.mapController,
+                          options: MapOptions(
+                            center: controller.getInitialPosition,
+                            zoom: 16.0,
+                            maxZoom: 18.0,
+                            interactiveFlags: InteractiveFlag.all,
+                          ),
+                          layers: [
+                            TileLayerOptions(
+                              urlTemplate: controller.getUrlTemplate,
+                              subdomains: controller.getSubdomains,
+                            ),
+                            MarkerLayerOptions(
+                              markers: [
+                                Marker(
+                                  // width: getWidth * 0.05,
+                                  // height: getHeight * 0.05,
+                                  point: controller.getInitialPosition,
+                                  builder: (_) => Icon(
+                                    Icons.location_pin,
+                                    color: Colors.red,
+                                    size: getHeight * 0.05,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
+                        Positioned(
+                          bottom: 16.0,
+                          right: 16.0,
+                          child: Column(
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(Icons.add),
+                              ),
+                              // Gap(getHeight * 0.025),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Icon(Icons.add),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 16.0,
+                          left: 16.0,
+                          child: ElevatedButton(
+                            onPressed: controller.resetMap,
+                            child: Text('Reset Map'),
+                          ),
+                        ),
                       ],
-                    ),
-                  ),
-                  SizedBox(height: 16.0),
-                  Center(
-                    child: Padding(
-                      padding: EdgeInsets.only(bottom: 16.0),
-                      child: ElevatedButton(
-                        onPressed: controller.resetMap,
-                        child: Text('Reset Map'),
-                      ),
                     ),
                   ),
                 ],
