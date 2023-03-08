@@ -52,7 +52,6 @@ dependencies:
   http: ^0.13.5
   webview_flutter: ^4.0.2
   timeline_tile: ^2.0.0
-  readmore: ^2.2.0
   expandable_text: ^2.3.0
   pull_to_refresh: ^2.0.0
   flutter_map: ^2.2.0
