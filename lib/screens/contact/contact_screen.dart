@@ -1,7 +1,4 @@
-import 'package:elte_learn/controllers/contact_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';

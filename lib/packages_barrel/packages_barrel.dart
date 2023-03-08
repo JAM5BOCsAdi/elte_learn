@@ -18,3 +18,5 @@ export 'package:shimmer/shimmer.dart';
 export 'package:easy_separator/easy_separator.dart';
 export 'package:timeline_tile/timeline_tile.dart';
 export 'package:webview_flutter/webview_flutter.dart';
+export 'package:elte_learn/controllers/contact_controller.dart';
+export 'package:flutter_map/flutter_map.dart';
