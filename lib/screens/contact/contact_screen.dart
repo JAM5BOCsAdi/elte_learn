@@ -64,12 +64,12 @@ class ContactScreen extends GetView<ContactController> {
                             children: [
                               ElevatedButton(
                                 onPressed: () {},
-                                child: Icon(Icons.add),
+                                child: const Icon(Icons.add),
                               ),
                               // Gap(getHeight * 0.025),
                               ElevatedButton(
                                 onPressed: () {},
-                                child: Icon(Icons.add),
+                                child: const Icon(Icons.remove),
                               ),
                             ],
                           ),
