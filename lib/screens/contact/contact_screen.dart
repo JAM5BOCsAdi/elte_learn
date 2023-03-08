@@ -1,25 +1,13 @@
+import 'package:elte_learn/controllers/contact_controller.dart';
+import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong.dart';
-import 'package:get/get.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
 
-class ContactScreen extends StatelessWidget {
-  ContactScreen({Key? key}) : super(key: key);
-// 47.230528336798976, 16.611700263845446
-  final LatLng initialPosition = LatLng(47.230528336798976, 16.611700263845446);
-
-  final mapController = MapController();
-
-  void resetMap() {
-    mapController.move(
-      initialPosition,
-      16.0,
-    );
-    mapController.rotate(0.0);
-  }
+class ContactScreen extends GetView<ContactController> {
+  const ContactScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +27,12 @@ class ContactScreen extends StatelessWidget {
                     height: getHeight * 0.5,
                     width: double.maxFinite,
                     child: FlutterMap(
-                      mapController: mapController,
+                      mapController: controller.mapController,
                       options: MapOptions(
-                        center: initialPosition,
+                        center: controller.getInitialPosition,
                         zoom: 16.0,
                         maxZoom: 18.0,
+                        interactiveFlags: InteractiveFlag.all,
                       ),
                       layers: [
                         TileLayerOptions(
@@ -55,7 +44,7 @@ class ContactScreen extends StatelessWidget {
                             Marker(
                               width: 80.0,
                               height: 80.0,
-                              point: initialPosition,
+                              point: controller.getInitialPosition,
                               builder: (_) => const Icon(
                                 Icons.location_pin,
                                 color: Colors.red,
@@ -72,7 +61,7 @@ class ContactScreen extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(bottom: 16.0),
                       child: ElevatedButton(
-                        onPressed: resetMap,
+                        onPressed: controller.resetMap,
                         child: Text('Reset Map'),
                       ),
                     ),

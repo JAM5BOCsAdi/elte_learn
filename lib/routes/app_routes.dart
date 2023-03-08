@@ -7,6 +7,7 @@ import '../../controllers/zoom_drawer_controller.dart';
 import '../../routes/route_names.dart';
 import '../../screens/login/login_screen.dart';
 import '../../screens/question/quizzes_results_screen.dart';
+import '../controllers/contact_controller.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/contact/contact_screen.dart';
@@ -71,8 +72,8 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,
-          page: () => ContactScreen(),
-          // binding: BindingsBuilder.put(() => HistoryController()),
+          page: () => const ContactScreen(),
+          binding: BindingsBuilder.put(() => ContactController()),
         ),
       ];
 }
