@@ -20,34 +20,37 @@ class PopUp extends GetView<ContactController> {
             width: double.maxFinite,
             child: Stack(
               children: [
-                FlutterMap(
-                  mapController: controller.mapController,
-                  options: MapOptions(
-                    center: controller.getInitialPosition,
-                    zoom: 16.0,
-                    maxZoom: 18.0,
-                    // interactiveFlags: InteractiveFlag.all,
-                  ),
-                  layers: [
-                    TileLayerOptions(
-                      urlTemplate: controller.getUrlTemplate,
-                      subdomains: controller.getSubdomains,
+                GestureDetector(
+                  onScaleUpdate: (ScaleUpdateDetails details) => controller.onScaleUpdate(details: details),
+                  child: FlutterMap(
+                    mapController: controller.mapController,
+                    options: MapOptions(
+                      center: controller.getInitialPosition,
+                      zoom: 16.0,
+                      maxZoom: 18.0,
+                      // interactiveFlags: InteractiveFlag.all,
                     ),
-                    MarkerLayerOptions(
-                      markers: [
-                        Marker(
-                          // width: getWidth * 0.05,
-                          // height: getHeight * 0.05,
-                          point: controller.getInitialPosition,
-                          builder: (_) => Icon(
-                            Icons.location_pin,
-                            color: primaryLT,
-                            size: getHeight * 0.05,
+                    layers: [
+                      TileLayerOptions(
+                        urlTemplate: controller.getUrlTemplate,
+                        subdomains: controller.getSubdomains,
+                      ),
+                      MarkerLayerOptions(
+                        markers: [
+                          Marker(
+                            // width: getWidth * 0.05,
+                            // height: getHeight * 0.05,
+                            point: controller.getInitialPosition,
+                            builder: (_) => Icon(
+                              Icons.location_pin,
+                              color: primaryLT,
+                              size: getHeight * 0.05,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 Positioned(
                   bottom: 16.0,
@@ -84,14 +87,6 @@ class PopUp extends GetView<ContactController> {
                     ),
                     onPressed: controller.resetMap,
                     child: const AutoSizeText('Visszaállítás'),
-                  ),
-                ),
-                Positioned(
-                  top: 0,
-                  right: 16,
-                  child: IconButton(
-                    onPressed: onTapClose,
-                    icon: const Icon(Icons.close, color: Colors.black, size: 50.0),
                   ),
                 ),
               ],

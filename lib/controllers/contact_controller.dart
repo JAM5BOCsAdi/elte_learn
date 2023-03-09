@@ -54,4 +54,16 @@ class ContactController extends GetxController {
   Future<void> popUp() async {
     await Get.dialog(PopUp(onTapClose: () => Get.back()));
   }
+
+  void onScaleUpdate({required ScaleUpdateDetails details}) {
+    if (details.scale >= 2) {
+      // Move the map only if the scale of the gesture is 2 or greater
+      final double lat = mapController.center.latitude;
+      final double lng = mapController.center.longitude;
+      final double newLat = lat - details.focalPointDelta.dy / 100;
+      final double newLng = lng + details.focalPointDelta.dx / 100;
+      final LatLng newCenter = LatLng(newLat, newLng);
+      mapController.move(newCenter, mapController.zoom);
+    }
+  }
 }
