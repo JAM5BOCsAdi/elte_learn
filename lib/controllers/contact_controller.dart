@@ -1,4 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/screens/contact/popUp.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -30,6 +31,10 @@ class ContactController extends GetxController {
       path: "sekrh@elte.hu",
     );
     _launch(emailLaunchUri);
+  }
+
+  Future<void> website() async {
+    await Get.toNamed(RouteNames.websiteScreenRoute);
   }
 
   Future<void> _launch(Uri url) async {

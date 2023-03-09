@@ -67,6 +67,13 @@ class ContactScreen extends GetView<ContactController> {
                         enabled: true,
                         onTap: controller.email,
                       ),
+                      Gap(getHeight * 0.015),
+                      ContactRow(
+                        icon: Icons.web,
+                        text: "https://sek.elte.hu/",
+                        enabled: true,
+                        onTap: controller.website,
+                      ),
                     ],
                   ),
                   Gap(getHeight * 0.025),
