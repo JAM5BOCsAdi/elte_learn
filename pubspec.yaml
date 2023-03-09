@@ -100,7 +100,7 @@ flutter:
     - assets/icons/web.svg
     # assets / images:
     - assets/images/app_splash_logo.png
-    - assets/images/app_splash_logo.svg
+    - assets/images/elte_sek.png
     - assets/images/bulb.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
