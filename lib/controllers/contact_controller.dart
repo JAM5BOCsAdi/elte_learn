@@ -17,7 +17,7 @@ class ContactController extends GetxController {
     mapController.rotate(0.0);
   }
 
-  void zoomIn() => mapController.move(getInitialPosition, mapController.zoom + 1);
+  void zoomIn() => mapController.move(mapController.center, mapController.zoom + 1);
 
-  void zoomOut() => mapController.move(getInitialPosition, mapController.zoom - 1);
+  void zoomOut() => mapController.move(mapController.center, mapController.zoom - 1);
 }
