@@ -84,39 +84,46 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           ),
                   ),
                   Gap(getHeight * 0.015),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: controller.items.map((item) {
-                        if (item.containsKey('children')) {
-                          return ExpandableDrawerTile(
-                            title: item['title'],
-                            children: item['children']
-                                .map((child) {
-                                  return DrawerTile(
-                                    title: child['title'],
-                                    routeName: child['routeName'],
-                                  );
-                                })
-                                .toList()
-                                .cast<DrawerTile>(),
-                          );
-                        } else {
-                          return DrawerTile(
-                            title: item['title'],
-                            routeName: item['routeName'],
-                          );
-                        }
-                      }).toList(),
+                  Expanded(
+                    flex: 1,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: controller.items.map((item) {
+                          if (item.containsKey('children')) {
+                            return ExpandableDrawerTile(
+                              title: item['title'],
+                              children: item['children']
+                                  .map((child) {
+                                    return DrawerTile(
+                                      title: child['title'],
+                                      routeName: child['routeName'],
+                                    );
+                                  })
+                                  .toList()
+                                  .cast<DrawerTile>(),
+                            );
+                          } else {
+                            return DrawerTile(
+                              title: item['title'],
+                              routeName: item['routeName'],
+                            );
+                          }
+                        }).toList(),
+                      ),
                     ),
                   ),
-                  const Spacer(flex: 1),
-                  Obx(
-                    () => DrawerButton(
-                      icon: controller.user.value == null ? Icons.login : Icons.logout,
-                      label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
-                      onPressed: controller.user.value == null
-                          ? () => Get.toNamed(RouteNames.loginScreenRoute)
-                          : () => controller.signOut(),
+                  // const Spacer(flex: 1),
+                  Gap(getHeight * 0.025),
+                  Expanded(
+                    flex: 0,
+                    child: Obx(
+                      () => DrawerButton(
+                        icon: controller.user.value == null ? Icons.login : Icons.logout,
+                        label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
+                        onPressed: controller.user.value == null
+                            ? () => Get.toNamed(RouteNames.loginScreenRoute)
+                            : () => controller.signOut(),
+                      ),
                     ),
                   ),
                 ],

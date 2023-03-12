@@ -10,8 +10,8 @@ import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
 
-class HistoryScreen extends GetView<MyZoomDrawerController> {
-  const HistoryScreen({Key? key}) : super(key: key);
+class ElteSekHistoryScreen extends GetView<MyZoomDrawerController> {
+  const ElteSekHistoryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

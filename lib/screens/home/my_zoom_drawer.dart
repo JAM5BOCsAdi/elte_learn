@@ -15,24 +15,26 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
     return Scaffold(
-      body: GetBuilder<MyZoomDrawerController>(builder: (_) {
-        return Container(
-          decoration: BoxDecoration(gradient: mainGradient()),
-          child: ZoomDrawer(
-            borderRadius: getHeight * 0.05,
-            showShadow: false,
-            angle: 0.0,
-            style: DrawerStyle.defaultStyle,
-            slideWidth: getWidth * 0.7,
-            androidCloseOnBackTap: true,
-            controller: _.zoomDrawerController,
-            mainScreenTapClose: true,
-            // menuScreenWidth: Get.width,
-            menuScreen: const MenuScreen(),
-            mainScreen: const MainScreen(),
-          ),
-        );
-      }),
+      body: GetBuilder<MyZoomDrawerController>(
+        builder: (_) {
+          return Container(
+            decoration: BoxDecoration(gradient: mainGradient()),
+            child: ZoomDrawer(
+              borderRadius: getHeight * 0.05,
+              showShadow: false,
+              angle: 0.0,
+              style: DrawerStyle.defaultStyle,
+              slideWidth: getWidth * 0.7,
+              androidCloseOnBackTap: true,
+              controller: _.zoomDrawerController,
+              mainScreenTapClose: true,
+              // menuScreenWidth: Get.width,
+              menuScreen: const MenuScreen(),
+              mainScreen: controller.getScreen(), //const MainScreen()
+            ),
+          );
+        },
+      ),
     );
   }
 }

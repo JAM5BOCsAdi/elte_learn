@@ -1,14 +1,21 @@
 import 'dart:math';
 
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:elte_learn/screens/history/elte_sek_history_screen.dart';
+import 'package:elte_learn/screens/home/main_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../controllers/auth_controller.dart';
+import '../routes/route_names.dart';
+import '../screens/history/elte_history_screen.dart';
+import '../screens/history/elte_sek_pti_history_screen.dart';
 
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
 
   Rxn<User?> user = Rxn();
+  RxString currentRoute = "".obs;
+
   final random = Random();
   final List<Map<String, dynamic>> items = [
     {
@@ -89,6 +96,27 @@ class MyZoomDrawerController extends GetxController {
       );
     } while (randomColor == Colors.white);
     return randomColor;
+  }
+
+  void getCurrentRoute(String currentRouteName) {
+    currentRoute.value = currentRouteName;
+    print("currentRoute.value: $currentRoute.value");
+  }
+
+  Widget getScreen() {
+    final getScreenCurrentRoute = currentRoute.toString();
+    print("getScreenCurrentRoute: $getScreenCurrentRoute");
+    switch (getScreenCurrentRoute) {
+      case RouteNames.elteHistoryScreenRoute:
+        return const ElteHistoryScreen();
+      case RouteNames.elteSekHistoryScreenRoute:
+        return const ElteSekHistoryScreen();
+      case RouteNames.elteSekPtiHistoryScreenRoute:
+        return const ElteSekPtiHistoryScreen();
+
+      default:
+        return const MainScreen();
+    }
   }
 
   void toggleDrawer() {

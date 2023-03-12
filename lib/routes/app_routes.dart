@@ -1,7 +1,8 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/news_controller.dart';
-import '../../screens/history/history_screen.dart';
+import '../screens/history/elte_history_screen.dart';
+import '../screens/history/elte_sek_history_screen.dart';
 import '../../screens/question/answer_check_quizzes_result_screen.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../routes/route_names.dart';
@@ -11,6 +12,7 @@ import '../controllers/contact_controller.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/contact/contact_screen.dart';
+import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/home/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
 import '../screens/news/facebook_screen.dart';
@@ -56,6 +58,21 @@ class AppRoutes {
           binding: BindingsBuilder.put(() => QuestionsController()),
         ),
         GetPage(
+          name: RouteNames.elteHistoryScreenRoute,
+          page: () => const ElteHistoryScreen(),
+          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        ),
+        GetPage(
+          name: RouteNames.elteSekHistoryScreenRoute,
+          page: () => const ElteSekHistoryScreen(),
+          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        ),
+        GetPage(
+          name: RouteNames.elteSekPtiHistoryScreenRoute,
+          page: () => const ElteSekPtiHistoryScreen(),
+          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        ),
+        GetPage(
           name: RouteNames.facebookScreenRoute,
           page: () => const FacebookScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
@@ -64,11 +81,6 @@ class AppRoutes {
           name: RouteNames.websiteScreenRoute,
           page: () => const WebsiteScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
-        ),
-        GetPage(
-          name: RouteNames.historyScreenRoute,
-          page: () => const HistoryScreen(),
-          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,
