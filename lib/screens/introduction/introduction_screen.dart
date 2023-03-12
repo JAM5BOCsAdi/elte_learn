@@ -34,7 +34,7 @@ class IntroductionScreen extends StatelessWidget {
                   ),
                   Gap(getHeight * 0.025),
                   AppCircleButton(
-                    onTap: () => Get.offAndToNamed(RouteNames.homeScreenRoute),
+                    onTap: () => Get.offAndToNamed(RouteNames.myZoomDrawerScreenRoute),
                     // clipBehavior: Clip.hardEdge,
                     child: Icon(Icons.arrow_forward, size: getHeight * 0.05),
                   ),

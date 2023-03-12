@@ -11,7 +11,7 @@ import '../controllers/contact_controller.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/contact/contact_screen.dart';
-import '../screens/home/home_screen.dart';
+import '../screens/home/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
 import '../screens/news/facebook_screen.dart';
 import '../screens/news/website_screen.dart';
@@ -25,8 +25,8 @@ class AppRoutes {
         GetPage(name: RouteNames.splashScreenRoute, page: () => const SplashScreen()),
         GetPage(name: RouteNames.introductionScreenRoute, page: () => const IntroductionScreen()),
         GetPage(
-          name: RouteNames.homeScreenRoute,
-          page: () => const HomeScreen(),
+          name: RouteNames.myZoomDrawerScreenRoute,
+          page: () => const MyZoomDrawer(),
           binding: BindingsBuilder(() {
             Get.put(QuestionPaperController());
             Get.put(MyZoomDrawerController());

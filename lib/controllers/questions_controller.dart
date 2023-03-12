@@ -122,7 +122,7 @@ class QuestionsController extends GetxController {
 
   void navigateToHome() {
     _timer!.cancel();
-    Get.offNamedUntil(RouteNames.homeScreenRoute, (route) => false);
+    Get.offNamedUntil(RouteNames.myZoomDrawerScreenRoute, (route) => false);
   }
 
   _startTimer(int seconds) {
