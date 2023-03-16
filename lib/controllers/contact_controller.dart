@@ -1,6 +1,7 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/screens/contact/popUp.dart';
+import 'package:elte_learn/screens/news/elte_sek_website_screen.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../widgets/dialogue.dart';
@@ -34,7 +35,7 @@ class ContactController extends GetxController {
   }
 
   Future<void> website() async {
-    await Get.toNamed(RouteNames.websiteScreenRoute);
+    await Get.to(const ElteSekWebsiteScreen());
   }
 
   Future<void> _launch(Uri url) async {
@@ -43,13 +44,13 @@ class ContactController extends GetxController {
     }
   }
 
-  void focus(BuildContext context) {
-    // Remove focus from the SelectableText when tapping outside its area
-    FocusScopeNode currentFocus = FocusScope.of(context);
-    if (!currentFocus.hasPrimaryFocus) {
-      currentFocus.unfocus();
-    }
-  }
+  // void focus(BuildContext context) {
+  //   // Remove focus from the SelectableText when tapping outside its area
+  //   FocusScopeNode currentFocus = FocusScope.of(context);
+  //   if (!currentFocus.hasPrimaryFocus) {
+  //     currentFocus.unfocus();
+  //   }
+  // }
 
   Future<void> popUp() async {
     await Get.dialog(PopUp(onTapClose: () => Get.back()));

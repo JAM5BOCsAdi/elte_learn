@@ -10,8 +10,8 @@ import '../../controllers/zoom_drawer_controller.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/content_area.dart';
 
-class MainScreen extends GetView<MyZoomDrawerController> {
-  const MainScreen({super.key});
+class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
+  const ElteSekPtiQuizScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

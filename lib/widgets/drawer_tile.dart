@@ -11,7 +11,7 @@ class DrawerTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final isActive = Get.currentRoute == routeName;
-
+    final zoomDrawer = Get.find<MyZoomDrawerController>();
     return ListTile(
       title: AutoSizeText(
         title,
@@ -21,7 +21,8 @@ class DrawerTile extends StatelessWidget {
         Get.toNamed(routeName);
         print("DrawerTile => Current_RouteName: $routeName");
         // print("RouteName:$isActive");
-        Get.find<MyZoomDrawerController>().currentRoute(routeName);
+
+        zoomDrawer.currentRoute.value = routeName;
       },
     );
   }

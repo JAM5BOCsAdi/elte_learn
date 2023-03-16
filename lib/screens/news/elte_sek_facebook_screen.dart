@@ -2,8 +2,8 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/news_controller.dart';
 
-class FacebookScreen extends GetView<NewsController> {
-  const FacebookScreen({Key? key}) : super(key: key);
+class ElteSekFacebookScreen extends GetView<NewsController> {
+  const ElteSekFacebookScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

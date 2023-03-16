@@ -2,8 +2,8 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/news_controller.dart';
 
-class WebsiteScreen extends GetView<NewsController> {
-  const WebsiteScreen({Key? key}) : super(key: key);
+class ElteSekWebsiteScreen extends GetView<NewsController> {
+  const ElteSekWebsiteScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

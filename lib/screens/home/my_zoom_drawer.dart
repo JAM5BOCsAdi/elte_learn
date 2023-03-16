@@ -1,11 +1,12 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/home/main_screen.dart';
+import 'package:elte_learn/screens/quizzes/elte_quiz_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
+import '../../models/menu_item_model.dart';
 import '../../screens/home/menu_screen.dart';
 
 class MyZoomDrawer extends GetView<MyZoomDrawerController> {
@@ -14,6 +15,13 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
+    Rx<MenuItemModel> currentItem = MenuItems.elteHistory.obs;
+
+    void onSelectedItem(MenuItemModel item) {
+      currentItem.value = item;
+      controller.closeDrawer();
+    }
+
     return Scaffold(
       body: GetBuilder<MyZoomDrawerController>(
         builder: (_) {
@@ -29,8 +37,11 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
               controller: _.zoomDrawerController,
               mainScreenTapClose: true,
               // menuScreenWidth: Get.width,
-              menuScreen: const MenuScreen(),
-              mainScreen: controller.getScreen(), //const MainScreen()
+              menuScreen: MenuScreen(
+                currentItem: currentItem.value,
+                onSelectedItem: onSelectedItem,
+              ),
+              mainScreen: controller.getScreen(currentItem), //const MainScreen()
             ),
           );
         },

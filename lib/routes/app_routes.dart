@@ -11,12 +11,12 @@ import '../../screens/question/quizzes_results_screen.dart';
 import '../controllers/contact_controller.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
-import '../screens/contact/contact_screen.dart';
+import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/home/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
-import '../screens/news/facebook_screen.dart';
-import '../screens/news/website_screen.dart';
+import '../screens/news/elte_sek_facebook_screen.dart';
+import '../screens/news/elte_sek_website_screen.dart';
 import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -74,17 +74,17 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.facebookScreenRoute,
-          page: () => const FacebookScreen(),
+          page: () => const ElteSekFacebookScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
         ),
         GetPage(
           name: RouteNames.websiteScreenRoute,
-          page: () => const WebsiteScreen(),
+          page: () => const ElteSekWebsiteScreen(),
           binding: BindingsBuilder.put(() => NewsController()),
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,
-          page: () => const ContactScreen(),
+          page: () => const ElteSekContactScreen(),
           binding: BindingsBuilder.put(() => ContactController()),
         ),
       ];

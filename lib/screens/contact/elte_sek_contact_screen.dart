@@ -4,22 +4,24 @@ import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/app_light_theme.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/zoom_drawer_controller.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/contact_row.dart';
 import '../../widgets/custom_app_bar.dart';
 
-class ContactScreen extends GetView<ContactController> {
-  const ContactScreen({Key? key}) : super(key: key);
+class ElteSekContactScreen extends GetView<ContactController> {
+  const ElteSekContactScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MyZoomDrawerController myZoomDrawerController = Get.find();
     return Scaffold(
       appBar: CustomAppBar(
         title: "Kapcsolat",
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
           // clipBehavior: Clip.none,
-          // onTap: controller.toggleDrawer,
+          onTap: myZoomDrawerController.toggleDrawer,
           child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
         ),
       ),

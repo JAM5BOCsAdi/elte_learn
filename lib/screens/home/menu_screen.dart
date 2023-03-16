@@ -1,5 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../models/menu_item_model.dart';
 import '../../routes/route_names.dart';
 import '../../widgets/drawer_tile.dart';
 import '../../widgets/expandable_drawer_tile.dart';
@@ -10,7 +11,9 @@ import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 
 class MenuScreen extends GetView<MyZoomDrawerController> {
-  const MenuScreen({Key? key}) : super(key: key);
+  final MenuItemModel currentItem;
+  final ValueChanged<MenuItemModel> onSelectedItem;
+  const MenuScreen({Key? key, required this.currentItem, required this.onSelectedItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -88,27 +91,35 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     flex: 1,
                     child: SingleChildScrollView(
                       child: Column(
-                        children: controller.items.map((item) {
-                          if (item.containsKey('children')) {
-                            return ExpandableDrawerTile(
-                              title: item['title'],
-                              children: item['children']
-                                  .map((child) {
-                                    return DrawerTile(
-                                      title: child['title'],
-                                      routeName: child['routeName'],
-                                    );
-                                  })
-                                  .toList()
-                                  .cast<DrawerTile>(),
-                            );
-                          } else {
-                            return DrawerTile(
-                              title: item['title'],
-                              routeName: item['routeName'],
-                            );
-                          }
-                        }).toList(),
+                        children: [
+                          ExpansionTile(
+                            title: const Text("Kvízek"),
+                            leading: const Icon(Icons.payment),
+                            children: [
+                              buildMenuItem(MenuItems.elteQuiz),
+                              buildMenuItem(MenuItems.elteSekQuiz),
+                              buildMenuItem(MenuItems.elteSekPtiQuiz),
+                            ],
+                          ),
+                          ExpansionTile(
+                            title: const Text("Történetek"),
+                            leading: const Icon(Icons.payment),
+                            children: [
+                              buildMenuItem(MenuItems.elteHistory),
+                              buildMenuItem(MenuItems.elteSekHistory),
+                              buildMenuItem(MenuItems.elteSekPtiHistory),
+                            ],
+                          ),
+                          ExpansionTile(
+                            title: const Text("Hírek"),
+                            leading: const Icon(Icons.payment),
+                            children: [
+                              buildMenuItem(MenuItems.elteSekWebsite),
+                              buildMenuItem(MenuItems.elteSekFacebook),
+                            ],
+                          ),
+                          buildMenuItem(MenuItems.elteSekContact),
+                        ],
                       ),
                     ),
                   ),
@@ -131,6 +142,20 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildMenuItem(MenuItemModel item) {
+    return ListTileTheme(
+      selectedColor: Colors.white,
+      child: ListTile(
+        selectedTileColor: Colors.black26,
+        selected: currentItem == item,
+        minLeadingWidth: 20,
+        leading: Icon(item.icon),
+        title: Text(item.title),
+        onTap: () => onSelectedItem(item),
       ),
     );
   }
