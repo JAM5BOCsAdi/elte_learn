@@ -19,8 +19,8 @@ class InitialBindings implements Bindings {
     Get.put(AuthController(), permanent: true); // Get.put(AuthController(), tag: "auth", permanent: true);
     // Get.put(NotificationService());
     Get.lazyPut(() => FirebaseStorageService());
-    // Get.put(NewsController());
-    // Get.put(ContactController());
+    Get.put(NewsController());
+    Get.put(ContactController());
     // Get.put(MyZoomDrawerController());
   }
 }

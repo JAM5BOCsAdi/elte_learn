@@ -21,7 +21,6 @@ import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
 
-/// Different routes for the app screens
 class AppRoutes {
   static List<GetPage> routes() => [
         GetPage(name: RouteNames.splashScreenRoute, page: () => const SplashScreen()),
@@ -85,7 +84,10 @@ class AppRoutes {
         GetPage(
           name: RouteNames.contactScreenRoute,
           page: () => const ElteSekContactScreen(),
-          binding: BindingsBuilder.put(() => ContactController()),
+          binding: BindingsBuilder(() {
+            Get.put(NewsController());
+            Get.put(ContactController());
+          }),
         ),
       ];
 }

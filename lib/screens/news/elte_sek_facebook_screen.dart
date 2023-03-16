@@ -1,6 +1,10 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_icons.dart';
+import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/news_controller.dart';
+import '../../controllers/zoom_drawer_controller.dart';
+import '../../widgets/app_circle_button.dart';
 
 class ElteSekFacebookScreen extends GetView<NewsController> {
   const ElteSekFacebookScreen({Key? key}) : super(key: key);
@@ -8,7 +12,21 @@ class ElteSekFacebookScreen extends GetView<NewsController> {
   @override
   Widget build(BuildContext context) {
     String _facebookUrl = "https://m.facebook.com/elte.sek";
+    MyZoomDrawerController myZoomDrawerController = Get.find();
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+        title: const AutoSizeText("ELTE SEK Facebook"),
+        leading: AppCircleButton(
+          // clipBehavior: Clip.none,
+          onTap: myZoomDrawerController.toggleDrawer,
+          child: Padding(
+            padding: EdgeInsets.only(left: getWidth * 0.05),
+            child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
+          ),
+        ),
+      ),
       body: SafeArea(
         child: FutureBuilder(
           future: controller.loadWebView(url: _facebookUrl),

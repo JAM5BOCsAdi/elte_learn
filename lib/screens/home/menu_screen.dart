@@ -28,116 +28,125 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
           ),
         ),
         child: SafeArea(
-          child: Stack(
+          child: Column(
             children: [
-              Column(
-                children: [
-                  Obx(
-                    () => controller.user.value == null
-                        ? InkWell(
-                            onTap: () => Get.toNamed(RouteNames.loginScreenRoute),
-                            child: AutoSizeText(
-                              "Jelentkezz be",
-                              style: detailText.copyWith(color: kOnSurfaceTextColor),
-                              minFontSize: 20.0,
-                            ),
-                          )
-                        : Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(bottom: getHeight * 0.015),
-                                child: Container(
-                                  // height: getHeight * 0.25,
-                                  width: getWidth * 0.5,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: controller.randomColor(),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black.withOpacity(0.2),
-                                        blurRadius: 8,
-                                        offset: const Offset(0, 4),
-                                      ),
-                                    ],
+              Obx(
+                () => controller.user.value == null
+                    ? InkWell(
+                        onTap: () => Get.toNamed(RouteNames.loginScreenRoute),
+                        child: AutoSizeText(
+                          "Jelentkezz be",
+                          style: detailText.copyWith(color: kOnSurfaceTextColor),
+                          minFontSize: 20.0,
+                        ),
+                      )
+                    : Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: getHeight * 0.015),
+                            child: Container(
+                              // height: getHeight * 0.25,
+                              width: getWidth * 0.5,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: controller.randomColor(),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 4),
                                   ),
-                                  child: Center(
-                                    child: AutoSizeText(
-                                      "${controller.getFirstLetter(controller.user.value)}",
-                                      style: TextStyle(
-                                        // fontWeight: FontWeight.w900,
-                                        fontSize: getHeight * 0.1,
-                                        color: kOnSurfaceTextColor,
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                ],
                               ),
-                              Align(
-                                alignment: Alignment.center,
+                              child: Center(
                                 child: AutoSizeText(
-                                  controller.user.value!.displayName ?? "",
+                                  "${controller.getFirstLetter(controller.user.value)}",
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: getHeight * 0.025,
+                                    // fontWeight: FontWeight.w900,
+                                    fontSize: getHeight * 0.1,
                                     color: kOnSurfaceTextColor,
                                   ),
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                  ),
-                  Gap(getHeight * 0.015),
-                  Expanded(
-                    flex: 1,
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          ExpansionTile(
-                            title: const Text("Kvízek"),
-                            leading: const Icon(Icons.payment),
-                            children: [
-                              buildMenuItem(MenuItems.elteQuiz),
-                              buildMenuItem(MenuItems.elteSekQuiz),
-                              buildMenuItem(MenuItems.elteSekPtiQuiz),
-                            ],
+                          Align(
+                            alignment: Alignment.center,
+                            child: AutoSizeText(
+                              controller.user.value!.displayName ?? "",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w900,
+                                fontSize: getHeight * 0.025,
+                                color: kOnSurfaceTextColor,
+                              ),
+                            ),
                           ),
-                          ExpansionTile(
-                            title: const Text("Történetek"),
-                            leading: const Icon(Icons.payment),
-                            children: [
-                              buildMenuItem(MenuItems.elteHistory),
-                              buildMenuItem(MenuItems.elteSekHistory),
-                              buildMenuItem(MenuItems.elteSekPtiHistory),
-                            ],
-                          ),
-                          ExpansionTile(
-                            title: const Text("Hírek"),
-                            leading: const Icon(Icons.payment),
-                            children: [
-                              buildMenuItem(MenuItems.elteSekWebsite),
-                              buildMenuItem(MenuItems.elteSekFacebook),
-                            ],
-                          ),
-                          buildMenuItem(MenuItems.elteSekContact),
                         ],
                       ),
-                    ),
-                  ),
-                  // const Spacer(flex: 1),
-                  Gap(getHeight * 0.025),
-                  Expanded(
-                    flex: 0,
-                    child: Obx(
-                      () => DrawerButton(
-                        icon: controller.user.value == null ? Icons.login : Icons.logout,
-                        label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
-                        onPressed: controller.user.value == null
-                            ? () => Get.toNamed(RouteNames.loginScreenRoute)
-                            : () => controller.signOut(),
+              ),
+              Gap(getHeight * 0.015),
+              Expanded(
+                flex: 1,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      ExpansionTile(
+                        textColor: kOnSurfaceTextColor,
+                        collapsedTextColor: kOnSurfaceTextColor,
+                        collapsedIconColor: kOnSurfaceTextColor,
+                        iconColor: kOnSurfaceTextColor,
+                        title: const AutoSizeText("Kvízek"),
+                        // leading: const Icon(Icons.payment),
+                        children: [
+                          buildMenuItem(MenuItems.elteQuiz),
+                          buildMenuItem(MenuItems.elteSekQuiz),
+                          buildMenuItem(MenuItems.elteSekPtiQuiz),
+                        ],
                       ),
-                    ),
+                      ExpansionTile(
+                        textColor: kOnSurfaceTextColor,
+                        collapsedTextColor: kOnSurfaceTextColor,
+                        collapsedIconColor: kOnSurfaceTextColor,
+                        iconColor: kOnSurfaceTextColor,
+                        title: const AutoSizeText("Történetek"),
+                        // leading: const Icon(Icons.payment),
+                        children: [
+                          buildMenuItem(MenuItems.elteHistory),
+                          buildMenuItem(MenuItems.elteSekHistory),
+                          buildMenuItem(MenuItems.elteSekPtiHistory),
+                        ],
+                      ),
+                      ExpansionTile(
+                        textColor: kOnSurfaceTextColor,
+                        collapsedTextColor: kOnSurfaceTextColor,
+                        collapsedIconColor: kOnSurfaceTextColor,
+                        iconColor: kOnSurfaceTextColor,
+
+                        title: const AutoSizeText("Hírek"),
+                        // leading: const Icon(Icons.payment),
+                        children: [
+                          buildMenuItem(MenuItems.elteSekWebsite),
+                          buildMenuItem(MenuItems.elteSekFacebook),
+                        ],
+                      ),
+                      buildMenuItem(MenuItems.elteSekContact),
+                    ],
                   ),
-                ],
+                ),
+              ),
+              // const Spacer(flex: 1),
+              Gap(getHeight * 0.025),
+              Expanded(
+                flex: 0,
+                child: Obx(
+                  () => DrawerButton(
+                    icon: controller.user.value == null ? Icons.login : Icons.logout,
+                    label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
+                    onPressed: controller.user.value == null
+                        ? () => Get.toNamed(RouteNames.loginScreenRoute)
+                        : () => controller.signOut(),
+                  ),
+                ),
               ),
             ],
           ),
@@ -148,12 +157,14 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
 
   Widget buildMenuItem(MenuItemModel item) {
     return ListTileTheme(
-      selectedColor: Colors.white,
+      selectedColor: kOnSurfaceTextColor,
+      textColor: kOnSurfaceTextColor,
       child: ListTile(
         selectedTileColor: Colors.black26,
+
         selected: currentItem == item,
         minLeadingWidth: 20,
-        leading: Icon(item.icon),
+        // leading: Icon(item.icon),
         title: Text(item.title),
         onTap: () => onSelectedItem(item),
       ),
