@@ -5,7 +5,7 @@ import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../models/event_model.dart';
-import '../../sources/histories/elte_sek_history.dart';
+import '../../sources/histories/elte_sek_pti_history.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
@@ -15,10 +15,11 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
 
   @override
   Widget build(BuildContext context) {
-    Event sekHistory = elteSekHistory[0];
+    Event history = elteSekPtiHistory[0];
     return Scaffold(
       appBar: CustomAppBar(
-        title: sekHistory.title ?? "Nincs Címe",
+        leftPadding: getWidth * 0.05,
+        title: history.title ?? "Nincs Címe",
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
           // clipBehavior: Clip.none,
@@ -32,13 +33,13 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
         padding: EdgeInsets.all(mobileScreenPadding * 0.25),
         child: SafeArea(
           child: ListView.builder(
-            itemCount: elteSekHistory.length,
+            itemCount: elteSekPtiHistory.length,
             itemBuilder: (_, index) {
-              sekHistory = elteSekHistory[index];
+              history = elteSekPtiHistory[index];
 
               return Column(
                 children: [
-                  _timelineTile(sekHistory: sekHistory, index: index),
+                  _timelineTile(history: history, index: index),
                   _timelineDivider(index: index),
                 ],
               );
@@ -51,7 +52,7 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
 }
 
 TimelineTile _timelineTile({
-  required Event sekHistory,
+  required Event history,
   required int index,
 }) {
   double width = getHeight * 0.05;
@@ -62,11 +63,11 @@ TimelineTile _timelineTile({
       alignment: TimelineAlign.manual,
       lineXY: 0.1,
       isFirst: index == 0,
-      isLast: index == elteSekHistory.length - 1,
+      isLast: index == elteSekPtiHistory.length - 1,
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
-        indicator: _indicator(yearNumber: sekHistory.year),
+        indicator: _indicator(yearNumber: history.year),
         drawGap: true,
       ),
       beforeLineStyle: LineStyle(
@@ -76,7 +77,7 @@ TimelineTile _timelineTile({
       endChild: ReadMore(
         paddingLeft: 0.025,
         paddingRight: 0.1,
-        sekHistory: sekHistory,
+        history: history,
         maxLines: 4,
         alignment: Alignment.centerLeft,
       ),
@@ -86,11 +87,11 @@ TimelineTile _timelineTile({
       alignment: TimelineAlign.manual,
       lineXY: 0.9,
       isFirst: index == 0,
-      isLast: index == elteSekHistory.length - 1,
+      isLast: index == elteSekPtiHistory.length - 1,
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
-        indicator: _indicator(yearNumber: sekHistory.year),
+        indicator: _indicator(yearNumber: history.year),
         drawGap: true,
       ),
       beforeLineStyle: LineStyle(
@@ -100,7 +101,7 @@ TimelineTile _timelineTile({
       startChild: ReadMore(
         paddingLeft: 0.1,
         paddingRight: 0.025,
-        sekHistory: sekHistory,
+        history: history,
         maxLines: 4,
         alignment: Alignment.centerRight,
       ),
@@ -131,7 +132,7 @@ Container _indicator({required String yearNumber}) {
 }
 
 TimelineDivider _timelineDivider({required int index}) {
-  if (index < elteSekHistory.length - 1) {
+  if (index < elteSekPtiHistory.length - 1) {
     return TimelineDivider(
       begin: 0.1,
       end: 0.9,

@@ -1,11 +1,11 @@
 import '../../models/event_model.dart';
 
-final List<Event> ptiHistory = [
+final List<Event> elteSekPtiHistory = [
   const Event(
+    title: "ELTE SEK PTI Történelme",
     year: '1911',
-    description: '''
-          A közoktatási kormányzat kifogásolja a Csurgói Tanítóképző működési körülményeit, s akkor vetődik fel az intézmény Nagykanizsára való telepítésének gondolata. A Vasvármegye cikkírója (1911/83. sz.) felhívja a figyelmet a szándékra, és felteszi a kérdést, hogy miért ne kerülhetne a Csurgói Tanítóképző Szombathelyre?
-          A kőszegi Szent Domonkos Rendi Apácazárda, amely egyéb oktatási formák mellett a középfokú szintű tanítóképzőt is működtette, kinyilvánítja az intézmény Szombathelyre költöztetésének szándékát.
+    description:
+        '''A közoktatási kormányzat kifogásolja a Csurgói Tanítóképző működési körülményeit, s akkor vetődik fel az intézmény Nagykanizsára való telepítésének gondolata. A Vasvármegye cikkírója (1911/83. sz.) felhívja a figyelmet a szándékra, és felteszi a kérdést, hogy miért ne kerülhetne a Csurgói Tanítóképző Szombathelyre? A kőszegi Szent Domonkos Rendi Apácazárda, amely egyéb oktatási formák mellett a középfokú szintű tanítóképzőt is működtette, kinyilvánítja az intézmény Szombathelyre költöztetésének szándékát.
           ''',
   ),
   const Event(
@@ -119,8 +119,7 @@ final List<Event> ptiHistory = [
   const Event(
     year: '2000',
     description:
-        '''Január 1-jétől az Országgyűlés döntése alapján az intézmény regionális szerepű főiskolai centrum, s neve Berzsenyi Dániel Főiskola.
-              Az elnevezés megváltoztatása a főiskola arculatváltozását is jelzi, hiszen a felvehető szakok köre nem-tanári szakokkal bővül, így közgazdasági szakkal is. Megkezdődik a “D” épület rekonstrukciója és bővítése, hogy helyet adjon az Európa Tanulmányok Központnak, s zajlik a Bolyai János Gyakorló Általános Iskola és Gimnázium bővítése is.''',
+        '''Január 1-jétől az Országgyűlés döntése alapján az intézmény regionális szerepű főiskolai centrum, s neve Berzsenyi Dániel Főiskola. Az elnevezés megváltoztatása a főiskola arculatváltozását is jelzi, hiszen a felvehető szakok köre nem-tanári szakokkal bővül, így közgazdasági szakkal is. Megkezdődik a “D” épület rekonstrukciója és bővítése, hogy helyet adjon az Európa Tanulmányok Központnak, s zajlik a Bolyai János Gyakorló Általános Iskola és Gimnázium bővítése is.''',
   ),
   const Event(
     year: '2002',

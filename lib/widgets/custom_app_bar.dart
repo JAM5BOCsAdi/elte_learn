@@ -13,6 +13,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showActionIcon;
   final VoidCallback? onMenuActionTap;
   final double? appBarHeight;
+  final double? leftPadding;
 
   const CustomAppBar({
     Key? key,
@@ -22,6 +23,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.showActionIcon = false,
     this.onMenuActionTap,
     this.appBarHeight,
+    this.leftPadding = 0.0,
   }) : super(key: key);
 
   @override
@@ -33,10 +35,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Positioned.fill(
               child: titleWidget == null
-                  ? Center(
-                      child: AutoSizeText(
-                        title,
-                        style: appBarText,
+                  ? Padding(
+                      padding: EdgeInsets.only(left: leftPadding!.toDouble()),
+                      child: Center(
+                        child: AutoSizeText(
+                          title,
+                          style: appBarText,
+                        ),
                       ),
                     )
                   : Center(

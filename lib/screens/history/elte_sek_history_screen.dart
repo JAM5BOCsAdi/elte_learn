@@ -15,10 +15,10 @@ class ElteSekHistoryScreen extends GetView<MyZoomDrawerController> {
 
   @override
   Widget build(BuildContext context) {
-    Event sekHistory = elteSekHistory[0];
+    Event history = elteSekHistory[0];
     return Scaffold(
       appBar: CustomAppBar(
-        title: sekHistory.title ?? "Nincs Címe",
+        title: history.title ?? "Nincs Címe",
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
           // clipBehavior: Clip.none,
@@ -34,11 +34,11 @@ class ElteSekHistoryScreen extends GetView<MyZoomDrawerController> {
           child: ListView.builder(
             itemCount: elteSekHistory.length,
             itemBuilder: (_, index) {
-              sekHistory = elteSekHistory[index];
+              history = elteSekHistory[index];
 
               return Column(
                 children: [
-                  _timelineTile(sekHistory: sekHistory, index: index),
+                  _timelineTile(history: history, index: index),
                   _timelineDivider(index: index),
                 ],
               );
@@ -51,7 +51,7 @@ class ElteSekHistoryScreen extends GetView<MyZoomDrawerController> {
 }
 
 TimelineTile _timelineTile({
-  required Event sekHistory,
+  required Event history,
   required int index,
 }) {
   double width = getHeight * 0.05;
@@ -66,7 +66,7 @@ TimelineTile _timelineTile({
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
-        indicator: _indicator(yearNumber: sekHistory.year),
+        indicator: _indicator(yearNumber: history.year),
         drawGap: true,
       ),
       beforeLineStyle: LineStyle(
@@ -76,7 +76,7 @@ TimelineTile _timelineTile({
       endChild: ReadMore(
         paddingLeft: 0.025,
         paddingRight: 0.1,
-        sekHistory: sekHistory,
+        history: history,
         maxLines: 4,
         alignment: Alignment.centerLeft,
       ),
@@ -90,7 +90,7 @@ TimelineTile _timelineTile({
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
-        indicator: _indicator(yearNumber: sekHistory.year),
+        indicator: _indicator(yearNumber: history.year),
         drawGap: true,
       ),
       beforeLineStyle: LineStyle(
@@ -100,7 +100,7 @@ TimelineTile _timelineTile({
       startChild: ReadMore(
         paddingLeft: 0.1,
         paddingRight: 0.025,
-        sekHistory: sekHistory,
+        history: history,
         maxLines: 4,
         alignment: Alignment.centerRight,
       ),

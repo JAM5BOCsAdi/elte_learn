@@ -6,14 +6,14 @@ import '../models/event_model.dart';
 
 // ReadMore
 class ReadMore extends StatefulWidget {
-  final Event sekHistory;
+  final Event history;
   final double paddingLeft;
   final double paddingRight;
   final int maxLines;
   final AlignmentGeometry alignment;
   const ReadMore({
     Key? key,
-    required this.sekHistory,
+    required this.history,
     required this.paddingLeft,
     required this.paddingRight,
     required this.maxLines,
@@ -37,7 +37,7 @@ class _ReadMoreState extends State<ReadMore> {
   bool _checkIfShouldShowMore() {
     final textPainter = TextPainter(
       text: TextSpan(
-        text: widget.sekHistory.description,
+        text: widget.history.description,
         style: const TextStyle(
           color: kOnSurfaceTextColor,
           fontSize: 18,
@@ -60,8 +60,8 @@ class _ReadMoreState extends State<ReadMore> {
           });
         },
         child: Text(
-          widget.sekHistory.description,
-          maxLines: _isExpanded ? widget.sekHistory.description.length : widget.maxLines,
+          widget.history.description,
+          maxLines: _isExpanded ? widget.history.description.length : widget.maxLines,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
             color: kOnSurfaceTextColor,
@@ -71,8 +71,8 @@ class _ReadMoreState extends State<ReadMore> {
       );
     } else {
       return Text(
-        widget.sekHistory.description,
-        maxLines: widget.sekHistory.description.length,
+        widget.history.description,
+        maxLines: widget.history.description.length,
         overflow: TextOverflow.ellipsis,
         style: const TextStyle(
           color: kOnSurfaceTextColor,
