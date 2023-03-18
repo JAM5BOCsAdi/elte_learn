@@ -5,80 +5,85 @@ final List<Event> elteHistory = [
     title: "ELTE Történelme",
     year: '1635',
     description:
-        '''Pázmány Péter esztergomi érsek Nagyszombat városában (ma Trnava Szlovákiában), akkori székhelyén alapította meg az egyetemet és vezetését a jezsuita rendre bízta. A jellegzetesen jezsuita egyetem bölcsészeti és teológiai karból állt, jogosult volt a tudományos fokozatok adományozására és már igen korán, 1667-ben jogi karral egészült ki.''',
+        'Pázmány Péter esztergomi érsek Nagyszombat városában (ma Trnava Szlovákiában), akkori székhelyén alapította meg az egyetemet és vezetését a jezsuita rendre bízta.',
+  ),
+  const Event(
+    year: '1667',
+    description:
+        'A jellegzetesen jezsuita egyetem bölcsészeti és teológiai karból állt, jogosult volt a tudományos fokozatok adományozására és már igen korán, 1667-ben jogi karral egészült ki.',
+  ),
+  const Event(
+    year: '1777',
+    description:
+        'A jezsuita rend feloszlatása után, 1777-ben az egyetemet (az alapító eredeti szándékával is egyezően) Nagyszombatból az ország közepébe, Buda városába, a királyi palotába költöztették. Az egyetem keretében kezdődött meg speciális tanfolyamok formájában a hazai mérnökképzés, és az állatorvosképzés. Nagyon sok ma önálló fővárosi egyetem a Tudományegyetemből fejlődött ki.',
+  ),
+  const Event(
+    year: '1784',
+    description:
+        'Az intézmény 1784-ben a Duna túlsó partjára, Pestre került át. Az oktatás nyelve 1844-ig a latin volt, ami a soknemzetiségű hallgatóság számára közvetítő, semleges nyelvnek számított.',
+  ),
+  const Event(
+    year: '1848',
+    description:
+        'Ekkor született meg az első egyetemi törvénycikk, amely a Vallás és Közoktatásügyi Minisztérium fennhatósága alá helyezte az egyetemet mint nemzeti intézményt és kimondta a tanszabadságot. A neoabszolutizmus idején németesítő tartalmú, de hasznos reformokat vezettek be, többek között egyenjogúsítva a Bölcsészeti Kart.',
+  ),
+  const Event(
+    year: '1867',
+    description:
+        'Az 1867-es kiegyezés után kezdődött az egyetem történetének legintenzívebben fejlődő szakasza. A kari szerkezet nem változott, de több új tanulmányi és klinikai épület, Egyetemi Könyvtár, központi épület készült el, szaporodott a tanszékek száma és az Egyetem Magyarország legfontosabb tudományos központjává nőtte ki magát. Esetenként már európai és világhírű tudósok oktattak katedráin, a hallgatói létszámot tekintve pedig a századfordulón a világ 15 legnagyobb egyeteme közé került. Fél évszázad alatt nyolcszorosára nőtt a hallgatók száma (1914-ben 8185 főre) ami azért is következett be, mert Magyarországon 1914 előtt mindössze két Tudományegyetem működött. Az óriási hallgatói tömeg csak kisebb része kaphatott magas színtű képzést. Ezt segítették pl. az 1868 után alakult szemináriumok, az 1895-ben megnyílt Eötvös József Kollégium és más intézmények.',
+  ),
+  const Event(
+    year: '1895',
+    description: 'Innentől már a nők is beiratkozhattak az egyetemre.',
   ),
   const Event(
     year: '1921',
     description:
-        'A trianoni események után - az elcsatolt Pozsonyból az Erzsébet királynőről elnevezett egyetemet Szombathelyre szerették volna telepíteni, de a város vezetői nem vállalták az egyetem befogadását, mely így Pécsett lelt otthonra.',
+        'Az első világháború után a forradalmak időszakában újabb reformtervek születtek, amelyek nem valósulhattak meg. Az egyetem neve 1921-től királyi magyar Pázmány Péter Tudományegyetem lett. Mivel a Trianon (1920. június 4.) után kisebb területűvé vált országban az újonnan létrejött vidéki egyetemek (Debrecen, Szeged, Pécs) igényeltek nagyobb támogatást, ezért az egyetemnek csak kisebb összegek jutottak. Viszont a második világháború végén sikerült megakadályozni az egyetemi intézmények és hallgatók nyugatra való kitelepítését, így gyorsan megkezdődhetett az újjáépítés',
   ),
   const Event(
-    year: '1928',
+    year: '1945',
     description:
-        'A Hír című újság (aug. 4.) közli, hogy Körmenden tanítóképzőt létesítenek, mivel Szombathely városatyái félnek a kiadásoktól, és nem vállalják egy új intézmény fenntartásának költségeit.',
+        'Új tanárokkal egészült ki a professzori kar, megkezdődött az esti rendszerű oktatás és sok addig egyetemre nem jutó fiatal iratkozhatott be.',
   ),
   const Event(
-    year: '1958',
-    description: 'Rendelet a tanítóképzés felsőfokúvá emeléséről (3 éves) (1958.évi 26.sz. trve)',
-  ),
-  const Event(
-    year: '1959',
+    year: '1948',
     description:
-        'Szeptembertől hároméves Felsőfokú Tanítóképző Intézet kezdi meg működését Szombathelyen a kőszegi, valamint a pápai középfokú tanítóképzők jogutódaként a volt Faludy Gimnázium épületében.',
+        'Az 1948-as baloldali fordulat után alapvetően megváltozott az egyetem szerkezete. 1949-ben a Bölcsészeti Karból kiválva önállósult a Természettudományi Kar, ami egy évszázados terv megvalósulását jelentette.',
   ),
   const Event(
-    year: '1962',
-    description: 'A tanítóképzés mellett megindul a népművelő–könyvtár szakos képzés is.',
-  ),
-  const Event(
-    year: '1964',
-    description: 'Átadják a gyakorlóiskola épületét.',
-  ),
-  const Event(
-    year: '1966',
-    description: 'A Magyar utcai kollégiumépülettel gyarapszik az intézmény.',
-  ),
-  const Event(
-    year: '1971',
+    year: '1950',
     description:
-        'Megindul az általános iskolai tanárképzés az intézményben a Pécsi Tanárképző Főiskola kihelyezett tagozataként (matematika-orosz, matematika-testnevelés és matematika-ének szakpárokon).',
+        'Állami utasításra elcsatolták az egyetemtől a Római Katolikus Hittudományi Fakultást, s az önálló akadémia lett. Az egyetem új neve Eötvös Loránd Tudományegyetem lett, és megszűnt évszázados joga a tudományos fokozatok adományozására. 1951 elején államigazgatási okokból önálló egyetemmé vált az Orvostudományi Kar.',
   ),
   const Event(
-    year: '1972',
+    year: '1954',
     description:
-        'További szakokkal (rajz, magyar, történelem) bővül a képzési kínálat, valamint lehetőség nyílik a népművelés és a könyvtár szak tanári szakokkal való párosítására.',
+        'A Lenin Intézet 1954 szeptemberében kivált a Bölcsészkarból, és önálló felsőoktatási intézményként működött. Feladatához az ideológiai - marxista-leninista - és nyelvi oktatás egyaránt hozzátartozott; középiskolai orosz nyelv és irodalom szakos tanárokat, valamint egyetemi oktatókat képeztek.',
   ),
   const Event(
-    year: '1974',
+    year: '1956',
     description:
-        'Megalakul a Szombathelyi Tanárképző Főiskola majd évekig ezen a néven működik. Létre jönnek a szaktanszékek. Átadják a korszerű, kitűnően felszerelt Bolyai János Gyakorló Általános Iskolát.',
+        'Az 1956-os forradalom a budapesti egyetemisták megmozdulásával kezdődött, majd őket is sújtotta a forradalom utáni megtorlás. A kádári konszolidáció időszakában aztán lassú nyitás kezdődött.',
   ),
   const Event(
-    year: '1975',
-    description: 'A tanító, népművelő és könyvtáros diplomák mellett átadják az első tanári okleveleket Szombathelyen.',
-  ),
-  const Event(
-    year: '1978',
-    description: 'Elsőként Szombathelyen van lehetőség a közművelődési és a tanári szakok párosítására.',
-  ),
-  const Event(
-    year: '1982',
-    description: 'Átadják a Főiskola Ady téri kollégiumát.',
-  ),
-  const Event(
-    year: '1984',
+    year: '1963',
     description:
-        'Az intézmény felveszi a Berzsenyi Dániel Tanárképző Főiskola nevet. Ekkor indul meg az új oktatási épületben a természettudományi szakos általános iskolai tanárképzés az addigi humán szakok mellett.',
+        'Eltörölték a származás szerinti felvételi rendszert, de az ELTE nem kapott számottevő fejlesztést, így épületeinek állaga igen leromlott, miközben oktatói és hallgatói létszáma egyre nőtt, és az itt felhalmozott szellemi kapacitás a legnagyobb volt egész Magyarországon.',
   ),
   const Event(
-    year: '1990',
+    year: '1983',
     description:
-        'A Főiskola kezelésébe kerül a Berzsenyi téri (D) épület, melyben elhelyezést kapnak a bölcsész tanszékek. Emellett az idegennyelvi szakok (angol, francia, német, olasz) nagy népszerűségnek örvendenek.',
+        'Az egyetem Tanárképző Főiskolai Karral egészült ki. A nyolcvanas évek közepén kezdődött meg az új lágymányosi egyetemi campus tervezése, majd építése.',
   ),
   const Event(
-    year: '1991',
+    year: '1989',
     description:
-        'Átadják az új Főiskolai Sportcsarnokot; egyszakos testnevelő tanári képzés indul Szombathelyen. Ugyanebben az évben megkezdi működését az EECALL (Kelet-Európai Számítógéppel Segített Nyelvoktatási Központ). Megnyílik a Regionális Informatikai Központ.',
+        'A rendszerváltozás után az ELTE hallgatói létszáma az ország többi intézményéhez hasonlóan intenzíven nőtt, a tudományos kapcsolatai gyarapodtak.',
+  ),
+  const Event(
+    year: '1993',
+    description: 'Az egyetem visszanyerte a tudományos fokozatadás jogát.',
   ),
   const Event(
     year: '1992',
@@ -91,73 +96,32 @@ final List<Event> elteHistory = [
         'A főiskola létrehozza a Savaria University Press alapítványi kiadót, s megalakul az Észak-Dunántúli Regionális Távoktatási Alközpont.',
   ),
   const Event(
-    year: '1994',
-    description:
-        'Más egyetemek és főiskolák kihelyezett képzéseit fogadja be a Főiskola (testnevelő egyetemi tanárképzés, táncpedagógus képzés, közoktatásvezetői képzés). A BDTF kezdeményezi a Societas Scientarium Savariensis (Szombathelyi Tudományos Társaság) megalapítását. A British Council támogatásával megnyílik a regionális szerepű Angoltanári Információs Központ és Könyvtár.',
-  ),
-  const Event(
-    year: '1995',
-    description:
-        'A londoni Thames Valley Egyetem akkreditálja az egyetemi angolnyelv-tanári szakot. Megnyílik a SOROS USIS Amerikai Tanulmányi Információs Iroda.',
-  ),
-  const Event(
-    year: '1996',
-    description: 'Az intézmény beadja 10 szak egyetemi akkreditációs kérelmét. Elindulnak a Jean Monnet-kurzusok.',
-  ),
-  const Event(year: '1997', description: 'Lezajlik az intézmény és a szakok akkreditációja.'),
-  const Event(
-    year: '1998',
-    description:
-        'Az intézmény két egyetemi szakkal bővül, az általános és alkalmazott, illetve a finnugor nyelvészetivel. Megnyílik az Európai Dokumentációs Központ és Szakkönyvtár (EDC) a “B” épületben.',
-  ),
-  const Event(
-    year: '1999',
-    description:
-        'Engedélyt kap az intézmény a nemzetközi tanulmányok egyetemi szak s a kommunikáció főiskolai szak indítására, és megalapítja a Gazdálkodási és Műszaki Intézetet. Ekkor készül el az Európai Dokumentációs Központ felújított épületrésze a városközpontban található Berzsenyi téren, s adja át azt szeptember 16-án Michael Lake, az Európai Unió delegációvezetője.',
-  ),
-  const Event(
     year: '2000',
     description:
-        '''Január 1-jétől az Országgyűlés döntése alapján az intézmény regionális szerepű főiskolai centrum, s neve Berzsenyi Dániel Főiskola. Az elnevezés megváltoztatása a főiskola arculatváltozását is jelzi, hiszen a felvehető szakok köre nem-tanári szakokkal bővül, így közgazdasági szakkal is. Megkezdődik a “D” épület rekonstrukciója és bővítése, hogy helyet adjon az Európa Tanulmányok Központnak, s zajlik a Bolyai János Gyakorló Általános Iskola és Gimnázium bővítése is.''',
+        'A rendkívül széttagolt egyetemi hálózat integrálásának során 2000. január 1-jétől az ELTE részévé vált a Bárczi Gusztáv Gyógypedagógiai Főiskolai Kar, valamint a Tanító- és Óvóképző Főiskolai Kar.',
   ),
   const Event(
-    year: '2002',
+    year: "2001",
     description:
-        'Január 1-től kormányrendelet alapján megalakult a Bölcsészettudományi, a Természettudományi, valamint a Testnevelési és Művészeti Főiskolai Kar.',
+        'Az említett integrációval azonban korántsem ért véget az ELTE szerkezetének kialakítása. Az Egyetemi Tanács 2001-es és 2002-es határozataival kezdeményezte három új egyetemi kar létrehozását és egy karának megszüntetését.',
   ),
   const Event(
-    year: '2006',
-    description: 'Bologna típusú alapszakok akkreditációja, az új rendszerű képzések bevezetése.',
-  ),
-  const Event(
-    year: '2007',
+    year: '2003',
     description:
-        'PPP beruházásban felépül a Forrásközpont, melyben elhelyezést nyer a Könyvtár és a Regionális Pedagógiai Szolgáltató és Kutatóközpont.',
+        'A Kormány elfogadta a javaslatot, és az ELTE karait megállapító korábbi jogszabályi rendelkezést módosítva létrehozta az Informatikai Kart, a Pedagógiai és Pszichológiai Kart és a Társadalomtudományi Kart, valamint 2003. augusztus 31. napjával megszüntette a Tanárképző Főiskolai Kart (TFK). A TFK-n folyó képzés azonban nem szűnt meg, azt - az adott szaktól függően - a Bölcsészettudományi Kar, a Természettudományi Kar, az Informatikai Kar és a Pedagógiai és Pszichológiai Kar vette át. Az új karok 2003. szeptember 1. napjától kezdték meg működésüket. Az Informatikai Kar alapvetően a TTK egyes oktatási szervezeti egységeiből, illetve a TFK szakos tanszékéből alakult ki. A Pedagógiai és Pszichológiai Kar javarészt BTK szakterületen működő intézeteinek, illetve a TFK egyes szervezeti egységeinek alapján jött létre. A Társadalomtudományi Kar döntően a BTK Szociológiai Intézetére épült, de átvette a GyFK egy, illetve a BTK több más tanszékét is.',
   ),
-  const Event(
-    year: '2008',
-    description:
-        'Január 1-től az Országgyűlés döntése szerint a Berzsenyi Dániel Főiskola és a Nyugat-magyarországi Egyetem egyesülésével egy új tíz karú egyetem jött létre (Savaria Egyetemi Központ alakul).',
-  ),
-  const Event(
-    year: '2009',
-    description: 'Mesterképzések sikeres akkreditációja. 50 éves az intézmény.',
-  ),
+  const Event(year: '2010', description: 'Az ELTE 2010-ben kutatóegyetemi címet kapott.'),
   const Event(
     year: '2013',
-    description: 'Osztatlan tanárképzési szakok létrejötte.',
-  ),
-  const Event(
-    year: '2015',
-    description: 'Szeptemberben elindult a duális gépészmérnök képzés.',
+    description: '2013-ban pedig kiemelt egyetemmé nyilvánították.',
   ),
   const Event(
     year: '2017',
     description:
-        'Február 1-től megszűnt a Nyugat-magyarországi Egyetem, a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként működnek tovább.',
+        '2017-ben az Egyetem szervezetébe integrálódott a szombathelyi Savaria Egyetemi Központ. Az egyetem történetének legújabb jelentős fejlesztéseként.',
   ),
   const Event(
-    year: '2018',
-    description: 'A Berzsenyi Dániel Pedagógusképző Központ létrehozása.',
+    year: '2021',
+    description: 'Létrejött az ELTE kilencedik kara, a Gazdaságtudományi Kar.',
   ),
 ];
