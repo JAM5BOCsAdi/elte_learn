@@ -7,7 +7,8 @@ import '../../controllers/zoom_drawer_controller.dart';
 import '../../widgets/app_circle_button.dart';
 
 class ElteSekWebsiteScreen extends GetView<NewsController> {
-  const ElteSekWebsiteScreen({Key? key}) : super(key: key);
+  final bool isElteSekWebsite;
+  const ElteSekWebsiteScreen({Key? key, this.isElteSekWebsite = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +20,19 @@ class ElteSekWebsiteScreen extends GetView<NewsController> {
         backgroundColor: Colors.blue,
         centerTitle: true,
         title: const AutoSizeText("ELTE SEK Weboldal"),
-        leading: AppCircleButton(
-          // clipBehavior: Clip.none,
-          onTap: myZoomDrawerController.toggleDrawer,
-          child: Padding(
-            padding: EdgeInsets.only(left: getWidth * 0.05),
-            child: Icon(AppIcons.menuLeft, size: getHeight * 0.025),
-          ),
-        ),
+        leading: isElteSekWebsite
+            ? AppCircleButton(
+                onTap: Get.back,
+                child: Icon(Icons.arrow_back, size: getHeight * 0.035),
+              )
+            : AppCircleButton(
+                // clipBehavior: Clip.none,
+                onTap: myZoomDrawerController.toggleDrawer,
+                child: Padding(
+                  padding: EdgeInsets.only(left: getWidth * 0.05),
+                  child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
+                ),
+              ),
       ),
       body: SafeArea(
         child: FutureBuilder(

@@ -35,7 +35,7 @@ class ContactController extends GetxController {
   }
 
   Future<void> website() async {
-    await Get.to(const ElteSekWebsiteScreen());
+    await Get.to(const ElteSekWebsiteScreen(isElteSekWebsite: true));
   }
 
   Future<void> _launch(Uri url) async {
@@ -43,14 +43,6 @@ class ContactController extends GetxController {
       throw "Sikertelen $url";
     }
   }
-
-  // void focus(BuildContext context) {
-  //   // Remove focus from the SelectableText when tapping outside its area
-  //   FocusScopeNode currentFocus = FocusScope.of(context);
-  //   if (!currentFocus.hasPrimaryFocus) {
-  //     currentFocus.unfocus();
-  //   }
-  // }
 
   Future<void> popUp() async {
     await Get.dialog(PopUp(onTapClose: () => Get.back()));
