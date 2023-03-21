@@ -35,7 +35,7 @@ class ContactController extends GetxController {
   }
 
   Future<void> website() async {
-    await Get.to(const ElteSekWebsiteScreen(isElteSekWebsite: true));
+    await Get.to(() => const ElteSekWebsiteScreen(isElteSekWebsite: true));
   }
 
   Future<void> _launch(Uri url) async {
