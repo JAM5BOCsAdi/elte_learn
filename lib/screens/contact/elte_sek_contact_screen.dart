@@ -35,7 +35,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
             padding: EdgeInsets.all(mobileScreenPadding),
             child: SingleChildScrollView(
               child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                     width: getWidth * 0.5,
@@ -49,6 +49,12 @@ class ElteSekContactScreen extends GetView<ContactController> {
                     ),
                   ),
                   Gap(getWidth * 0.025),
+                  const AutoSizeText(
+                    "ELTE Savaria Egyetemi Központ",
+                    style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
+                    minFontSize: 20,
+                  ),
+                  Gap(getWidth * 0.05),
                   Column(
                     children: [
                       ContactRow(
@@ -79,6 +85,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                     ],
                   ),
                   Gap(getHeight * 0.025),
+
                   // ClipRRect(
                   //   borderRadius: BorderRadius.circular(getHeight * 0.025),
                   //   child: SizedBox(
