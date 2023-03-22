@@ -50,7 +50,7 @@ dependencies:
   shimmer: ^2.0.0
   easy_separator: ^1.0.1
   http: ^0.13.5
-  webview_flutter: ^4.0.2
+  webview_flutter: ^4.0.7
   timeline_tile: ^2.0.0
   expandable_text: ^2.3.0
   pull_to_refresh: ^2.0.0

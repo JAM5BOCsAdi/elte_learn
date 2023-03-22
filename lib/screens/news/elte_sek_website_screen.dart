@@ -1,4 +1,7 @@
+import 'package:elte_learn/configs/themes/app_light_theme.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';
@@ -15,9 +18,13 @@ class ElteSekWebsiteScreen extends GetView<NewsController> {
     String _websiteUrl = "https://sek.elte.hu/";
     MyZoomDrawerController myZoomDrawerController = Get.find();
 
+    final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers = {
+      Factory(() => EagerGestureRecognizer()),
+    };
+
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: primaryLightLT,
         centerTitle: true,
         title: const AutoSizeText("ELTE SEK Weboldal"),
         leading: isElteSekWebsite
@@ -37,11 +44,12 @@ class ElteSekWebsiteScreen extends GetView<NewsController> {
       body: SafeArea(
         child: FutureBuilder(
           future: controller.loadWebView(url: _websiteUrl),
-          builder: (context, snapshot) {
+          builder: (_, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return RefreshIndicator(
                 onRefresh: () => controller.reload(),
                 child: WebViewWidget(
+                  gestureRecognizers: gestureRecognizers,
                   controller: controller.webViewController,
                 ),
               );

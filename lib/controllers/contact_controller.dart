@@ -1,6 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/routes/route_names.dart';
-import 'package:elte_learn/screens/contact/popUp.dart';
+import 'package:elte_learn/screens/contact/elte_sek_contact_screen_map.dart';
 import 'package:elte_learn/screens/news/elte_sek_website_screen.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -44,19 +44,19 @@ class ContactController extends GetxController {
     }
   }
 
-  Future<void> popUp() async {
-    await Get.dialog(PopUp(onTapClose: () => Get.back()));
+  Future<void> map() async {
+    await Get.dialog(ElteSekContactScreenMap());
   }
 
-  void onScaleUpdate({required ScaleUpdateDetails details}) {
-    if (details.scale >= 2) {
-      // Move the map only if the scale of the gesture is 2 or greater
-      final double lat = mapController.center.latitude;
-      final double lng = mapController.center.longitude;
-      final double newLat = lat - details.focalPointDelta.dy / 100;
-      final double newLng = lng + details.focalPointDelta.dx / 100;
-      final LatLng newCenter = LatLng(newLat, newLng);
-      mapController.move(newCenter, mapController.zoom);
-    }
-  }
+  // void onScaleUpdate({required ScaleUpdateDetails details}) {
+  //   if (details.scale >= 2) {
+  //     // Move the map only if the scale of the gesture is 2 or greater
+  //     final double lat = mapController.center.latitude;
+  //     final double lng = mapController.center.longitude;
+  //     final double newLat = lat - details.focalPointDelta.dy / 100;
+  //     final double newLng = lng + details.focalPointDelta.dx / 100;
+  //     final LatLng newCenter = LatLng(newLat, newLng);
+  //     mapController.move(newCenter, mapController.zoom);
+  //   }
+  // }
 }

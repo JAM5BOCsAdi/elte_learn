@@ -74,12 +74,18 @@ class AppRoutes {
         GetPage(
           name: RouteNames.facebookScreenRoute,
           page: () => const ElteSekFacebookScreen(),
-          binding: BindingsBuilder.put(() => NewsController()),
+          binding: BindingsBuilder(() {
+            Get.put(NewsController());
+            Get.put(MyZoomDrawerController());
+          }),
         ),
         GetPage(
           name: RouteNames.websiteScreenRoute,
           page: () => const ElteSekWebsiteScreen(),
-          binding: BindingsBuilder.put(() => NewsController()),
+          binding: BindingsBuilder(() {
+            Get.put(NewsController());
+            Get.put(MyZoomDrawerController());
+          }),
         ),
         GetPage(
           name: RouteNames.contactScreenRoute,
