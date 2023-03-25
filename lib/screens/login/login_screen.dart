@@ -29,17 +29,7 @@ class LoginScreen extends GetView<AuthController> {
                   height: getHeight * 0.25,
                   width: getWidth * 0.5,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: getHeight * 0.025),
-                  child: const AutoSizeText(
-                    "Sed tempor nisi in gravida congue. Cras elementum mi sit amet neque blandit faucibus. Donec turpis dui",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: kOnSurfaceTextColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+                Gap(getHeight * 0.05),
                 Button(
                   onTap: () {
                     controller.signInWithGoogle();
