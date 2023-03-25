@@ -17,7 +17,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
         centerTitle: true,
         title: const AutoSizeText("ELTE SEK Helyzete"),
         leading: AppCircleButton(
-          onTap: Get.back,
+          onTap: () => Get.back(),
           child: Icon(Icons.arrow_back, size: getHeight * 0.035),
         ),
       ),
