@@ -24,59 +24,6 @@ class MyZoomDrawerController extends GetxController {
   RxString currentRoute = "".obs;
 
   final random = Random();
-  // final List<Map<String, dynamic>> items = [
-  //   {
-  //     'title': 'Kvízek',
-  //     'children': [
-  //       {
-  //         'title': 'ELTE',
-  //         'routeName': '/elte_quiz',
-  //       },
-  //       {
-  //         'title': 'ELTE SEK',
-  //         'routeName': '/elte_sek_quiz',
-  //       },
-  //       {
-  //         'title': 'ELTE SEK PTI',
-  //         'routeName': '/elte_sek_quiz',
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     'title': 'Történetek',
-  //     'children': [
-  //       {
-  //         'title': 'ELTE',
-  //         'routeName': '/elte_history',
-  //       },
-  //       {
-  //         'title': 'ELTE SEK',
-  //         'routeName': '/elte_sek_history',
-  //       },
-  //       {
-  //         'title': 'ELTE SEK PTI',
-  //         'routeName': '/elte_sek_pti_history',
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     'title': 'Hírek',
-  //     'children': [
-  //       {
-  //         'title': 'ELTE SEK Facebook',
-  //         'routeName': '/elte_sek_facebook',
-  //       },
-  //       {
-  //         'title': 'ELTE SEK Weboldal',
-  //         'routeName': '/elte_sek_website',
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     'title': 'Kapcsolat',
-  //     'routeName': '/contact',
-  //   },
-  // ];
 
   @override
   void onReady() {

@@ -1,10 +1,7 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/routes/route_names.dart';
 import 'package:elte_learn/screens/contact/elte_sek_contact_screen_map.dart';
 import 'package:elte_learn/screens/news/elte_sek_website_screen.dart';
 import 'package:latlong2/latlong.dart';
-
-import '../widgets/dialogue.dart';
 
 class ContactController extends GetxController {
   final LatLng _initialPosition = LatLng(47.230528336798976, 16.611700263845446);
@@ -45,7 +42,7 @@ class ContactController extends GetxController {
   }
 
   Future<void> map() async {
-    await Get.dialog(ElteSekContactScreenMap());
+    await Get.to(() => const ElteSekContactScreenMap());
   }
 
   // void onScaleUpdate({required ScaleUpdateDetails details}) {
