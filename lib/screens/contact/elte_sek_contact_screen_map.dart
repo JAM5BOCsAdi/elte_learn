@@ -11,6 +11,17 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
 
   @override
   Widget build(BuildContext context) {
+    MapController mapController = MapController();
+
+    void resetMap() {
+      mapController.move(controller.getInitialPosition, 16.0);
+      mapController.rotate(0.0);
+    }
+
+    void zoomIn() => mapController.move(mapController.center, mapController.zoom + 1);
+
+    void zoomOut() => mapController.move(mapController.center, mapController.zoom - 1);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryLightLT,
@@ -24,7 +35,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
       body: Stack(
         children: [
           FlutterMap(
-            mapController: controller.mapController,
+            mapController: mapController,
             options: MapOptions(
               center: controller.getInitialPosition,
               zoom: 16.0,
@@ -57,9 +68,9 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
             right: 16.0,
             child: Column(
               children: [
-                ZoomButton(zoom: () => controller.zoomIn(), icon: Icons.add, color: primaryLightLT),
+                ZoomButton(zoom: () => zoomIn(), icon: Icons.add, color: primaryLightLT),
                 Gap(getHeight * 0.025),
-                ZoomButton(zoom: () => controller.zoomOut(), icon: Icons.remove, color: primaryLT),
+                ZoomButton(zoom: () => zoomOut(), icon: Icons.remove, color: primaryLT),
               ],
             ),
           ),
@@ -71,7 +82,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade400),
                 // minimumSize: MaterialStateProperty.all<Size>(const Size(20, 40)),
               ),
-              onPressed: controller.resetMap,
+              onPressed: resetMap,
               child: const AutoSizeText('Visszaállítás'),
             ),
           ),

@@ -8,20 +8,9 @@ class ContactController extends GetxController {
   final String _urlTemplate = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
   final List<String> _subdomains = ['a', 'b', 'c'];
 
-  final mapController = MapController();
-
   LatLng get getInitialPosition => _initialPosition;
   String get getUrlTemplate => _urlTemplate;
   List<String> get getSubdomains => _subdomains;
-
-  void resetMap() {
-    mapController.move(getInitialPosition, 16.0);
-    mapController.rotate(0.0);
-  }
-
-  void zoomIn() => mapController.move(mapController.center, mapController.zoom + 1);
-
-  void zoomOut() => mapController.move(mapController.center, mapController.zoom - 1);
 
   void email() {
     final emailLaunchUri = Uri(
@@ -44,16 +33,4 @@ class ContactController extends GetxController {
   Future<void> map() async {
     await Get.to(() => const ElteSekContactScreenMap());
   }
-
-  // void onScaleUpdate({required ScaleUpdateDetails details}) {
-  //   if (details.scale >= 2) {
-  //     // Move the map only if the scale of the gesture is 2 or greater
-  //     final double lat = mapController.center.latitude;
-  //     final double lng = mapController.center.longitude;
-  //     final double newLat = lat - details.focalPointDelta.dy / 100;
-  //     final double newLng = lng + details.focalPointDelta.dx / 100;
-  //     final LatLng newCenter = LatLng(newLat, newLng);
-  //     mapController.move(newCenter, mapController.zoom);
-  //   }
-  // }
 }
