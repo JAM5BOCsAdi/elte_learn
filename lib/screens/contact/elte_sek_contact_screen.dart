@@ -32,73 +32,117 @@ class ElteSekContactScreen extends GetView<ContactController> {
         decoration: BoxDecoration(gradient: mainGradient()),
         child: SafeArea(
           bottom: false,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.all(mobileScreenPadding),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: getHeight * 0.015),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: getWidth * 0.5,
-                            height: getHeight * 0.15,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/elte_sek.png"),
-                                fit: BoxFit.contain,
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(mobileScreenPadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: getHeight * 0.015),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: getWidth * 0.5,
+                              height: getHeight * 0.15,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/elte_sek.png"),
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
-                          ),
-                          Gap(getWidth * 0.025),
-                          const AutoSizeText(
-                            "ELTE Savaria Egyetemi Központ",
-                            style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
-                            minFontSize: 20,
-                          ),
-                          Gap(getWidth * 0.05),
-                          Column(
-                            children: [
-                              ContactRow(
-                                icon: Icons.location_on,
-                                text: "9700 Szombathely,\n Károlyi Gáspár tér 4.",
-                                enabled: true,
-                                onTap: controller.map,
+                            Gap(getWidth * 0.025),
+                            const AutoSizeText(
+                              "ELTE Savaria Egyetemi Központ",
+                              style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
+                              minFontSize: 20,
+                            ),
+                            Gap(getWidth * 0.05),
+                            Column(
+                              children: [
+                                ContactRow(
+                                  icon: Icons.location_on,
+                                  text: "9700 Szombathely,\n Károlyi Gáspár tér 4.",
+                                  enabled: true,
+                                  onTap: controller.map,
+                                ),
+                                Gap(getHeight * 0.015),
+                                const ContactRow(
+                                  icon: Icons.phone,
+                                  text: "(94) 504 300",
+                                ),
+                                Gap(getHeight * 0.015),
+                                ContactRow(
+                                  icon: Icons.mail,
+                                  text: "sekrh@elte.hu",
+                                  enabled: true,
+                                  onTap: controller.email,
+                                ),
+                                Gap(getHeight * 0.015),
+                                ContactRow(
+                                  icon: Icons.web,
+                                  text: "https://sek.elte.hu/",
+                                  enabled: true,
+                                  onTap: controller.website,
+                                ),
+                              ],
+                            ),
+                            Gap(getWidth * 0.05),
+                            Container(
+                              width: getWidth * 0.5,
+                              height: getHeight * 0.15,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/me.png"),
+                                  fit: BoxFit.contain,
+                                ),
                               ),
-                              Gap(getHeight * 0.015),
-                              const ContactRow(
-                                icon: Icons.phone,
-                                text: "(94) 504 300",
-                              ),
-                              Gap(getHeight * 0.015),
-                              ContactRow(
-                                icon: Icons.mail,
-                                text: "sekrh@elte.hu",
-                                enabled: true,
-                                onTap: controller.email,
-                              ),
-                              Gap(getHeight * 0.015),
-                              ContactRow(
-                                icon: Icons.web,
-                                text: "https://sek.elte.hu/",
-                                enabled: true,
-                                onTap: controller.website,
-                              ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            Gap(getWidth * 0.025),
+                            const AutoSizeText(
+                              "Horváth Ádám - Mobilfejlesztő",
+                              style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
+                              minFontSize: 20,
+                            ),
+                            Gap(getWidth * 0.05),
+                            Column(
+                              children: [
+                                Gap(getHeight * 0.015),
+                                const ContactRow(
+                                  icon: Icons.phone,
+                                  text: "06/30 - 134 - 4567",
+                                ),
+                                Gap(getHeight * 0.015),
+                                ContactRow(
+                                  icon: Icons.mail,
+                                  text: "oradam@elte.hu",
+                                  enabled: true,
+                                  onTap: controller.email,
+                                ),
+                                Gap(getHeight * 0.015),
+                                ContactRow(
+                                  icon: Icons.web,
+                                  text: "https://oradam.web.elte.hu/\nportfolio-website-1/",
+                                  enabled: true,
+                                  onTap: controller.website,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
