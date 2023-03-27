@@ -1,6 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:elte_learn/screens/contact/elte_sek_contact_screen_map.dart';
-import 'package:elte_learn/screens/news/elte_sek_website_screen.dart';
+import 'package:elte_learn/screens/news/news_screens.dart';
 import 'package:latlong2/latlong.dart';
 
 class ContactController extends GetxController {
@@ -21,7 +21,7 @@ class ContactController extends GetxController {
   }
 
   Future<void> website() async {
-    await Get.to(() => const ElteSekWebsiteScreen(isElteSekWebsite: true));
+    await Get.to(() => const NewsScreens(isElteSekWebsite: true, isBackButton: true));
   }
 
   Future<void> _launch(Uri url) async {

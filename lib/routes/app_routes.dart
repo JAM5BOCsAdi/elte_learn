@@ -15,8 +15,7 @@ import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/home/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
-import '../screens/news/elte_sek_facebook_screen.dart';
-import '../screens/news/elte_sek_website_screen.dart';
+import '../screens/news/news_screens.dart';
 import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -73,7 +72,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.facebookScreenRoute,
-          page: () => const ElteSekFacebookScreen(),
+          page: () => const NewsScreens(isElteSekWebsite: false),
           binding: BindingsBuilder(() {
             Get.put(NewsController());
             Get.put(MyZoomDrawerController());
@@ -81,7 +80,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RouteNames.websiteScreenRoute,
-          page: () => const ElteSekWebsiteScreen(),
+          page: () => const NewsScreens(isElteSekWebsite: true),
           binding: BindingsBuilder(() {
             Get.put(NewsController());
             Get.put(MyZoomDrawerController());
