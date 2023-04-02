@@ -1,11 +1,11 @@
+import 'package:elte_learn/controllers/histories_controller.dart';
+import 'package:elte_learn/models/histories_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/zoom_drawer_controller.dart';
-import '../../models/event_model.dart';
-import '../../sources/histories/elte_history.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
@@ -15,10 +15,12 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
 
   @override
   Widget build(BuildContext context) {
-    Event history = elteHistory[0];
+    // Get.put(HistoriesController());
+    final HistoriesController historiesController = Get.find<HistoriesController>();
+
     return Scaffold(
       appBar: CustomAppBar(
-        title: history.title ?? "Nincs Címe",
+        title: "ELTE Történelme",
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
           // clipBehavior: Clip.none,
@@ -31,16 +33,28 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
         decoration: BoxDecoration(gradient: mainGradient()),
         padding: EdgeInsets.all(mobileScreenPadding * 0.25),
         child: SafeArea(
-          child: ListView.builder(
-            itemCount: elteHistory.length,
-            itemBuilder: (_, index) {
-              history = elteHistory[index];
+          child: FutureBuilder(
+            future: historiesController.loadElteHistories(),
+            builder: (_, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (snapshot.hasError) {
+                return Center(child: Text('Error: ${snapshot.error}'));
+              }
 
-              return Column(
-                children: [
-                  _timelineTile(history: history, index: index),
-                  _timelineDivider(index: index),
-                ],
+              return ListView.builder(
+                itemCount: historiesController.histories.length,
+                itemBuilder: (_, index) {
+                  HistoriesModel history = historiesController.histories[index];
+
+                  return Column(
+                    children: [
+                      _timelineTile(index: index, historiesLength: historiesController.histories.length, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesController.histories.length),
+                    ],
+                  );
+                },
               );
             },
           ),
@@ -51,8 +65,9 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
 }
 
 TimelineTile _timelineTile({
-  required Event history,
   required int index,
+  required historiesLength,
+  required HistoriesModel history,
 }) {
   double width = getHeight * 0.05;
   double height = getHeight * 0.05;
@@ -62,7 +77,7 @@ TimelineTile _timelineTile({
       alignment: TimelineAlign.manual,
       lineXY: 0.1,
       isFirst: index == 0,
-      isLast: index == elteHistory.length - 1,
+      isLast: index == historiesLength - 1,
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
@@ -86,7 +101,7 @@ TimelineTile _timelineTile({
       alignment: TimelineAlign.manual,
       lineXY: 0.9,
       isFirst: index == 0,
-      isLast: index == elteHistory.length - 1,
+      isLast: index == historiesLength - 1,
       indicatorStyle: IndicatorStyle(
         width: width,
         height: height,
@@ -130,8 +145,8 @@ Container _indicator({required String yearNumber}) {
   );
 }
 
-TimelineDivider _timelineDivider({required int index}) {
-  if (index < elteHistory.length - 1) {
+TimelineDivider _timelineDivider({required int index, required int historiesLength}) {
+  if (index < historiesLength - 1) {
     return TimelineDivider(
       begin: 0.1,
       end: 0.9,

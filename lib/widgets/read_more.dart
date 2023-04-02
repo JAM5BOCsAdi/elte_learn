@@ -1,12 +1,11 @@
+import 'package:elte_learn/models/histories_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../configs/themes/app_colors.dart';
 import '../configs/themes/ui_parameters.dart';
-import '../models/event_model.dart';
 
-// ReadMore
 class ReadMore extends StatefulWidget {
-  final Event history;
+  final HistoriesModel history;
   final double paddingLeft;
   final double paddingRight;
   final int maxLines;

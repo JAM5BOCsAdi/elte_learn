@@ -1,3 +1,4 @@
+import 'package:elte_learn/controllers/histories_controller.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../configs/system_chrome/set_system_chrome.dart';
@@ -20,6 +21,6 @@ class InitialBindings implements Bindings {
     Get.lazyPut(() => FirebaseStorageService());
     Get.put(NewsController());
     Get.put(ContactController());
-    // Get.put(MyZoomDrawerController());
+    Get.put(HistoriesController());
   }
 }
