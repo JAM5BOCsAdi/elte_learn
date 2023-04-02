@@ -6,12 +6,14 @@ import 'package:elte_learn/screens/history/elte_sek_history_screen.dart';
 import 'package:elte_learn/screens/quizzes/elte_quiz_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import '../../controllers/auth_controller.dart';
+import '../configs/themes/app_light_theme.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/elte_history_screen.dart';
 import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/news/news_screens.dart';
 import '../screens/quizzes/elte_sek_pti_quiz_screen.dart';
 import '../screens/quizzes/elte_sek_quiz_screen.dart';
+import '../utils/consts.dart';
 
 class MyZoomDrawerController extends GetxController {
   final zoomDrawerController = ZoomDrawerController();
@@ -74,10 +76,18 @@ class MyZoomDrawerController extends GetxController {
         return const ElteSekPtiHistoryScreen();
 
       case MenuItems.elteSekWebsite:
-        return const NewsScreens(isElteSekWebsite: true);
+        return NewsScreens(
+          title: "ELTE SEK Weboldal",
+          url: websiteUrl,
+          backgroundColor: primaryLightLT,
+        );
 
       case MenuItems.elteSekFacebook:
-        return const NewsScreens(isElteSekWebsite: false);
+        return NewsScreens(
+          title: "ELTE SEK Facebook",
+          url: facebookUrl,
+          backgroundColor: Colors.blue,
+        );
 
       case MenuItems.elteSekContact:
         return const ElteSekContactScreen();

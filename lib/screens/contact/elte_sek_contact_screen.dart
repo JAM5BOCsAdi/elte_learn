@@ -6,6 +6,7 @@ import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/app_light_theme.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/zoom_drawer_controller.dart';
+import '../../utils/consts.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/contact_row.dart';
 import '../../widgets/custom_app_bar.dart';
@@ -70,7 +71,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   icon: Icons.location_on,
                                   text: "9700 Szombathely,\n Károlyi Gáspár tér 4.",
                                   enabled: true,
-                                  onTap: controller.map,
+                                  onTap: () => controller.map(),
                                 ),
                                 Gap(getHeight * 0.015),
                                 const ContactRow(
@@ -89,7 +90,8 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   icon: Icons.web,
                                   text: "https://sek.elte.hu/",
                                   enabled: true,
-                                  onTap: controller.website,
+                                  onTap: () =>
+                                      controller.website(title: "ELTE SEK Weboldal", url: websiteUrl, color: primaryLightLT),
                                 ),
                               ],
                             ),
@@ -131,7 +133,8 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   icon: Icons.web,
                                   text: "https://oradam.web.elte.hu/\nportfolio-website-1/",
                                   enabled: true,
-                                  onTap: controller.website,
+                                  onTap: () =>
+                                      controller.website(title: "Portfólió oldal", url: myWebsite, color: myWebsiteBGColor),
                                 ),
                               ],
                             ),

@@ -10,6 +10,7 @@ const Color kCustomScaffoldColor2 = Color.fromARGB(255, 240, 237, 255);
 const Color correctAnswersColor = Color(0XFF3AC3CB);
 const Color wrongAnswersColor = Color(0XFFF85187);
 const Color notAnswersColor = Color(0XFF2A3C65);
+const Color myWebsiteBGColor = Color(0XFF27AE60);
 
 const kMainGradientLight = LinearGradient(
   begin: Alignment.topLeft,

@@ -10,16 +10,21 @@ import '../../controllers/zoom_drawer_controller.dart';
 import '../../widgets/app_circle_button.dart';
 
 class NewsScreens extends GetView<NewsController> {
-  final bool isElteSekWebsite;
   final bool isBackButton;
-  const NewsScreens({Key? key, this.isElteSekWebsite = false, this.isBackButton = false}) : super(key: key);
+  final String title;
+  final String url;
+  final Color backgroundColor;
+  const NewsScreens({
+    Key? key,
+    required this.title,
+    required this.url,
+    required this.backgroundColor,
+    this.isBackButton = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     MyZoomDrawerController myZoomDrawerController = Get.find();
-
-    String facebookUrl = "https://m.facebook.com/elte.sek";
-    String websiteUrl = "https://sek.elte.hu/";
 
     final Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers = {
       Factory(() => EagerGestureRecognizer()),
@@ -27,9 +32,9 @@ class NewsScreens extends GetView<NewsController> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: isElteSekWebsite ? primaryLightLT : Colors.blue,
+        backgroundColor: backgroundColor,
         centerTitle: true,
-        title: isElteSekWebsite ? const AutoSizeText("ELTE SEK Weboldal") : const AutoSizeText("ELTE SEK Facebook"),
+        title: AutoSizeText(title),
         leading: isBackButton
             ? AppCircleButton(
                 onTap: Get.back,
@@ -46,7 +51,7 @@ class NewsScreens extends GetView<NewsController> {
       ),
       body: SafeArea(
         child: FutureBuilder(
-          future: controller.loadWebView(url: isElteSekWebsite ? websiteUrl : facebookUrl),
+          future: controller.loadWebView(url: url),
           builder: (_, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               return RefreshIndicator(

@@ -12,6 +12,12 @@ class ContactController extends GetxController {
   String get getUrlTemplate => _urlTemplate;
   List<String> get getSubdomains => _subdomains;
 
+  Future<void> _launch(Uri url) async {
+    if (!await launchUrl(url)) {
+      throw "Sikertelen $url";
+    }
+  }
+
   void email({required String path}) {
     final emailLaunchUri = Uri(
       scheme: "mailto",
@@ -20,14 +26,13 @@ class ContactController extends GetxController {
     _launch(emailLaunchUri);
   }
 
-  Future<void> website() async {
-    await Get.to(() => const NewsScreens(isElteSekWebsite: true, isBackButton: true));
-  }
-
-  Future<void> _launch(Uri url) async {
-    if (!await launchUrl(url)) {
-      throw "Sikertelen $url";
-    }
+  Future<void> website({required String title, required String url, required Color color}) async {
+    await Get.to(() => NewsScreens(
+          title: title,
+          url: url,
+          backgroundColor: color,
+          isBackButton: true,
+        ));
   }
 
   Future<void> map() async {
