@@ -21,16 +21,4 @@ class MenuItems {
   static const elteSekFacebook = MenuItemModel(title: 'ELTE SEK Facebook');
 
   static const elteSekContact = MenuItemModel(title: 'Kapcsolat');
-
-  // static const all = <MenuItemModel>[
-  //   elteQuiz,
-  //   elteSekQuiz,
-  //   elteSekPtiQuiz,
-  //   elteHistory,
-  //   elteSekHistory,
-  //   elteSekPtiHistory,
-  //   elteSekWebsite,
-  //   elteSekFacebook,
-  //   elteSekContact,
-  // ];
 }
