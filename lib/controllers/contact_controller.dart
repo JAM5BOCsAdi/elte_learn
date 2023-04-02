@@ -12,10 +12,10 @@ class ContactController extends GetxController {
   String get getUrlTemplate => _urlTemplate;
   List<String> get getSubdomains => _subdomains;
 
-  void email() {
+  void email({required String path}) {
     final emailLaunchUri = Uri(
       scheme: "mailto",
-      path: "sekrh@elte.hu",
+      path: path,
     );
     _launch(emailLaunchUri);
   }

@@ -82,7 +82,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   icon: Icons.mail,
                                   text: "sekrh@elte.hu",
                                   enabled: true,
-                                  onTap: controller.email,
+                                  onTap: () => controller.email(path: "sekrh@elte.hu"),
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
@@ -124,7 +124,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   icon: Icons.mail,
                                   text: "oradam@elte.hu",
                                   enabled: true,
-                                  onTap: controller.email,
+                                  onTap: () => controller.email(path: "oradam@elte.hu"),
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
