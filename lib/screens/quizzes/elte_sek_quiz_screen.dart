@@ -1,5 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/home/question_card.dart';
+import 'package:elte_learn/screens/quizzes/question_card.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';

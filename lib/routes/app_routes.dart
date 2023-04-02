@@ -13,7 +13,7 @@ import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/elte_sek_pti_history_screen.dart';
-import '../screens/home/my_zoom_drawer.dart';
+import '../screens/menu/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
 import '../screens/news/news_screens.dart';
 import '../screens/question/questions_screen.dart';

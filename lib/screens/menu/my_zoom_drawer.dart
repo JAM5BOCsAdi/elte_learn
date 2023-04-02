@@ -7,7 +7,7 @@ import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../models/menu_item_model.dart';
-import '../../screens/home/menu_screen.dart';
+import '../../screens/menu/menu_screen.dart';
 
 class MyZoomDrawer extends GetView<MyZoomDrawerController> {
   const MyZoomDrawer({Key? key}) : super(key: key);
