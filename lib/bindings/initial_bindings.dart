@@ -8,7 +8,6 @@ import '../controllers/theme_controller.dart';
 import '../controllers/zoom_drawer_controller.dart';
 import '../services/firebase_storage_service.dart';
 
-/// Executed before app boots
 class InitialBindings implements Bindings {
   @override
   void dependencies() {
