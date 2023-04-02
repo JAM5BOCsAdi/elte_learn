@@ -19,7 +19,7 @@ class ElteQuizScreen extends GetView<MyZoomDrawerController> {
     List<String> paperIds = [
       "ppr002",
     ];
-    int numOfPapers = paperIds.length;
+    // int numOfPapers = paperIds.length;
 
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),

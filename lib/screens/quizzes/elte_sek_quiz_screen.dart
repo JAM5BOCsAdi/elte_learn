@@ -21,7 +21,7 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
       "ppr003",
       "ppr004",
     ];
-    int numOfPapers = paperIds.length;
+    // int numOfPapers = paperIds.length;
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),
       child: SafeArea(
