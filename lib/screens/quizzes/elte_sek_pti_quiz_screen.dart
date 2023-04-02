@@ -16,6 +16,10 @@ class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
+    List<String> paperIds = [
+      "ppr001",
+    ];
+    int numOfPapers = paperIds.length;
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),
       child: SafeArea(
@@ -74,10 +78,18 @@ class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
                   () => ListView.separated(
                     padding: UIParameters.mobileScreenPadding,
                     itemBuilder: (BuildContext context, int index) {
-                      return QuestionCard(model: _questionPaperController.allPapers[index]);
+                      final paper = _questionPaperController.allPapers[index];
+                      if (paperIds.contains(paper.id)) {
+                        return Padding(
+                          padding: EdgeInsets.only(bottom: getHeight * 0.025),
+                          child: QuestionCard(model: paper),
+                        );
+                      } else {
+                        return const SizedBox(height: 0, width: 0);
+                      }
                     },
-                    separatorBuilder: (BuildContext context, int index) {
-                      return Gap(getWidth * 0.05);
+                    separatorBuilder: (_, int index) {
+                      return const SizedBox(height: 0, width: 0);
                     },
                     itemCount: _questionPaperController.allPapers.length,
                   ),

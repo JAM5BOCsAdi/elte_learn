@@ -89,7 +89,7 @@ class ElteQuizScreen extends GetView<MyZoomDrawerController> {
                         return const SizedBox(height: 0, width: 0);
                       }
                     },
-                    separatorBuilder: (BuildContext context, int index) {
+                    separatorBuilder: (_, int index) {
                       return const SizedBox(height: 0, width: 0);
                     },
                     itemCount: _questionPaperController.allPapers.length,
