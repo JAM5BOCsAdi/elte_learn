@@ -44,15 +44,17 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
               }
 
               return ListView.builder(
-                itemCount: historiesController.histories.length,
+                itemCount: historiesController.elteHistories.length,
                 itemBuilder: (_, index) {
-                  print("ItemCount: ${historiesController.histories.length}");
-                  HistoriesModel history = historiesController.histories[index];
+                  print("ItemCount: ${historiesController.elteHistories.length}");
+
+                  HistoriesModel history = historiesController.elteHistories[index];
 
                   return Column(
                     children: [
-                      _timelineTile(index: index, historiesLength: historiesController.histories.length, history: history),
-                      _timelineDivider(index: index, historiesLength: historiesController.histories.length),
+                      _timelineTile(
+                          index: index, historiesLength: historiesController.elteHistories.length, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesController.elteHistories.length),
                     ],
                   );
                 },

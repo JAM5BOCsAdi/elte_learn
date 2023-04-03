@@ -44,14 +44,15 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
               }
 
               return ListView.builder(
-                itemCount: historiesController.histories.length,
+                itemCount: historiesController.elteHistories.length,
                 itemBuilder: (_, index) {
-                  HistoriesModel history = historiesController.histories[index];
+                  HistoriesModel history = historiesController.elteHistories[index];
 
                   return Column(
                     children: [
-                      _timelineTile(index: index, historiesLength: historiesController.histories.length, history: history),
-                      _timelineDivider(index: index, historiesLength: historiesController.histories.length),
+                      _timelineTile(
+                          index: index, historiesLength: historiesController.elteHistories.length, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesController.elteHistories.length),
                     ],
                   );
                 },
