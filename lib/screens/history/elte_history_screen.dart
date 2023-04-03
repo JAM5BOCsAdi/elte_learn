@@ -15,7 +15,6 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
 
   @override
   Widget build(BuildContext context) {
-    // Get.put(HistoriesController());
     final HistoriesController historiesController = Get.find<HistoriesController>();
 
     return Scaffold(
