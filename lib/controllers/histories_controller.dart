@@ -14,6 +14,7 @@ class HistoriesController extends GetxController {
   // }
 
   Future<void> loadElteHistories() async {
+    elteHistories.clear();
     final data = await rootBundle.loadString(elteHistoryTxt);
     final lines = data.split('\n');
     print("loadElteHistories: $data");
@@ -29,6 +30,7 @@ class HistoriesController extends GetxController {
   }
 
   Future<void> loadElteSekHistories() async {
+    elteSekHistories.clear();
     final data = await rootBundle.loadString(elteSekHistoryTxt);
     final lines = data.split('\n');
     print("loadElteSekHistories: $data");
@@ -44,6 +46,7 @@ class HistoriesController extends GetxController {
   }
 
   Future<void> loadElteSekPtiHistories() async {
+    elteSekPtiHistories.clear();
     final data = await rootBundle.loadString(elteSekPtiHistoryTxt);
     final lines = data.split('\n');
     print("loadElteSekPtiHistories: $data");
