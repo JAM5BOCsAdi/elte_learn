@@ -71,8 +71,8 @@ TimelineTile _timelineTile({
   required historiesLength,
   required HistoriesModel history,
 }) {
-  double width = getHeight * 0.05;
-  double height = getHeight * 0.05;
+  double width = getHeight * 0.06;
+  double height = getHeight * 0.06;
 
   if (index.isEven) {
     return TimelineTile(

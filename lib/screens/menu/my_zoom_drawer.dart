@@ -1,5 +1,4 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/quizzes/elte_quiz_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -15,7 +14,8 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
-    Rx<MenuItemModel> currentItem = MenuItems.elteSekQuiz.obs;
+    //TODO: Default (Starting) screen
+    Rx<MenuItemModel> currentItem = MenuItems.elteSekPtiHistory.obs;
 
     void onSelectedItem(MenuItemModel item) {
       currentItem.value = item;
