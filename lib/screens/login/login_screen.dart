@@ -44,7 +44,7 @@ class LoginScreen extends GetView<AuthController> {
                       ),
                       Center(
                         child: AutoSizeText(
-                          "Sign in with Google",
+                          "Google bejelentkezés",
                           minFontSize: 18,
                           style: TextStyle(
                             color: Theme.of(context).primaryColor,
