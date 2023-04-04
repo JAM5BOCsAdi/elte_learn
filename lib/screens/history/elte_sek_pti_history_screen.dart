@@ -20,6 +20,7 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
 
     return Scaffold(
       appBar: CustomAppBar(
+        leftPadding: getWidth * 0.05,
         title: "ELTE SEK PTI Történelme",
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
@@ -34,7 +35,7 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
         padding: EdgeInsets.all(mobileScreenPadding * 0.25),
         child: SafeArea(
           child: FutureBuilder(
-            future: historiesController.loadElteHistories(),
+            future: historiesController.loadElteSekPtiHistories(),
             builder: (_, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
@@ -44,15 +45,15 @@ class ElteSekPtiHistoryScreen extends GetView<MyZoomDrawerController> {
               }
 
               return ListView.builder(
-                itemCount: historiesController.elteHistories.length,
+                itemCount: historiesController.elteSekPtiHistories.length,
                 itemBuilder: (_, index) {
-                  HistoriesModel history = historiesController.elteHistories[index];
+                  HistoriesModel history = historiesController.elteSekPtiHistories[index];
 
                   return Column(
                     children: [
                       _timelineTile(
-                          index: index, historiesLength: historiesController.elteHistories.length, history: history),
-                      _timelineDivider(index: index, historiesLength: historiesController.elteHistories.length),
+                          index: index, historiesLength: historiesController.elteSekPtiHistories.length, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesController.elteSekPtiHistories.length),
                     ],
                   );
                 },

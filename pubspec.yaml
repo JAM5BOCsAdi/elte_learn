@@ -89,6 +89,7 @@ flutter:
     # assets / DB / histories:
     - assets/DB/histories/elteHistory.txt
     - assets/DB/histories/elteSekHistory.txt
+    - assets/DB/histories/elteSekPtiHistory.txt
     # assets / DB / papers:
     - assets/DB/papers/elte_sek_history.json
     - assets/DB/papers/pti.json
