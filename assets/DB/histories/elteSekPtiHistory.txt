@@ -2,6 +2,6 @@
 2018:2018 szeptemberétől már nemcsak alapképzésben, hanem felsőoktatási szakképzésben is van lehetőség a programozás iránt érdeklődőknek a szükséges ismeretek elsajátítására.
 Cél:A programtervező informatikus alapszakon hallgatóink az informatikai feladatok megoldásához szükséges elméleti és speciális gyakorlati, fejlesztői-alkalmazói ismereteket sajátíthatják el.
 Nyelv:Az Egyetem jelenlegi hallgatói számára ajánlott, de nem kötelező a nyelvvizsga megszerzése az oklevél kiadásához, ebbe beletartozik az ELTE SEK PTI és számos más kar is. Ezenfelül vannak kivételek, ahol viszont szükséges a nyelvizsga.
-2021:afklmgaém
-2022:afklmgaém
+Idő:A képzési idő 6 félév (= 3 év)
+Spec:Az ELTE programtervező informatikus képzésének a specializációja a szoftvermérnök (D szakirány), melyet az alapképzés (BSc) befejezése után lehet megkezdeni a mesterképzés (MSc) jóvoltából.
 2023:afklmgaém
