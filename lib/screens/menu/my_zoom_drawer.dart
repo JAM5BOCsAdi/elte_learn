@@ -15,7 +15,7 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
     //TODO: Default (Starting) screen
-    Rx<MenuItemModel> currentItem = MenuItems.elteSekPtiHistory.obs;
+    Rx<MenuItemModel> currentItem = MenuItems.elteSekPtiQuiz.obs;
 
     void onSelectedItem(MenuItemModel item) {
       currentItem.value = item;
