@@ -1,13 +1,13 @@
 {
-    "id": "ppr001",
-    "title": "Fizika",
+    "id": "ppr004",
+    "title": "Kviz4",
     "image_title": "fizika",
     "image_url": "",
     "description": "Általános fizika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
     "time_seconds": 900,
     "questions": [
         {
-            "id": "ppr001q001",
+            "id": "ppr004q001",
             "question": "Hány erő hat a vízszintes asztalon nyugalomban lévő könyvre?",
             "answers": [
                 {
@@ -30,7 +30,7 @@
             "correct_answer": "D"
         },
         {
-            "id": "ppr001q002",
+            "id": "ppr004q002",
             "question": "Az alábbiak közük melyik érvényesül, mikor a kanyarodó autóban akaratlanul oldalra dőlünk?",
             "answers": [
                 {
@@ -53,7 +53,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr001q003",
+            "id": "ppr004q003",
             "question": "A gázoknak nincs tömegük.",
             "answers": [
                 {
@@ -68,7 +68,7 @@
             "correct_answer": "B"
         },
         {
-            "id": "ppr001q004",
+            "id": "ppr004q004",
             "question": "Melyik törvény írja le a felhajtóerő nagyságát?",
             "answers": [
                 {
@@ -91,7 +91,7 @@
             "correct_answer": "D"
         },
         {
-            "id": "ppr001q005",
+            "id": "ppr004q005",
             "question": "A szabadon eső test gyorsulása ...",
             "answers": [
                 {

@@ -18,7 +18,10 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
     QuestionPaperController _questionPaperController = Get.find();
 
     List<String> paperIds = [
-      "ppr004",
+      "ppr005",
+      "ppr006",
+      "ppr007",
+      "ppr008",
     ];
     // int numOfPapers = paperIds.length;
     return Container(

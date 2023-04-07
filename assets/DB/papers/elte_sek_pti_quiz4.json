@@ -1,13 +1,13 @@
- {
-    "id": "ppr002",
-    "title": "ELTE SEK PTI",
+{
+    "id": "ppr012",
+    "title": "Kvíz4",
     "image_title": "elte_sek_pti",
     "image_url": "",
     "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
     "time_seconds": 300,
     "questions": [
       {
-        "id": "ppr002q001",
+        "id": "ppr012q001",
         "question": "Mennyi az alapszakos képzés képzésiideje?",
         "answers": [
           {
@@ -26,7 +26,7 @@
         "correct_answer": "C"
       },
       {
-        "id": "ppr002q002",
+        "id": "ppr012q002",
         "question": "Szombathelyen szoftvermérnök specializáció van?",
         "answers": [
           {
@@ -41,7 +41,7 @@
         "correct_answer": "B"
       },
       {
-        "id": "ppr002q003",
+        "id": "ppr012q003",
         "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
         "answers": [
           {
@@ -60,7 +60,7 @@
         "correct_answer": "B"
       },
       {
-        "id": "ppr002q004",
+        "id": "ppr012q004",
         "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
         "answers": [
           {
@@ -79,7 +79,7 @@
         "correct_answer": "A"
       },
       {
-        "id": "ppr002q005",
+        "id": "ppr012q005",
         "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
         "answers": [
           {

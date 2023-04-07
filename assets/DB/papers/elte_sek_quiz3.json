@@ -1,0 +1,105 @@
+{
+    "id": "ppr007",
+    "title": "Kviz3",
+    "image_title": "elte_sek_tortenelem",
+    "image_url": "",
+    "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
+    "time_seconds": 300,
+    "questions": [
+        {
+            "id": "ppr007q001",
+            "question": "Ki volt a jogelőd intézmény névadója?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Szent Domonkos"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Berzsenyi Dániel"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Bolyai János"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr007q002",
+            "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Tanítóképző"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Tanárképző"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Pedagógusképző"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr007q003",
+            "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Tanári"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Tanító"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Pedagógiai"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr007q004",
+            "question": "Milyen duális képzés indul el 2015-ben?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Turizmus-vendéglátás"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Gazdálkodási és menedzsment"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Gépészmérnök"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr007q005",
+            "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "2016"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "2017"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "2018"
+                }
+            ],
+            "correct_answer": "B"
+        }
+    ]
+}

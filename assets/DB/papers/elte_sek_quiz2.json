@@ -1,13 +1,13 @@
 {
-    "id": "ppr004",
-    "title": "Történelem",
+    "id": "ppr006",
+    "title": "Kviz2",
     "image_title": "elte_sek_tortenelem",
     "image_url": "",
     "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
     "time_seconds": 300,
     "questions": [
         {
-            "id": "ppr004q001",
+            "id": "ppr006q001",
             "question": "Ki volt a jogelőd intézmény névadója?",
             "answers": [
                 {
@@ -26,7 +26,7 @@
             "correct_answer": "B"
         },
         {
-            "id": "ppr004q002",
+            "id": "ppr006q002",
             "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
             "answers": [
                 {
@@ -45,7 +45,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr004q003",
+            "id": "ppr006q003",
             "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
             "answers": [
                 {
@@ -64,7 +64,7 @@
             "correct_answer": "A"
         },
         {
-            "id": "ppr004q004",
+            "id": "ppr006q004",
             "question": "Milyen duális képzés indul el 2015-ben?",
             "answers": [
                 {
@@ -83,7 +83,7 @@
             "correct_answer": "C"
         },
         {
-            "id": "ppr004q005",
+            "id": "ppr006q005",
             "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
             "answers": [
                 {

@@ -91,10 +91,21 @@ flutter:
     - assets/DB/histories/elteSekHistory.txt
     - assets/DB/histories/elteSekPtiHistory.txt
     # assets / DB / papers:
-    - assets/DB/papers/elte_sek_history.json
-    - assets/DB/papers/elte_sek_pti.json
-    - assets/DB/papers/maths.json
-    - assets/DB/papers/physics.json
+    #        elte_quizzes
+    - assets/DB/papers/elte_quiz1.json
+    - assets/DB/papers/elte_quiz2.json
+    - assets/DB/papers/elte_quiz3.json
+    - assets/DB/papers/elte_quiz4.json
+    #        elte_sek_quizzes
+    - assets/DB/papers/elte_sek_quiz1.json
+    - assets/DB/papers/elte_sek_quiz2.json
+    - assets/DB/papers/elte_sek_quiz3.json
+    - assets/DB/papers/elte_sek_quiz4.json
+    #        elte_sek_pti_quizzes
+    - assets/DB/papers/elte_sek_pti_quiz1.json
+    - assets/DB/papers/elte_sek_pti_quiz2.json
+    - assets/DB/papers/elte_sek_pti_quiz3.json
+    - assets/DB/papers/elte_sek_pti_quiz4.json
     # assets / icons:
     - assets/icons/code.svg
     - assets/icons/contact.svg
