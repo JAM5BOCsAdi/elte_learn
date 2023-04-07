@@ -17,7 +17,7 @@ class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
     List<String> paperIds = [
-      "ppr001",
+      "ppr002",
     ];
     // int numOfPapers = paperIds.length;
     return Container(

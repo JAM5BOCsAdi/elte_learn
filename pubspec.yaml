@@ -92,7 +92,7 @@ flutter:
     - assets/DB/histories/elteSekPtiHistory.txt
     # assets / DB / papers:
     - assets/DB/papers/elte_sek_history.json
-    - assets/DB/papers/pti.json
+    - assets/DB/papers/elte_sek_pti.json
     - assets/DB/papers/maths.json
     - assets/DB/papers/physics.json
     # assets / icons:
