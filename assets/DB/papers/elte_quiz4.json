@@ -1,6 +1,6 @@
 {
     "id": "ppr004",
-    "title": "Kviz4",
+    "title": "ELTE új karai",
     "image_title": "fizika",
     "image_url": "",
     "description": "Általános fizika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
@@ -8,49 +8,49 @@
     "questions": [
         {
             "id": "ppr004q001",
-            "question": "Hány erő hat a vízszintes asztalon nyugalomban lévő könyvre?",
+            "question": "Mely két főiskolai kar vált az ELTE részévé 2000-ben?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "0"
+                    "answer": "Informatikai Kar, Pedagógiai és Pszichológiai Kar"
                 },
                 {
                     "identifier": "B",
-                    "answer": "4"
+                    "answer": "Jog- és Államtudományi Kar, Természettudományi Kar"
                 },
                 {
                     "identifier": "C",
-                    "answer": "3"
+                    "answer": "Bárczi Gusztáv Gyógypedagógiai Főiskolai Kar, Tanító- és Óvóképző Főiskolai Kar"
                 },
                 {
                     "identifier": "D",
                     "answer": "2"
                 }
             ],
-            "correct_answer": "D"
+            "correct_answer": "C"
         },
         {
             "id": "ppr004q002",
-            "question": "Az alábbiak közük melyik érvényesül, mikor a kanyarodó autóban akaratlanul oldalra dőlünk?",
+            "question": "Hány új egyetemi kar jött létre az ELTE-n az Egyetemi Tanács 2001-es és 2002-es határozataival?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Tehetetlenség"
+                    "answer": "Négy"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Szabadesés"
+                    "answer": "Három"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Felhajtóerő"
+                    "answer": "Öt"
                 },
                 {
                     "identifier": "D",
-                    "answer": "Közegellenállás"
+                    "answer": "Kettő"
                 }
             ],
-            "correct_answer": "A"
+            "correct_answer": "B"
         },
         {
             "id": "ppr004q003",
@@ -69,49 +69,49 @@
         },
         {
             "id": "ppr004q004",
-            "question": "Melyik törvény írja le a felhajtóerő nagyságát?",
+            "question": "Mely új kar alakult ki a TTK egyes oktatási szervezeti egységeiből és a TFK szakos tanszékéből?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Pascal törvénye"
+                    "answer": "Informatikai Kar"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Newton I. törvénye"
+                    "answer": "Pedagógiai és Pszichológiai Kar"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Newton II. törvénye"
+                    "answer": "Társadalomtudományi Kar"
                 },
                 {
                     "identifier": "D",
-                    "answer": "Arkhimédész törvénye"
-                }
-            ],
-            "correct_answer": "D"
-        },
-        {
-            "id": "ppr004q005",
-            "question": "A szabadon eső test gyorsulása ...",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "9,81 m/s2"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "3,14 m/s2"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "14 cm/s"
-                },
-                {
-                    "identifier": "D",
-                    "answer": "kiszámíthatatlan"
+                    "answer": "Gazdaságtudományi Kar"
                 }
             ],
             "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q005",
+            "question": "Mely kart hozták létre az Informatikai -, a Pedagógiai és Pszichológiai - és a Társadalomtudományi Kar megszüntetésekor?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": " Gazdaságtudományi Kar"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Bölcsészettudományi Kar"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Tanárképző Főiskolai Kar"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Természettudományi Kar"
+                }
+            ],
+            "correct_answer": "C"
         }
     ]
 }

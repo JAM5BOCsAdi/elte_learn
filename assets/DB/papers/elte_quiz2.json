@@ -1,60 +1,56 @@
 {
     "id": "ppr002",
-    "title": "Kviz2",
+    "title": "Kvíz2",
     "image_title": "fizika",
     "image_url": "",
-    "description": "Általános fizika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
-    "time_seconds": 900,
+    "description": "Ez a kvíz arról szól, hogy az egyetemünk milyen szerepet játszott a tudomány világában az évszázadok során.",
+    "time_seconds": 300,
     "questions": [
         {
             "id": "ppr002q001",
-            "question": "Hány erő hat a vízszintes asztalon nyugalomban lévő könyvre?",
+            "question": "Melyik karból vált ki az önállósult Természettudományi Kar?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "0"
+                    "answer": "Bölcsészeti Kar"
                 },
                 {
                     "identifier": "B",
-                    "answer": "4"
+                    "answer": "Római Katolikus Hittudományi Fakultás"
                 },
                 {
                     "identifier": "C",
-                    "answer": "3"
+                    "answer": "Orvostudományi Kar"
                 },
                 {
                     "identifier": "D",
-                    "answer": "2"
-                }
-            ],
-            "correct_answer": "D"
-        },
-        {
-            "id": "ppr002q002",
-            "question": "Az alábbiak közük melyik érvényesül, mikor a kanyarodó autóban akaratlanul oldalra dőlünk?",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "Tehetetlenség"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "Szabadesés"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "Felhajtóerő"
-                },
-                {
-                    "identifier": "D",
-                    "answer": "Közegellenállás"
+                    "answer": "Nem szerepel a szövegben"
                 }
             ],
             "correct_answer": "A"
         },
         {
+            "id": "ppr002q002",
+            "question": "Mi lett az egyetem új neve az állami utasításra?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Természettudományi Kar"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Eötvös Loránd Tudományegyetem"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Római Katolikus Hittudományi Fakultás"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
             "id": "ppr002q003",
-            "question": "A gázoknak nincs tömegük.",
+            "question": "A tanszabadság azt jelenti, hogy az egyetem tanárainak szabad döntése van az oktatás módjáról és tartalmáról",
             "answers": [
                 {
                     "identifier": "A",
@@ -65,50 +61,50 @@
                     "answer": "Hamis"
                 }
             ],
-            "correct_answer": "B"
+            "correct_answer": "A"
         },
         {
             "id": "ppr002q004",
-            "question": "Melyik törvény írja le a felhajtóerő nagyságát?",
+            "question": "Mikor kezdődött az egyetem történetének legintenzívebben fejlődő szakasza?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Pascal törvénye"
+                    "answer": "1635-ben"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Newton I. törvénye"
+                    "answer": "1667-ben"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Newton II. törvénye"
+                    "answer": "1777-ben"
                 },
                 {
                     "identifier": "D",
-                    "answer": "Arkhimédész törvénye"
+                    "answer": "1867-ben"
                 }
             ],
             "correct_answer": "D"
         },
         {
             "id": "ppr002q005",
-            "question": "A szabadon eső test gyorsulása ...",
+            "question": "Mely reformokat vezettek be az egyetemen a neoabszolutizmus idején?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "9,81 m/s2"
+                    "answer": "Egyenjogúsítást a Bölcsészeti Kart"
                 },
                 {
                     "identifier": "B",
-                    "answer": "3,14 m/s2"
+                    "answer": "A kollégiumi élet megszüntetését"
                 },
                 {
                     "identifier": "C",
-                    "answer": "14 cm/s"
+                    "answer": "A tanszabadság eltörlését"
                 },
                 {
                     "identifier": "D",
-                    "answer": "kiszámíthatatlan"
+                    "answer": "A hallgatók száma korlátozását"
                 }
             ],
             "correct_answer": "A"

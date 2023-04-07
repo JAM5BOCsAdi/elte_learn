@@ -1,6 +1,6 @@
 {
     "id": "ppr003",
-    "title": "Kviz3",
+    "title": "'63-'92",
     "image_title": "fizika",
     "image_url": "",
     "description": "Általános fizika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
@@ -8,53 +8,53 @@
     "questions": [
         {
             "id": "ppr003q001",
-            "question": "Hány erő hat a vízszintes asztalon nyugalomban lévő könyvre?",
+            "question": "____-ben szűnt meg a származás szerinti felvételi rendszer az ELTE-nél?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "0"
+                    "answer": "1983"
                 },
                 {
                     "identifier": "B",
-                    "answer": "4"
+                    "answer": "1963"
                 },
                 {
                     "identifier": "C",
-                    "answer": "3"
+                    "answer": "1993"
                 },
                 {
                     "identifier": "D",
-                    "answer": "2"
+                    "answer": "1992"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr003q002",
+            "question": "Mit jelent a NYERSZ?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Nemzetközi Diák Szövetség"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Nagy Youtuberek és Streamerek Szövetsége"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Nemzetközi Tudományos Együttműködési Szövetség"
+                },
+                {
+                    "identifier": "D",
+                    "answer": "Nyugat-Magyarországi Egyetemi Regionális Szövetség"
                 }
             ],
             "correct_answer": "D"
         },
         {
-            "id": "ppr003q002",
-            "question": "Az alábbiak közük melyik érvényesül, mikor a kanyarodó autóban akaratlanul oldalra dőlünk?",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "Tehetetlenség"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "Szabadesés"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "Felhajtóerő"
-                },
-                {
-                    "identifier": "D",
-                    "answer": "Közegellenállás"
-                }
-            ],
-            "correct_answer": "A"
-        },
-        {
             "id": "ppr003q003",
-            "question": "A gázoknak nincs tömegük.",
+            "question": "Igaz, hogy hét intézményből állt az ELTE intézeti rendszere 1992-ben?",
             "answers": [
                 {
                     "identifier": "A",
@@ -65,53 +65,53 @@
                     "answer": "Hamis"
                 }
             ],
-            "correct_answer": "B"
+            "correct_answer": "A"
         },
         {
             "id": "ppr003q004",
-            "question": "Melyik törvény írja le a felhajtóerő nagyságát?",
+            "question": "Mikor nyerte vissza az ELTE a tudományos fokozatadás jogát?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Pascal törvénye"
+                    "answer": "1963-ban"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Newton I. törvénye"
+                    "answer": "1993-ban"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Newton II. törvénye"
+                    "answer": "1983-ban"
                 },
                 {
                     "identifier": "D",
-                    "answer": "Arkhimédész törvénye"
+                    "answer": "1992-ben"
                 }
             ],
-            "correct_answer": "D"
+            "correct_answer": "B"
         },
         {
             "id": "ppr003q005",
-            "question": "A szabadon eső test gyorsulása ...",
+            "question": "Mivel bővült az ELTE Bolyai János Gyakorló Általános Iskolája 1992-ben?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "9,81 m/s2"
+                    "answer": "Óvodával"
                 },
                 {
                     "identifier": "B",
-                    "answer": "3,14 m/s2"
+                    "answer": "Nyolcosztályos gimnáziummal"
                 },
                 {
                     "identifier": "C",
-                    "answer": "14 cm/s"
+                    "answer": "Középiskolával"
                 },
                 {
                     "identifier": "D",
-                    "answer": "kiszámíthatatlan"
+                    "answer": "Szakiskolával"
                 }
             ],
-            "correct_answer": "A"
+            "correct_answer": "B"
         }
     ]
 }

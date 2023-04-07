@@ -1,102 +1,102 @@
 {
     "id": "ppr001",
-    "title": "Egyetem évei",
+    "title": "Az ELTE korai története",
     "image_title": "matematika",
     "image_url": "",
-    "description": "Egy kvíz mely arról szól, hogy milyen úton járt az egyetemünk az alapításától napjainkig.",
+    "description": " Az ELTE Magyarország egyik legrégebbi és legjelentősebb egyeteme. Teszteld tudásodat az ELTE történetéről az alábbi öt kérdéssel!",
     "time_seconds": 10,
     "questions": [
         {
             "id": "ppr001q001",
-            "question": "Mikor alapították az egyetemet?",
+            "question": "Mikor alapította Pázmány Péter az ELTE-t?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "1635"
+                    "answer": "1635-ben"
                 },
                 {
                     "identifier": "B",
-                    "answer": "1667"
+                    "answer": "1667-ben"
                 },
                 {
                     "identifier": "C",
-                    "answer": "1777"
+                    "answer": "1777-ben"
                 }
             ],
             "correct_answer": "A"
         },
         {
             "id": "ppr001q002",
-            "question": "Melyik évben költöztették át az egyetemet Nagyszombatról Budára?",
+            "question": "Mely karokból állt az ELTE az alapításakor?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "1777"
+                    "answer": "Természettudományi és műszaki"
                 },
                 {
                     "identifier": "B",
-                    "answer": "1848"
+                    "answer": "Jogi és orvostudományi"
                 },
                 {
                     "identifier": "C",
-                    "answer": "1784"
+                    "answer": "Bölcsészeti és teológiai"
                 }
             ],
             "correct_answer": "C"
         },
         {
             "id": "ppr001q003",
-            "question": "Milyen nyelven folyt az oktatás az egyetemen 1844-ig?",
+            "question": "Hol volt az ELTE székhelye az alapítása után?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Angol"
+                    "answer": "Budapesten"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Latin"
+                    "answer": "Nagyszombatban"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Magyar"
+                    "answer": "Esztergomban"
                 }
             ],
             "correct_answer": "B"
         },
         {
             "id": "ppr001q004",
-            "question": "Mikor nyitották meg az egyetemet a nők előtt?",
+            "question": "Mikor került át az ELTE Pestre?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "1895"
+                    "answer": "1635-ben"
                 },
                 {
                     "identifier": "B",
-                    "answer": "1867"
+                    "answer": "1777-ben"
                 },
                 {
                     "identifier": "C",
-                    "answer": "1921"
+                    "answer": "1784-ben"
                 }
             ],
-            "correct_answer": "A"
+            "correct_answer": "C"
         },
         {
             "id": "ppr001q005",
-            "question": "Melyik évben lett az egyetem neve a királyi magyar Pázmány Péter Tudományegyetem?",
+            "question": "Mikor nyílt meg az ELTE előtt az út a nők előtt?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "1848"
+                    "answer": "1848-ban"
                 },
                 {
                     "identifier": "B",
-                    "answer": "1921"
+                    "answer": "1895-ben"
                 },
                 {
                     "identifier": "C",
-                    "answer": "1867"
+                    "answer": "Sosem nyílt meg előttük"
                 }
             ],
             "correct_answer": "B"
