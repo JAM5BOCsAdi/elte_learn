@@ -4,7 +4,7 @@
     "image_title": "matematika",
     "image_url": "",
     "description": " Az ELTE Magyarország egyik legrégebbi és legjelentősebb egyeteme. Teszteld tudásodat az ELTE történetéről az alábbi öt kérdéssel!",
-    "time_seconds": 10,
+    "time_seconds": 300,
     "questions": [
         {
             "id": "ppr001q001",
