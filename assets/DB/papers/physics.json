@@ -1,10 +1,10 @@
 {
     "id": "ppr001",
     "title": "Fizika",
+    "image_title": "fizika",
     "image_url": "",
     "description": "Általános fizika kvíz. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non c",
     "time_seconds": 900,
-    
     "questions": [
         {
             "id": "ppr001q001",

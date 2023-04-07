@@ -1,9 +1,9 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-/// Every class is a collection in FireBase [ Class = Collection ]
 class QuestionPaperModel {
   String id;
   String title;
+  String imageTitle;
   String? imageUrl;
   String description;
   int timeSeconds;
@@ -13,6 +13,7 @@ class QuestionPaperModel {
   QuestionPaperModel({
     required this.id,
     required this.title,
+    required this.imageTitle,
     this.imageUrl,
     required this.description,
     required this.timeSeconds,
@@ -23,6 +24,7 @@ class QuestionPaperModel {
   QuestionPaperModel.fromJson(Map<String, dynamic> json)
       : id = json['id'] as String,
         title = json['title'] as String,
+        imageTitle = json['image_title'] as String,
         imageUrl = json['image_url'] as String,
         description = json['description'] as String,
         timeSeconds = json['time_seconds'],
@@ -32,6 +34,7 @@ class QuestionPaperModel {
   QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
       : id = json.id,
         title = json['title'],
+        imageTitle = json['image_title'],
         imageUrl = json['image_url'],
         description = json['description'],
         timeSeconds = json['time_seconds'],

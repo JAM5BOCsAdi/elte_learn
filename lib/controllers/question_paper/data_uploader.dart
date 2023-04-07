@@ -15,7 +15,6 @@ class DataUploader extends GetxController {
 
   final loadingStatus = LoadingStatus.loading.obs;
 
-  /// Connect to the FireStore and upload data
   Future<void> uploadData() async {
     loadingStatus.value = LoadingStatus.loading; // value: 0
 
@@ -43,6 +42,7 @@ class DataUploader extends GetxController {
       batch.set(questionPaperRef.doc(paper.id), {
         "title": paper.title,
         "image_url": paper.imageUrl,
+        "image_title": paper.imageTitle,
         "description": paper.description,
         "time_seconds": paper.timeSeconds,
         "questions_count": paper.questions == null ? 0 : paper.questions!.length

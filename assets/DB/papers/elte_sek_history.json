@@ -1,6 +1,7 @@
 {
     "id": "ppr004",
-    "title": "Történelem",
+    "title": "ELTE SEK Történelem",
+    "image_title": "elte_sek_tortenelem",
     "image_url": "",
     "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
     "time_seconds": 300,

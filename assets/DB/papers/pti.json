@@ -1,96 +1,97 @@
-{
-  "id": "ppr002",
-  "title": "PTI",
-  "image_url": "",
-  "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
-  "time_seconds": 300,
-  "questions": [
-    {
-      "id": "ppr002q001",
-      "question": "Mennyi az alapszakos képzés képzésiideje?",
-      "answers": [
-        {
-          "identifier": "A",
-          "answer": "8 félév"
-        },
-        {
-          "identifier": "B",
-          "answer": "7 félév"
-        },
-        {
-          "identifier": "C",
-          "answer": "6 félév"
-        }
-      ],
-      "correct_answer": "C"
-    },
-    {
-      "id": "ppr002q002",
-      "question": "Szombathelyen szoftvermérnök specializáció van?",
-      "answers": [
-        {
-          "identifier": "A",
-          "answer": "Nem"
-        },
-        {
-          "identifier": "B",
-          "answer": "Igen"
-        }
-      ],
-      "correct_answer": "B"
-    },
-    {
-      "id": "ppr002q003",
-      "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
-      "answers": [
-        {
-          "identifier": "A",
-          "answer": "2016 szeptembere óta"
-        },
-        {
-          "identifier": "B",
-          "answer": "2017 szeptembere óta"
-        },
-        {
-          "identifier": "C",
-          "answer": "2015 szeptembere óta"
-        }
-      ],
-      "correct_answer": "B"
-    },
-    {
-      "id": "ppr002q004",
-      "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
-      "answers": [
-        {
-          "identifier": "A",
-          "answer": "Nincs"
-        },
-        {
-          "identifier": "B",
-          "answer": "Nem tudom"
-        },
-        {
-          "identifier": "C",
-          "answer": "Van"
-        }
-      ],
-      "correct_answer": "A"
-    },
-    {
-      "id": "ppr002q005",
-      "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
-      "answers": [
-        {
-          "identifier": "A",
-          "answer": "Igen"
-        },
-        {
-          "identifier": "B",
-          "answer": "Nem"
-        }
-      ],
-      "correct_answer": "A"
-    }
-  ]
-}
+ {
+    "id": "ppr002",
+    "title": "PTI",
+    "image_title": "pti",
+    "image_url": "",
+    "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
+    "time_seconds": 300,
+    "questions": [
+      {
+        "id": "ppr002q001",
+        "question": "Mennyi az alapszakos képzés képzésiideje?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "8 félév"
+          },
+          {
+            "identifier": "B",
+            "answer": "7 félév"
+          },
+          {
+            "identifier": "C",
+            "answer": "6 félév"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "ppr002q002",
+        "question": "Szombathelyen szoftvermérnök specializáció van?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "Nem"
+          },
+          {
+            "identifier": "B",
+            "answer": "Igen"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "ppr002q003",
+        "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "2016 szeptembere óta"
+          },
+          {
+            "identifier": "B",
+            "answer": "2017 szeptembere óta"
+          },
+          {
+            "identifier": "C",
+            "answer": "2015 szeptembere óta"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "ppr002q004",
+        "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "Nincs"
+          },
+          {
+            "identifier": "B",
+            "answer": "Nem tudom"
+          },
+          {
+            "identifier": "C",
+            "answer": "Van"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "ppr002q005",
+        "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "Igen"
+          },
+          {
+            "identifier": "B",
+            "answer": "Nem"
+          }
+        ],
+        "correct_answer": "A"
+      }
+    ]
+  }
