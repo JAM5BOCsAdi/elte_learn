@@ -1,90 +1,90 @@
 {
     "id": "ppr008",
-    "title": "Kviz4",
+    "title": "Berzsenyi Dániel Főiskola története",
     "image_title": "elte_sek_tortenelem",
     "image_url": "",
-    "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
+    "description": "Kvíz a Berzsenyi Dániel Főiskola, a magyar felsőoktatási intézmény történetéről.",
     "time_seconds": 300,
     "questions": [
         {
             "id": "ppr008q001",
-            "question": "Ki volt a jogelőd intézmény névadója?",
+            "question": "Mikor indultak el a Jean Monnet-kurzusok az intézményben?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Szent Domonkos"
+                    "answer": "1996"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Berzsenyi Dániel"
+                    "answer": "2000"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Bolyai János"
+                    "answer": "1998"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr008q002",
+            "question": "Mikor nyitotta meg az Európai Dokumentációs Központ és Szakkönyvtár (EDC) az 'B' épületben?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "2000"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "1998"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "1999"
                 }
             ],
             "correct_answer": "B"
         },
         {
-            "id": "ppr008q002",
-            "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "Tanítóképző"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "Tanárképző"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "Pedagógusképző"
-                }
-            ],
-            "correct_answer": "A"
-        },
-        {
             "id": "ppr008q003",
-            "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
+            "question": "Mikor változott meg az intézmény neve Berzsenyi Dániel Főiskolára?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Tanári"
+                    "answer": "2008"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Tanító"
+                    "answer": "2002"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Pedagógiai"
-                }
-            ],
-            "correct_answer": "A"
-        },
-        {
-            "id": "ppr008q004",
-            "question": "Milyen duális képzés indul el 2015-ben?",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "Turizmus-vendéglátás"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "Gazdálkodási és menedzsment"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "Gépészmérnök"
+                    "answer": "2000"
                 }
             ],
             "correct_answer": "C"
         },
         {
+            "id": "ppr008q004",
+            "question": "Mikor jött létre a Savaria Egyetemi Központ a Berzsenyi Dániel Főiskola és a Nyugat-magyarországi Egyetem egyesülésével?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "2008"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "2009"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "2013"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
             "id": "ppr008q005",
-            "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
+            "question": "Mikor jött létre a Berzsenyi Dániel Pedagógusképző Központ?",
             "answers": [
                 {
                     "identifier": "A",
@@ -99,7 +99,7 @@
                     "answer": "2018"
                 }
             ],
-            "correct_answer": "B"
+            "correct_answer": "C"
         }
     ]
 }

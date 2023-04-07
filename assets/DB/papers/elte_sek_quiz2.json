@@ -1,105 +1,105 @@
 {
     "id": "ppr006",
-    "title": "Kviz2",
+    "title": "A Szombathelyi Tanítóképző intézmény története",
     "image_title": "elte_sek_tortenelem",
     "image_url": "",
-    "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
+    "description": "Ez a kérdéssorozat a Szombathelyi Tanítóképző intézmény történetével foglalkozik, mely több évet foglal magába.",
     "time_seconds": 300,
     "questions": [
         {
             "id": "ppr006q001",
-            "question": "Ki volt a jogelőd intézmény névadója?",
+            "question": "Mikor vetődött fel először a Csurgói Tanítóképző intézmény telepítése Szombathelyre?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Szent Domonkos"
+                    "answer": "1921"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Berzsenyi Dániel"
+                    "answer": "1911"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Bolyai János"
+                    "answer": "1958"
                 }
             ],
             "correct_answer": "B"
         },
         {
             "id": "ppr006q002",
-            "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
+            "question": "Miért nem települt az Erzsébet királynőről elnevezett egyetem Szombathelyre a trianoni események után?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Tanítóképző"
+                    "answer": "Nem volt rá szükség"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Tanárképző"
+                    "answer": "A város vezetői nem vállalták az egyetem befogadását"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Pedagógusképző"
+                    "answer": "Az egyetemnek nem tetszett Szombathely városa"
                 }
             ],
-            "correct_answer": "A"
+            "correct_answer": "B"
         },
         {
             "id": "ppr006q003",
-            "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
+            "question": "Mikor kezdték meg működésüket a hároméves Felsőfokú Tanítóképző Intézetek Szombathelyen?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Tanári"
+                    "answer": "1959-ben"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Tanító"
+                    "answer": "1958-ban"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Pedagógiai"
+                    "answer": "1921-ben"
                 }
             ],
             "correct_answer": "A"
         },
         {
             "id": "ppr006q004",
-            "question": "Milyen duális képzés indul el 2015-ben?",
+            "question": "Milyen oktatási forma mellett működtette a tanítóképzőt a kőszegi Szent Domonkos Rendi Apácazárda?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Turizmus-vendéglátás"
+                    "answer": "Csak magasabb szintű tanulmányokat"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Gazdálkodási és menedzsment"
+                    "answer": "Csak magasabb szintű tanulmányokat"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Gépészmérnök"
+                    "answer": "Mind közép-, mind felsőfokú tanítóképzést"
                 }
             ],
             "correct_answer": "C"
         },
         {
             "id": "ppr006q005",
-            "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
+            "question": "Milyen szakos képzés is indult a tanítóképzés mellett?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "2016"
+                    "answer": "Népművelő szak"
                 },
                 {
                     "identifier": "B",
-                    "answer": "2017"
+                    "answer": "Általános orvosi szak"
                 },
                 {
                     "identifier": "C",
-                    "answer": "2018"
+                    "answer": "Gazdasági szak"
                 }
             ],
-            "correct_answer": "B"
+            "correct_answer": "A"
         }
     ]
 }

@@ -1,105 +1,105 @@
 {
     "id": "ppr007",
-    "title": "Kviz3",
+    "title": "A Szombathelyi Tanárképző Főiskola története",
     "image_title": "elte_sek_tortenelem",
     "image_url": "",
-    "description": "ELTE SEK Történetéről szóló rövid kis kvíz, melyre az olvasottak alapján tudsz választ adni.",
+    "description": "Ez a kvíz az 1960-as és 1990-es évek közötti időszakban zajló eseményekről szól, amelyek a Szombathelyi Tanárképző Főiskola történetének fontos mérföldkövei voltak.",
     "time_seconds": 300,
     "questions": [
         {
             "id": "ppr007q001",
-            "question": "Ki volt a jogelőd intézmény névadója?",
+            "question": "Mikor bővült a képzési kínálat a népművelés és a könyvtár szakokkal való párosításával?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Szent Domonkos"
+                    "answer": "1975"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Berzsenyi Dániel"
+                    "answer": "1971"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Bolyai János"
+                    "answer": "1972"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr007q002",
+            "question": "Milyen néven működött évekig a Szombathelyi Tanárképző Főiskola?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "answer": "Societas Scientarium Savariensis"
+                },
+                {
+                    "identifier": "B",
+                    "answer": "Berzsenyi Dániel Tanárképző Főiskola"
+                },
+                {
+                    "identifier": "C",
+                    "answer": "Bolyai János Gyakorló Általános Iskola"
                 }
             ],
             "correct_answer": "B"
         },
         {
-            "id": "ppr007q002",
-            "question": "1974-től évekig Szombathelyi ______ Főiskola néven működik.",
-            "answers": [
-                {
-                    "identifier": "A",
-                    "answer": "Tanítóképző"
-                },
-                {
-                    "identifier": "B",
-                    "answer": "Tanárképző"
-                },
-                {
-                    "identifier": "C",
-                    "answer": "Pedagógusképző"
-                }
-            ],
-            "correct_answer": "A"
-        },
-        {
             "id": "ppr007q003",
-            "question": "Milyen okleveleket adnak át elsőként Szombathelyen?",
+            "question": "Ebben az évben nyílt meg az EECALL (Kelet-Európai Számítógéppel Segített Nyelvoktatási Központ).",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Tanári"
+                    "answer": "1991"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Tanító"
+                    "answer": "1993"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Pedagógiai"
+                    "answer": "1971"
                 }
             ],
             "correct_answer": "A"
         },
         {
             "id": "ppr007q004",
-            "question": "Milyen duális képzés indul el 2015-ben?",
+            "question": "Milyen támogatással nyílt meg a regionális szerepű Angoltanári Információs Központ és Könyvtár?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "Turizmus-vendéglátás"
+                    "answer": "Egyetemi támogatással"
                 },
                 {
                     "identifier": "B",
-                    "answer": "Gazdálkodási és menedzsment"
+                    "answer": "Soros USIS Amerikai Tanulmányi Információs Iroda támogatásával"
                 },
                 {
                     "identifier": "C",
-                    "answer": "Gépészmérnök"
+                    "answer": "British Council támogatásával"
                 }
             ],
             "correct_answer": "C"
         },
         {
             "id": "ppr007q005",
-            "question": "Mikortól működnek a szombathelyi karok az Eötvös Loránd Tudományegyetem részeként?",
+            "question": "Melyik intézmény nyílt meg az osztrák kormánytámogatással?",
             "answers": [
                 {
                     "identifier": "A",
-                    "answer": "2016"
+                    "answer": "Regionális szerepű osztrák könyvtár"
                 },
                 {
                     "identifier": "B",
-                    "answer": "2017"
+                    "answer": "Regionális Informatikai Központ"
                 },
                 {
                     "identifier": "C",
-                    "answer": "2018"
+                    "answer": "Nyugat-Magyarországi Egyetemi Regionális Szövetség"
                 }
             ],
-            "correct_answer": "B"
+            "correct_answer": "A"
         }
     ]
 }
