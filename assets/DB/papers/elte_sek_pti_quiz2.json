@@ -1,94 +1,106 @@
 {
     "id": "ppr010",
-    "title": "Kvíz2",
+    "title": "Általános ismeretek",
     "image_title": "elte_sek_pti",
     "image_url": "",
-    "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
+    "description": "Általánosabb, több helyről kiemelt kérdések",
     "time_seconds": 300,
     "questions": [
       {
         "id": "ppr010q001",
-        "question": "Mennyi az alapszakos képzés képzésiideje?",
+        "question": "Milyen szakirányok érhetőek el az ELTE programtervező informatikus képzésén?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "8 félév"
+            "answer": "Csak az alapszak érhető el."
           },
           {
             "identifier": "B",
-            "answer": "7 félév"
+            "answer": "Az alapszak és a szoftvermérnöki szakirány is elérhető."
           },
           {
             "identifier": "C",
-            "answer": "6 félév"
+            "answer": "Csak a szoftvermérnöki szakirány érhető el."
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "ppr010q002",
+        "question": "Hol érhető el az ELTE programtervező informatikus képzése?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "Csak a budapesti ELTE-n."
+          },
+          {
+            "identifier": "B",
+            "answer": "Csak a szombathelyi ELTE-n"
+          },
+          {
+            "identifier": "C",
+            "answer": "Mindkettőn"
+          },
+          {
+            "identifier": "D",
+            "answer": "Egyiken sem"
           }
         ],
         "correct_answer": "C"
       },
       {
-        "id": "ppr010q002",
-        "question": "Szombathelyen szoftvermérnök specializáció van?",
-        "answers": [
-          {
-            "identifier": "A",
-            "answer": "Nem"
-          },
-          {
-            "identifier": "B",
-            "answer": "Igen"
-          }
-        ],
-        "correct_answer": "B"
-      },
-      {
         "id": "ppr010q003",
-        "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
+        "question": "Milyen ismereteket sajátíthatnak el azok, akik az ELTE programtervező informatikus képzésén vesznek részt?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "2016 szeptembere óta"
+            "answer": "Csak elméleti ismereteket."
           },
           {
             "identifier": "B",
-            "answer": "2017 szeptembere óta"
+            "answer": "Speciális fejlesztői-alkalmazói ismereteket."
           },
           {
             "identifier": "C",
-            "answer": "2015 szeptembere óta"
+            "answer": "Csak web- és cloud programozási ismereteket."
+          },
+          {
+            "identifier": "D",
+            "answer": "Mind elméleti, mind speciális gyakorlati ismereteket."
           }
         ],
-        "correct_answer": "B"
+        "correct_answer": "D"
       },
       {
         "id": "ppr010q004",
-        "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
+        "question": "Milyen jellegű projekteken dolgozhatnak az ELTE programtervező informatikus képzésén résztvevő hallgatók?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "Nincs"
+            "answer": "Csak magyar nyelvű projekteken."
           },
           {
             "identifier": "B",
-            "answer": "Nem tudom"
+            "answer": "Mind magyar, mind nemzetközi projekteken."
           },
           {
             "identifier": "C",
-            "answer": "Van"
+            "answer": "Csak nemzetközi projekteken."
           }
         ],
-        "correct_answer": "A"
+        "correct_answer": "B"
       },
       {
         "id": "ppr010q005",
-        "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
+        "question": "Milyen szakképzettség szerepel az oklevélben?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "Igen"
+            "answer": "Programtervező Informatikus"
           },
           {
             "identifier": "B",
-            "answer": "Nem"
+            "answer": "Szoftvermérnök"
           }
         ],
         "correct_answer": "A"

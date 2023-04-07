@@ -1,97 +1,82 @@
 {
     "id": "ppr011",
-    "title": "Kvíz3",
+    "title": "Nyelv, Idő, BSc, MSc",
     "image_title": "elte_sek_pti",
     "image_url": "",
-    "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
+    "description": "Nyelv és képzések idejéről szóló rövid kis szösszenet.",
     "time_seconds": 300,
     "questions": [
       {
         "id": "ppr011q001",
-        "question": "Mennyi az alapszakos képzés képzésiideje?",
+        "question": "A nyelvvizsga megléte kötelező Programtervező Informatikus képzésben?",
         "answers": [
           {
             "identifier": "A",
+            "answer": "Ajánlott, de nem kötelező az oklevél kiadásához"
+          },
+          {
+            "identifier": "B",
+            "answer": "Kötelező az oklevél kiadásához"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "ppr011q002",
+        "question": "Milyen hosszú az alapszak képzési ideje?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "6 félév"
+          },
+          {
+            "identifier": "B",
             "answer": "8 félév"
           },
           {
             "identifier": "B",
-            "answer": "7 félév"
-          },
-          {
-            "identifier": "C",
-            "answer": "6 félév"
+            "answer": "4 félév"
           }
         ],
-        "correct_answer": "C"
-      },
-      {
-        "id": "ppr011q002",
-        "question": "Szombathelyen szoftvermérnök specializáció van?",
-        "answers": [
-          {
-            "identifier": "A",
-            "answer": "Nem"
-          },
-          {
-            "identifier": "B",
-            "answer": "Igen"
-          }
-        ],
-        "correct_answer": "B"
+        "correct_answer": "A"
       },
       {
         "id": "ppr011q003",
-        "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
+        "question": "Mikor kezdhető meg a mesterszak képzés?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "2016 szeptembere óta"
+            "answer": "Az alapszak elkezdése előtt"
           },
           {
             "identifier": "B",
-            "answer": "2017 szeptembere óta"
+            "answer": "Az alapszak befejezése után"
           },
           {
             "identifier": "C",
-            "answer": "2015 szeptembere óta"
+            "answer": "Az alapszak utolsó félévében"
           }
         ],
         "correct_answer": "B"
       },
       {
         "id": "ppr011q004",
-        "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
+        "question": "Mennyi ideig tart a mesterszak képzése?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "Nincs"
+            "answer": "3 év"
           },
           {
             "identifier": "B",
-            "answer": "Nem tudom"
+            "answer": "1 év"
           },
           {
             "identifier": "C",
-            "answer": "Van"
+            "answer": "2 év"
           }
         ],
-        "correct_answer": "A"
-      },
-      {
-        "id": "ppr011q005",
-        "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
-        "answers": [
-          {
-            "identifier": "A",
-            "answer": "Igen"
-          },
-          {
-            "identifier": "B",
-            "answer": "Nem"
-          }
-        ],
-        "correct_answer": "A"
+        "correct_answer": "C"
       }
     ]
   }

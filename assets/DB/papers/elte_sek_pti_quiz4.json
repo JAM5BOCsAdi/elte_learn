@@ -1,86 +1,86 @@
 {
     "id": "ppr012",
-    "title": "Kvíz4",
+    "title": "Szoftvermérnök, Állások",
     "image_title": "elte_sek_pti",
     "image_url": "",
-    "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karon található meg.",
+    "description": "A következő öt kérdés az ELTE szoftvermérnök szakirányával kapcsolatos információkat teszteli.",
     "time_seconds": 300,
     "questions": [
       {
         "id": "ppr012q001",
-        "question": "Mennyi az alapszakos képzés képzésiideje?",
+        "question": "Milyen szakirány választható az ELTE SEK programtervező informatikus képzésének mesterképzésén?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "8 félév"
+            "answer": "Webfejlesztő"
           },
           {
             "identifier": "B",
-            "answer": "7 félév"
+            "answer": " Szoftvermérnök"
           },
           {
             "identifier": "C",
-            "answer": "6 félév"
+            "answer": "Alkalmazás- és rendszerfejlesztő"
           }
         ],
-        "correct_answer": "C"
+        "correct_answer": "B"
       },
       {
         "id": "ppr012q002",
-        "question": "Szombathelyen szoftvermérnök specializáció van?",
+        "question": "Mivel foglalkozhat a szoftvermérnök?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "Nem"
+            "answer": "Építőipar"
           },
           {
             "identifier": "B",
-            "answer": "Igen"
+            "answer": "Szoftvertervezés, -fejlesztés, -tesztelés és -értékelés"
           }
         ],
         "correct_answer": "B"
       },
       {
         "id": "ppr012q003",
-        "question": "Mióta van a szombathelyi karon programtervező informatikus szak?",
+        "question": "Milyen munkakörökben van lehetőség elhelyezkedni a végzett hallgatóknak?",
         "answers": [
           {
             "identifier": "A",
-            "answer": "2016 szeptembere óta"
+            "answer": "Informatikai fejlesztések, szolgáltatások, innovatív kutatások és menedzseri munkakörök területén"
           },
           {
             "identifier": "B",
-            "answer": "2017 szeptembere óta"
+            "answer": "Banki és pénzügyi szektorban"
           },
           {
             "identifier": "C",
-            "answer": "2015 szeptembere óta"
-          }
-        ],
-        "correct_answer": "B"
-      },
-      {
-        "id": "ppr012q004",
-        "question": "Van-e meghatározott minimum felvételi ponthatár a PTI képzésre?",
-        "answers": [
-          {
-            "identifier": "A",
-            "answer": "Nincs"
-          },
-          {
-            "identifier": "B",
-            "answer": "Nem tudom"
-          },
-          {
-            "identifier": "C",
-            "answer": "Van"
+            "answer": "Közigazgatásban"
           }
         ],
         "correct_answer": "A"
       },
       {
+        "id": "ppr012q004",
+        "question": "Milyen típusú szoftvereket készíthet egy szoftvermérnök?",
+        "answers": [
+          {
+            "identifier": "A",
+            "answer": "Csak egyszerű weboldalakat"
+          },
+          {
+            "identifier": "B",
+            "answer": "Bármilyen szoftvert, beleértve operációs rendszereket, hálózati szoftvereket, mobilalkalmazásokat, stb..."
+          },
+          {
+            "identifier": "C",
+            "answer": "Csak mobilalkalmazásokat"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
         "id": "ppr012q005",
-        "question": "2018 szeptemberétől nemcsak alapkézésen, hanem felsőoktatási szakképzésen (FOSZK) is lehet tanulni a programozást.",
+        "question": "Az olvasottak alapján számodra megéri elkezdeni a képzés(eke)t?",
         "answers": [
           {
             "identifier": "A",
@@ -88,7 +88,7 @@
           },
           {
             "identifier": "B",
-            "answer": "Nem"
+            "answer": "A"
           }
         ],
         "correct_answer": "A"
