@@ -12,8 +12,9 @@ import '../../widgets/app_circle_button.dart';
 import '../../widgets/content_area.dart';
 
 class QuizzesScreen extends GetView<MyZoomDrawerController> {
+  final String title;
   final List<String> paperIds;
-  const QuizzesScreen({Key? key, required this.paperIds}) : super(key: key);
+  const QuizzesScreen({Key? key, required this.title, required this.paperIds}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,26 +37,26 @@ class QuizzesScreen extends GetView<MyZoomDrawerController> {
                     child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: getHeight * 0.015),
+                    padding: EdgeInsets.symmetric(vertical: getHeight * 0.02),
                     child: Row(
                       children: [
-                        const Icon(AppIcons.peace),
+                        Icon(AppIcons.peace, size: getWidth * 0.075),
                         Gap(getWidth * 0.025),
                         Obx(
                           () => controller.user.value == null
                               ? SizedBox(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     newbieTitle,
-                                    style: detailText.copyWith(color: kOnSurfaceTextColor),
-                                    minFontSize: 20.0,
+                                    style: detailText.copyWith(color: kOnSurfaceTextColor, fontSize: getWidth * 0.05),
+                                    maxLines: 1,
                                   ),
                                 )
                               : Align(
                                   alignment: Alignment.centerLeft,
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Hello ${controller.user.value!.displayName ?? ""} ",
-                                    style: detailText.copyWith(color: kOnSurfaceTextColor),
-                                    minFontSize: 20.0,
+                                    style: appBarText.copyWith(color: kOnSurfaceTextColor, fontWeight: FontWeight.normal),
+                                    maxLines: 1,
                                   ),
                                 ),
                         ),
@@ -63,7 +64,7 @@ class QuizzesScreen extends GetView<MyZoomDrawerController> {
                     ),
                   ),
                   AutoSizeText(
-                    learningQuestionTitle,
+                    title,
                     style: headerText,
                   ),
                 ],

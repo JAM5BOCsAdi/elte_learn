@@ -68,13 +68,14 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           ),
                           Align(
                             alignment: Alignment.center,
-                            child: AutoSizeText(
+                            child: Text(
                               controller.user.value!.displayName ?? "",
                               style: TextStyle(
                                 fontWeight: FontWeight.w900,
                                 fontSize: getHeight * 0.025,
                                 color: kOnSurfaceTextColor,
                               ),
+                              maxLines: 1,
                             ),
                           ),
                         ],

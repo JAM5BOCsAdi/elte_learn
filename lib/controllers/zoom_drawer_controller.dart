@@ -55,13 +55,22 @@ class MyZoomDrawerController extends GetxController {
   Widget getScreen(Rx<MenuItemModel> currentItem) {
     switch (currentItem.value) {
       case MenuItems.elteQuiz:
-        return QuizzesScreen(paperIds: eltePaperIds);
+        return QuizzesScreen(
+          title: elteQuizzesTitle,
+          paperIds: paperIds["eltePaperIds"]!.toList(),
+        );
 
       case MenuItems.elteSekQuiz:
-        return QuizzesScreen(paperIds: elteSekPaperIds);
+        return QuizzesScreen(
+          title: elteSekQuizzesTitle,
+          paperIds: paperIds["elteSekPaperIds"]!.toList(),
+        );
 
       case MenuItems.elteSekPtiQuiz:
-        return QuizzesScreen(paperIds: elteSekPtiPaperIds);
+        return QuizzesScreen(
+          title: elteSekPtiQuizzesTitle,
+          paperIds: paperIds["elteSekPtiPaperIds"]!.toList(),
+        );
 
       case MenuItems.elteHistory:
         return const HistoriesScreen(title: elteHistoryTitle, source: elteHistoryTxt);
@@ -89,7 +98,10 @@ class MyZoomDrawerController extends GetxController {
       case MenuItems.elteSekContact:
         return const ElteSekContactScreen();
       default:
-        return QuizzesScreen(paperIds: elteSekPtiPaperIds);
+        return QuizzesScreen(
+          title: elteSekPtiQuizzesTitle,
+          paperIds: paperIds["elteSekPtiPaperIds"]!.toList(),
+        );
     }
   }
 

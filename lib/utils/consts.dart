@@ -15,8 +15,10 @@ const String elteSekPti = "ELTE SEK PTI";
 
 // Quizzes
 const String quizzesTitle = "Kvízek";
-const String newbieTitle = "Hello újonc kérlek lépj be";
-const String learningQuestionTitle = "Mit szeretnél tanulni ma?";
+const String newbieTitle = "Hello újonc, kérlek jelentkezz be";
+const String elteQuizzesTitle = "ELTE Kvízek";
+const String elteSekQuizzesTitle = "ELTE SEK Kvízek";
+const String elteSekPtiQuizzesTitle = "ELTE SEK PTI Kvízek";
 
 // Histories
 const String historiesTitle = "Történetek";
@@ -75,21 +77,23 @@ const String snackBar1 = "Hiba az oldal betöltésekor";
 const String snackBar2 = "Az oldal nem tudott betöltődni";
 
 // PaperIds
-List<String> eltePaperIds = [
-  "ppr001",
-  "ppr002",
-  "ppr003",
-  "ppr004",
-];
-List<String> elteSekPaperIds = [
-  "ppr005",
-  "ppr006",
-  "ppr007",
-  "ppr008",
-];
-List<String> elteSekPtiPaperIds = [
-  "ppr009",
-  "ppr010",
-  "ppr011",
-  "ppr012",
-];
+Map<String, List<String>> paperIds = {
+  "eltePaperIds": [
+    "ppr001",
+    "ppr002",
+    "ppr003",
+    "ppr004",
+  ],
+  "elteSekPaperIds": [
+    "ppr005",
+    "ppr006",
+    "ppr007",
+    "ppr008",
+  ],
+  "elteSekPtiPaperIds": [
+    "ppr009",
+    "ppr010",
+    "ppr011",
+    "ppr012",
+  ],
+};
