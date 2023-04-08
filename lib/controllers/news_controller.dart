@@ -2,6 +2,7 @@ import '../packages_barrel/packages_barrel.dart';
 
 class NewsController extends GetxController {
   late WebViewController webViewController;
+  final isLoading = false.obs;
 
   @override
   void onInit() {
@@ -12,18 +13,16 @@ class NewsController extends GetxController {
   void initWebViewController() {
     webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      // ..setBackgroundColor(Color.fromARGB(0, 255, 255, 255))
       ..setNavigationDelegate(
         NavigationDelegate(
-          // onProgress: (int progress) {
-          //   // Update loading bar.
-          // },
           onPageStarted: (String url) {
-            print("Oldal töltődik");
+            isLoading.value = true;
+            // print("Oldal töltődik");
             // Get.snackbar("Oldal töltődik", "Oldal töltődik");
           },
           onPageFinished: (String url) {
-            print("Oldal betöltődött");
+            isLoading.value = false;
+            // print("Oldal betöltődött");
             // Get.snackbar("Oldal betöltődött", "Oldal betöltődött");
           },
           onWebResourceError: (WebResourceError error) {
@@ -45,5 +44,14 @@ class NewsController extends GetxController {
 
   Future<void> reload() async {
     await webViewController.reload();
+  }
+
+  Widget loadingWidget() {
+    return const Dialog(
+      backgroundColor: Colors.transparent,
+      child: Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
   }
 }

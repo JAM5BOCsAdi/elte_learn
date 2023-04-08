@@ -2,14 +2,12 @@ import 'dart:math';
 
 import 'package:elte_learn/models/menu_item_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/history/elte_sek_history_screen.dart';
 import 'package:elte_learn/screens/quizzes/elte_quiz_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import '../../controllers/auth_controller.dart';
 import '../configs/themes/app_light_theme.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/histories_screen.dart';
-import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/news/news_screens.dart';
 import '../screens/quizzes/elte_sek_pti_quiz_screen.dart';
 import '../screens/quizzes/elte_sek_quiz_screen.dart';

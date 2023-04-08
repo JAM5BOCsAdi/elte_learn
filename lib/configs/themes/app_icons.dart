@@ -1,6 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-// Singleton class
 class AppIcons {
   AppIcons._();
   static const fontFamily = 'AppIcons';

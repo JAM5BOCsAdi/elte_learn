@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/auth_controller.dart';
@@ -39,7 +38,6 @@ class QuestionPaperController extends GetxController {
 
     if (_authController.isLoggedIn()) {
       if (tryAgain) {
-        // Get.back();
         Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper, preventDuplicates: false);
       } else {
         Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper);

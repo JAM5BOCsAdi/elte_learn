@@ -13,12 +13,10 @@ class SetSystemChrome extends GetxController {
     // setEnabledSystemUIMode();
   }
 
-  // Set the Orientation to portraitUp => No other allowed
   Future<void> setPreferredOrientations() async {
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   }
 
-  // Set the SystemUIOverlayStyle [StatusBar and/or NavigationBar]
   void setSystemUIOverlayStyle() {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
@@ -27,8 +25,4 @@ class SetSystemChrome extends GetxController {
       ),
     );
   }
-
-  // Future<void> setEnabledSystemUIMode() async {
-  //   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  // }
 }

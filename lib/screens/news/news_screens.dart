@@ -1,4 +1,3 @@
-import 'package:elte_learn/configs/themes/app_light_theme.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
@@ -56,10 +55,7 @@ class NewsScreens extends GetView<NewsController> {
             if (snapshot.connectionState == ConnectionState.done) {
               return RefreshIndicator(
                 onRefresh: () => controller.reload(),
-                child: WebViewWidget(
-                  gestureRecognizers: gestureRecognizers,
-                  controller: controller.webViewController,
-                ),
+                child: Obx(() => isLoading(gestureRecognizers)),
               );
             } else {
               return const Center(
@@ -70,5 +66,16 @@ class NewsScreens extends GetView<NewsController> {
         ),
       ),
     );
+  }
+
+  Widget isLoading(Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers) {
+    if (controller.isLoading.value) {
+      return controller.loadingWidget();
+    } else {
+      return WebViewWidget(
+        gestureRecognizers: gestureRecognizers,
+        controller: controller.webViewController,
+      );
+    }
   }
 }

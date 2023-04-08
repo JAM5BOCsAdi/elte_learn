@@ -1,7 +1,8 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/contact/elte_sek_contact_screen_map.dart';
-import 'package:elte_learn/screens/news/news_screens.dart';
 import 'package:latlong2/latlong.dart';
+
+import '../../screens/contact/elte_sek_contact_screen_map.dart';
+import '../../screens/news/news_screens.dart';
 
 class ContactController extends GetxController {
   final LatLng _initialPosition = LatLng(47.230528336798976, 16.611700263845446);

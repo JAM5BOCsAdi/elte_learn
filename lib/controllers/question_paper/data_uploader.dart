@@ -31,9 +31,7 @@ class DataUploader extends GetxController {
     for (var paper in papersInAssets) {
       String stringPaperContent = await rootBundle.loadString(paper);
       questionPapers.add(QuestionPaperModel.fromJson(json.decode(stringPaperContent)));
-      // print(stringPaperContent);
     }
-    // print("Items number ${questionPapers[0].description}");
 
     final fireStore = FirebaseFirestore.instance;
     var batch = fireStore.batch();

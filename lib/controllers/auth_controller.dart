@@ -3,10 +3,9 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../../firebase_ref/references.dart';
 import '../../routes/route_names.dart';
 import '../../utils/app_logger.dart';
-import '../widgets/dialogue.dart';
+import '../../widgets/dialogue.dart';
 
 class AuthController extends GetxController {
-  // static AuthController get to => Get.find<AuthController>(tag: "auth");
   late FirebaseAuth _firebaseAuth;
   late Stream<User?> _authStateChanges;
 
@@ -77,11 +76,7 @@ class AuthController extends GetxController {
   void showLoginAlertDialogue() {
     Get.dialog(
       Dialogs.questionStartDialogue(
-        onTapOK: () {
-          // Navigate To Login Page
-          // Get.offAllNamed("/introduction");
-          navigateToLogin();
-        },
+        onTapOK: () => navigateToLogin(),
         onTapCancel: () => Get.back(),
       ),
       barrierDismissible: false,
