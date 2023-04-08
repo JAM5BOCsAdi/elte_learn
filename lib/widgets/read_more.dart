@@ -1,6 +1,6 @@
-import 'package:elte_learn/models/histories_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../models/histories_model.dart';
 import '../configs/themes/app_colors.dart';
 import '../configs/themes/ui_parameters.dart';
 
@@ -53,10 +53,7 @@ class _ReadMoreState extends State<ReadMore> {
     if (_shouldShowMore) {
       return GestureDetector(
         onTap: () {
-          setState(() {
-            _isExpanded = !_isExpanded;
-            // print("Tapped");
-          });
+          setState(() => _isExpanded = !_isExpanded);
         },
         child: Text(
           widget.history.description,

@@ -45,17 +45,13 @@ dependencies:
   firebase_auth: ^3.11.2
   url_launcher: ^6.1.6
   google_sign_in: ^5.4.2
-  logger: ^1.1.0
   flutter_svg: ^1.1.6
   shimmer: ^2.0.0
   easy_separator: ^1.0.1
-  http: ^0.13.5
   webview_flutter: ^4.0.7
   timeline_tile: ^2.0.0
-  expandable_text: ^2.3.0
   pull_to_refresh: ^2.0.0
   flutter_map: ^2.2.0
-  flutter_map_marker_popup: ^3.2.0
   flutter_launcher_icons: ^0.11.0
 
 dev_dependencies:

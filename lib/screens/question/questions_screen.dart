@@ -29,10 +29,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
               side: BorderSide(color: kOnSurfaceTextColor, width: getWidth * 0.005),
             ),
           ),
-          child: Obx(() => CountdownTimer(
-                time: controller.time.value,
-                color: kOnSurfaceTextColor,
-              )),
+          child: Obx(() => CountdownTimer(time: controller.time.value, color: kOnSurfaceTextColor)),
         ),
         showActionIcon: true,
         titleWidget: Obx(

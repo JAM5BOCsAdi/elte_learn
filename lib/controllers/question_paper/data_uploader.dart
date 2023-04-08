@@ -24,7 +24,6 @@ class DataUploader extends GetxController {
 
     final papersInAssets =
         manifestMap.keys.where((path) => path.startsWith("assets/DB/papers") && path.contains(".json")).toList();
-    print(papersInAssets);
 
     List<QuestionPaperModel> questionPapers = [];
 

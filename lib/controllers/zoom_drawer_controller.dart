@@ -51,7 +51,6 @@ class MyZoomDrawerController extends GetxController {
 
   void getCurrentRoute(String currentRouteName) {
     currentRoute.value = currentRouteName;
-    print("currentRoute.value: $currentRoute.value");
   }
 
   Widget getScreen(Rx<MenuItemModel> currentItem) {
@@ -97,7 +96,6 @@ class MyZoomDrawerController extends GetxController {
 
   void toggleDrawer() {
     zoomDrawerController.toggle?.call();
-    print("Toggle Tapped");
     update();
   }
 

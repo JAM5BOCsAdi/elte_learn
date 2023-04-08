@@ -35,7 +35,6 @@ class BackgroundDecoration extends StatelessWidget {
 class BackgroundPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // implement paint
     Paint paint = Paint()..color = Colors.white.withOpacity(0.1);
     final path = Path();
     path.moveTo(0, 0);
@@ -56,8 +55,6 @@ class BackgroundPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // implement shouldRepaint
-    // throw UnimplementedError();
     return false;
   }
 }

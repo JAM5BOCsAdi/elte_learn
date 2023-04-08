@@ -2,7 +2,6 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../firebase_ref/references.dart';
 import '../../routes/route_names.dart';
-import '../../utils/app_logger.dart';
 import '../../widgets/dialogue.dart';
 
 class AuthController extends GetxController {
@@ -41,8 +40,8 @@ class AuthController extends GetxController {
         await saveUser(googleSignInAccount);
         navigateToHomePage();
       }
-    } on Exception catch (error) {
-      AppLogger.e(error);
+    } on Exception catch (e) {
+      throw Exception("signInWithGoogle ERROR: $e");
     }
   }
 
@@ -60,12 +59,11 @@ class AuthController extends GetxController {
   }
 
   Future<void> signOut() async {
-    AppLogger.d("Kijelentkezés");
     try {
       await _firebaseAuth.signOut();
       navigateToHomePage();
     } on FirebaseAuthException catch (e) {
-      AppLogger.e(e);
+      throw Exception("signOut ERROR: $e");
     }
   }
 

@@ -1,7 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/auth_controller.dart';
-import '../../utils/app_logger.dart';
 import '../../firebase_ref/references.dart';
 import '../../models/question_paper_model.dart';
 import '../../routes/route_names.dart';
@@ -29,7 +28,7 @@ class QuestionPaperController extends GetxController {
       }
       allPapers.assignAll(paperList);
     } catch (e) {
-      AppLogger.e(e);
+      throw Exception("getAllPapers ERROR: $e");
     }
   }
 
@@ -41,10 +40,8 @@ class QuestionPaperController extends GetxController {
         Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper, preventDuplicates: false);
       } else {
         Get.toNamed(RouteNames.questionsScreenRoute, arguments: paper);
-        print("Logged in");
       }
     } else {
-      print("Cim: ${paper.title}");
       _authController.showLoginAlertDialogue();
     }
   }

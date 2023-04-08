@@ -26,7 +26,6 @@ class QuestionsController extends GetxController {
   @override
   void onReady() {
     final _questionPaper = Get.arguments as QuestionPaperModel;
-    print(_questionPaper.id);
     loadData(_questionPaper);
     super.onReady();
   }
@@ -54,9 +53,7 @@ class QuestionsController extends GetxController {
         _question.answers = answers;
       }
     } catch (e) {
-      if (kDebugMode) {
-        print(e.toString());
-      }
+      throw Exception("loadData ERROR $e");
     }
     if (questionPaper.questions != null && questionPaper.questions!.isNotEmpty) {
       allQuestions.assignAll(questionPaper.questions!);
@@ -65,9 +62,6 @@ class QuestionsController extends GetxController {
 
       _startTimer(questionPaper.timeSeconds);
 
-      if (kDebugMode) {
-        print(questionPaper.questions![0].question);
-      }
       loadingStatus.value = LoadingStatus.completed;
     } else {
       loadingStatus.value = LoadingStatus.error;

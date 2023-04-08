@@ -1,7 +1,6 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
-import 'package:elte_learn/configs/themes/custom_text_styles.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../configs/themes/ui_parameters.dart';
 
 class ContactRow extends StatelessWidget {
@@ -29,7 +28,6 @@ class ContactRow extends StatelessWidget {
             text,
             style: const TextStyle(
               color: kOnSurfaceTextColor,
-              // fontSize: 18.0,
             ),
             minFontSize: 18.0,
           ),

@@ -9,7 +9,6 @@ class HistoriesController extends GetxController {
     histories.clear();
     String data = await rootBundle.loadString(source);
     List<String> lines = data.split('§');
-    print("loadHistories: $data");
 
     for (var line in lines) {
       List<String> parts = line.split(':').map((e) => e.trim()).toList();

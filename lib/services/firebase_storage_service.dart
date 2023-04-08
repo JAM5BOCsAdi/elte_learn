@@ -2,7 +2,6 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../firebase_ref/references.dart';
 
-/// Load images from Firebase Storage
 class FirebaseStorageService extends GetxService {
   Future<String?> getImage(String? imgName) async {
     if (imgName == null) {
@@ -15,8 +14,7 @@ class FirebaseStorageService extends GetxService {
 
       return imgUrl;
     } catch (e) {
-      print("FirebaseStorageService: $e");
-      return null;
+      return throw Exception("FirebaseStorageService: $e");
     }
   }
 }

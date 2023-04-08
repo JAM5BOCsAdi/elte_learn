@@ -17,13 +17,9 @@ class NewsController extends GetxController {
         NavigationDelegate(
           onPageStarted: (String url) {
             isLoading.value = true;
-            // print("Oldal töltődik");
-            // Get.snackbar("Oldal töltődik", "Oldal töltődik");
           },
           onPageFinished: (String url) {
             isLoading.value = false;
-            // print("Oldal betöltődött");
-            // Get.snackbar("Oldal betöltődött", "Oldal betöltődött");
           },
           onWebResourceError: (WebResourceError error) {
             Get.snackbar("Hiba az oldal betöltésekor", "Az oldal nem tudott betöltődni");
