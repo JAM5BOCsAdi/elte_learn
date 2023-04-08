@@ -4,14 +4,13 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 
 import '../../models/menu_item_model.dart';
-import '../../screens/quizzes/elte_quiz_screen.dart';
 import '../../controllers/auth_controller.dart';
+import '../configs/themes/app_colors.dart';
 import '../configs/themes/app_light_theme.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/history/histories_screen.dart';
 import '../screens/news/news_screens.dart';
-import '../screens/quizzes/elte_sek_pti_quiz_screen.dart';
-import '../screens/quizzes/elte_sek_quiz_screen.dart';
+import '../screens/quizzes/quizzes_screen.dart';
 import '../utils/consts.dart';
 
 class MyZoomDrawerController extends GetxController {
@@ -56,13 +55,13 @@ class MyZoomDrawerController extends GetxController {
   Widget getScreen(Rx<MenuItemModel> currentItem) {
     switch (currentItem.value) {
       case MenuItems.elteQuiz:
-        return const ElteQuizScreen();
+        return QuizzesScreen(paperIds: eltePaperIds);
 
       case MenuItems.elteSekQuiz:
-        return const ElteSekQuizScreen();
+        return QuizzesScreen(paperIds: elteSekPaperIds);
 
       case MenuItems.elteSekPtiQuiz:
-        return const ElteSekPtiQuizScreen();
+        return QuizzesScreen(paperIds: elteSekPtiPaperIds);
 
       case MenuItems.elteHistory:
         return const HistoriesScreen(title: elteHistoryTitle, source: elteHistoryTxt);
@@ -84,13 +83,13 @@ class MyZoomDrawerController extends GetxController {
         return const NewsScreens(
           title: elteSekFacebookTitle,
           url: facebookUrl,
-          backgroundColor: Colors.blue,
+          backgroundColor: blueColor,
         );
 
       case MenuItems.elteSekContact:
         return const ElteSekContactScreen();
       default:
-        return const ElteSekQuizScreen();
+        return QuizzesScreen(paperIds: elteSekPtiPaperIds);
     }
   }
 

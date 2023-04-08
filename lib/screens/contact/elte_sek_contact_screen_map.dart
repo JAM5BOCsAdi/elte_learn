@@ -1,5 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_light_theme.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../utils/consts.dart';
@@ -76,7 +77,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
             left: 16.0,
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade400),
+                backgroundColor: MaterialStateProperty.all<Color>(resetMapColor),
               ),
               onPressed: resetMap,
               child: const AutoSizeText(elteSekMapResetTitle),

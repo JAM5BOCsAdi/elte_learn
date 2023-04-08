@@ -1,28 +1,23 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/quizzes/question_card.dart';
 
+import '../../screens/quizzes/question_card.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
+import '../../utils/consts.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/content_area.dart';
 
-class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
-  const ElteSekQuizScreen({Key? key}) : super(key: key);
+class QuizzesScreen extends GetView<MyZoomDrawerController> {
+  final List<String> paperIds;
+  const QuizzesScreen({Key? key, required this.paperIds}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
-
-    List<String> paperIds = [
-      "ppr005",
-      "ppr006",
-      "ppr007",
-      "ppr008",
-    ];
 
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),
@@ -50,7 +45,7 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
                           () => controller.user.value == null
                               ? SizedBox(
                                   child: AutoSizeText(
-                                    "Hello újonc kérlek lépj be",
+                                    newbieTitle,
                                     style: detailText.copyWith(color: kOnSurfaceTextColor),
                                     minFontSize: 20.0,
                                   ),
@@ -68,7 +63,7 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
                     ),
                   ),
                   AutoSizeText(
-                    "Mit szeretnél tanulni ma?",
+                    learningQuestionTitle,
                     style: headerText,
                   ),
                 ],
