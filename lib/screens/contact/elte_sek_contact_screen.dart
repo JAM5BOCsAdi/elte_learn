@@ -19,10 +19,9 @@ class ElteSekContactScreen extends GetView<ContactController> {
 
     return Scaffold(
       appBar: CustomAppBar(
-        title: "Kapcsolat",
+        title: contactsTitle,
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
-          // clipBehavior: Clip.none,
           onTap: myZoomDrawerController.toggleDrawer,
           child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
         ),
@@ -52,14 +51,14 @@ class ElteSekContactScreen extends GetView<ContactController> {
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image: AssetImage("assets/images/elte_sek.png"),
+                                  image: AssetImage(contactsScreenPng),
                                   fit: BoxFit.contain,
                                 ),
                               ),
                             ),
                             Gap(getWidth * 0.025),
                             const AutoSizeText(
-                              "ELTE Savaria Egyetemi Központ",
+                              elteSekTitle,
                               style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
                               minFontSize: 20,
                             ),
@@ -68,29 +67,29 @@ class ElteSekContactScreen extends GetView<ContactController> {
                               children: [
                                 ContactRow(
                                   icon: Icons.location_on,
-                                  text: "9700 Szombathely,\n Károlyi Gáspár tér 4.",
+                                  text: elteSekLocationTitle,
                                   enabled: true,
                                   onTap: () => controller.map(),
                                 ),
                                 Gap(getHeight * 0.015),
                                 const ContactRow(
                                   icon: Icons.phone,
-                                  text: "(94) 504 300",
+                                  text: elteSekPhoneTitle,
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.mail,
-                                  text: "sekrh@elte.hu",
+                                  text: elteSekMailTitle,
                                   enabled: true,
-                                  onTap: () => controller.email(path: "sekrh@elte.hu"),
+                                  onTap: () => controller.email(path: elteSekMailTitle),
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.web,
-                                  text: "https://sek.elte.hu/",
+                                  text: websiteUrl,
                                   enabled: true,
                                   onTap: () =>
-                                      controller.website(title: "ELTE SEK Weboldal", url: websiteUrl, color: primaryLightLT),
+                                      controller.website(title: elteSekWebsiteTitle, url: websiteUrl, color: primaryLightLT),
                                 ),
                               ],
                             ),
@@ -101,14 +100,14 @@ class ElteSekContactScreen extends GetView<ContactController> {
                               decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                  image: AssetImage("assets/images/me.png"),
+                                  image: AssetImage(contactsScreenMePng),
                                   fit: BoxFit.contain,
                                 ),
                               ),
                             ),
                             Gap(getWidth * 0.025),
                             const AutoSizeText(
-                              "Horváth Ádám - Mobilfejlesztő",
+                              meTitle,
                               style: TextStyle(color: kOnSurfaceTextColor, fontWeight: FontWeight.bold),
                               minFontSize: 20,
                             ),
@@ -118,22 +117,22 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                 Gap(getHeight * 0.015),
                                 const ContactRow(
                                   icon: Icons.phone,
-                                  text: "06/30 - 134 - 4567",
+                                  text: mePhoneTitle,
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.mail,
-                                  text: "oradam@elte.hu",
+                                  text: meMailTitle,
                                   enabled: true,
-                                  onTap: () => controller.email(path: "oradam@elte.hu"),
+                                  onTap: () => controller.email(path: meMailTitle),
                                 ),
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.web,
-                                  text: "https://oradam.web.elte.hu/\nportfolio-website-1/",
+                                  text: myWebsite,
                                   enabled: true,
                                   onTap: () =>
-                                      controller.website(title: "Portfólió oldal", url: myWebsite, color: myWebsiteBGColor),
+                                      controller.website(title: portfolioTitle, url: myWebsite, color: myWebsiteBGColor),
                                 ),
                               ],
                             ),

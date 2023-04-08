@@ -1,4 +1,5 @@
 import '../packages_barrel/packages_barrel.dart';
+import '../utils/consts.dart';
 
 class NewsController extends GetxController {
   late WebViewController webViewController;
@@ -22,10 +23,10 @@ class NewsController extends GetxController {
             isLoading.value = false;
           },
           onWebResourceError: (WebResourceError error) {
-            Get.snackbar("Hiba az oldal betöltésekor", "Az oldal nem tudott betöltődni");
+            Get.snackbar(snackBar1, snackBar2);
           },
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith("https://")) {
+            if (request.url.startsWith(urlStartsWith)) {
               return NavigationDecision.navigate;
             }
             return NavigationDecision.prevent;

@@ -65,24 +65,24 @@ class MyZoomDrawerController extends GetxController {
         return const ElteSekPtiQuizScreen();
 
       case MenuItems.elteHistory:
-        return HistoriesScreen(title: "ELTE Történelem", source: elteHistoryTxt);
+        return const HistoriesScreen(title: elteHistoryTitle, source: elteHistoryTxt);
 
       case MenuItems.elteSekHistory:
-        return HistoriesScreen(title: "ELTE SEK Történelem", source: elteSekHistoryTxt);
+        return const HistoriesScreen(title: elteSekHistoryTitle, source: elteSekHistoryTxt);
 
       case MenuItems.elteSekPtiHistory:
-        return HistoriesScreen(title: "ELTE SEK PTI Történelem", source: elteSekPtiHistoryTxt, leftPadding: true);
+        return const HistoriesScreen(title: elteSekPtiHistoryTitle, source: elteSekPtiHistoryTxt, leftPadding: true);
 
       case MenuItems.elteSekWebsite:
-        return NewsScreens(
-          title: "ELTE SEK Weboldal",
+        return const NewsScreens(
+          title: elteSekWebsiteTitle,
           url: websiteUrl,
           backgroundColor: primaryLightLT,
         );
 
       case MenuItems.elteSekFacebook:
-        return NewsScreens(
-          title: "ELTE SEK Facebook",
+        return const NewsScreens(
+          title: elteSekFacebookTitle,
           url: facebookUrl,
           backgroundColor: Colors.blue,
         );

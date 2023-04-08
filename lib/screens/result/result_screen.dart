@@ -5,6 +5,7 @@ import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/result_controller_extension.dart';
+import '../../utils/consts.dart';
 import '../../widgets/answer_card.dart';
 import '../../widgets/button.dart';
 import '../../widgets/quizzes_results_card.dart';
@@ -34,11 +35,11 @@ class ResultScreen extends GetView<QuestionsController> {
                 child: ContentArea(
                   child: Column(
                     children: [
-                      SvgPicture.asset("assets/images/bulb.svg"),
+                      SvgPicture.asset(bulbSvg),
                       Padding(
                         padding: EdgeInsets.only(top: getHeight * 0.025, bottom: getHeight * 0.025),
                         child: AutoSizeText(
-                          "Gratulálunk",
+                          congratulationTitle,
                           style: headerText.copyWith(color: _textColor),
                         ),
                       ),
@@ -48,7 +49,7 @@ class ResultScreen extends GetView<QuestionsController> {
                       ),
                       Gap(getHeight * 0.025),
                       const AutoSizeText(
-                        "Koppints a helyes válaszokért",
+                        tapForCorrectAnswersTitle,
                         textAlign: TextAlign.center,
                       ),
                       Gap(getHeight * 0.025),

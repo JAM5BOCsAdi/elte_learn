@@ -123,7 +123,6 @@ class QuestionsController extends GetxController {
       duration,
       (Timer timer) {
         if (remainedSeconds <= 0) {
-          // If the time is over, show the Dialog
           Get.dialog(Dialogs.showTimeUpDialogue(onTapOK: () => navigateToHome()));
 
           timer.cancel();

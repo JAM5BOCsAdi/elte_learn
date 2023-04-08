@@ -2,6 +2,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/app_light_theme.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../utils/consts.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/zoom_button.dart';
 
@@ -25,7 +26,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
       appBar: AppBar(
         backgroundColor: primaryLightLT,
         centerTitle: true,
-        title: const AutoSizeText("ELTE SEK Helyzete"),
+        title: const AutoSizeText(elteSekMapTitle),
         leading: AppCircleButton(
           onTap: () => Get.back(),
           child: Icon(Icons.arrow_back, size: getHeight * 0.035),
@@ -78,7 +79,7 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade400),
               ),
               onPressed: resetMap,
-              child: const AutoSizeText('Visszaállítás'),
+              child: const AutoSizeText(elteSekMapResetTitle),
             ),
           ),
         ],

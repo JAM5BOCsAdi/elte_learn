@@ -2,6 +2,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../models/menu_item_model.dart';
 import '../../routes/route_names.dart';
+import '../../utils/consts.dart';
 import '../../widgets/drawer_button.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
@@ -32,7 +33,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                     ? InkWell(
                         onTap: () => Get.toNamed(RouteNames.loginScreenRoute),
                         child: AutoSizeText(
-                          "Jelentkezz be",
+                          logInTitle1,
                           style: detailText.copyWith(color: kOnSurfaceTextColor),
                           minFontSize: 20.0,
                         ),
@@ -90,7 +91,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedTextColor: kOnSurfaceTextColor,
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
-                        title: const AutoSizeText("Kvízek"),
+                        title: const AutoSizeText(quizzesTitle),
                         children: [
                           buildMenuItem(MenuItems.elteQuiz),
                           buildMenuItem(MenuItems.elteSekQuiz),
@@ -102,7 +103,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedTextColor: kOnSurfaceTextColor,
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
-                        title: const AutoSizeText("Történetek"),
+                        title: const AutoSizeText(historiesTitle),
                         children: [
                           buildMenuItem(MenuItems.elteHistory),
                           buildMenuItem(MenuItems.elteSekHistory),
@@ -114,7 +115,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedTextColor: kOnSurfaceTextColor,
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
-                        title: const AutoSizeText("Hírek"),
+                        title: const AutoSizeText(newsTitle),
                         children: [
                           buildMenuItem(MenuItems.elteSekWebsite),
                           buildMenuItem(MenuItems.elteSekFacebook),
@@ -131,7 +132,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                 child: Obx(
                   () => DrawerButton(
                     icon: controller.user.value == null ? Icons.login : Icons.logout,
-                    label: controller.user.value == null ? "Bejelentkezés" : "Kijelentkezés",
+                    label: controller.user.value == null ? logInTitle2 : logOutTitle,
                     onPressed: controller.user.value == null
                         ? () => Get.toNamed(RouteNames.loginScreenRoute)
                         : () => controller.signOut(),

@@ -36,7 +36,6 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
               androidCloseOnBackTap: true,
               controller: _.zoomDrawerController,
               mainScreenTapClose: true,
-              // menuScreenWidth: Get.width,
               menuScreen: MenuScreen(
                 currentItem: currentItem.value,
                 onSelectedItem: onSelectedItem,

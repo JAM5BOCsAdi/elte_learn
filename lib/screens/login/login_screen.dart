@@ -2,6 +2,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/auth_controller.dart';
+import '../../utils/consts.dart';
 import '../../widgets/button.dart';
 import '../../configs/themes/app_colors.dart';
 
@@ -25,7 +26,7 @@ class LoginScreen extends GetView<AuthController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/images/app_splash_logo.png",
+                  appSplashLogoPng,
                   height: getHeight * 0.25,
                   width: getWidth * 0.5,
                 ),
@@ -37,12 +38,12 @@ class LoginScreen extends GetView<AuthController> {
                       Align(
                         alignment: Alignment.centerLeft,
                         child: SvgPicture.asset(
-                          "assets/icons/google.svg",
+                          googleSvg,
                         ),
                       ),
                       Center(
                         child: AutoSizeText(
-                          "Google bejelentkezés",
+                          googleSignInTitle,
                           minFontSize: 18,
                           style: TextStyle(
                             color: Theme.of(context).primaryColor,

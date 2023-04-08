@@ -2,6 +2,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../utils/consts.dart';
 import '../../widgets/button.dart';
 import '../../widgets/answer_card.dart';
 import '../../widgets/content_area.dart';
@@ -81,7 +82,7 @@ class QuizzesResultScreen extends GetView<QuestionsController> {
                   padding: UIParameters.mobileScreenPadding,
                   child: Button(
                     onTap: () => controller.complete(),
-                    title: "Befejez",
+                    title: endQuestionTitle,
                   ),
                 ),
               ),

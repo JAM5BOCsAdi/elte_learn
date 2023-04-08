@@ -2,6 +2,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/ui_parameters.dart';
 import '../../configs/themes/app_colors.dart';
+import '../../utils/consts.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(gradient: mainGradient()),
             child: Image.asset(
-              "assets/images/app_splash_logo.png",
+              appSplashLogoPng,
               width: getWidth * 0.5,
               height: getHeight * 0.25,
             ),

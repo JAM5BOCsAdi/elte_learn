@@ -3,6 +3,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../utils/consts.dart';
 import '../../widgets/answer_card.dart';
 import '../../widgets/content_area.dart';
 import '../../widgets/countdown_timer.dart';
@@ -106,7 +107,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                                     ? Get.toNamed(RouteNames.quizzesResultScreenRoute)
                                     : controller.nextQuestion();
                               },
-                              title: controller.isLastQuestion ? "Befejez" : "Tovább",
+                              title: controller.isLastQuestion ? endQuestionTitle : nextQuestionTitle,
                             ),
                           ),
                         ),
