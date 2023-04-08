@@ -5,7 +5,6 @@ import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../widgets/app_circle_button.dart';
 
-/// Introduction in a few sentences
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({Key? key}) : super(key: key);
 

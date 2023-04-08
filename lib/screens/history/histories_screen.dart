@@ -10,8 +10,11 @@ import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
 
-class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
-  const ElteHistoryScreen({Key? key}) : super(key: key);
+class HistoriesScreen extends GetView<MyZoomDrawerController> {
+  final String title;
+  final String source;
+  final bool leftPadding;
+  const HistoriesScreen({Key? key, required this.title, required this.source, this.leftPadding = false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,8 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
 
     return Scaffold(
       appBar: CustomAppBar(
-        title: "ELTE Történelme",
+        title: title,
+        leftPadding: leftPadding == true ? getHeight * 0.05 : 0,
         appBarHeight: getHeight * 0.02,
         leading: AppCircleButton(
           // clipBehavior: Clip.none,
@@ -33,7 +37,7 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
         padding: EdgeInsets.all(mobileScreenPadding * 0.25),
         child: SafeArea(
           child: FutureBuilder(
-            future: historiesController.loadElteHistories(),
+            future: historiesController.loadHistories(source: source),
             builder: (_, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
@@ -43,17 +47,16 @@ class ElteHistoryScreen extends GetView<MyZoomDrawerController> {
               }
 
               return ListView.builder(
-                itemCount: historiesController.elteHistories.length,
+                itemCount: historiesController.histories.length,
                 itemBuilder: (_, index) {
-                  print("ItemCount: ${historiesController.elteHistories.length}");
+                  print("ItemCount: ${historiesController.histories.length}");
 
-                  HistoriesModel history = historiesController.elteHistories[index];
+                  HistoriesModel history = historiesController.histories[index];
 
                   return Column(
                     children: [
-                      _timelineTile(
-                          index: index, historiesLength: historiesController.elteHistories.length, history: history),
-                      _timelineDivider(index: index, historiesLength: historiesController.elteHistories.length),
+                      _timelineTile(index: index, historiesLength: historiesController.histories.length, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesController.histories.length),
                     ],
                   );
                 },

@@ -8,7 +8,7 @@ import 'package:flutter_zoom_drawer/config.dart';
 import '../../controllers/auth_controller.dart';
 import '../configs/themes/app_light_theme.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
-import '../screens/history/elte_history_screen.dart';
+import '../screens/history/histories_screen.dart';
 import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/news/news_screens.dart';
 import '../screens/quizzes/elte_sek_pti_quiz_screen.dart';
@@ -67,13 +67,13 @@ class MyZoomDrawerController extends GetxController {
         return const ElteSekPtiQuizScreen();
 
       case MenuItems.elteHistory:
-        return const ElteHistoryScreen();
+        return HistoriesScreen(title: "ELTE Történelem", source: elteHistoryTxt);
 
       case MenuItems.elteSekHistory:
-        return const ElteSekHistoryScreen();
+        return HistoriesScreen(title: "ELTE SEK Történelem", source: elteSekHistoryTxt);
 
       case MenuItems.elteSekPtiHistory:
-        return const ElteSekPtiHistoryScreen();
+        return HistoriesScreen(title: "ELTE SEK PTI Történelem", source: elteSekPtiHistoryTxt, leftPadding: true);
 
       case MenuItems.elteSekWebsite:
         return NewsScreens(

@@ -1,21 +1,16 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../controllers/news_controller.dart';
-import '../screens/history/elte_history_screen.dart';
-import '../screens/history/elte_sek_history_screen.dart';
 import '../../screens/question/answer_check_quizzes_result_screen.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../routes/route_names.dart';
 import '../../screens/login/login_screen.dart';
 import '../../screens/question/quizzes_results_screen.dart';
-import '../controllers/contact_controller.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';
-import '../screens/history/elte_sek_pti_history_screen.dart';
 import '../screens/menu/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
-import '../screens/news/news_screens.dart';
 import '../screens/question/questions_screen.dart';
 import '../screens/result/result_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -55,21 +50,21 @@ class AppRoutes {
           page: () => const AnswerCheckQuizzesResultScreen(),
           binding: BindingsBuilder.put(() => QuestionsController()),
         ),
-        GetPage(
-          name: RouteNames.elteHistoryScreenRoute,
-          page: () => const ElteHistoryScreen(),
-          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        ),
-        GetPage(
-          name: RouteNames.elteSekHistoryScreenRoute,
-          page: () => const ElteSekHistoryScreen(),
-          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        ),
-        GetPage(
-          name: RouteNames.elteSekPtiHistoryScreenRoute,
-          page: () => const ElteSekPtiHistoryScreen(),
-          binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        ),
+        // GetPage(
+        //   name: RouteNames.elteHistoryScreenRoute,
+        //   page: () => const ElteHistoryScreen(),
+        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        // ),
+        // GetPage(
+        //   name: RouteNames.elteSekHistoryScreenRoute,
+        //   page: () => const ElteSekHistoryScreen(),
+        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        // ),
+        // GetPage(
+        //   name: RouteNames.elteSekPtiHistoryScreenRoute,
+        //   page: () => const ElteSekPtiHistoryScreen(),
+        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
+        // ),
         // GetPage(
         //   name: RouteNames.facebookScreenRoute,
         //   page: () => const NewsScreens(isElteSekWebsite: false),
