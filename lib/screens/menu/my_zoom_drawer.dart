@@ -41,7 +41,7 @@ class MyZoomDrawer extends GetView<MyZoomDrawerController> {
                 currentItem: currentItem.value,
                 onSelectedItem: onSelectedItem,
               ),
-              mainScreen: controller.getScreen(currentItem), //const MainScreen()
+              mainScreen: controller.getScreen(currentItem),
             ),
           );
         },

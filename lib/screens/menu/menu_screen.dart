@@ -18,7 +18,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
     return Container(
       padding: UIParameters.mobileScreenPadding,
       width: double.infinity,
-      // decoration: BoxDecoration(color: Colors.transparent),
       child: Theme(
         data: ThemeData(
           textButtonTheme: TextButtonThemeData(
@@ -43,7 +42,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                           Padding(
                             padding: EdgeInsets.only(bottom: getHeight * 0.015),
                             child: Container(
-                              // height: getHeight * 0.25,
                               width: getWidth * 0.5,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
@@ -60,7 +58,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                                 child: AutoSizeText(
                                   "${controller.getFirstLetter(controller.user.value)}",
                                   style: TextStyle(
-                                    // fontWeight: FontWeight.w900,
                                     fontSize: getHeight * 0.1,
                                     color: kOnSurfaceTextColor,
                                   ),
@@ -94,7 +91,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
                         title: const AutoSizeText("Kvízek"),
-                        // leading: const Icon(Icons.payment),
                         children: [
                           buildMenuItem(MenuItems.elteQuiz),
                           buildMenuItem(MenuItems.elteSekQuiz),
@@ -107,7 +103,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
                         title: const AutoSizeText("Történetek"),
-                        // leading: const Icon(Icons.payment),
                         children: [
                           buildMenuItem(MenuItems.elteHistory),
                           buildMenuItem(MenuItems.elteSekHistory),
@@ -119,9 +114,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                         collapsedTextColor: kOnSurfaceTextColor,
                         collapsedIconColor: kOnSurfaceTextColor,
                         iconColor: kOnSurfaceTextColor,
-
                         title: const AutoSizeText("Hírek"),
-                        // leading: const Icon(Icons.payment),
                         children: [
                           buildMenuItem(MenuItems.elteSekWebsite),
                           buildMenuItem(MenuItems.elteSekFacebook),
@@ -132,7 +125,6 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                   ),
                 ),
               ),
-              // const Spacer(flex: 1),
               Gap(getHeight * 0.025),
               Expanded(
                 flex: 0,
@@ -159,10 +151,8 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
       textColor: kOnSurfaceTextColor,
       child: ListTile(
         selectedTileColor: Colors.black26,
-
         selected: currentItem == item,
         minLeadingWidth: 20,
-        // leading: Icon(item.icon),
         title: Text(item.title),
         onTap: () => onSelectedItem(item),
       ),

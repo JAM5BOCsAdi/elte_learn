@@ -1,5 +1,4 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/contact/elte_sek_contact_screen_map.dart';
 
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';

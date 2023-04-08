@@ -1,6 +1,6 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/quizzes/question_card.dart';
 
+import '../../screens/quizzes/question_card.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/custom_text_styles.dart';
@@ -22,7 +22,7 @@ class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
       "ppr011",
       "ppr012",
     ];
-    // int numOfPapers = paperIds.length;
+
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),
       child: SafeArea(
@@ -36,7 +36,6 @@ class ElteSekPtiQuizScreen extends GetView<MyZoomDrawerController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppCircleButton(
-                    // clipBehavior: Clip.none,
                     onTap: controller.toggleDrawer,
                     child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
                   ),

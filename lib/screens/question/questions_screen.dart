@@ -54,7 +54,6 @@ class QuestionsScreen extends GetView<QuestionsController> {
                         child: Column(
                           children: [
                             AutoSizeText(controller.currentQuestion.value!.question, style: questionText),
-                            // Gap(getHeight * 0.025),
                             GetBuilder<QuestionsController>(
                               id: "answers_list",
                               builder: (_) {

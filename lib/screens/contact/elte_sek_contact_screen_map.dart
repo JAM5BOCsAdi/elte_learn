@@ -1,4 +1,3 @@
-import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/app_light_theme.dart';
@@ -40,7 +39,6 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
               center: controller.getInitialPosition,
               zoom: 16.0,
               maxZoom: 18.0,
-              // interactiveFlags: InteractiveFlag.all,
             ),
             layers: [
               TileLayerOptions(
@@ -50,8 +48,6 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
               MarkerLayerOptions(
                 markers: [
                   Marker(
-                    // width: getWidth * 0.05,
-                    // height: getHeight * 0.05,
                     point: controller.getInitialPosition,
                     builder: (_) => Icon(
                       Icons.location_pin,
@@ -80,7 +76,6 @@ class ElteSekContactScreenMap extends GetView<ContactController> {
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.blue.shade400),
-                // minimumSize: MaterialStateProperty.all<Size>(const Size(20, 40)),
               ),
               onPressed: resetMap,
               child: const AutoSizeText('Visszaállítás'),

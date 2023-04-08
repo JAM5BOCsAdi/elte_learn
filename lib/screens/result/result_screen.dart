@@ -50,7 +50,7 @@ class ResultScreen extends GetView<QuestionsController> {
                       const AutoSizeText(
                         "Koppints a helyes válaszokért",
                         textAlign: TextAlign.center,
-                      ), // Tap below question numbers to view correct answers
+                      ),
                       Gap(getHeight * 0.025),
                       Expanded(
                         child: GridView.builder(
@@ -96,14 +96,6 @@ class ResultScreen extends GetView<QuestionsController> {
                   padding: EdgeInsets.all(mobileScreenPadding),
                   child: Row(
                     children: [
-                      // Expanded(
-                      //   child: Button(
-                      //     onTap: () => controller.tryAgain(),
-                      //     color: UIParameters.isDarkMode() ? Theme.of(context).primaryColor : kOnSurfaceTextColor,
-                      //     title: "Újra",
-                      //   ),
-                      // ),
-                      // Gap(getWidth * 0.025),
                       Expanded(
                         child: Button(
                           onTap: () => controller.saveTestResults(),

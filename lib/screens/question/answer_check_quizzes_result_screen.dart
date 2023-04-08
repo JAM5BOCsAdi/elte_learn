@@ -67,7 +67,6 @@ class AnswerCheckQuizzesResultScreen extends GetView<QuestionsController> {
                                   return AnswerCard(
                                     answer: answerText,
                                     isSelected: false,
-                                    onTap: () {},
                                   );
                                 },
                                 separatorBuilder: (_, index) => Gap(getHeight * 0.015),

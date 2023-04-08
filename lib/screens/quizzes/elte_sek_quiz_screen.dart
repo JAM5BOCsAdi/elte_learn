@@ -23,7 +23,7 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
       "ppr007",
       "ppr008",
     ];
-    // int numOfPapers = paperIds.length;
+
     return Container(
       decoration: BoxDecoration(gradient: mainGradient()),
       child: SafeArea(
@@ -37,7 +37,6 @@ class ElteSekQuizScreen extends GetView<MyZoomDrawerController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppCircleButton(
-                    // clipBehavior: Clip.none,
                     onTap: controller.toggleDrawer,
                     child: Icon(AppIcons.menuLeft, size: getHeight * 0.035),
                   ),

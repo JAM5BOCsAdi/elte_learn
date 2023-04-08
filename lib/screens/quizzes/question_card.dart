@@ -22,10 +22,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
         color: Theme.of(context).cardColor,
       ),
       child: InkWell(
-        onTap: () {
-          // print("${model.title}");
-          controller.navigateToQuestions(paper: model, tryAgain: false);
-        },
+        onTap: () => controller.navigateToQuestions(paper: model, tryAgain: false),
         child: Padding(
           padding: EdgeInsets.all(_padding),
           child: Stack(
@@ -51,7 +48,6 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
                           ),
                         ),
-                        // model.imageUrl == null || model.imageUrl!.isEmpty ? Image.asset("assets/images/app_splash_logo.png") : Image.network(model.imageUrl!),
                       ),
                     ),
                   ),

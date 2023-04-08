@@ -1,7 +1,7 @@
-import 'package:elte_learn/controllers/histories_controller.dart';
-import 'package:elte_learn/models/histories_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../../controllers/histories_controller.dart';
+import '../../models/histories_model.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';

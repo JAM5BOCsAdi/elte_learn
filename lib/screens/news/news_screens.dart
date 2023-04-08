@@ -40,7 +40,6 @@ class NewsScreens extends GetView<NewsController> {
                 child: Icon(Icons.arrow_back, size: getHeight * 0.035),
               )
             : AppCircleButton(
-                // clipBehavior: Clip.none,
                 onTap: myZoomDrawerController.toggleDrawer,
                 child: Padding(
                   padding: EdgeInsets.only(left: getWidth * 0.05),

@@ -13,13 +13,13 @@ enum AnswersStatus {
 class AnswerCard extends StatelessWidget {
   final String answer;
   final bool isSelected;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   const AnswerCard({
     Key? key,
     required this.answer,
     this.isSelected = false,
-    required this.onTap,
+    this.onTap,
   }) : super(key: key);
 
   @override
