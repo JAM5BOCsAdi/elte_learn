@@ -32,8 +32,7 @@ const String elteSekMailTitle = "sekrh@elte.hu";
 const String meTitle = "Horváth Ádám - Mobilfejlesztő";
 const String mePhoneTitle = "06/30 - 134 - 4567";
 const String meMailTitle = "oradam@elte.hu";
-const String portfolioTitle = "Portfólió oldal";
-const String portfolioWebsite = "https://oradam.web.elte.hu/\nportfolio-website-1/";
+const String portfolioTitle = "Portfólió Weboldal";
 const String elteSekMapTitle = "ELTE SEK Helyzete";
 const String elteSekMapResetTitle = "Visszaállítás";
 

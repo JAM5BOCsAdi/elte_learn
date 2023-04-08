@@ -86,7 +86,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.web,
-                                  text: websiteUrl,
+                                  text: elteSekWebsiteTitle,
                                   enabled: true,
                                   onTap: () =>
                                       controller.website(title: elteSekWebsiteTitle, url: websiteUrl, color: primaryLightLT),
@@ -129,7 +129,7 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                 Gap(getHeight * 0.015),
                                 ContactRow(
                                   icon: Icons.web,
-                                  text: portfolioWebsite,
+                                  text: portfolioTitle,
                                   enabled: true,
                                   onTap: () =>
                                       controller.website(title: portfolioTitle, url: myWebsite, color: myWebsiteBGColor),
