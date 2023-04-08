@@ -46,15 +46,17 @@ class HistoriesScreen extends GetView<MyZoomDrawerController> {
                 return Center(child: Text('Error: ${snapshot.error}'));
               }
 
+              int historiesLength = historiesController.histories.length;
+
               return ListView.builder(
-                itemCount: historiesController.histories.length,
+                itemCount: historiesLength,
                 itemBuilder: (_, index) {
                   HistoriesModel history = historiesController.histories[index];
 
                   return Column(
                     children: [
-                      _timelineTile(index: index, historiesLength: historiesController.histories.length, history: history),
-                      _timelineDivider(index: index, historiesLength: historiesController.histories.length),
+                      _timelineTile(index: index, historiesLength: historiesLength, history: history),
+                      _timelineDivider(index: index, historiesLength: historiesLength),
                     ],
                   );
                 },
