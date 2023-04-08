@@ -1,9 +1,10 @@
 import 'dart:math';
 
-import 'package:elte_learn/models/menu_item_model.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:elte_learn/screens/quizzes/elte_quiz_screen.dart';
 import 'package:flutter_zoom_drawer/config.dart';
+
+import '../../models/menu_item_model.dart';
+import '../../screens/quizzes/elte_quiz_screen.dart';
 import '../../controllers/auth_controller.dart';
 import '../configs/themes/app_light_theme.dart';
 import '../screens/contact/elte_sek_contact_screen.dart';

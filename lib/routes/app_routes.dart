@@ -50,44 +50,5 @@ class AppRoutes {
           page: () => const AnswerCheckQuizzesResultScreen(),
           binding: BindingsBuilder.put(() => QuestionsController()),
         ),
-        // GetPage(
-        //   name: RouteNames.elteHistoryScreenRoute,
-        //   page: () => const ElteHistoryScreen(),
-        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        // ),
-        // GetPage(
-        //   name: RouteNames.elteSekHistoryScreenRoute,
-        //   page: () => const ElteSekHistoryScreen(),
-        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        // ),
-        // GetPage(
-        //   name: RouteNames.elteSekPtiHistoryScreenRoute,
-        //   page: () => const ElteSekPtiHistoryScreen(),
-        //   binding: BindingsBuilder.put(() => MyZoomDrawerController()),
-        // ),
-        // GetPage(
-        //   name: RouteNames.facebookScreenRoute,
-        //   page: () => const NewsScreens(isElteSekWebsite: false),
-        //   binding: BindingsBuilder(() {
-        //     Get.put(NewsController());
-        //     Get.put(MyZoomDrawerController());
-        //   }),
-        // ),
-        // GetPage(
-        //   name: RouteNames.websiteScreenRoute,
-        //   page: () => const NewsScreens(isElteSekWebsite: true),
-        //   binding: BindingsBuilder(() {
-        //     Get.put(NewsController());
-        //     Get.put(MyZoomDrawerController());
-        //   }),
-        // ),
-        GetPage(
-          name: RouteNames.contactScreenRoute,
-          page: () => const ElteSekContactScreen(),
-          binding: BindingsBuilder(() {
-            Get.put(NewsController());
-            Get.put(ContactController());
-          }),
-        ),
       ];
 }

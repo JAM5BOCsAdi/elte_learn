@@ -115,11 +115,6 @@ class QuestionsController extends GetxController {
     Get.toNamed(RouteNames.resultScreenRoute, arguments: questionPaperModel);
   }
 
-  // void tryAgain() {
-  //   Get.find<QuestionPaperController>().navigateToQuestions(paper: questionPaperModel, tryAgain: true);
-  //   _timer!.cancel();
-  // }
-
   void navigateToHome() {
     _timer!.cancel();
     Get.offNamedUntil(RouteNames.myZoomDrawerScreenRoute, (route) => false);
