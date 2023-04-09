@@ -37,7 +37,7 @@ extension ResultControllerExtension on QuestionsController {
         },
       );
       batch.commit();
-      goBack();
+      // goBack();
       navigateToHome();
     }
   }

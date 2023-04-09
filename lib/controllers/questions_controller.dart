@@ -119,11 +119,11 @@ class QuestionsController extends GetxController {
     Get.offNamedUntil(RouteNames.myZoomDrawerScreenRoute, (route) => false);
   }
 
-  void goBack() {
-    _timer!.cancel();
-    final previousRoute = Get.previousRoute;
-    print("Prev. Screen: $previousRoute");
-  }
+  // void goBack() {
+  //   _timer!.cancel();
+  //   final previousRoute = Get.previousRoute;
+  //   print("Prev. Screen: $previousRoute");
+  // }
 
   _startTimer(int seconds) {
     const duration = Duration(seconds: 1);
