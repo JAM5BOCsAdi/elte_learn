@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
-import 'package:flutter/foundation.dart';
 
 import '../controllers/auth_controller.dart';
 import '../widgets/dialogue.dart';
@@ -28,6 +27,12 @@ class QuestionsController extends GetxController {
     final _questionPaper = Get.arguments as QuestionPaperModel;
     loadData(_questionPaper);
     super.onReady();
+  }
+
+  @override
+  void onClose() {
+    _timer?.cancel();
+    super.onClose();
   }
 
   Future<void> loadData(QuestionPaperModel questionPaper) async {

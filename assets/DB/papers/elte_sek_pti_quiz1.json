@@ -4,7 +4,7 @@
     "image_title": "elte_sek_pti",
     "image_url": "",
     "description": "Programtervező informatikus képzésről szóló kvíz, mely a szombathelyi informatikai karnak a részét képezi.",
-    "time_seconds": 300,
+    "time_seconds": 10,
     "questions": [
       {
         "id": "ppr009q001",
