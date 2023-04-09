@@ -1,3 +1,4 @@
+import 'package:elte_learn/configs/themes/app_light_theme.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -19,7 +20,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: UIParameters.cardBorderRadius,
-        color: Theme.of(context).cardColor,
+        color: kOnSurfaceTextColor,
       ),
       child: InkWell(
         onTap: () => controller.navigateToQuestions(paper: model, tryAgain: false),
@@ -69,12 +70,12 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             IconText(
                               icon: Icon(
                                 Icons.help_outline_sharp,
-                                color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                                color: Get.isDarkMode ? kOnSurfaceTextColor : kOnSurfaceTextColor,
                               ),
                               text: Text(
                                 "${model.questionsCount} kérdés",
                                 style: detailText.copyWith(
-                                  color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                                  color: Get.isDarkMode ? kOnSurfaceTextColor : kOnSurfaceTextColor,
                                 ),
                               ),
                             ),
@@ -105,7 +106,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: _padding, horizontal: _padding * 2),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
+                      color: primaryLT,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(cardBorderRadius),
                         bottomRight: Radius.circular(cardBorderRadius),
