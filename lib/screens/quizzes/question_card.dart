@@ -7,6 +7,7 @@ import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../controllers/question_paper/question_paper_controller.dart';
 import '../../models/question_paper_model.dart';
+import '../../utils/consts.dart';
 import '../../widgets/icon_text.dart';
 
 class QuestionCard extends GetView<QuestionPaperController> {
@@ -46,7 +47,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
                               alignment: Alignment.center,
                               child: const CircularProgressIndicator(),
                             ),
-                            errorWidget: (context, url, error) => Image.asset("assets/images/app_splash_logo.png"),
+                            errorWidget: (context, url, error) => Image.asset(appSplashLogoPng),
                           ),
                         ),
                       ),
