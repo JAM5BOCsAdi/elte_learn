@@ -48,6 +48,7 @@ const String elteSekMapResetTitle = "Visszaállítás";
 // Results
 const String congratulationTitle = "Gratulálunk";
 const String tapForCorrectAnswersTitle = "Koppints a helyes válaszokért";
+const String backButtonTitle = "Kezdőlap";
 
 // Questions
 const String endQuestionTitle = "Befejez";

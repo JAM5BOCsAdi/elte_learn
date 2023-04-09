@@ -102,7 +102,7 @@ class ResultScreen extends GetView<QuestionsController> {
                           onTap: () => controller.saveTestResults(),
                           color: Colors.green.withOpacity(0.75),
                           textColor: Colors.white,
-                          title: "Kezdőlap",
+                          title: backButtonTitle,
                         ),
                       ),
                     ],
