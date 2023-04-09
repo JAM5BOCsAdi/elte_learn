@@ -31,7 +31,7 @@ class QuestionsController extends GetxController {
 
   @override
   void onClose() {
-    _timer?.cancel();
+    _timer!.cancel();
     super.onClose();
   }
 
@@ -117,6 +117,12 @@ class QuestionsController extends GetxController {
   void navigateToHome() {
     _timer!.cancel();
     Get.offNamedUntil(RouteNames.myZoomDrawerScreenRoute, (route) => false);
+  }
+
+  void goBack() {
+    _timer!.cancel();
+    final previousRoute = Get.previousRoute;
+    print("Prev. Screen: $previousRoute");
   }
 
   _startTimer(int seconds) {
