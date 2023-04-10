@@ -74,6 +74,7 @@ class MenuScreen extends GetView<MyZoomDrawerController> {
                                 fontWeight: FontWeight.w900,
                                 fontSize: getHeight * 0.025,
                                 color: kOnSurfaceTextColor,
+                                overflow: TextOverflow.ellipsis,
                               ),
                               maxLines: 1,
                             ),

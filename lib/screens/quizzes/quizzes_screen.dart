@@ -57,6 +57,7 @@ class QuizzesScreen extends GetView<MyZoomDrawerController> {
                                     "Hello ${controller.user.value!.displayName ?? ""} ",
                                     style: appBarText.copyWith(color: kOnSurfaceTextColor, fontWeight: FontWeight.normal),
                                     maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
                         ),
