@@ -27,3 +27,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+//TODO: FutureBuilder-be belerakni a "main"-t, hátha úgy egyből frissül a szín
