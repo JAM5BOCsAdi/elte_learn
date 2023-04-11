@@ -21,6 +21,7 @@ class SetSystemChrome extends GetxController {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
+        // systemNavigationBarColor: Colors.black.withOpacity(0.0),
         // systemNavigationBarColor: Colors.white, // Colors.black.withOpacity(0.002)
       ),
     );

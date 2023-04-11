@@ -18,7 +18,6 @@ class IntroductionScreen extends StatelessWidget {
         ),
         child: SafeArea(
           child: Container(
-            decoration: BoxDecoration(gradient: mainGradient()),
             alignment: Alignment.center,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: getWidth * 0.2),
