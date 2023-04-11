@@ -3,16 +3,16 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
-import '../../utils/consts.dart';
-import '../../widgets/answer_card.dart';
-import '../../widgets/content_area.dart';
-import '../../widgets/countdown_timer.dart';
-import '../../widgets/custom_app_bar.dart';
 import '../../controllers/questions_controller.dart';
 import '../../firebase_ref/loading_status.dart';
 import '../../routes/route_names.dart';
+import '../../utils/consts.dart';
+import '../../widgets/answer_card.dart';
 import '../../widgets/background_decoration.dart';
 import '../../widgets/button.dart';
+import '../../widgets/content_area.dart';
+import '../../widgets/countdown_timer.dart';
+import '../../widgets/custom_app_bar.dart';
 import '../../widgets/question_place_holder.dart';
 
 class QuestionsScreen extends GetView<QuestionsController> {
@@ -42,8 +42,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
           child: Obx(
             () => Column(
               children: [
-                if (controller.loadingStatus.value == LoadingStatus.loading)
-                  const Expanded(child: ContentArea(child: QuestionPlaceHolder())),
+                if (controller.loadingStatus.value == LoadingStatus.loading) const Expanded(child: ContentArea(child: QuestionPlaceHolder())),
                 if (controller.loadingStatus.value == LoadingStatus.completed)
                   Expanded(
                     child: ContentArea(
@@ -92,8 +91,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                               width: getWidth * 0.25,
                               child: Button(
                                 onTap: () => controller.previousQuestion(),
-                                child: Icon(Icons.arrow_back_ios_new,
-                                    color: Get.isDarkMode ? kOnSurfaceTextColor : Theme.of(context).primaryColor),
+                                child: Icon(Icons.arrow_back_ios_new, color: Theme.of(context).primaryColor),
                               ),
                             ),
                           ),
@@ -103,9 +101,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                             visible: controller.loadingStatus.value == LoadingStatus.completed,
                             child: Button(
                               onTap: () {
-                                controller.isLastQuestion
-                                    ? Get.toNamed(RouteNames.quizzesResultScreenRoute)
-                                    : controller.nextQuestion();
+                                controller.isLastQuestion ? Get.toNamed(RouteNames.quizzesResultScreenRoute) : controller.nextQuestion();
                               },
                               title: controller.isLastQuestion ? endQuestionTitle : nextQuestionTitle,
                             ),

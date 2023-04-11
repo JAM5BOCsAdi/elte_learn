@@ -1,11 +1,11 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../../controllers/histories_controller.dart';
-import '../../models/histories_model.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/app_icons.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/histories_controller.dart';
 import '../../controllers/zoom_drawer_controller.dart';
+import '../../models/histories_model.dart';
 import '../../widgets/app_circle_button.dart';
 import '../../widgets/custom_app_bar.dart';
 import '../../widgets/read_more.dart';
@@ -132,7 +132,7 @@ Container _indicator({required String yearNumber}) {
   return Container(
     decoration: BoxDecoration(
       shape: BoxShape.circle,
-      gradient: kMainGradientLight,
+      gradient: UIParameters.isDarkMode() ? kMainGradientDark : kMainGradientLight,
       border: Border.fromBorderSide(
         BorderSide(
           color: Colors.lightGreen.shade400,

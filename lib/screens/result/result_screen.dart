@@ -1,18 +1,18 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../../routes/route_names.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../controllers/questions_controller.dart';
 import '../../controllers/result_controller_extension.dart';
+import '../../routes/route_names.dart';
 import '../../utils/consts.dart';
 import '../../widgets/answer_card.dart';
-import '../../widgets/button.dart';
-import '../../widgets/quizzes_results_card.dart';
 import '../../widgets/background_decoration.dart';
+import '../../widgets/button.dart';
 import '../../widgets/content_area.dart';
 import '../../widgets/custom_app_bar.dart';
-import '../../controllers/questions_controller.dart';
+import '../../widgets/quizzes_results_card.dart';
 
 class ResultScreen extends GetView<QuestionsController> {
   const ResultScreen({Key? key}) : super(key: key);
@@ -48,8 +48,11 @@ class ResultScreen extends GetView<QuestionsController> {
                         style: TextStyle(color: _textColor),
                       ),
                       Gap(getHeight * 0.025),
-                      const AutoSizeText(
+                      AutoSizeText(
                         tapForCorrectAnswersTitle,
+                        style: TextStyle(
+                          color: UIParameters.isDarkMode() ? kOnSurfaceTextColor : Theme.of(context).primaryColor,
+                        ),
                         textAlign: TextAlign.center,
                       ),
                       Gap(getHeight * 0.025),
