@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: Get.find<ThemeController>().lightTheme,
+      darkTheme: Get.find<ThemeController>().darkTheme,
+      themeMode: ThemeMode.system,
       getPages: AppRoutes.routes(),
     );
   }
