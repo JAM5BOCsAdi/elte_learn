@@ -32,18 +32,12 @@ class Dialogs {
           onPressed: onTapOK,
           child: Text(quizOKTitle, style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
         ),
-        _buildCancelTextButton(isOnTapCancel, onTapCancel),
+        if (isOnTapCancel)
+          TextButton(
+            onPressed: onTapCancel,
+            child: const Text(quizCancelTitle, style: TextStyle(color: Colors.black)),
+          ),
       ],
     );
-  }
-
-  static Widget _buildCancelTextButton(bool isOnTapCancel, VoidCallback? onTapCancel) {
-    if (isOnTapCancel) {
-      return TextButton(
-        onPressed: onTapCancel,
-        child: const Text(quizCancelTitle, style: TextStyle(color: Colors.black)),
-      );
-    }
-    return const SizedBox(height: 0, width: 0);
   }
 }
