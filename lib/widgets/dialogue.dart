@@ -1,6 +1,8 @@
 import 'package:elte_learn/configs/themes/app_colors.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
+import '../utils/consts.dart';
+
 class Dialogs {
   static final Dialogs _singleton = Dialogs._internal();
 
@@ -11,22 +13,22 @@ class Dialogs {
   static AlertDialog questionStartDialogue({required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
     return AlertDialog(
       backgroundColor: kOnSurfaceTextColor,
-      title: const Text('Kvíz megkezdése sikertelen!'),
+      title: const Text(quizStartFailTitle),
       content: SingleChildScrollView(
         child: ListBody(
           children: const [
-            Text('Kvíz megkezdéséhez kérem jelentkezzen be.'),
+            Text(quizLoginTitle),
           ],
         ),
       ),
       actions: [
         TextButton(
           onPressed: onTapOK,
-          child: Text('OK', style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
+          child: Text(quizOKTitle, style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
         ),
         TextButton(
           onPressed: onTapCancel,
-          child: const Text('Mégse', style: TextStyle(color: Colors.black)),
+          child: const Text(quizCancelTitle, style: TextStyle(color: Colors.black)),
         ),
       ],
     );
@@ -35,18 +37,18 @@ class Dialogs {
   static AlertDialog showTimeUpDialogue({required VoidCallback onTapOK}) {
     return AlertDialog(
       backgroundColor: kOnSurfaceTextColor,
-      title: const Text('Lejárt az idő!'),
+      title: const Text(quizTimeIsUpTitle),
       content: SingleChildScrollView(
         child: ListBody(
           children: const [
-            Text('Legközelebb jobban fog menni :)'),
+            Text(quizTimeIsUpTextTitle),
           ],
         ),
       ),
       actions: [
         TextButton(
           onPressed: onTapOK,
-          child: Text('OK', style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
+          child: Text(quizOKTitle, style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
         ),
       ],
     );

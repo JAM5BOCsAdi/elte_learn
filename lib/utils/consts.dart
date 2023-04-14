@@ -61,6 +61,14 @@ const String introductionTitle =
 // Login
 const String googleSignInTitle = "Google bejelentkezés";
 
+// Dialogue
+const String quizStartFailTitle = "Kvíz megkezdése sikertelen!";
+const String quizLoginTitle = "Kvíz megkezdéséhez kérem jelentkezzen be.";
+const String quizTimeIsUpTitle = "Lejárt az idő!";
+const String quizTimeIsUpTextTitle = "Legközelebb jobban fog menni :)";
+const String quizOKTitle = "OK";
+const String quizCancelTitle = "Mégse";
+
 // Assets Text Sources
 const String elteHistoryTxt = "assets/DB/histories/elteHistory.txt";
 const String elteSekHistoryTxt = "assets/DB/histories/elteSekHistory.txt";
