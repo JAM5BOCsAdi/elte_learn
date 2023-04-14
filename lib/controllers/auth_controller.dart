@@ -3,6 +3,7 @@ import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 import '../../firebase_ref/references.dart';
 import '../../routes/route_names.dart';
 import '../../widgets/dialogue.dart';
+import '../utils/consts.dart';
 
 class AuthController extends GetxController {
   late FirebaseAuth _firebaseAuth;
@@ -73,7 +74,10 @@ class AuthController extends GetxController {
 
   void showLoginAlertDialogue() {
     Get.dialog(
-      Dialogs.questionStartDialogue(
+      Dialogs.dialogue(
+        title: quizStartFailTitle,
+        listBodyTitle: quizLoginTitle,
+        isOnTapCancel: true,
         onTapOK: () => navigateToLogin(),
         onTapCancel: () => Get.back(),
       ),

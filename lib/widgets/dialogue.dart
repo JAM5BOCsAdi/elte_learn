@@ -10,14 +10,20 @@ class Dialogs {
 
   factory Dialogs() => _singleton;
 
-  static AlertDialog questionStartDialogue({required VoidCallback onTapOK, required VoidCallback onTapCancel}) {
+  static AlertDialog dialogue({
+    required String title,
+    required String listBodyTitle,
+    required VoidCallback onTapOK,
+    bool isOnTapCancel = false,
+    VoidCallback? onTapCancel,
+  }) {
     return AlertDialog(
       backgroundColor: kOnSurfaceTextColor,
-      title: const Text(quizStartFailTitle),
+      title: Text(title),
       content: SingleChildScrollView(
         child: ListBody(
-          children: const [
-            Text(quizLoginTitle),
+          children: [
+            Text(listBodyTitle),
           ],
         ),
       ),
@@ -26,31 +32,18 @@ class Dialogs {
           onPressed: onTapOK,
           child: Text(quizOKTitle, style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
         ),
-        TextButton(
-          onPressed: onTapCancel,
-          child: const Text(quizCancelTitle, style: TextStyle(color: Colors.black)),
-        ),
+        _buildCancelTextButton(isOnTapCancel, onTapCancel),
       ],
     );
   }
 
-  static AlertDialog showTimeUpDialogue({required VoidCallback onTapOK}) {
-    return AlertDialog(
-      backgroundColor: kOnSurfaceTextColor,
-      title: const Text(quizTimeIsUpTitle),
-      content: SingleChildScrollView(
-        child: ListBody(
-          children: const [
-            Text(quizTimeIsUpTextTitle),
-          ],
-        ),
-      ),
-      actions: [
-        TextButton(
-          onPressed: onTapOK,
-          child: Text(quizOKTitle, style: TextStyle(color: Theme.of(Get.context!).primaryColor)),
-        ),
-      ],
-    );
+  static Widget _buildCancelTextButton(bool isOnTapCancel, VoidCallback? onTapCancel) {
+    if (isOnTapCancel) {
+      return TextButton(
+        onPressed: onTapCancel,
+        child: const Text(quizCancelTitle, style: TextStyle(color: Colors.black)),
+      );
+    }
+    return const SizedBox(height: 0, width: 0);
   }
 }

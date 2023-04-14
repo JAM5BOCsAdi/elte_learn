@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
 import '../controllers/auth_controller.dart';
+import '../utils/consts.dart';
 import '../widgets/dialogue.dart';
 import '../firebase_ref/loading_status.dart';
 import '../firebase_ref/references.dart';
@@ -119,12 +120,6 @@ class QuestionsController extends GetxController {
     Get.offNamedUntil(RouteNames.myZoomDrawerScreenRoute, (route) => false);
   }
 
-  // void goBack() {
-  //   _timer!.cancel();
-  //   final previousRoute = Get.previousRoute;
-  //   print("Prev. Screen: $previousRoute");
-  // }
-
   _startTimer(int seconds) {
     const duration = Duration(seconds: 1);
     remainedSeconds = seconds;
@@ -134,7 +129,11 @@ class QuestionsController extends GetxController {
       duration,
       (Timer timer) {
         if (remainedSeconds <= 0) {
-          Get.dialog(Dialogs.showTimeUpDialogue(onTapOK: () => navigateToHome()));
+          Get.dialog(Dialogs.dialogue(
+            title: quizTimeIsUpTitle,
+            listBodyTitle: quizTimeIsUpTextTitle,
+            onTapOK: () => navigateToHome(),
+          ));
 
           timer.cancel();
         } else {
