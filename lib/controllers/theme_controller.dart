@@ -37,17 +37,17 @@ class ThemeController extends GetxController with WidgetsBindingObserver {
     final brightness = MediaQuery.of(Get.context!).platformBrightness;
     if (brightness == Brightness.dark) {
       Get.changeThemeMode(ThemeMode.dark);
-      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        systemNavigationBarColor: Colors.black,
-        // systemNavigationBarDividerColor: Colors.white,
-      ));
+      // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      //   systemNavigationBarColor: Colors.black,
+      //   // systemNavigationBarDividerColor: Colors.white,
+      // ));
       // update();
     } else {
       Get.changeThemeMode(ThemeMode.light);
-      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        systemNavigationBarColor: Colors.white,
-        // systemNavigationBarDividerColor: Colors.white,
-      ));
+      // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      //   systemNavigationBarColor: Colors.white,
+      //   // systemNavigationBarDividerColor: Colors.white,
+      // ));
       // update();
     }
   }

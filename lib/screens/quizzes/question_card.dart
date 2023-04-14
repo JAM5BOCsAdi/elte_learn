@@ -71,12 +71,12 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             IconText(
                               icon: Icon(
                                 Icons.help_outline_sharp,
-                                color: Get.isDarkMode ? Theme.of(context).primaryColor : Theme.of(context).primaryColor,
+                                color: Theme.of(context).primaryColor,
                               ),
                               text: Text(
                                 "${model.questionsCount} kérdés",
                                 style: detailText.copyWith(
-                                  color: Get.isDarkMode ? Theme.of(context).primaryColor : Theme.of(context).primaryColor,
+                                  color: Theme.of(context).primaryColor,
                                 ),
                               ),
                             ),
@@ -84,12 +84,12 @@ class QuestionCard extends GetView<QuestionPaperController> {
                             IconText(
                               icon: Icon(
                                 Icons.timer,
-                                color: Get.isDarkMode ? Theme.of(context).primaryColor : Theme.of(context).primaryColor,
+                                color: Theme.of(context).primaryColor,
                               ),
                               text: Text(
                                 "${model.timeInMinutes()} perc",
                                 style: detailText.copyWith(
-                                  color: Get.isDarkMode ? Theme.of(context).primaryColor : Theme.of(context).primaryColor,
+                                  color: Theme.of(context).primaryColor,
                                 ),
                               ),
                             )

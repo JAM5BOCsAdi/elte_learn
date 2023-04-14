@@ -1,8 +1,8 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../../widgets/answer_card.dart';
 import '../../configs/themes/app_colors.dart';
 import '../../configs/themes/ui_parameters.dart';
+import '../../widgets/answer_card.dart';
 
 class QuizzesResultsCard extends StatelessWidget {
   final int index;
@@ -31,12 +31,11 @@ class QuizzesResultsCard extends StatelessWidget {
         _backgroundColor = wrongAnswersColor;
         break;
       case AnswersStatus.NOT_ANSWERED:
-        _backgroundColor = Get.isDarkMode ? Colors.red.withOpacity(0.5) : Theme.of(context).primaryColor.withOpacity(0.1);
-        ;
+        _backgroundColor = Get.isDarkMode ? Colors.red.withOpacity(0.5) : Theme.of(context).primaryColor.withOpacity(0.35);
         break;
 
       default:
-        _backgroundColor = Theme.of(context).primaryColor.withOpacity(0.1);
+        _backgroundColor = Theme.of(context).primaryColor.withOpacity(0.35);
     }
 
     return InkWell(
