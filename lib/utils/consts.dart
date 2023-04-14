@@ -65,7 +65,7 @@ const String googleSignInTitle = "Google bejelentkezés";
 const String quizStartFailTitle = "Kvíz megkezdése sikertelen!";
 const String quizLoginTitle = "Kvíz megkezdéséhez kérem jelentkezzen be.";
 const String quizTimeIsUpTitle = "Lejárt az idő!";
-const String quizTimeIsUpTextTitle = "Legközelebb jobban fog menni :)";
+const String quizTimeIsUpTextTitle = "Legközelebb jobban fog menni 😊";
 const String quizOKTitle = "OK";
 const String quizCancelTitle = "Mégse";
 
