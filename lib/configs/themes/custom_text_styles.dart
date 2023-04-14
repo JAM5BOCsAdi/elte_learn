@@ -7,7 +7,7 @@ TextStyle detailText = TextStyle(fontSize: getHeight * 0.015);
 TextStyle appBarText = TextStyle(fontSize: getHeight * 0.025, fontWeight: FontWeight.bold, color: kOnSurfaceTextColor);
 TextStyle headerText = TextStyle(fontSize: getHeight * 0.030, fontWeight: FontWeight.w700, color: kOnSurfaceTextColor);
 
-TextStyle questionText = TextStyle(fontSize: getHeight * 0.025, fontWeight: FontWeight.w800, color: UIParameters.isDarkMode() ? kOnSurfaceTextColor : Theme.of(Get.context!).primaryColor);
+TextStyle questionText = TextStyle(fontSize: getHeight * 0.025, fontWeight: FontWeight.w800);
 
 TextStyle cardTitles(context) => TextStyle(
       color: Theme.of(context).primaryColor,

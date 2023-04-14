@@ -50,7 +50,8 @@ class QuestionsScreen extends GetView<QuestionsController> {
                         padding: EdgeInsets.only(top: getHeight * 0.025),
                         child: Column(
                           children: [
-                            AutoSizeText(controller.currentQuestion.value!.question, style: questionText),
+                            AutoSizeText(controller.currentQuestion.value!.question,
+                                style: questionText.copyWith(color: UIParameters.isDarkMode() ? kOnSurfaceTextColor : Theme.of(Get.context!).primaryColor)),
                             GetBuilder<QuestionsController>(
                               id: "answers_list",
                               builder: (_) {
