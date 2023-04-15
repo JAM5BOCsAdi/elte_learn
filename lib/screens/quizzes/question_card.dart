@@ -127,18 +127,9 @@ class QuestionCard extends GetView<QuestionPaperController> {
   void imgDialog({required QuestionPaperModel model}) {
     Get.dialog(
       Dialog(
-        child: Stack(
-          children: [
-            Positioned.fill(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
-                child: Container(
-                  color: Theme.of(Get.context!).primaryColor.withAlpha(200),
-                ),
-              ),
-            ),
-            buildImage(model: model),
-          ],
+        child: Container(
+          color: Theme.of(Get.context!).primaryColor.withAlpha(200),
+          child: buildImage(model: model),
         ),
       ),
     );
