@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:elte_learn/configs/themes/app_light_theme.dart';
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
@@ -33,21 +35,17 @@ class QuestionCard extends GetView<QuestionPaperController> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ClipRRect(
-                    borderRadius: UIParameters.cardBorderRadius,
-                    child: ColoredBox(
-                      color: Theme.of(context).primaryColor.withOpacity(0.2),
-                      child: SizedBox(
-                        height: getHeight * 0.1 / 1.25,
-                        width: getWidth * 0.2 / 1.25,
-                        child: Center(
-                          child: CachedNetworkImage(
-                            imageUrl: model.imageUrl!,
-                            placeholder: (context, url) => Container(
-                              alignment: Alignment.center,
-                              child: const CircularProgressIndicator(),
-                            ),
-                            errorWidget: (context, url, error) => Image.asset(appSplashLogoPng),
+                  GestureDetector(
+                    onTap: () => imgDialog(model: model),
+                    child: ClipRRect(
+                      borderRadius: UIParameters.cardBorderRadius,
+                      child: ColoredBox(
+                        color: Theme.of(context).primaryColor.withOpacity(0.2),
+                        child: SizedBox(
+                          height: getHeight * 0.1 / 1.25,
+                          width: getWidth * 0.2 / 1.25,
+                          child: Center(
+                            child: buildImage(model: model),
                           ),
                         ),
                       ),
@@ -123,6 +121,37 @@ class QuestionCard extends GetView<QuestionPaperController> {
           ),
         ),
       ),
+    );
+  }
+
+  void imgDialog({required QuestionPaperModel model}) {
+    Get.dialog(
+      Dialog(
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
+                child: Container(
+                  color: Theme.of(Get.context!).primaryColor.withAlpha(200),
+                ),
+              ),
+            ),
+            buildImage(model: model),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildImage({required QuestionPaperModel model}) {
+    return CachedNetworkImage(
+      imageUrl: model.imageUrl!,
+      placeholder: (context, url) => Container(
+        alignment: Alignment.center,
+        child: const CircularProgressIndicator(),
+      ),
+      errorWidget: (context, url, error) => Image.asset(appSplashLogoPng),
     );
   }
 }
