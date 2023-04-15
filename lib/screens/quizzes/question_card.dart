@@ -131,7 +131,7 @@ class QuestionCard extends GetView<QuestionPaperController> {
           children: [
             Positioned.fill(
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
+                filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
                 child: Container(
                   color: Theme.of(Get.context!).primaryColor.withAlpha(200),
                 ),
