@@ -68,10 +68,6 @@ class AuthController extends GetxController {
     }
   }
 
-  void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);
-  void navigateToLogin() => Get.toNamed(RouteNames.loginScreenRoute);
-  void navigateToHomePage() => Get.offAllNamed(RouteNames.myZoomDrawerScreenRoute);
-
   void showLoginAlertDialogue() {
     Get.dialog(
       Dialogs.dialogue(
@@ -88,4 +84,8 @@ class AuthController extends GetxController {
   bool isLoggedIn() {
     return _firebaseAuth.currentUser != null;
   }
+
+  void navigateToIntroduction() => Get.offAllNamed(RouteNames.introductionScreenRoute);
+  void navigateToLogin() => Get.toNamed(RouteNames.loginScreenRoute);
+  void navigateToHomePage() => Get.offAllNamed(RouteNames.myZoomDrawerScreenRoute);
 }
