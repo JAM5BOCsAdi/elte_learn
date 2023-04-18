@@ -1,6 +1,5 @@
 import 'package:elte_learn/packages_barrel/packages_barrel.dart';
 
-import '../../controllers/news_controller.dart';
 import '../../screens/question/answer_check_quizzes_result_screen.dart';
 import '../../controllers/zoom_drawer_controller.dart';
 import '../../routes/route_names.dart';
