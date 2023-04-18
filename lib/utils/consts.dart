@@ -79,7 +79,7 @@ const String contactsScreenPng = "assets/images/elte_sek.png";
 const String contactsScreenMePng = "assets/images/me.png";
 const String appSplashLogoPng = "assets/images/app_splash_logo.png";
 const String googleSvg = "assets/icons/google.svg";
-const String bulbSvg = "assets/images/bulb.svg";
+const String bulbSvg = "assets/icons/bulb.svg";
 
 // SnackBar Sources
 const String snackBar1 = "Hiba az oldal betöltésekor";
