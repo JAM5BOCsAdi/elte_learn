@@ -8,7 +8,6 @@ import '../../screens/login/login_screen.dart';
 import '../../screens/question/quizzes_results_screen.dart';
 import '../controllers/question_paper/question_paper_controller.dart';
 import '../controllers/questions_controller.dart';
-import '../screens/contact/elte_sek_contact_screen.dart';
 import '../screens/menu/my_zoom_drawer.dart';
 import '../screens/introduction/introduction_screen.dart';
 import '../screens/question/questions_screen.dart';
