@@ -103,23 +103,16 @@ flutter:
     - assets/DB/papers/elte_sek_pti_quiz3.json
     - assets/DB/papers/elte_sek_pti_quiz4.json
     # assets / icons:
-    - assets/icons/code.svg
-    - assets/icons/contact.svg
-    - assets/icons/email.svg
-    - assets/icons/github.svg
+    - assets/icons/bulb.svg
     - assets/icons/google.svg
-    - assets/icons/logout.svg
     - assets/icons/menu.svg
     - assets/icons/menuleft.svg
     - assets/icons/peace.svg
-    - assets/icons/rate.svg
     - assets/icons/trophyoutline.svg
-    - assets/icons/web.svg
     # assets / images:
     - assets/images/app_splash_logo.png
     - assets/images/logo.png
     - assets/images/elte_sek.png
-    - assets/images/bulb.svg
     - assets/images/me.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
