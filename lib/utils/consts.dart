@@ -86,7 +86,7 @@ const String snackBar1 = "Hiba az oldal betöltésekor";
 const String snackBar2 = "Az oldal nem tudott betöltődni";
 
 // PaperIds
-Map<String, List<String>> paperIds = {
+const Map<String, List<String>> paperIds = {
   "eltePaperIds": [
     "ppr001",
     "ppr002",
