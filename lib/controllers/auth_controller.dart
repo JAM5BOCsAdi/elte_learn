@@ -50,7 +50,6 @@ class AuthController extends GetxController {
     userRef.doc(account.email).set({
       "email": account.email,
       "name": account.displayName,
-      "profilepic": account.photoUrl,
     });
   }
 
