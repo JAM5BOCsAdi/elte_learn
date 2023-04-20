@@ -7,7 +7,6 @@ import '../../routes/route_names.dart';
 import '../../services/firebase_storage_service.dart';
 
 class QuestionPaperController extends GetxController {
-  final allPaperImages = <String>[].obs;
   final allPapers = <QuestionPaperModel>[].obs;
 
   @override
