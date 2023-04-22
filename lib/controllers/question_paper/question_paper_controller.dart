@@ -19,11 +19,16 @@ class QuestionPaperController extends GetxController {
     try {
       QuerySnapshot<Map<String, dynamic>> data = await questionPaperRef.get();
       final paperList = data.docs.map((paper) => QuestionPaperModel.fromSnapshot(paper)).toList();
-      allPapers.assignAll(paperList);
+      // allPapers.assignAll(paperList);
 
       for (var paper in paperList) {
         final imgUrl = await Get.find<FirebaseStorageService>().getImage(paper.imageTitle);
         paper.imageUrl = imgUrl;
+
+        // Here it updates the database to show "image_url"
+        var batch = fireStore.batch();
+        batch.update(questionPaperRef.doc(paper.id), {"image_url": imgUrl});
+        await batch.commit();
       }
       allPapers.assignAll(paperList);
     } catch (e) {
