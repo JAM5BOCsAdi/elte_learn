@@ -8,6 +8,7 @@ import '../../services/firebase_storage_service.dart';
 
 class QuestionPaperController extends GetxController {
   final allPapers = <QuestionPaperModel>[].obs;
+  final isLoading = true.obs;
 
   @override
   void onReady() {
@@ -31,6 +32,7 @@ class QuestionPaperController extends GetxController {
         await batch.commit();
       }
       allPapers.assignAll(paperList);
+      isLoading.value = false;
     } catch (e) {
       throw Exception("getAllPapers ERROR: $e");
     }

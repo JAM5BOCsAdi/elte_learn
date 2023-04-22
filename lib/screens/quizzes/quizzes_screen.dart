@@ -75,24 +75,28 @@ class QuizzesScreen extends GetView<MyZoomDrawerController> {
               child: ContentArea(
                 addPadding: false,
                 child: Obx(
-                  () => ListView.separated(
-                    padding: UIParameters.mobileScreenPadding,
-                    itemBuilder: (BuildContext context, int index) {
-                      final paper = _questionPaperController.allPapers[index];
-                      if (paperIds.contains(paper.id)) {
-                        return Padding(
-                          padding: EdgeInsets.only(bottom: getHeight * 0.025),
-                          child: QuestionCard(model: paper),
-                        );
-                      } else {
-                        return const SizedBox(height: 0, width: 0);
-                      }
-                    },
-                    separatorBuilder: (_, int index) {
-                      return const SizedBox(height: 0, width: 0);
-                    },
-                    itemCount: _questionPaperController.allPapers.length,
-                  ),
+                  () => _questionPaperController.isLoading.value
+                      ? const Center(
+                          child: CircularProgressIndicator(),
+                        )
+                      : ListView.separated(
+                          padding: UIParameters.mobileScreenPadding,
+                          itemBuilder: (BuildContext context, int index) {
+                            final paper = _questionPaperController.allPapers[index];
+                            if (paperIds.contains(paper.id)) {
+                              return Padding(
+                                padding: EdgeInsets.only(bottom: getHeight * 0.025),
+                                child: QuestionCard(model: paper),
+                              );
+                            } else {
+                              return const SizedBox(height: 0, width: 0);
+                            }
+                          },
+                          separatorBuilder: (_, int index) {
+                            return const SizedBox(height: 0, width: 0);
+                          },
+                          itemCount: _questionPaperController.allPapers.length,
+                        ),
                 ),
               ),
             )
