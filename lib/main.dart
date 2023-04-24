@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: Get.find<ThemeController>().lightTheme,
       darkTheme: Get.find<ThemeController>().darkTheme,
       themeMode: ThemeMode.system,
@@ -27,4 +28,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//TODO: FutureBuilder-be belerakni a "main"-t, hátha úgy egyből frissül a szín
