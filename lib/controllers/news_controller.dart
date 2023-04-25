@@ -1,3 +1,5 @@
+import 'package:elte_learn/configs/themes/ui_parameters.dart';
+
 import '../packages_barrel/packages_barrel.dart';
 import '../utils/consts.dart';
 
@@ -44,10 +46,14 @@ class NewsController extends GetxController {
   }
 
   Widget loadingWidget() {
-    return const Dialog(
-      backgroundColor: Colors.transparent,
-      child: Center(
-        child: CircularProgressIndicator(),
+    return SizedBox(
+      height: getHeight,
+      width: getWidth,
+      child: const Dialog(
+        backgroundColor: Colors.transparent,
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
       ),
     );
   }

@@ -48,20 +48,22 @@ class NewsScreens extends GetView<NewsController> {
               ),
       ),
       body: SafeArea(
-        child: FutureBuilder(
-          future: controller.loadWebView(url: url),
-          builder: (_, snapshot) {
-            if (snapshot.connectionState == ConnectionState.done) {
-              return RefreshIndicator(
-                onRefresh: () => controller.reload(),
-                child: Obx(() => isLoading(gestureRecognizers)),
-              );
-            } else {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-          },
+        child: RefreshIndicator(
+          onRefresh: () => controller.reload(),
+          child: FutureBuilder(
+            future: controller.loadWebView(url: url),
+            builder: (_, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done || snapshot.connectionState == ConnectionState.waiting) {
+                return SingleChildScrollView(
+                  child: Obx(() => isLoading(gestureRecognizers)),
+                );
+              } else {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            },
+          ),
         ),
       ),
     );
@@ -71,9 +73,13 @@ class NewsScreens extends GetView<NewsController> {
     if (controller.isLoading.value) {
       return controller.loadingWidget();
     } else {
-      return WebViewWidget(
-        gestureRecognizers: gestureRecognizers,
-        controller: controller.webViewController,
+      return SizedBox(
+        height: getHeight,
+        width: getWidth,
+        child: WebViewWidget(
+          gestureRecognizers: gestureRecognizers,
+          controller: controller.webViewController,
+        ),
       );
     }
   }
