@@ -134,6 +134,15 @@ class ElteSekContactScreen extends GetView<ContactController> {
                                   onTap: () =>
                                       controller.website(title: portfolioTitle, url: myWebsite, color: myWebsiteBGColor),
                                 ),
+                                // ElevatedButton(
+                                //   onPressed: () {
+                                //     launchUrl(
+                                //       Uri.parse(websiteUrl),
+                                //       mode: LaunchMode.inAppWebView,
+                                //     );
+                                //   },
+                                //   child: const Text(websiteUrl),
+                                // ),
                               ],
                             ),
                           ],
