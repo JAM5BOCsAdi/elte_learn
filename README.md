@@ -5,10 +5,10 @@
 <h2>Images</h2>
 
 <!-- Text Align Center not working -->
-<div style="text-align:center;">
-    <p id="img1">First image</p>
-</div>
-<img src="https://github.com/JAM5BOCsAdi/learning_bloc3/blob/master/lib/images/img1.png" alt="Preview of Image 1">
+<h3>SplashScreen</h3>
+<img src="https://github.com/JAM5BOCsAdi/elte_learn/assets/90914431/ac954aa9-10ff-4c21-b838-8a4f7f63aefa" alt="Preview of Image 1">
+
+<h3>IntroductionScreen</h3>
 
 <div style="text-align:center;">
     <p>Second image</p>
